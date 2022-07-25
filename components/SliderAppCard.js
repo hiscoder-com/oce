@@ -1,12 +1,11 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function SliderAppCard({ config }) {
-  const { title, description, link, logo } = config
+function SliderAppCard({ app }) {
+  const { title, description, link, logo } = app
 
   return (
-    <div className="w-[520px] max-h-64 bg-[#F7F9FA] my-5 py-10 px-8 rounded-3x">
+    <div className="w-[520px] max-h-64 bg-blue-75 my-5 py-10 px-8 rounded-2xl">
       <div className="flex flex-row">
         <div className="w-2/3">
           <div>
