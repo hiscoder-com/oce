@@ -1,56 +1,46 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { useRef, useState } from 'react'
-import Logo from '../public/logo.svg'
+import Image from 'next/image'
+
 import Chevron from '../public/chevron.svg'
+import Logo from '../public/logo.svg'
 
 function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-
   return (
-    <div className="flex items-center justify-between py-7 cursor-default">
-      <div className="flex gap-2.5">
-        <Image src={Logo} alt="" width="22" height="30" className="" />
-        <p className="text-2xl">Open Components</p>
+    <div className="header">
+      <div>
+        <Link href="/">
+          <a className="flex gap-2.5 pl-2">
+            <Image src={Logo} alt="" width="22" height="30" />
+            <p className="text-2xl">Open Components</p>
+          </a>
+        </Link>
       </div>
       <div className="flex text-lg">
         <Link href="/">
-          <a className="px-3 py-2 rounded-md hover:bg-[#FDD835] active:bg-yellow-400">
-            About
-          </a>
+          <a className="btn-yellow">About</a>
         </Link>
-        <div className="flex gap-2 px-3 py-2 rounded-md active:bg-yellow-400 hover:bg-[#FDD835]">
-          <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="relative">
-            <a className="">Projects</a>
-            <div
-              className={`absolute bg-slate-100 mt-2 p-3 flex flex-col shadow-md rounded-md ${
-                isDropdownOpen ? '' : 'hidden'
-              }`}
-            >
+        <div className="flex gap-2 btn-yellow group">
+          <div className="relative">
+            <a className="cursor-pointer">Projects</a>
+            <div className="dropdown">
               <Link href="/">
-                <a className="px-3 py-2 rounded-md hover:bg-[#FDD835] active:bg-yellow-400">
-                  Apps
-                </a>
+                <a className="btn-yellow">Apps</a>
               </Link>
               <Link href="/">
-                <a className="px-3 py-2 rounded-md hover:bg-[#FDD835] active:bg-yellow-400">
-                  Components
-                </a>
+                <a className="btn-yellow">Components</a>
               </Link>
             </div>
-          </button>
+          </div>
           <Image
             src={Chevron}
             alt=""
             width="6"
             height="4"
-            className={`${isDropdownOpen && 'rotate-180'}`}
+            className="group-hover:rotate-180"
           />
         </div>
         <Link href="/">
-          <a className="px-3 py-2 rounded-md hover:bg-[#FDD835] active:bg-yellow-400">
-            Get Involved
-          </a>
+          <a className="btn-yellow">Get Involved</a>
         </Link>
       </div>
     </div>
