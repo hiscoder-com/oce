@@ -1,7 +1,13 @@
 module.exports = {
   content: ['./pages/**/*.js', './components/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        yellow: {
+          350: '#FDD835',
+        },
+      },
+    },
   },
   plugins: [],
 }
