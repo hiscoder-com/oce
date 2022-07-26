@@ -3,6 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        yellow: {
+          350: '#FDD835',
+        },
         blue: {
           75: '#F7F9FA',
         },
