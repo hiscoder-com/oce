@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+
 import Carousel from 'react-simply-carousel'
+
 import SliderAppCard from '../components/SliderAppCard'
+
 function SliderApp({ apps, forwardBtnProps, backwardBtnProps }) {
   const [activeSlide, setActiveSlide] = useState(0)
 
@@ -28,7 +31,6 @@ function SliderApp({ apps, forwardBtnProps, backwardBtnProps }) {
       }
       backwardBtnProps={
         backwardBtnProps ?? {
-          show: true,
           children: '<',
           style: {
             border: 0,
