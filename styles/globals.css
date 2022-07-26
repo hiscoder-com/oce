@@ -13,15 +13,15 @@
 }
 
 .btn-yellow {
-	@apply btn hover: bg-yellow-350 active:bg-yellow-400
+	@apply btn hover:bg-yellow-350 active:bg-yellow-400
 }
 
 .btn-transparent {
-	@apply btn hover: text-yellow-350 active:text-yellow-400
+	@apply btn hover:text-yellow-350 active:text-yellow-400
 }
 
 .footer {
-	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default .
+	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
 }
 
 .line-clamp-3 {
