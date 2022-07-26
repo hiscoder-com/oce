@@ -16,24 +16,9 @@ function Header() {
         </Link>
       </div>
       <div className="flex">
-        <div className="flex gap-2 btn group">
-          <div className="relative">
-            <a className="cursor-pointer">Get started</a>
-            <div className="dropdown">
-              <Link href="/">
-                <a className="btn-gray">Tutorials</a>
-              </Link>
-            </div>
-          </div>
-          <Image
-            src={Chevron}
-            alt=""
-            width="6"
-            height="4"
-            className="group-hover:rotate-180"
-          />
-        </div>
-
+        <Link href="/">
+          <a className="btn-gray">Get started</a>
+        </Link>
         <div className="flex gap-2 btn group">
           <div className="relative">
             <a className="cursor-pointer">Learning</a>
