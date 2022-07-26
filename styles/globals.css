@@ -8,18 +8,26 @@
 	}
 }
 
-.btn{
+.btn {
 	@apply px-3 py-2 rounded-md
 }
 
 .btn-yellow {
-	@apply btn hover:bg-yellow-350 active:bg-yellow-400
+	@apply btn hover: bg-yellow-350 active:bg-yellow-400
 }
 
 .btn-transparent {
-	@apply btn hover:text-yellow-350 active:text-yellow-400
+	@apply btn hover: text-yellow-350 active:text-yellow-400
 }
 
 .footer {
-	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
+	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default .
+}
+
+.line-clamp-3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
