@@ -15,7 +15,7 @@ function Footer() {
           </a>
         </Link>
       </div>
-      <div className="">2022 © unfolding word</div>
+      <div className="">2022 © unfoldingWord</div>
       <div className="flex ">
         <Link href="/">
           <a className="btn-transparent">About</a>
