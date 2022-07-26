@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-export function Repository(repo) {
+export function ComponentCard(repo) {
   return (
     <div
       className="border rounded p-2 border-green-300 w-1/3 inline-block"
@@ -41,23 +41,23 @@ export function Repository(repo) {
 
 function ComponentsList() {
   const [totalCount, setTotalCount] = useState()
-  const [repos, setRepos] = useState([])
+  const [components, setComponents] = useState([])
 
   useEffect(() => {
-    fetch('/api/repos')
+    fetch('/api/components')
       .then((result) => result.json())
       .then((res) => {
         setTotalCount(res.totalCount)
-        setRepos(res.nodes)
+        setComponents(res.nodes)
       })
   }, [])
 
-  const repositoriesComponents = repos?.map(Repository)
+  const componentCards = components?.map(ComponentCard)
 
   return (
     <div>
       <div>totalCount: {totalCount}</div>
-      {repositoriesComponents}
+      {componentCards}
     </div>
   )
 }
