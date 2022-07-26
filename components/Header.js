@@ -15,7 +15,7 @@ function Header() {
           </a>
         </Link>
       </div>
-      <div className="flex text-lg">
+      <div className="flex">
         <Link href="/">
           <a className="btn-yellow">About</a>
         </Link>
