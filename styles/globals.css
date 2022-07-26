@@ -15,10 +15,6 @@
 	@apply px-3 py-2 rounded-md hover:text-yellow-350 active:text-yellow-500
 }
 
-.dropdown{
-	@apply absolute mt-2 p-3 flex-col shadow-md bg-white text-black rounded-md hidden group-hover:flex hover:flex
-}
-
 .footer{
 		@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
 }
