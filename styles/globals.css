@@ -9,11 +9,11 @@
 }
 
 .btn {
-	@apply px-3 py-2 rounded-md
+	@apply px-3 py-2 whitespace-nowrap rounded-md
 }
 
-.btn-yellow {
-	@apply btn hover:bg-yellow-350 active:bg-yellow-400
+.btn-gray {
+	@apply btn hover:text-gray-600 active:text-gray-400
 }
 
 .btn-transparent {
@@ -24,6 +24,13 @@
 	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
 }
 
+.dropdown {
+	@apply absolute flex-col mt-2 p-3 shadow-md rounded-md hidden group-hover:flex
+}
+
+.header {
+	@apply flex items-center justify-between py-7 px-28 text-lg cursor-default
+}
 .line-clamp-3 {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
