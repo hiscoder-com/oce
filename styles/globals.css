@@ -7,3 +7,15 @@
     font-family: Ubuntu, system-ui, sans-serif;
   }
 }
+
+.btn-yellow{
+	@apply px-3 py-2 rounded-md hover:bg-yellow-350 active:bg-yellow-400
+}
+
+.dropdown{
+	@apply absolute mt-2 p-3 flex-col shadow-md rounded-md hidden group-hover:flex hover:flex
+}
+
+.header{
+		@apply flex items-center justify-between py-7 cursor-default
+}
