@@ -31,10 +31,18 @@
 .header {
 	@apply flex items-center justify-between py-7 px-28 text-lg cursor-default
 }
-.line-clamp-3 {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
+.line-clamp {
+	display: -webkit-box;	
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.line-clamp-1 {
+	@apply line-clamp;
+	-webkit-line-clamp: 1;
+}
+.line-clamp-3 {
+	@apply line-clamp;
+	-webkit-line-clamp: 3;
+}
+
