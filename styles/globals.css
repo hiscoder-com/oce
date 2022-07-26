@@ -11,11 +11,18 @@
 .btn-yellow{
 	@apply px-3 py-2 rounded-md hover:bg-yellow-350 active:bg-yellow-400
 }
+.btn-transparent{
+	@apply px-3 py-2 rounded-md hover:text-yellow-350 active:text-yellow-500
+}
 
 .dropdown{
-	@apply absolute mt-2 p-3 flex-col shadow-md rounded-md hidden group-hover:flex hover:flex
+	@apply absolute mt-2 p-3 flex-col shadow-md bg-white text-black rounded-md hidden group-hover:flex hover:flex
 }
 
 .header{
-		@apply flex items-center justify-between py-7 cursor-default
+		@apply flex items-center justify-between py-7 px-28 cursor-default
+}
+
+.footer{
+		@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
 }

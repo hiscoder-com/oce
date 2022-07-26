@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Chevron from '../public/chevron.svg'
-import Logo from '../public/logo.svg'
+import Chevron from '../public/chevron-white.svg'
+import Logo from '../public/logo-grey.svg'
 
 function Footer() {
   return (
-    <div className="header">
+    <div className="footer">
       <div>
         <Link href="/">
           <a className="flex gap-2.5 pl-2">
@@ -15,14 +15,15 @@ function Footer() {
           </a>
         </Link>
       </div>
-      <div className="flex text-lg">
+      <div className="">2022 © unfolding word</div>
+      <div className="flex ">
         <Link href="/">
-          <a className="btn-yellow">About</a>
+          <a className="btn-transparent">About</a>
         </Link>
-        <div className="flex gap-2 btn-yellow group">
+        <div className="flex btn-transparent group">
           <div className="relative">
-            <a className="cursor-pointer">Projects</a>
-            <div className="dropdown">
+            <a className="cursor-pointer btn-transparent">Projects</a>
+            <div className="dropdown -top-32">
               <Link href="/">
                 <a className="btn-yellow">Apps</a>
               </Link>
@@ -40,7 +41,7 @@ function Footer() {
           />
         </div>
         <Link href="/">
-          <a className="btn-yellow">Get Involved</a>
+          <a className="btn-transparent">Get Involved</a>
         </Link>
       </div>
     </div>
