@@ -3,18 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: Ubuntu, system-ui, sans-serif;
-  }
+	html {
+		font-family: Ubuntu, system-ui, sans-serif;
+	}
 }
 
-.btn-yellow{
-	@apply px-3 py-2 rounded-md hover:bg-yellow-350 active:bg-yellow-400
-}
-.btn-transparent{
-	@apply px-3 py-2 rounded-md hover:text-yellow-350 active:text-yellow-500
+.btn{
+	@apply px-3 py-2 rounded-md
 }
 
-.footer{
-		@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
+.btn-yellow {
+	@apply btn hover:bg-yellow-350 active:bg-yellow-400
+}
+
+.btn-transparent {
+	@apply btn hover:text-yellow-350 active:text-yellow-400
+}
+
+.footer {
+	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
 }
