@@ -16,18 +16,12 @@ function Header() {
         </Link>
       </div>
       <div className="flex">
-        <Link href="/">
-          <a className="btn-yellow">Get started</a>
-        </Link>
-        <div className="flex gap-2 btn-yellow group">
+        <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer">Learning</a>
+            <a className="cursor-pointer">Get started</a>
             <div className="dropdown">
               <Link href="/">
-                <a className="btn-yellow">Apps</a>
-              </Link>
-              <Link href="/">
-                <a className="btn-yellow">Components</a>
+                <a className="btn-gray">Tutorials</a>
               </Link>
             </div>
           </div>
@@ -39,9 +33,47 @@ function Header() {
             className="group-hover:rotate-180"
           />
         </div>
-        <Link href="/">
-          <a className="btn-yellow">Get Involved</a>
-        </Link>
+
+        <div className="flex gap-2 btn group">
+          <div className="relative">
+            <a className="cursor-pointer">Learning</a>
+            <div className="dropdown">
+              <Link href="/">
+                <a className="btn-gray">White Paper</a>
+              </Link>
+              <Link href="/">
+                <a className="btn-gray">Infographic</a>
+              </Link>
+            </div>
+          </div>
+          <Image
+            src={Chevron}
+            alt=""
+            width="6"
+            height="4"
+            className="group-hover:rotate-180"
+          />
+        </div>
+        <div className="flex gap-2 btn group">
+          <div className="relative">
+            <a className="cursor-pointer">Explore</a>
+            <div className="dropdown">
+              <Link href="/">
+                <a className="btn-gray">Apps</a>
+              </Link>
+              <Link href="/">
+                <a className="btn-gray">Components</a>
+              </Link>
+            </div>
+          </div>
+          <Image
+            src={Chevron}
+            alt=""
+            width="6"
+            height="4"
+            className="group-hover:rotate-180"
+          />
+        </div>
       </div>
     </div>
   )
