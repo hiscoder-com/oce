@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import useComponents from '../hooks/useComponents'
+import ComponentCard from './ComponentCard'
 
-export function ComponentCard({ repo }) {
+export function ComponentCard2({ repo }) {
   return (
     <div
       className="border rounded p-2 border-green-300 w-1/3 inline-block"
@@ -98,7 +99,7 @@ function ComponentsList() {
       ) : (
         <>
           <div>Total Count: {total}</div>
-          {componentCards}
+          <div className="my-8 grid grid-cols-5 gap-8">{componentCards}</div>
           {pageInfo.hasNextPage ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>
           ) : (

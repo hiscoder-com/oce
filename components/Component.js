@@ -1,4 +1,5 @@
 import { Tab } from '@headlessui/react'
+import Contributors from './Contributors'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -32,7 +33,9 @@ function Component() {
               <Tab.Panel>Apps List</Tab.Panel>
             </Tab.Panels>
           </div>
-          <div className="w-1/3">Sidebar, not changed</div>
+          <div className="w-1/3">
+            <div>Sidebar</div> <Contributors />{' '}
+          </div>
         </div>
       </Tab.Group>
     </div>

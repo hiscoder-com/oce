@@ -1,6 +1,8 @@
 import Image from 'next/image'
 
-function Contributors({ contributors }) {
+import { contributors } from '../utils/helper'
+
+function Contributors() {
   return (
     <div className="flex flex-col gap-1.5 text-zinc-450">
       <div className="flex">
@@ -15,8 +17,8 @@ function Contributors({ contributors }) {
                   src={el.avatar_url}
                   alt={el.login}
                   title={el.login}
-                  width="48"
-                  height="48"
+                  width="42"
+                  height="42"
                 />
               </div>
             )

@@ -1,3 +1,5 @@
+import ComponentsList from '../components/ComponentsList'
+
 function componentsPage() {
   return (
     <div className="divide-y divide-dashed px-28">
@@ -18,15 +20,7 @@ function componentsPage() {
           <div>Search for components</div>
         </div>
         <div className="mt-24 font-bold text-3xl">Text Tree</div>
-        <div className="my-8 grid grid-cols-5 gap-8">
-          {[...Array(20).keys()].map((el) => {
-            return (
-              <div key={el} className="h-56 bg-blue-75">
-                {el + 1}
-              </div>
-            )
-          })}
-        </div>
+        <ComponentsList />
       </div>
     </div>
   )

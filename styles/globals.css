@@ -33,7 +33,7 @@
 }
 
 .header {
-  @apply flex items-center justify-between text-lg mb-4 font-bold
+  @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
 }
 .line-clamp {
   display: -webkit-box;
