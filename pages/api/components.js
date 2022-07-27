@@ -5,20 +5,42 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   headers: { Authorization: `bearer ${process.env.GITHUB_TOKEN}` },
 })
-
+// https://registry.npmjs.com/-/v1/search?text=keywords:translationCore&size=20&from=0
 export default async function handler(req, res) {
+  const {
+    from = false,
+    limit = 10,
+    order = 'updated',
+    direction = 'desc',
+    topics = [],
+  } = req.query
   try {
     const result = await client.query({
-      query: gql`
-        {
-          topic(name: "scripture-open-components") {
-            repositories(first: 10, orderBy: { field: UPDATED_AT, direction: DESC }) {
-              nodes {
+      query: gql`{
+        search(
+          first: ${parseInt(limit)}
+          after: ${from ? '"' + from + '"' : 'null'}
+          type: REPOSITORY
+          query: "topic:scripture-open-components ${topics.join(' ')} NOT app sort:${
+        order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
+      }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
+        ) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          total: repositoryCount
+          repos: edges {
+            repo: node {
+              ... on Repository {
                 name
                 nameWithOwner
                 description
                 latestRelease {
-                  createdAt
+                  publishedAt
+                  tag {
+                    name
+                  }
                   name
                 }
                 repositoryTopics(first: 5) {
@@ -40,13 +62,13 @@ export default async function handler(req, res) {
                   }
                 }
               }
-              totalCount
             }
           }
         }
-      `,
+      }
+`,
     })
-    res.status(200).json(result.data.topic.repositories)
+    res.status(200).json(result.data.search)
   } catch (error) {
     res.status(404).json(error)
   }
