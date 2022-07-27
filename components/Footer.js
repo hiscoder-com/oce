@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer">
       <div>
         <Link href="/">
-          <a className="flex items-center gap-2.5 pl-2">
+          <a className="flex items-center gap-5 pl-2">
             <Image src={Logo} alt="" width="34" height="47" />
             <p className="uppercase">Open Components</p>
           </a>
