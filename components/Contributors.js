@@ -1,27 +1,29 @@
-function Contributors() {
-  const contributors = [
-    {
-      login: 'foxprogs',
-      avatar_url: 'https://avatars.githubusercontent.com/u/30548361?v=4',
-      html_url: 'https://github.com/foxprogs',
-    },
-    {
-      login: 'Valyukhov',
-      avatar_url: 'https://avatars.githubusercontent.com/u/74174349?v=4',
-      html_url: 'https://github.com/Valyukhov',
-    },
-    {
-      login: 'Vorobushec',
-      avatar_url: 'https://avatars.githubusercontent.com/u/68908261?v=4',
-      html_url: 'https://github.com/Vorobushec',
-    },
-    {
-      login: 'Pavel064',
-      avatar_url: 'https://avatars.githubusercontent.com/u/60795829?v=4',
-      html_url: 'https://github.com/Pavel064',
-    },
-  ]
-  return <div>Contributors</div>
+import Image from 'next/image'
+
+function Contributors({ contributors }) {
+  return (
+    <div className="flex flex-col text-zinc-450">
+      <div className="flex">
+        <p>Contributors: {contributors.length}</p>
+      </div>
+      <div className="flex gap-1">
+        {contributors &&
+          contributors.map((el, key) => {
+            return (
+              <div key={key} className="contributor-avatar">
+                <Image
+                  src={el.avatar_url}
+                  alt={el.login}
+                  title={el.login}
+                  width="48"
+                  height="48"
+                />
+              </div>
+            )
+          })}
+      </div>
+    </div>
+  )
 }
 
 export default Contributors
