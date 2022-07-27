@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 function Contributors({ contributors }) {
   return (
-    <div className="flex flex-col text-zinc-450">
+    <div className="flex flex-col gap-1.5 text-zinc-450">
       <div className="flex">
         <p>Contributors: {contributors.length}</p>
       </div>
