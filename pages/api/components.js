@@ -12,8 +12,10 @@ export default async function handler(req, res) {
     limit = 10,
     order = 'updated',
     direction = 'desc',
-    topics = [],
+    'topics[]': _topics = [],
   } = req.query
+  const topics = Array.isArray(_topics) ? _topics : _topics.length ? [_topics] : []
+
   try {
     const result = await client.query({
       query: gql`{
