@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		font-family: Ubuntu, system-ui, sans-serif;
+	}
+}
+
+.btn {
+	@apply px-3 py-2 whitespace-nowrap rounded-md
+}
+
+.btn-gray {
+	@apply btn hover:text-gray-600 active:text-gray-400
+}
+
+.btn-transparent {
+	@apply btn hover:text-yellow-350 active:text-yellow-400
+}
+
+.contributor-avatar {
+	@apply overflow-hidden flex justify-center border-2 rounded-lg
+}
+
+.footer {
+	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
+}
+
+.dropdown {
+	@apply absolute flex-col mt-2 p-3 shadow-md rounded-md hidden group-hover:flex
+}
+
+.header {
+	@apply flex items-center justify-between py-7 px-28 text-lg cursor-default
+}
+.line-clamp {
+	display: -webkit-box;	
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.line-clamp-1 {
+	@apply line-clamp;
+	-webkit-line-clamp: 1;
+}
+.line-clamp-3 {
+	@apply line-clamp;
+	-webkit-line-clamp: 3;
+}
+
