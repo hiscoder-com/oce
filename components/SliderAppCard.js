@@ -19,8 +19,8 @@ function SliderAppCard({ app }) {
           <Image
             width="100%"
             height="100%"
-            alt="logo of app"
-            src={logo ?? '/logo_card_app.png'}
+            alt="logo"
+            src={logo ?? '/default-logo.png'}
             className="rounded-lg"
           />
         </div>
