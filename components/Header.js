@@ -9,19 +9,16 @@ function Header() {
     <div className="header">
       <div>
         <Link href="/">
-          <a className="flex gap-2.5 pl-2">
-            <Image src={Logo} alt="" width="22" height="30" />
-            <p className="text-2xl">Open Components</p>
+          <a className="flex items-center gap-5 pl-2">
+            <Image src={Logo} alt="logo" width="34" height="47" />
+            <p className="uppercase">Open Components</p>
           </a>
         </Link>
       </div>
       <div className="flex">
-        <Link href="/">
-          <a className="btn-gray">Get started</a>
-        </Link>
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer">Learning</a>
+            <a className="cursor-pointer hover:text-gray-600">About</a>
             <div className="dropdown">
               <Link href="/">
                 <a className="btn-gray">White Paper</a>
@@ -33,7 +30,7 @@ function Header() {
           </div>
           <Image
             src={Chevron}
-            alt=""
+            alt="chevron"
             width="6"
             height="4"
             className="group-hover:rotate-180"
@@ -41,7 +38,7 @@ function Header() {
         </div>
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer">Explore</a>
+            <a className="cursor-pointer hover:text-gray-600">Explore</a>
             <div className="dropdown">
               <Link href="/">
                 <a className="btn-gray">Apps</a>
@@ -53,12 +50,18 @@ function Header() {
           </div>
           <Image
             src={Chevron}
-            alt=""
+            alt="chevron"
             width="6"
             height="4"
             className="group-hover:rotate-180"
           />
         </div>
+        <Link href="/">
+          <a className="btn-gray">Get started</a>
+        </Link>
+        <Link href="/">
+          <a className="btn-gray">FAQ</a>
+        </Link>
       </div>
     </div>
   )

@@ -25,15 +25,15 @@
 }
 
 .footer {
-	@apply flex items-center justify-between py-7 px-28 text-lg bg-black text-white cursor-default
+	@apply flex items-center justify-between py-7 px-28 text-lg font-semibold bg-black text-white cursor-default
 }
 
 .dropdown {
-	@apply absolute flex-col mt-2 p-3 shadow-md rounded-md hidden group-hover:flex
+	@apply absolute flex-col mt-2 p-3 font-normal shadow-md rounded-md hidden group-hover:flex
 }
 
 .header {
-	@apply flex items-center justify-between py-7 px-28 text-lg cursor-default
+	@apply flex items-center justify-between py-7 px-28 text-lg font-bold cursor-default
 }
 .line-clamp {
 	display: -webkit-box;	
