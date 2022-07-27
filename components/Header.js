@@ -6,10 +6,10 @@ import Logo from '../public/logo.svg'
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header container mx-auto px-2">
       <div>
         <Link href="/">
-          <a className="flex gap-2.5 pl-2">
+          <a className="flex gap-2.5">
             <Image src={Logo} alt="" width="22" height="30" />
             <p className="text-2xl">Open Components</p>
           </a>
