@@ -11,7 +11,7 @@ function ComponentCard() {
         Library of components for convenient viewing of various biblical events
       </div>
       <div className="pr-6 flex justify-between">
-        <div className="rounded-full h-5 w-5">
+        <div className="h-5 w-5">
           <Image
             width="100%"
             height="100%"
