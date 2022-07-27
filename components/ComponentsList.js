@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+
 import { useEffect, useState } from 'react'
+import useComponents from '../hooks/useComponents'
 
 export function ComponentCard({ repo }) {
-  console.log(repo)
   return (
     <div
       className="border rounded p-2 border-green-300 w-1/3 inline-block"
@@ -44,23 +46,48 @@ export function ComponentCard({ repo }) {
 }
 
 function ComponentsList() {
+  const router = useRouter()
+  const {
+    isReady,
+    query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
+  } = router
   const [total, setTotal] = useState()
   const [components, setComponents] = useState([])
   const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null })
-
+  const { data, isLoading, isError } = useComponents(
+    isReady && {
+      limit,
+      order,
+      direction,
+      topics: [],
+      from: null,
+    }
+  )
+  console.log({ isLoading, isError, data })
   useEffect(() => {
-    fetch('/api/components')
-      .then((result) => result.json())
-      .then((res) => {
-        setTotal(res.total)
-        setComponents(res.repos)
-        setPageInfo(res.pageInfo)
-      })
-      .catch((err) => console.log(err))
-  }, [])
+    if (!isLoading && !isError) {
+      setTotal(data.total)
+      setComponents(data.repos)
+      setPageInfo(data.pageInfo)
+    }
+  }, [data, isError, isLoading])
   const handlerLoadMore = () => {
-    fetch(`/api/components?from=${pageInfo.endCursor}`)
-      .then((result) => result.json())
+    const filters = new URLSearchParams({
+      limit,
+      order,
+      direction,
+      topics,
+      from: pageInfo.endCursor,
+    })
+    fetch(`/api/components?${filters.toString()}`)
+      .then((result) => {
+        console.log('result2', result)
+        if (result.status === 200) {
+          return result.json()
+        } else {
+          throw result
+        }
+      })
       .then((res) => {
         setComponents((prev) => prev.concat(res.repos))
         setPageInfo(res.pageInfo)
@@ -72,12 +99,20 @@ function ComponentsList() {
 
   return (
     <div>
-      <div>Total Count: {total}</div>
-      {componentCards}
-      {pageInfo.hasNextPage ? (
-        <div onClick={handlerLoadMore}>LOAD MORE</div>
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : isError ? (
+        <div>Error</div>
       ) : (
-        <div>END</div>
+        <>
+          <div>Total Count: {total}</div>
+          {componentCards}
+          {pageInfo.hasNextPage ? (
+            <div onClick={handlerLoadMore}>LOAD MORE</div>
+          ) : (
+            <div>END</div>
+          )}
+        </>
       )}
     </div>
   )
