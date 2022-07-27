@@ -52,3 +52,17 @@
   @apply line-clamp;
   -webkit-line-clamp: 3;
 }
+
+.tab {
+  @apply py-2 px-4 font-bold relative outline-none
+}
+
+.tab.active:before {
+  content : "";
+  position: absolute;
+  left    : calc(20% + 0.5rem);
+  bottom  : -2px;
+  height  : 3px;
+  right   : calc(20% + 0.5rem);
+  border-bottom: 3px solid black;
+}
