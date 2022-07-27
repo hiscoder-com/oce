@@ -3,7 +3,7 @@ function Labels({ isFull, labels }) {
   return (
     <>
       {
-        <div className="flex flex-wrap gap-2">
+        <div className={`${isFull && 'flex flex-wrap'} truncate gap-2`}>
           {filterLabels.map((el) => {
             return <Label isFull={isFull} key={el} label={el} />
           })}
@@ -44,8 +44,8 @@ function Label({ isFull, label }) {
   return (
     <div
       className={`${labelColor} uppercase ${
-        !isFull ? 'text-xxs p-1' : 'text-base p-2'
-      } font-bold w-fit rounded-lg self-center`}
+        !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-base p-2'
+      } font-bold w-fit rounded-lg self-center `}
     >
       {label}
     </div>
