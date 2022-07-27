@@ -13,7 +13,9 @@ function SidePanel() {
       <div className="flex items-center justify-between h-8 mb-4 px-3 rounded bg-blue-75 text-base font-semibold">
         <Link href={'tt-timeline-poc.netlify.app'}>
           <a target="_blank">
-            <div className="link-in-sidePanel">tt-timeline-poc.netlify.app</div>
+            <div className="link-in-sidePanel hover:underline">
+              tt-timeline-poc.netlify.app
+            </div>
           </a>
         </Link>
         <Link href={'tt-timeline-poc.netlify.app'}>
@@ -34,7 +36,7 @@ function SidePanel() {
       <div className="flex items-center justify-between h-8 mb-4 px-3 rounded bg-blue-75 text-base font-semibold">
         <Link href={'https://github.com/texttree/timeline-poc'}>
           <a target="_blank">
-            <div className="link-in-sidePanel">
+            <div className="link-in-sidePanel hover:underline">
               https://github.com/texttree/timeline-poc
             </div>
           </a>
