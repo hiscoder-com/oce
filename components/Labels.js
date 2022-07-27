@@ -1,13 +1,11 @@
 function Labels({ isFull, labels }) {
-  const filterLabels = isFull ? labels : labels.slice(0, 3)
   return (
     <>
       {
         <div className={`${isFull && 'flex flex-wrap'} truncate gap-2`}>
-          {filterLabels.map((el) => {
-            return <Label isFull={isFull} key={el} label={el} />
+          {labels.map((el, index) => {
+            return <Label isFull={isFull} key={index} label={el} />
           })}
-          {labels.length > 3 && !isFull && <div>...</div>}
         </div>
       }
     </>
@@ -45,7 +43,7 @@ function Label({ isFull, label }) {
     <div
       className={`${labelColor} uppercase ${
         !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-base p-2'
-      } font-bold w-fit rounded-lg self-center `}
+      } font-bold w-fit rounded-lg self-center`}
     >
       {label}
     </div>
