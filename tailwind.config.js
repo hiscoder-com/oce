@@ -9,6 +9,9 @@ module.exports = {
         blue: {
           75: '#F7F9FA',
         },
+        zinc: {
+          450: '#828282',
+        },
       },
     },
   },
