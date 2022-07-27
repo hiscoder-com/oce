@@ -1,4 +1,5 @@
 import useSWR from 'swr'
+
 import { fetcher } from '../utils/fetcher'
 
 function useComponents(params) {
