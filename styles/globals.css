@@ -49,4 +49,7 @@
 	@apply line-clamp;
 	-webkit-line-clamp: 3;
 }
+.link-in-sidePanel:hover{
+	text-decoration: underline;
+}
 
