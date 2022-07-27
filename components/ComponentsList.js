@@ -52,6 +52,7 @@ function ComponentsList() {
     query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
   } = router
   const [total, setTotal] = useState()
+  const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
   const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null })
   const { data, isLoading, isError } = useComponents(
@@ -60,46 +61,36 @@ function ComponentsList() {
       order,
       direction,
       topics: [],
-      from: null,
+      from,
     }
   )
-  console.log({ isLoading, isError, data })
+
   useEffect(() => {
     if (!isLoading && !isError) {
-      setTotal(data.total)
-      setComponents(data.repos)
-      setPageInfo(data.pageInfo)
-    }
-  }, [data, isError, isLoading])
-  const handlerLoadMore = () => {
-    const filters = new URLSearchParams({
-      limit,
-      order,
-      direction,
-      topics,
-      from: pageInfo.endCursor,
-    })
-    fetch(`/api/components?${filters.toString()}`)
-      .then((result) => {
-        console.log('result2', result)
-        if (result.status === 200) {
-          return result.json()
-        } else {
-          throw result
+      setTotal(() => {
+        if (from === null) {
+          return data.total
         }
       })
-      .then((res) => {
-        setComponents((prev) => prev.concat(res.repos))
-        setPageInfo(res.pageInfo)
+      setComponents((prev) => {
+        if (from === null) {
+          return data.repos
+        } else {
+          return prev.concat(data.repos)
+        }
       })
-      .catch((err) => console.log(err))
+      setPageInfo(data.pageInfo)
+    }
+  }, [data, from, isError, isLoading])
+  const handlerLoadMore = () => {
+    setFrom(pageInfo.endCursor)
   }
 
   const componentCards = components?.map(ComponentCard)
 
   return (
     <div>
-      {isLoading ? (
+      {from === null && isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
         <div>Error</div>
