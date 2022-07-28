@@ -1,17 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 import Contributors from './Contributors'
-import useReleases from '../hooks/useReleases'
 
-function SidePanel({ license, homepage, repository, owner }) {
-  const {
-    query: { address },
-    isReady,
-  } = useRouter()
-  const { data: release } = useReleases(isReady && address)
-  console.log(release)
+function SidePanel({ license, homepage, repository, owner, release }) {
   return (
     <div className="flex flex-col justify-between w-full">
       <div className="text-xs text-zinc-450">License</div>
@@ -21,14 +13,14 @@ function SidePanel({ license, homepage, repository, owner }) {
       <div className="text-xs text-zinc-450">Homepage</div>
 
       <div className="flex items-center justify-between h-8 mb-4 px-3 rounded bg-blue-75 text-base font-semibold">
-        <Link href={homepage}>
+        <Link href={homepage ?? ''}>
           <a target="_blank">
             <div className="link-in-sidePanel line-clamp-1 hover:underline">
               {homepage}
             </div>
           </a>
         </Link>
-        <Link href={homepage}>
+        <Link href={homepage ?? ''}>
           <a target="_blank">
             <div className="link-svg h-5 w-5">
               <Image
@@ -44,14 +36,14 @@ function SidePanel({ license, homepage, repository, owner }) {
       </div>
       <div className="text-xs text-zinc-450">Repository</div>
       <div className="flex items-center justify-between h-8 mb-4 px-3 rounded bg-blue-75 text-base font-semibold">
-        <Link href={repository}>
+        <Link href={repository ?? ''}>
           <a target="_blank">
             <div className="link-in-sidePanel line-clamp-1 hover:underline">
               {repository}
             </div>
           </a>
         </Link>
-        <Link href={repository}>
+        <Link href={repository ?? ''}>
           <a target="_blank">
             <div className="h-5 w-5">
               <Image
@@ -70,15 +62,15 @@ function SidePanel({ license, homepage, repository, owner }) {
           <div className="w-[45%]">
             <div className="text-xs text-zinc-450">Release</div>
             <div className="flex items-center h-8 mb-4 pl-3 rounded bg-blue-75 text-base font-semibold">
-              {release?.published_at
-                ? new Date(release?.published_at).toLocaleDateString('en-US')
+              {release?.publishedAt
+                ? new Date(release?.publishedAt).toLocaleDateString('en-US')
                 : ''}
             </div>
           </div>
           <div className="w-[45%]">
             <div className="text-xs text-zinc-450">Version</div>
             <div className="flex items-center h-8 mb-4 pl-3 rounded bg-blue-75 text-base font-semibold">
-              {release?.tag_name}
+              {release?.tagName}
             </div>
           </div>
         </div>

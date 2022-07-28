@@ -23,14 +23,14 @@ function Component({ address }) {
           <h1 className="text-6xl font-bold">{repo.name}</h1>
           <p className="my-4">{repo.description}</p>
           <div className="text-gray-500">
-            {repo?.language} • Updated {timeSince(repo.updated_at)} ago
+            {repo?.language?.name} • Updated {timeSince(repo.pushedAt)} ago
           </div>
           <div className="my-8">
             <Labels
               isFull={true}
-              labels={repo.topics.filter(
-                (el) => !['scripture-open-components'].includes(el)
-              )}
+              labels={repo?.repositoryTopics?.nodes
+                ?.filter((el) => !['scripture-open-components'].includes(el.topic.name))
+                .map((el) => el.topic.name)}
             />
           </div>
           <Tab.Group>
@@ -55,10 +55,11 @@ function Component({ address }) {
               </div>
               <div className="w-1/3">
                 <SidePanel
-                  license={repo?.license.name}
-                  homepage={repo?.homepage}
-                  repository={repo.html_url}
-                  owner={{ url: repo.owner?.avatar_url, name: repo.owner.login }}
+                  license={repo?.licenseInfo?.name}
+                  homepage={repo?.homepageUrl}
+                  repository={repo?.url}
+                  owner={{ url: repo.owner?.avatarUrl, name: repo.owner?.login }}
+                  release={repo?.latestRelease}
                 />
               </div>
             </div>

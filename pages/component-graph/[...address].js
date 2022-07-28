@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import ComponentGraph from '../../components/ComponentGraph'
+import Component from '../../components/Component'
 
-function ComponentGraphPage() {
+function ComponentPage() {
   const {
     isReady,
     query: { address },
   } = useRouter()
-  return <>{isReady ? <ComponentGraph address={address.join('/')} /> : <>Loading</>}</>
+  return <>{isReady ? <Component address={address.join('/')} /> : <>Loading</>}</>
 }
 
-export default ComponentGraphPage
+export default ComponentPage
