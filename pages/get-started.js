@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 import editor_r from '../public/editor-reverse.svg'
 import window from '../public/window.svg'
-import icons from '../public/icons.svg'
+import search from '../public/search.svg'
 import editor from '../public/editor.svg'
 import search2 from '../public/search2.svg'
-// import editor_r2 from '../public/editor_r2.svg'
+import editor2 from '../public/editor2.svg'
 
 function getStarted() {
   return (
@@ -53,7 +53,7 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={icons} alt="logo" width="200" height="200" />
+          <Image src={search2} alt="logo" width="200" height="200" />
         </div>
         <div className="flex flex-col gap-8 text-2xl">
           <div className="phase-card-title">Phase 2: Explore the ecosystem</div>
@@ -73,7 +73,7 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={editor} alt="logo" width="200" height="200" />
+          <Image src={editor2} alt="logo" width="200" height="200" />
         </div>
         <div className="flex flex-col gap-8 text-2xl">
           <div className="phase-card-title">
@@ -91,7 +91,7 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={search2} alt="logo" width="200" height="200" />
+          <Image src={search} alt="logo" width="200" height="200" />
         </div>
         <div className="flex flex-col gap-8 text-2xl">
           <div className="phase-card-title">
