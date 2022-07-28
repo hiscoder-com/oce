@@ -20,3 +20,25 @@ export const contributors = [
     html_url: 'https://github.com/Pavel064',
   },
 ]
+
+export const apps = [
+  {
+    html_url: 'https://github.com/texttree/bsa',
+    name: 'Open Bible Text',
+    description: 'Bible Study App',
+    avatar_url: 'https://avatars.githubusercontent.com/u/77689766?v=4',
+  },
+  {
+    html_url: 'https://github.com/texttree/v-cana',
+    name: 'V-cana',
+    description:
+      'A tool to translate the Bible and Bible content into your language in the easiest, most accessible and fastest way',
+    avatar_url: 'https://avatars.githubusercontent.com/u/77689766?v=4',
+  },
+  {
+    html_url: 'https://github.com/unfoldingWord-dev/Autographa',
+    name: 'Autographa',
+    description: 'A Bible Translator for Everyone',
+    avatar_url: 'https://avatars.githubusercontent.com/u/11397506?v=4',
+  },
+]
