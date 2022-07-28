@@ -1,8 +1,16 @@
+import { useState, useEffect } from 'react'
+
 import { Tab } from '@headlessui/react'
-import useComponent from '../hooks/useComponent'
-import { timeSince } from '../utils/helper'
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+
 import Labels from './Labels'
 import SidePanel from './SidePanel'
+import useComponent from '../hooks/useComponent'
+
+import { timeSince } from '../utils/helper'
+
+import 'github-markdown-css/github-markdown-light.css'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -11,6 +19,15 @@ function classNames(...classes) {
 const tabs = ['Readme', 'Apps']
 
 function Component({ address }) {
+  const [log, setLog] = useState()
+
+  useEffect(() => {
+    fetch(`https://raw.githubusercontent.com/${address}/master/README.md`)
+      .then((response) => response.text())
+      .then((text) => {
+        setLog({ text: text })
+      })
+  }, [address])
   const { data: repo, isLoading, isError } = useComponent(address)
   return (
     <div className="mt-12">
@@ -21,11 +38,11 @@ function Component({ address }) {
       ) : (
         <>
           <h1 className="text-6xl font-bold">{repo.name}</h1>
-          <p className="my-4">{repo.description}</p>
+          <p className="my-5">{repo.description}</p>
           <div className="text-gray-500">
             {repo?.language?.name} • Updated {timeSince(repo.pushedAt)} ago
           </div>
-          <div className="my-8">
+          <div className="my-10">
             <Labels
               isFull={true}
               labels={repo?.repositoryTopics?.nodes
@@ -49,7 +66,14 @@ function Component({ address }) {
             <div className="flex flex-row">
               <div className="w-2/3">
                 <Tab.Panels className="">
-                  <Tab.Panel>Readme Content</Tab.Panel>
+                  <Tab.Panel>
+                    <ReactMarkdown
+                      rehypePlugins={[rehypeRaw]}
+                      className={'markdown-body'}
+                    >
+                      {log ? log.text : 'Version of application'}
+                    </ReactMarkdown>
+                  </Tab.Panel>
                   <Tab.Panel>Apps List</Tab.Panel>
                 </Tab.Panels>
               </div>

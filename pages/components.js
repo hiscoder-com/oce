@@ -5,7 +5,7 @@ import ComponentsList from '../components/ComponentsList'
 function ComponentsPage() {
   const [total, setTotal] = useState()
   return (
-    <div className="divide-y divide-dashed px-28">
+    <div className="divide-y divide-dashed px-2 md:px-5 lg:px-12 2xl:px-28">
       <div className="mt-40 text-center pb-14">
         <div className="text-6xl font-bold">Components</div>
         <div className="mt-5">

@@ -58,7 +58,9 @@ function ComponentsList({ setTotal }) {
         <div>Error</div>
       ) : (
         <>
-          <div className="my-8 grid grid-cols-5 gap-8">{componentCards}</div>
+          <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 xl:grid-cols-4 xl:gap-5 2xl:grid-cols-5 2xl:gap-8">
+            {componentCards}
+          </div>
           {pageInfo.hasNextPage ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>
           ) : (
