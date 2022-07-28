@@ -50,7 +50,6 @@ function ComponentsListNpm({ setTotal }) {
   const handlerLoadMore = () => {
     setFrom((prev) => parseInt(prev) + parseInt(limit))
   }
-  console.log(parseInt(from), parseInt(limit), parseInt(totalRepos))
   const componentCards = components?.map(ComponentCardNpm)
 
   return (

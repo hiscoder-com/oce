@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Labels from './Labels'
+
 function ComponentCard({ repo }) {
   return (
     <div
@@ -13,7 +15,12 @@ function ComponentCard({ repo }) {
             {repo.name}
           </a>
         </Link>
-        <div className="line-clamp-1">Component of labels</div>
+        <Labels
+          isFull={false}
+          labels={repo.repositoryTopics?.nodes
+            .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
+            .map((el) => el.topic.name)}
+        />
       </div>
       <div className="pr-2 text-gray-500 text-sm line-clamp-3">{repo.description}</div>
       <div className="pr-6 flex justify-between">

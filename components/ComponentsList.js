@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react'
 
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import useComponents from '../hooks/useComponents'
 import ComponentCard from './ComponentCard'
 
-function ComponentsList() {
+function ComponentsList({ setTotal }) {
   const router = useRouter()
   const {
     isReady,
     query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
   } = router
-  const [total, setTotal] = useState()
   const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
   const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null })
@@ -28,9 +26,11 @@ function ComponentsList() {
 
   useEffect(() => {
     if (!isLoading && !isError) {
-      setTotal(() => {
+      setTotal((prev) => {
         if (from === null) {
           return data.total
+        } else {
+          return prev
         }
       })
       setComponents((prev) => {
@@ -42,7 +42,8 @@ function ComponentsList() {
       })
       setPageInfo(data.pageInfo)
     }
-  }, [data, from, isError, isLoading])
+  }, [data, from, isError, isLoading, setTotal])
+
   const handlerLoadMore = () => {
     setFrom(pageInfo.endCursor)
   }
@@ -57,7 +58,6 @@ function ComponentsList() {
         <div>Error</div>
       ) : (
         <>
-          <div>Total Count: {total}</div>
           <div className="my-8 grid grid-cols-5 gap-8">{componentCards}</div>
           {pageInfo.hasNextPage ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>

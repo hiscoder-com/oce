@@ -21,7 +21,7 @@
 }
 
 .contributor-avatar {
-  @apply overflow-hidden flex justify-center border-2 rounded-lg
+  @apply overflow-hidden border inline-flex m-0.5 rounded-lg
 }
 
 .footer {

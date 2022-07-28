@@ -3,7 +3,7 @@ function Labels({ isFull, labels }) {
     <>
       {
         <div className={`${isFull && 'flex flex-wrap'} truncate gap-2`}>
-          {labels.map((el, index) => {
+          {labels?.map((el, index) => {
             return <Label isFull={isFull} key={index} label={el} />
           })}
         </div>

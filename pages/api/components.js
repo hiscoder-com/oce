@@ -5,7 +5,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   headers: { Authorization: `bearer ${process.env.GITHUB_TOKEN}` },
 })
-// https://registry.npmjs.com/-/v1/search?text=keywords:translationCore&size=20&from=0
+
 export default async function handler(req, res) {
   const {
     from = false,

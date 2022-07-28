@@ -8,7 +8,7 @@ function ComponentsPage() {
       <div className="mt-40 text-center pb-14">
         <div className="text-6xl font-bold">Components</div>
         <div className="mt-5">
-          <div className="inline-block">Repozitories: {total}</div>
+          <div className="inline-block">Repositories: {total}</div>
         </div>
       </div>
       <div className="pt-12">
