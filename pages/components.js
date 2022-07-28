@@ -1,3 +1,6 @@
+import Filter from '../components/Filter'
+import ComponentsList from '../components/ComponentsList'
+
 function componentsPage() {
   return (
     <div className="divide-y divide-dashed px-28">
@@ -11,21 +14,21 @@ function componentsPage() {
       <div className="pt-12">
         <div className="flex justify-between">
           <div className="flex justify-between">
-            <div className="px-2">Labels </div>
-            <div className="px-2">Size </div>
-            <div className="px-2">Language </div>
+            <div className="px-2 w-40 overflow-hidden">
+              <Filter type="topics" />
+            </div>
+            <div className="px-2 w-40">
+              <Filter type="direction" />
+            </div>
+            <div className="px-2 w-40">
+              <Filter type="order" />
+            </div>
           </div>
-          <div>Search for components</div>
+          <Filter type="query" />
         </div>
         <div className="mt-24 font-bold text-3xl">Text Tree</div>
         <div className="my-8 grid grid-cols-5 gap-8">
-          {[...Array(20).keys()].map((el) => {
-            return (
-              <div key={el} className="h-56 bg-blue-75">
-                {el + 1}
-              </div>
-            )
-          })}
+          <ComponentsList />
         </div>
       </div>
     </div>
