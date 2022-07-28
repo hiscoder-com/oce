@@ -3,10 +3,10 @@ import Footer from './Footer'
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="">
       <Header />
-      <main>{children}</main>
+      <main className="container flex justify-center mx-auto">{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -45,6 +45,7 @@
 	@apply line-clamp;
 	-webkit-line-clamp: 1;
 }
+
 .line-clamp-3 {
 	@apply line-clamp;
 	-webkit-line-clamp: 3;
