@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Contributors from './Contributors'
 
 function SidePanel() {
   return (
@@ -76,13 +77,13 @@ function SidePanel() {
             width="100%"
             height="100%"
             alt="owner"
-            src={'/logo_card_app.png'}
+            src={'https://avatars.githubusercontent.com/u/77689766?s=200&v=4'}
             className="link-svg"
           />
         </div>
-        <div className="pl-2.5">text tree</div>
+        <div className="pl-2.5">textTree</div>
       </div>
-      <div className="text-xs text-zinc-450">Contributors:</div>
+      <Contributors />
     </div>
   )
 }

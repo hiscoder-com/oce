@@ -6,7 +6,7 @@ function Contributors() {
   return (
     <div className="flex flex-col gap-1.5 text-zinc-450">
       <div className="flex">
-        <p>Contributors: {contributors.length}</p>
+        <p className="text-xs text-zinc-450">Contributors: {contributors.length}</p>
       </div>
       <div className="flex gap-1">
         {contributors &&

@@ -11,7 +11,7 @@ function Header() {
         <Link href="/">
           <a className="flex items-center gap-5">
             <Image src={Logo} alt="logo" width="34" height="47" />
-            <p className="uppercase">Open Components</p>
+            <p className="">Open Components</p>
           </a>
         </Link>
       </div>

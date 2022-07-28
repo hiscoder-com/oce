@@ -1,5 +1,5 @@
 import { Tab } from '@headlessui/react'
-import Contributors from './Contributors'
+import SidePanel from './SidePanel'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -34,7 +34,7 @@ function Component() {
             </Tab.Panels>
           </div>
           <div className="w-1/3">
-            <div>Sidebar</div> <Contributors />{' '}
+            <SidePanel />
           </div>
         </div>
       </Tab.Group>
