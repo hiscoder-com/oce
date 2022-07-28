@@ -60,7 +60,7 @@
 }
 
 .phase-card {
-	@apply flex gap-10 py-14 pl-5 bg-gray-50
+	@apply flex gap-10 py-14 pl-5 bg-blue-75
 }
 .phase-card-title {
 	@apply text-2xl font-bold
