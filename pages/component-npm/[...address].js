@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import Component from '../../components/Component'
+import ComponentNpm from '../../components/ComponentNpm'
 
-function ComponentPage() {
+function ComponentNpmPage() {
   const {
     isReady,
     query: { address },
   } = useRouter()
-  return <>{isReady ? <Component address={address.join('/')} /> : <>Loading</>}</>
+  return <>{isReady ? <ComponentNpm address={address.join('/')} /> : <>Loading</>}</>
 }
 
-export default ComponentPage
+export default ComponentNpmPage

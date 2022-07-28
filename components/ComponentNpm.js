@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 const tabs = ['Readme', 'Apps']
 
-function Component({ address }) {
+function ComponentNpm({ address }) {
   const [log, setLog] = useState()
 
   useEffect(() => {
@@ -97,4 +97,4 @@ function Component({ address }) {
   )
 }
 
-export default Component
+export default ComponentNpm
