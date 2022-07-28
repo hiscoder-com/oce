@@ -50,3 +50,18 @@
 	@apply line-clamp;
 	-webkit-line-clamp: 3;
 }
+
+.phase-card-ul {
+	@apply list-disc list-inside pl-3 font-semibold leading-loose
+}
+
+.underline-custom {
+	@apply underline underline-offset-2 decoration-2 text-blue-500
+}
+
+.phase-card {
+	@apply flex gap-10 py-14 pl-5 bg-gray-50
+}
+.phase-card-title {
+	@apply text-2xl font-bold
+}
