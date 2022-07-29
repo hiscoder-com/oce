@@ -15,10 +15,10 @@ function getStarted() {
         <div className="flex self-start ml-60">
           <Image
             src={editor_r}
-            alt="logo"
+            alt="editor_rotate"
             width="76"
             height="76"
-            className="rotate-180 "
+            className="rotate-180"
           />
         </div>
         <div className="flex flex-col text-center gap-5">
@@ -29,16 +29,16 @@ function getStarted() {
           </div>
         </div>
         <div className="flex self-end mr-60">
-          <Image src={editor_r} alt="logo" width="76" height="76" />
+          <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
       </div>
 
       <div className="phase-card">
         <div>
-          <Image src={window} alt="logo" width="200" height="200" />
+          <Image src={window} alt="window" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
-          <div className="phase-card-title">
+        <div className="text-2xl">
+          <div className="mb-8 font-bold">
             Phase 1: Understanding the Open Components philosophy
           </div>
           <ul className="phase-card-ul">
@@ -60,10 +60,10 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={search2} alt="logo" width="200" height="200" />
+          <Image src={search2} alt="search2" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
-          <div className="phase-card-title">Phase 2: Explore the ecosystem</div>
+        <div className="text-2xl">
+          <div className="mb-8 font-bold">Phase 2: Explore the ecosystem</div>
           <ul className="phase-card-ul">
             <li>
               To check out the{' '}
@@ -85,10 +85,10 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={editor2} alt="logo" width="200" height="200" />
+          <Image src={editor2} alt="editor2" width="200" height="200" />
         </div>
         <div className="flex flex-col gap-8 text-2xl">
-          <div className="phase-card-title">
+          <div className="mb-8 font-bold">
             Phase 3: Learn the principles of iterative development
           </div>
           <ul className="phase-card-ul">
@@ -105,10 +105,10 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={search} alt="logo" width="200" height="200" />
+          <Image src={search} alt="search" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
-          <div className="phase-card-title">
+        <div className="text-2xl">
+          <div className="mb-8 font-bold">
             Phase 4: Learn how to get started with an open component
           </div>
           <ul className="phase-card-ul">
@@ -135,10 +135,10 @@ function getStarted() {
 
       <div className="phase-card">
         <div>
-          <Image src={editor} alt="logo" width="200" height="200" />
+          <Image src={editor} alt="editor" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
-          <div className="phase-card-title">
+        <div className="text-2xl">
+          <div className="mb-8 font-bold">
             Phase 5: Contribute to an existing Open Component
           </div>
           <ul className="phase-card-ul">
