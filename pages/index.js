@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-24 my-16 cursor-default">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="flex flex-row self-end mr-56">
+        <div className="flex flex-row self-end mr-96">
           <Image src={editor_black} alt="" width="90" height="90" />
         </div>
         <div className="mb-8 w-3/5 text-center text-6xl font-bold text-[#2F5C6E]">
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-row gap-5 ">
+      <div className="flex flex-row gap-5">
         <div className="flex flex-col pt-16 pb-8 px-9 gap-5 w-1/3 bg-blue-75 rounded-lg">
           <div>
             <Image src={ascent} alt="" width="303" height="185" />
