@@ -1,26 +1,38 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-function ComponentCard() {
+import Labels from './Labels'
+
+function ComponentCard({ repo }) {
   return (
-    <div className="flex flex-col justify-between pt-8 pl-6 pb-4 bg-blue-75 h-56 max-w-sm rounded-xl">
+    <div
+      key={repo.nameWithOwner}
+      className="flex flex-col justify-between pt-8 pl-6 pb-4 bg-blue-75 h-56 rounded-xl"
+    >
       <div>
-        <div className="line-clamp-1 font-bold text-2xl">timeline-poc</div>
-        <div className="line-clamp-1">Component of labels</div>
+        <Link href={`/component/${repo.nameWithOwner}`}>
+          <a className="line-clamp-1 font-bold text-xl cursor-pointer hover:underline">
+            {repo.name}
+          </a>
+        </Link>
+        <Labels
+          labels={repo.repositoryTopics?.nodes
+            .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
+            .map((el) => el.topic.name)}
+        />
       </div>
-      <div className="pr-2 text-gray-500 text-sm line-clamp-3">
-        Library of components for convenient viewing of various biblical events
-      </div>
+      <div className="pr-2 text-gray-500 text-sm line-clamp-3">{repo.description}</div>
       <div className="pr-6 flex justify-between">
         <div className="h-5 w-5">
           <Image
             width="100%"
             height="100%"
-            alt="logo"
-            src={'/default-logo.png'}
+            alt={repo.owner?.login}
+            src={repo.owner?.avatarUrl}
             className="rounded-full"
           />
         </div>
-        <div className="text-gray-400">v1.1</div>
+        <div className="text-gray-400">{repo.latestRelease?.tag.name || 'v-.--.--'}</div>
       </div>
     </div>
   )
