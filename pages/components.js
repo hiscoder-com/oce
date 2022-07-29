@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import Filter from '../components/Filter'
 import ComponentsList from '../components/ComponentsList'
 import Filter from '../components/Filter'
 function ComponentsPage() {
@@ -16,6 +17,7 @@ function ComponentsPage() {
       <div className="pt-12">
         <div className="flex justify-between">
           <div className="flex justify-between">
+
             <div className="px-2 w-40 ">
               <Filter type="topics" />
             </div>
@@ -25,10 +27,10 @@ function ComponentsPage() {
             <div className="px-2 w-40">
               <Filter type="order" />
             </div>
+
           </div>
           <Filter type="query" />
         </div>
-
         <ComponentsList setTotal={setTotal} />
       </div>
     </div>

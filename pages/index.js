@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
       <Link href={'/components-npm'}>
         <a className="hover:underline m-5">From NPM</a>
       </Link>
-
     </div>
   )
 }
