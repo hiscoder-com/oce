@@ -81,7 +81,7 @@ function SidePanel({ license, homepage, repository, owner, release }) {
           <Image
             width="100%"
             height="100%"
-            alt="owner"
+            alt={owner?.name ?? 'owner'}
             src={owner?.url}
             className="link-svg"
           />
