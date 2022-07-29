@@ -6,7 +6,7 @@ import Logo from '../public/logo.svg'
 
 function Header() {
   return (
-    <div className="header container mx-auto px-2">
+    <header className="header container mx-auto px-2">
       <div>
         <Link href="/">
           <a className="flex items-center gap-5">
@@ -63,7 +63,7 @@ function Header() {
           <a className="btn-gray">FAQ</a>
         </Link>
       </div>
-    </div>
+    </header>
   )
 }
 
