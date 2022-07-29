@@ -9,9 +9,9 @@ export default function LeanExpectations() {
     date: 'Sep 8, 2018 · 17 min read',
   }
   return (
-    <div className="container px-4 mx-auto ">
+    <div className="container mx-auto md:px-1 lg:px-2 2xl:px-4  ">
       <HeaderStaticPage config={HeaderConfig} />
-      <div className="px-40 mx-auto">
+      <div className="mx-auto md:px-10 lg:px-20 2xl:px-40">
         <br />
         <p>
           For new software to have intrinsic value, it typically introduces innovative
