@@ -20,7 +20,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex flex-row self-end mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
@@ -192,7 +191,6 @@ export default function Home() {
           <Image src={discord_hero} alt="discord_hero" width="234" height="227" />
         </div>
       </div>
-
     </div>
   )
 }
