@@ -16,7 +16,6 @@ function ComponentCard({ repo }) {
           </a>
         </Link>
         <Labels
-          isFull={false}
           labels={repo.repositoryTopics?.nodes
             .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
             .map((el) => el.topic.name)}

@@ -14,10 +14,7 @@ function ComponentCardNpm({ package: repo }) {
             {repo.name}
           </a>
         </Link>
-        <Labels
-          isFull={false}
-          labels={repo.keywords.filter((el) => !['bible', 'app'].includes(el))}
-        />
+        <Labels labels={repo.keywords.filter((el) => !['bible', 'app'].includes(el))} />
       </div>
       <div className="pr-2 text-gray-500 text-sm line-clamp-3">{repo.description}</div>
       <div className="pr-6 flex justify-between">

@@ -45,7 +45,7 @@ function Component({ address }) {
           </div>
           <div className="my-10">
             <Labels
-              isFull={true}
+              full
               labels={repo?.repositoryTopics?.nodes
                 ?.filter((el) => !['scripture-open-components'].includes(el.topic.name))
                 .map((el) => el.topic.name)}
