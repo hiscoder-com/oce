@@ -63,7 +63,7 @@
 }
 
 .phase-card-ul {
-	@apply list-disc list-inside pl-3 font-semibold leading-loose
+	@apply list-disc list-inside pl-3 leading-loose
 }
 
 .underline-custom {
