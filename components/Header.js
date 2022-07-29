@@ -10,8 +10,8 @@ function Header() {
       <div>
         <Link href="/">
           <a className="flex items-center gap-5">
-            <Image src={Logo} alt="logo" width="34" height="47" />
-            <p className="">Open Components</p>
+            <Image src={Logo} alt="Open Components Ecosystem" width="34" height="47" />
+            <p>Open Components</p>
           </a>
         </Link>
       </div>
@@ -30,7 +30,7 @@ function Header() {
           </div>
           <Image
             src={Chevron}
-            alt="chevron"
+            alt="show more"
             width="6"
             height="4"
             className="group-hover:rotate-180"
@@ -50,7 +50,7 @@ function Header() {
           </div>
           <Image
             src={Chevron}
-            alt="chevron"
+            alt="show more"
             width="6"
             height="4"
             className="group-hover:rotate-180"

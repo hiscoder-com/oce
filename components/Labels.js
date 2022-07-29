@@ -1,17 +1,3 @@
-function Labels({ full = false, labels }) {
-  return (
-    <>
-      {
-        <div className={`${full && 'flex flex-wrap'} truncate gap-2`}>
-          {labels?.map((el, index) => {
-            return <Label isFull={full} key={index} label={el} />
-          })}
-        </div>
-      }
-    </>
-  )
-}
-
 const colors = [
   'bg-slate-100 text-slate-600',
   'bg-rose-100 text-rose-600',
@@ -47,6 +33,20 @@ function Label({ isFull, label }) {
     >
       {label}
     </div>
+  )
+}
+
+function Labels({ full = false, labels }) {
+  return (
+    <>
+      {
+        <div className={`${full && 'flex flex-wrap'} truncate gap-2`}>
+          {labels?.map((el, index) => {
+            return <Label isFull={full} key={index} label={el} />
+          })}
+        </div>
+      }
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+
 import Component from '../../components/Component'
 
 function ComponentPage() {

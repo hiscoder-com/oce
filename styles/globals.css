@@ -20,10 +20,6 @@
   @apply btn hover:text-yellow-350 active:text-yellow-400
 }
 
-.contributor-avatar {
-  @apply overflow-hidden border inline-flex m-0.5 rounded-lg
-}
-
 .footer {
   @apply flex items-center justify-between text-lg font-bold py-7 text-white
 }

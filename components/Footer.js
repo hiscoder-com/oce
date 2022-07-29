@@ -10,7 +10,7 @@ function Footer() {
         <div>
           <Link href="/">
             <a className="flex gap-2.5 pl-2">
-              <Image src={Logo} alt="" width="22" height="30" />
+              <Image src={Logo} alt="Open Components Ecosystem" width="22" height="30" />
               <p className="text-2xl">Open Components</p>
             </a>
           </Link>

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import { useRouter } from 'next/router'
 
-import useComponentsNpm from '../hooks/useComponentsNpm'
 import ComponentCardNpm from './ComponentCardNpm'
+import useComponentsNpm from '../hooks/useComponentsNpm'
 
 function ComponentsListNpm({ setTotal }) {
   const router = useRouter()

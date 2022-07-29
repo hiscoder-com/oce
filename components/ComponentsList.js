@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import { useRouter } from 'next/router'
 
-import useComponents from '../hooks/useComponents'
 import ComponentCard from './ComponentCard'
+import useComponents from '../hooks/useComponents'
 
 function ComponentsList({ setTotal }) {
   const router = useRouter()

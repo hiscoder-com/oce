@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-// https://registry.npmjs.com/-/v1/search?text=keywords:translationCore&size=20&from=0
 export default async function handler(req, res) {
   const { from = false, limit = 10, 'topics[]': _topics = [] } = req.query
   const topics = Array.isArray(_topics) ? _topics : _topics.length ? [_topics] : []
