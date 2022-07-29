@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 
 import ComponentCard from '../components/ComponentCard'
@@ -14,6 +15,12 @@ import discord_hero from '../public/discord_hero.svg'
 export default function Home() {
   return (
     <div className="flex flex-col gap-24 my-16 cursor-default">
+      <Head>
+        <title>Open Components Ecosystem</title>
+        <meta name="description" content="Open Components Ecosystem" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex flex-row self-end mr-96">
           <Image src={editor_black} alt="" width="90" height="90" />
