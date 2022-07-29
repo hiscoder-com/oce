@@ -2,10 +2,9 @@ import Image from 'next/image'
 
 function HeaderStaticPage({ config }) {
   const { title, name, date } = config
-  console.log(config.title)
   return (
-    <div className="container">
-      <button className="flex  justify-between w-28">
+    <div className=" border-b-2 border-dashed my-16  pr-10">
+      <button className="flex justify-between w-28">
         <div className="w-5 h-3">
           <Image
             className="back-svg "
@@ -19,9 +18,9 @@ function HeaderStaticPage({ config }) {
       </button>
       <div className="flex justify-between items-center">
         <h1 className="text-5xl">{title ? title : ''}</h1>
-        <div className="">
+        <div>
           <Image
-            className="editor-r "
+            className="editor-r"
             width="197"
             height="197"
             alt="editor-r"
@@ -31,7 +30,7 @@ function HeaderStaticPage({ config }) {
       </div>
       <div className="flex">
         <p>{name ? name : ''}</p>
-        <p>{date ? date : ''}</p>
+        <p className="pb-20">{date ? date : ''}</p>
       </div>
     </div>
   )

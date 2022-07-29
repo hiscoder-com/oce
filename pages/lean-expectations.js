@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import HeaderStaticPage from '../components/HeaderStaticPage'
 
 export default function LeanExpectations() {
@@ -8,9 +9,9 @@ export default function LeanExpectations() {
     date: 'Sep 8, 2018 · 17 min read',
   }
   return (
-    <div className="container px-24 mx-auto ">
+    <div className="container px-4 mx-auto ">
       <HeaderStaticPage config={HeaderConfig} />
-      <div className="px-24 mx-auto">
+      <div className="px-40 mx-auto">
         <br />
         <p>
           For new software to have intrinsic value, it typically introduces innovative
@@ -31,7 +32,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            Photo by <u>Temple Cerulean</u> on <u>Unsplash</u>
+            Photo by{' '}
+            <Link href="https://unsplash.com/@templecerulean?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Temple Cerulean</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -61,12 +73,27 @@ export default function LeanExpectations() {
         <p>
           It is important to be purposeful in the iterative learning process since it can
           take time to deliver software and the use cases we set out to solve are ever
-          changing. Adopting the tools of <u>Lean Software Development</u> is ideal as it
-          focuses on the following principles: eliminate waste, amplify learning, decide
-          as late as possible, deliver as fast as possible, empower the team, and build
-          integrity in. Transitioning from the traditional <u>Waterfall</u> to the more
-          modern <u>Agile methodology</u> is a great place to start as it fosters many of
-          the lean principles.
+          changing. Adopting the tools of{' '}
+          <Link href="https://en.wikipedia.org/wiki/Lean_software_development">
+            <a target="_blank">
+              <u>Lean Software Development</u>
+            </a>
+          </Link>{' '}
+          is ideal as it focuses on the following principles: eliminate waste, amplify
+          learning, decide as late as possible, deliver as fast as possible, empower the
+          team, and build integrity in. Transitioning from the traditional{' '}
+          <Link href="https://en.wikipedia.org/wiki/Waterfall_model">
+            <a target="_blank">
+              <u>Waterfall</u>
+            </a>
+          </Link>{' '}
+          to the more modern{' '}
+          <Link href="https://en.wikipedia.org/wiki/Agile_software_development">
+            <a target="_blank">
+              <u>Agile methodology</u>
+            </a>
+          </Link>{' '}
+          is a great place to start as it fosters many of the lean principles.
         </p>
         <br />
         <figure>
@@ -79,7 +106,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            Photo by <u>rawpixel</u> on <u>Unsplash</u>
+            Photo by{' '}
+            <Link href="https://unsplash.com/@rawpixel/collections">
+              <a target="_blank">
+                <u>rawpixel</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -144,12 +182,17 @@ export default function LeanExpectations() {
         <br />
         <p>
           To strike a balance of this natural tension, we follow the second principle of
-          Lean Software Development, <u>amplify learning</u>. Shorten your learning cycles
-          by frequently involving user input and user testing. This can introduce change
-          in a more predictable manner and over time offer a sense of increased stability
-          to the users. When there is much to be learned, prepare to introduce drastic
-          changes. As the learning from the users results in smaller changes, a more
-          stable product naturally emerges.
+          Lean Software Development,
+          <Link href="https://en.wikipedia.org/wiki/Lean_software_development#Amplify_learning">
+            <a target="_blank">
+              <u>amplify learning</u>
+            </a>
+          </Link>
+          . Shorten your learning cycles by frequently involving user input and user
+          testing. This can introduce change in a more predictable manner and over time
+          offer a sense of increased stability to the users. When there is much to be
+          learned, prepare to introduce drastic changes. As the learning from the users
+          results in smaller changes, a more stable product naturally emerges.
         </p>
         <br />
         <p>
@@ -175,7 +218,18 @@ export default function LeanExpectations() {
           <figcaption className=" text-gray-400">
             “Proof of Concepts are like using the scientific method in software
             development. You have to design your experiment before you begin testing your
-            hypothesis.” — photo credit <u>chuttersnap</u> on <u>Unsplash</u>
+            hypothesis.” — photo credit{' '}
+            <Link href="https://unsplash.com/@chuttersnap?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>chuttersnap</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -229,8 +283,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            “Mockups of a user interface” — photo credit William <u>Iven</u> on
-            <u>Unsplash</u>
+            “Mockups of a user interface” — photo credit{' '}
+            <Link href="https://unsplash.com/@firmbee?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>William Iven</u>
+              </a>
+            </Link>{' '}
+            on
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -284,8 +348,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            “Electronic prototyping” — photo credit Nicolas <u>Thomas</u> on{' '}
-            <u>Unsplash</u>
+            “Electronic prototyping” — photo credit{' '}
+            <Link href="https://unsplash.com/@nicolasthomas?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Nicolas Thomas</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -304,8 +378,13 @@ export default function LeanExpectations() {
           the shortcuts taken previously and applying what was learned. This should be
           more thoroughly user tested to further understand the bottlenecks of things such
           as software architecture and user management. This typically has a lot of bugs
-          that have yet to be addressed and labeled as Alpha or Beta. While using
-          <u>Semantic Versioning</u>, it can be signified as a release less than 1.0.
+          that have yet to be addressed and labeled as Alpha or Beta. While using{' '}
+          <Link href="https://en.wikipedia.org/wiki/Software_versioning#Degree_of_compatibility">
+            <a target="_blank">
+              <u>Semantic Versioning</u>
+            </a>
+          </Link>
+          , it can be signified as a release less than 1.0.
         </p>
         <br />
         <p>
@@ -341,7 +420,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            “close-up photo of motherboard” by <u>Nenad Grujic</u> on <u>Unsplash</u>
+            “close-up photo of motherboard” by{' '}
+            <Link href="https://unsplash.com/@nenadg?utm_source=medium&utm_medium=referral">
+              <a target="_balnk">
+                <u>Nenad Grujic</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -367,11 +457,16 @@ export default function LeanExpectations() {
         <p>
           Adding more developers rarely speeds up the development process as it
           complicates team dynamics and the complexity of code. The{' '}
-          <u>Ringelmann Effect</u> applies here. It states that a smaller team can be more
-          productive than a larger one. As the code is properly modularized it makes it
-          easier for more team members and even multiple teams to contribute without
-          slowing the process down as much because they are working on separate but
-          integrated projects. This is discussed in a bit more depth in the MVP section.
+          <Link href="https://en.wikipedia.org/wiki/Ringelmann_effect">
+            <a target="_blank">
+              <u>Ringelmann Effect</u>
+            </a>
+          </Link>{' '}
+          applies here. It states that a smaller team can be more productive than a larger
+          one. As the code is properly modularized it makes it easier for more team
+          members and even multiple teams to contribute without slowing the process down
+          as much because they are working on separate but integrated projects. This is
+          discussed in a bit more depth in the MVP section.
         </p>
         <br />
         <p>
@@ -393,8 +488,19 @@ export default function LeanExpectations() {
           />
           <figcaption className=" text-gray-400">
             “The MVP Camera. No bells, no whistles, just the basics. It is nearly as
-            instant as our modern digital cameras.” — credit <u>Hermes Rivera</u> on{' '}
-            <u>Unsplash</u>
+            instant as our modern digital cameras.” — credit{' '}
+            <Link href="https://unsplash.com/@hermez777?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Hermes Rivera</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                {' '}
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -429,7 +535,18 @@ export default function LeanExpectations() {
             “If we knew that arial photography was the destiny of drones, we might have
             built out from the existing camera and tried to make it fly. Instead drones
             technology was matured in its own path until they found their shared destiny.”
-            — credit <u>Dose Media</u> on <u>Unsplash</u>
+            — credit{' '}
+            <Link href="https://unsplash.com/@dose?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Dose Media</u>
+              </a>
+            </Link>
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>{' '}
           </figcaption>
         </figure>
         <br />
@@ -477,7 +594,17 @@ export default function LeanExpectations() {
             “Drone photography did not start as someone setting out to build flying
             cameras but the integration of two fully developed technologies.” — photo
             credit
-            <u>Mitch Nielsen</u> on <u>Unsplash</u>
+            <Link href="https://unsplash.com/@mitchnielsen?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Mitch Nielsen</u>
+              </a>
+            </Link>
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>{' '}
           </figcaption>
         </figure>
         <br />
@@ -542,7 +669,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            Photo by <u>NEW DATA SERVICES</u> on <u>Unsplash</u>
+            Photo by{' '}
+            <Link href="https://unsplash.com/@new_data_services?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>NEW DATA SERVICES</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -599,7 +737,18 @@ export default function LeanExpectations() {
             alt=""
           />
           <figcaption className=" text-gray-400">
-            Photo by <u>Raphael Koh</u> on <u>Unsplash</u>
+            Photo by{' '}
+            <Link href="https://unsplash.com/@dreamevile?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Raphael Koh</u>
+              </a>
+            </Link>{' '}
+            on{' '}
+            <Link href="https://unsplash.com/?utm_source=medium&utm_medium=referral">
+              <a target="_blank">
+                <u>Unsplash</u>
+              </a>
+            </Link>
           </figcaption>
         </figure>
         <br />
@@ -673,14 +822,20 @@ export default function LeanExpectations() {
         </blockquote>
         <br />
         <p>
-          There is <u>no silver bullet</u> in software development. However, iterative
-          learning is still paramount even if enough field research has been done to study
-          the use cases. Since the world is continuing to change at a growingly rapid
-          pace, research may be out of sync by the time the software application is built.
-          Think of this approach as a part of field research. Test assumptions made in the
-          PoC and Prototype during the research phase, that way there is less of a
-          disconnect between the research and the development efforts. Continue testing
-          during the MVP phase to ensure the user needs are adequately met.
+          There is{' '}
+          <Link href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month#No_silver_bullet">
+            <a target="_blak">
+              <u>no silver bullet</u>
+            </a>
+          </Link>{' '}
+          in software development. However, iterative learning is still paramount even if
+          enough field research has been done to study the use cases. Since the world is
+          continuing to change at a growingly rapid pace, research may be out of sync by
+          the time the software application is built. Think of this approach as a part of
+          field research. Test assumptions made in the PoC and Prototype during the
+          research phase, that way there is less of a disconnect between the research and
+          the development efforts. Continue testing during the MVP phase to ensure the
+          user needs are adequately met.
         </p>
         <br />
         <p className="mb-24">
