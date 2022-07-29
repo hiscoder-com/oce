@@ -13,14 +13,14 @@ function SidePanel({ license, homepage, repository, owner, release }) {
       <div className="text-xs text-zinc-450">Homepage</div>
 
       <div className="flex items-center justify-between h-8 mb-4 px-3 rounded bg-blue-75 text-base font-semibold">
-        <Link href={homepage ?? ''}>
+        <Link href={homepage || repository}>
           <a target="_blank">
             <div className="link-in-sidePanel line-clamp-1 hover:underline">
-              {homepage}
+              {homepage || repository}
             </div>
           </a>
         </Link>
-        <Link href={homepage ?? ''}>
+        <Link href={homepage || repository}>
           <a target="_blank">
             <div className="link-svg h-5 w-5">
               <Image

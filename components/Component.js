@@ -20,13 +20,13 @@ function classNames(...classes) {
 const tabs = ['Readme', 'Apps']
 
 function Component({ address }) {
-  const [log, setLog] = useState()
+  const [readme, setReadme] = useState()
 
   useEffect(() => {
     fetch(`https://raw.githubusercontent.com/${address}/master/README.md`)
       .then((response) => response.text())
       .then((text) => {
-        setLog({ text: text })
+        setReadme(text)
       })
   }, [address])
   const { data: repo, isLoading, isError } = useComponent(address)
@@ -64,15 +64,15 @@ function Component({ address }) {
                 </Tab>
               ))}
             </Tab.List>
-            <div className="flex flex-row">
-              <div className="w-2/3">
-                <Tab.Panels className="">
+            <div className="flex flex-col md:flex-row">
+              <div className="w-full mb-6 md:w-2/3 pr-0 md:pr-6 lg:pr-24">
+                <Tab.Panels>
                   <Tab.Panel>
                     <ReactMarkdown
                       rehypePlugins={[rehypeRaw]}
                       className={'markdown-body'}
                     >
-                      {log ? log.text : 'Version of application'}
+                      {readme ?? 'Loading...'}
                     </ReactMarkdown>
                   </Tab.Panel>
                   <Tab.Panel>
@@ -80,7 +80,7 @@ function Component({ address }) {
                   </Tab.Panel>
                 </Tab.Panels>
               </div>
-              <div className="w-1/3">
+              <div className="w-full md:w-1/3">
                 <SidePanel
                   license={repo?.licenseInfo?.name}
                   homepage={repo?.homepageUrl}
