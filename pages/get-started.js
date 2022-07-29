@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import editor_r from '../public/editor-reverse.svg'
 import window from '../public/window.svg'
@@ -9,8 +10,8 @@ import editor2 from '../public/editor2.svg'
 
 function getStarted() {
   return (
-    <div className="flex flex-col gap-14 my-16">
-      <div className="flex flex-col items-center border-b-2">
+    <div className="flex flex-col gap-14 my-16 cursor-default">
+      <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex self-start ml-60">
           <Image
             src={editor_r}
@@ -42,10 +43,16 @@ function getStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              To learn about <span className="underline-custom">Open Components</span>
+              To learn about{' '}
+              <Link href="/">
+                <a className="underline-custom">Open Components</a>
+              </Link>
             </li>
             <li>
-              Check the <span className="underline-custom">whitepaper</span>
+              Check the{' '}
+              <Link href="/">
+                <a className="underline-custom">whitepaper</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -59,13 +66,18 @@ function getStarted() {
           <div className="phase-card-title">Phase 2: Explore the ecosystem</div>
           <ul className="phase-card-ul">
             <li>
-              To check out the <span className="underline-custom">Open Components</span>{' '}
+              To check out the{' '}
+              <Link href="/">
+                <a className="underline-custom">Open Components</a>
+              </Link>{' '}
               developed by the community
             </li>
             <li>
               To check out the{' '}
-              <span className="underline-custom">Bible applications</span> using open
-              components
+              <Link href="/">
+                <a className="underline-custom">Bible applications</a>
+              </Link>{' '}
+              using open components
             </li>
           </ul>
         </div>
@@ -81,9 +93,11 @@ function getStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <span className="underline-custom">
-                Lean Expectations — PoC, Prototype, MVP
-              </span>
+              <Link href="/">
+                <a className="underline-custom">
+                  Lean Expectations — PoC, Prototype, MVP
+                </a>
+              </Link>{' '}
             </li>
           </ul>
         </div>
@@ -99,13 +113,21 @@ function getStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <span className="underline-custom">Starting a React Component Library</span>
+              <Link href="/">
+                <a className="underline-custom">Starting a React Component Library</a>
+              </Link>
             </li>
             <li>
-              Introduction to <span className="underline-custom">Styleguidist</span>
+              Introduction to{' '}
+              <Link href="/">
+                <a className="underline-custom">Styleguidist</a>
+              </Link>
             </li>
             <li>
-              Philosophy of <span className="underline-custom">Headless components</span>
+              Philosophy of{' '}
+              <Link href="/">
+                <a className="underline-custom">Headless components</a>
+              </Link>
             </li>
           </ul>
         </div>
