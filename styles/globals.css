@@ -36,7 +36,7 @@
 	@apply flex items-center justify-between py-7 px-28 text-lg font-bold cursor-default
 }
 .input {
-	@apply appearance-none block w-full px-3 py-1.5 text-base  font-normal  text-gray-700  bg-white bg-clip-padding bg-no-repeat  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
+	@apply appearance-none block w-full px-3 py-1.5 text-base font-normal bg-clip-padding bg-no-repeat  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
 }
 .options {
 @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm

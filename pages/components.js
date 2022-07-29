@@ -14,7 +14,7 @@ function componentsPage() {
       <div className="pt-12">
         <div className="flex justify-between">
           <div className="flex justify-between">
-            <div className="px-2 w-40 overflow-hidden">
+            <div className="px-2 w-40 ">
               <Filter type="topics" />
             </div>
             <div className="px-2 w-40">
