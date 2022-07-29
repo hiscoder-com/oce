@@ -33,7 +33,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 pl-5 bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
         <div>
           <Image src={window} alt="window" width="200" height="200" />
         </div>
@@ -58,7 +58,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 pl-5 bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
         <div>
           <Image src={search2} alt="search2" width="200" height="200" />
         </div>
@@ -83,7 +83,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 pl-5 bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
         <div>
           <Image src={editor2} alt="editor2" width="200" height="200" />
         </div>
@@ -103,7 +103,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 pl-5 bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
         <div>
           <Image src={search} alt="search" width="200" height="200" />
         </div>
@@ -133,7 +133,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 pl-5 bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
         <div>
           <Image src={editor} alt="editor" width="200" height="200" />
         </div>
