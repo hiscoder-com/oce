@@ -9,9 +9,9 @@ function Footer() {
       <div className="footer container mx-auto px-2">
         <div>
           <Link href="/">
-            <a className="flex gap-2.5 pl-2">
-              <Image src={Logo} alt="Open Components Ecosystem" width="22" height="30" />
-              <p className="text-2xl">Open Components</p>
+            <a className="items-center gap-5 pl-2">
+              <Image src={Logo} alt="Open Components Ecosystem" width="34" height="47" />
+              <p>Open Components</p>
             </a>
           </Link>
         </div>
