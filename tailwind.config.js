@@ -15,6 +15,12 @@ module.exports = {
         zinc: {
           450: '#828282',
         },
+        primary: {
+          600: '#2F5C6E',
+        },
+        text: {
+          600: '#4F4F4F',
+        },
       },
     },
   },
