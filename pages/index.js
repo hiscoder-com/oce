@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import editor_black from '../public/editor_black.svg'
@@ -177,7 +178,9 @@ export default function Home() {
         <div className="flex flex-col gap-5">
           <div className="text-5xl font-bold text-primary-600">
             Join our community on{' '}
-            <span className="underline decoration-4 underline-offset-4">Discord</span>
+            <Link href="https://opencomponents.io/">
+              <a className="underline decoration-4 underline-offset-4">Discord</a>
+            </Link>
           </div>
           <div className="text-xl text-zinc-450">
             Use #scripture-open-components to showcase your work in the community
