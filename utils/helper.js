@@ -1,3 +1,45 @@
+export const components = [
+  {
+    nameWithOwner: 'texttree/timeline-poc',
+    name: 'timeline-poc',
+    description:
+      ' blanditiis nobis temporibus quam ipsum quis exercitationem fugiat asperiores? Necessitatibus maiores nesciunt quis eligendi.',
+    repositoryTopics: { nodes: [{ topic: { name: 'component' } }] },
+    owner: {
+      login: 'timeline-poc',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/77689766?v=4',
+    },
+  },
+  {
+    nameWithOwner: 'texttree/scripture-resources-rcl',
+    name: 'scripture-resources-rcl',
+    description: ' Omnis tempore alias, iste repellendus deleniti rerum dolores',
+    repositoryTopics: {
+      nodes: [
+        { topic: { name: 'vanila' } },
+        { topic: { name: 'javascript' } },
+        { topic: { name: 'react' } },
+      ],
+    },
+    owner: {
+      login: 'timeline-poc',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/77689711?v=4',
+    },
+  },
+  {
+    nameWithOwner: 'texttree/gitea-react-toolkit',
+    name: 'gitea-react-toolkit',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    repositoryTopics: {
+      nodes: [{ topic: { name: 'dataset' } }, { topic: { name: 'nlp' } }],
+    },
+    owner: {
+      login: 'timeline-poc',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/77689722?v=4',
+    },
+  },
+]
+
 export const apps = [
   {
     html_url: 'https://github.com/texttree/bsa',
