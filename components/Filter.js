@@ -34,21 +34,29 @@ export default function Filter({ type }) {
     }
 
     if (type === 'topics') {
-      router.replace({
-        query: { ...router.query, 'topics[]': param },
-      })
+      router.replace(
+        {
+          query: { ...router.query, 'topics[]': param },
+        },
+        undefined,
+        { scroll: false }
+      )
       return
     }
 
-    router.replace({
-      query: { ...router.query, [type]: param },
-    })
+    router.replace(
+      {
+        query: { ...router.query, [type]: param },
+      },
+      undefined,
+      { scroll: false }
+    )
   }
   const handleCleanRouter = (e) => {
     e.preventDefault()
     const params = new URLSearchParams(query)
     params.delete('topics[]')
-    router.replace({ pathname, query: params.toString() }, undefined, { shallow: true })
+    router.replace({ pathname, query: params.toString() }, undefined, { scroll: false })
     setSelectedFilters([])
   }
   useEffect(() => {
@@ -57,9 +65,13 @@ export default function Filter({ type }) {
     }
 
     if (type !== 'topics' && !Object.keys(query).includes(type)) {
-      router.replace({
-        query: { ...query, [type]: selectedFilter.value },
-      })
+      router.replace(
+        {
+          query: { ...query, [type]: selectedFilter.value },
+        },
+        undefined,
+        { scroll: false }
+      )
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, selectedFilter, type])
