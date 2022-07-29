@@ -9,6 +9,9 @@ import discord from '../public/discord.svg'
 import introduction from '../public/introduction.svg'
 import explore from '../public/explore.svg'
 import discord_hero from '../public/discord_hero.svg'
+import { apps, components } from '../utils/helper'
+import ComponentCard from '../components/ComponentCard'
+import AppCard from '../components/AppCard'
 
 export default function Home() {
   return (
@@ -144,6 +147,9 @@ export default function Home() {
             Components
           </div>
           <div className="flex gap-8">
+            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
+              {components.map((el) => ComponentCard({ repo: el }))}
+            </div>
             <div className="flex justify-center items-center gap-2.5 w-56 h-56">
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
                 More
@@ -160,8 +166,9 @@ export default function Home() {
             Applications
           </div>
           <div className="flex gap-8">
-            <div>tcCreate</div>
-            <div>Autographa</div>
+            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
+              {apps?.map((el) => AppCard({ repo: el }))}
+            </div>
             <div className="flex gap-2.5">
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
                 More
