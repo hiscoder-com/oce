@@ -1,58 +1,16 @@
 import { useEffect, useState } from 'react'
 
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
+import ComponentCard from './ComponentCard'
 import useComponents from '../hooks/useComponents'
 
-export function ComponentCard({ repo }) {
-  return (
-    <div
-      className="border rounded p-2 border-green-300 w-1/3 inline-block"
-      key={repo.nameWithOwner}
-    >
-      <a className="text-xl hover:underline" href={`/component/${repo.nameWithOwner}`}>
-        <b>NAME</b> {repo.name}
-      </a>
-      <br />
-      <div>
-        <b>LABLES </b>
-        {repo.repositoryTopics?.nodes
-          .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
-          .map((el) => (
-            <span key={el.topic.name}>{el.topic.name} </span>
-          ))}
-      </div>
-      <div>
-        <b>DESCRIPTION</b> {repo.description}
-      </div>
-      <b>OWNER</b>
-      <Image
-        width={'24px'}
-        height={'24px'}
-        src={repo.owner?.avatarUrl}
-        alt={repo.owner?.login}
-      />
-      <div>
-        <b>RELEASE NAME</b> {repo.latestRelease?.name || '--.--.--'}
-      </div>
-      <div>
-        <b>RELEASE TAG</b> {repo.latestRelease?.tag.name || '--.--.--'}
-      </div>
-      <div>
-        <b>RELEASE PUBLISHED DATE</b> {repo.latestRelease?.publishedAt || '--/--/--'}
-      </div>
-    </div>
-  )
-}
-
-function ComponentsList() {
+function ComponentsList({ setTotal }) {
   const router = useRouter()
   const {
     isReady,
     query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
   } = router
-  const [total, setTotal] = useState()
   const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
   const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null })
@@ -68,9 +26,11 @@ function ComponentsList() {
 
   useEffect(() => {
     if (!isLoading && !isError) {
-      setTotal(() => {
+      setTotal((prev) => {
         if (from === null) {
           return data.total
+        } else {
+          return prev
         }
       })
       setComponents((prev) => {
@@ -82,7 +42,8 @@ function ComponentsList() {
       })
       setPageInfo(data.pageInfo)
     }
-  }, [data, from, isError, isLoading])
+  }, [data, from, isError, isLoading, setTotal])
+
   const handlerLoadMore = () => {
     setFrom(pageInfo.endCursor)
   }
@@ -97,8 +58,9 @@ function ComponentsList() {
         <div>Error</div>
       ) : (
         <>
-          <div>Total Count: {total}</div>
-          {componentCards}
+          <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 xl:grid-cols-4 xl:gap-5 2xl:grid-cols-5 2xl:gap-8">
+            {componentCards}
+          </div>
           {pageInfo.hasNextPage ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>
           ) : (
