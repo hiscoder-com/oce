@@ -67,3 +67,11 @@
   right   : calc(20% + 0.5rem);
   border-bottom: 3px solid black;
 }
+
+.phase-card-ul {
+	@apply list-disc list-inside pl-3 leading-loose
+}
+
+.underline-custom {
+	@apply underline underline-offset-2 decoration-2 text-blue-500
+}
