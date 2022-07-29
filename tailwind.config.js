@@ -17,6 +17,7 @@ module.exports = {
         },
         primary: {
           600: '#2F5C6E',
+          700: '#254958',
         },
         text: {
           600: '#4F4F4F',

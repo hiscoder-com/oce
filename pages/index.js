@@ -20,7 +20,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex flex-row self-end mr-96">
-          <Image src={editor_black} alt="" width="90" height="90" />
+          <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
         <div className="mb-8 w-3/5 text-center text-6xl font-bold text-primary-600">
           Open Components are Reusable Building Blocks for Bible Technology
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-blue-75 rounded-lg hover:bg-yellow-350 group">
           <div className="flex flex-col gap-14">
             <div>
-              <Image src={ascent} alt="" width="303" height="185" />
+              <Image src={ascent} alt="ascent" width="303" height="185" />
             </div>
 
             <div className="flex flex-col gap-5">
@@ -43,7 +43,7 @@ export default function Home() {
                   Get started
                 </div>
                 <div>
-                  <Image src={right} alt="" width="20" height="13" />
+                  <Image src={right} alt="right arrow" width="20" height="13" />
                 </div>
               </div>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
@@ -55,11 +55,11 @@ export default function Home() {
           </div>
 
           <button className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
-            <div className="flex justify-center items-center gap-2 w-full h-full rounded-lg hover:bg-primary-600 active:bg-[#254958]">
+            <div className="flex justify-center items-center gap-2 w-full h-full rounded-lg hover:bg-primary-600 active:bg-primary-700">
               <div className="flex justify-center">
                 <Image
                   src={discord}
-                  alt=""
+                  alt="discord"
                   width="24"
                   height="23"
                   className="group-hover:fill-black"
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 group rounded-lg hover:bg-yellow-350">
           <div className="flex flex-col gap-14">
             <div>
-              <Image src={introduction} alt="" width="303" height="185" />
+              <Image src={introduction} alt="introduction" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center">
@@ -83,7 +83,7 @@ export default function Home() {
                 <div>
                   <Image
                     src={right}
-                    alt=""
+                    alt="right arrow"
                     width="20"
                     height="13"
                     className="group-hover:fill-black"
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
 
           <button className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
-            <div className="flex justify-center items-center w-full h-full rounded-lg hover:bg-primary-600 active:bg-[#254958]">
+            <div className="flex justify-center items-center w-full h-full rounded-lg hover:bg-primary-600 active:bg-primary-700">
               Learn more
             </div>
           </button>
@@ -111,7 +111,7 @@ export default function Home() {
         <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 rounded-lg hover:bg-yellow-350 group">
           <div className="flex flex-col gap-14">
             <div>
-              <Image src={explore} alt="" width="303" height="185" />
+              <Image src={explore} alt="explore" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center">
@@ -121,7 +121,7 @@ export default function Home() {
                 <div>
                   <Image
                     src={right}
-                    alt=""
+                    alt="right arrow"
                     width="20"
                     height="13"
                     className="group-hover:fill-black"
@@ -148,7 +148,7 @@ export default function Home() {
                 More
               </div>
               <div>
-                <Image src={right} alt="" width="13" height="8" />
+                <Image src={right} alt="right arrow" width="13" height="8" />
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 More
               </div>
               <div>
-                <Image src={right} alt="" width="13" height="8" />
+                <Image src={right} alt="right arrow" width="13" height="8" />
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <Image src={discord_hero} alt="" width="234" height="227" />
+          <Image src={discord_hero} alt="discord_hero" width="234" height="227" />
         </div>
       </div>
     </div>
