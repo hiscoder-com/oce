@@ -9,6 +9,7 @@ import discord from '../public/discord.svg'
 import introduction from '../public/introduction.svg'
 import explore from '../public/explore.svg'
 import discord_hero from '../public/discord_hero.svg'
+import discord_arrow from '../public/discord_arrow.svg'
 
 export default function Home() {
   return (
@@ -174,16 +175,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex gap-52">
-        <div className="flex flex-col gap-5">
-          <div className="text-5xl font-bold text-primary-600">
-            Join our community on{' '}
-            <Link href="https://opencomponents.io/">
-              <a className="underline decoration-4 underline-offset-4">Discord</a>
-            </Link>
+      <div className="flex gap-28">
+        <div className="flex flex-col justify-center gap-5">
+          <div className="flex gap-11">
+            <div className="text-5xl font-bold text-primary-600">
+              Join our community on{' '}
+              <Link href="https://discord.com/invite/auJb4H9ezx">
+                <a className="underline decoration-4 underline-offset-4">Discord</a>
+              </Link>
+            </div>
+            <Image src={discord_arrow} alt="discord_arrow" width="44" height="29" />
           </div>
-          <div className="text-xl text-zinc-450">
-            Use #scripture-open-components to showcase your work in the community
+
+          <div>
+            <div className="w-2/3 text-xl text-zinc-450">
+              Use #scripture-open-components to showcase your work in the community
+            </div>
           </div>
         </div>
         <div>
