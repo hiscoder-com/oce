@@ -13,7 +13,7 @@ function Footer() {
             Open Components
           </a>
         </Link>
-        <div className="text-zinc-450">2022 © unfoldingWord</div>
+        <div className="text-text-500">2022 © unfoldingWord</div>
         <div>
           <Link href="/about">
             <a className="btn-transparent">About</a>

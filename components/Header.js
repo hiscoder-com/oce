@@ -18,7 +18,7 @@ function Header() {
       <div className="flex">
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer hover:text-gray-600">About</a>
+            <a className="cursor-pointer hover:text-gray-700">About</a>
             <div className="dropdown">
               <Link href="/about">
                 <a className="btn-gray">Whitepaper</a>
@@ -38,7 +38,7 @@ function Header() {
         </div>
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer hover:text-gray-600">Explore</a>
+            <a className="cursor-pointer hover:text-gray-700">Explore</a>
             <div className="dropdown">
               <Link href="/">
                 <a className="btn-gray">Apps</a>

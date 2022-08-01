@@ -10,8 +10,8 @@ function Contributors() {
   } = useRouter()
   const { data: contributors } = useContributors(isReady && address)
   return (
-    <div className="flex flex-col gap-1.5 text-zinc-450">
-      <p className="text-xs text-zinc-450">Contributors: {contributors?.length}</p>
+    <div className="flex flex-col gap-1.5 text-text-500">
+      <p className="text-xs text-text-500">Contributors: {contributors?.length}</p>
       <div>
         {contributors &&
           contributors.map((el, key) => {

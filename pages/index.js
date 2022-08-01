@@ -36,7 +36,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row gap-5 h-[617px]">
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-blue-75 rounded-lg hover:bg-yellow-350 group">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-blue-75 rounded-lg hover:bg-secondary-600 group">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={ascent} alt="ascent" width="303" height="185" />
@@ -82,7 +82,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 group rounded-lg hover:bg-yellow-350">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 group rounded-lg hover:bg-secondary-600">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={introduction} alt="introduction" width="303" height="185" />
@@ -127,7 +127,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 rounded-lg hover:bg-yellow-350 group">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 rounded-lg hover:bg-secondary-600 group">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={explore} alt="explore" width="303" height="185" />
@@ -160,7 +160,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-4">
-          <div className="text-base font-semibold uppercase text-zinc-450">
+          <div className="text-base font-semibold uppercase text-text-500">
             Components
           </div>
           <div className="flex gap-8">
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-base font-semibold uppercase text-zinc-450">
+          <div className="text-base font-semibold uppercase text-text-500">
             Applications
           </div>
           <div className="flex gap-8">
@@ -207,7 +207,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="w-2/3 text-xl text-zinc-450">
+            <div className="w-2/3 text-xl text-text-500">
               Use #scripture-open-components to showcase your work in the community
             </div>
           </div>
