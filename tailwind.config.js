@@ -7,7 +7,7 @@ module.exports = {
       },
       colors: {
         yellow: {
-          350: '#FDD835',
+          350: '#ffdb85',
         },
         blue: {
           75: '#F7F9FA',
