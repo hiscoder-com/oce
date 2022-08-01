@@ -27,7 +27,7 @@ function HeaderStaticPage({ config }) {
         </button>
       </Link>
       <div className="flex justify-between items-center">
-        <h1 className="text-5xl ">{title ? title : ''}</h1>
+        <h1 className="text-5xl text-primary-600 ">{title ? title : ''}</h1>
         <div>
           <Image
             className="editor-r"
