@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import editor_black from '../public/editor_black.svg'
 import ascent from '../public/ascent.svg'
@@ -12,6 +13,8 @@ import discord_hero from '../public/discord_hero.svg'
 import discord_arrow from '../public/discord_arrow.svg'
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <div className="flex flex-col gap-24 my-16 cursor-default">
       <Head>
@@ -58,8 +61,13 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
-            <div className="flex justify-center items-center gap-2 w-full h-full rounded-lg hover:bg-primary-600 active:bg-primary-700">
+          <button
+            onClick={() => {
+              router.push(`https://discord.com/invite/auJb4H9ezx`)
+            }}
+            className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black"
+          >
+            <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
               <div className="flex justify-center">
                 <Image
                   src={discord}
@@ -107,8 +115,13 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
-            <div className="flex justify-center items-center w-full h-full rounded-lg hover:bg-primary-600 active:bg-primary-700">
+          <button
+            onClick={() => {
+              router.push(`/about`)
+            }}
+            className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black"
+          >
+            <div className="flex justify-center items-center w-full h-full rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
               Learn more
             </div>
           </button>
