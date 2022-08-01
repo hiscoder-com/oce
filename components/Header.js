@@ -20,10 +20,10 @@ function Header() {
           <div className="relative">
             <a className="cursor-pointer hover:text-gray-600">About</a>
             <div className="dropdown">
-              <Link href="/">
-                <a className="btn-gray">White Paper</a>
+              <Link href="/about">
+                <a className="btn-gray">Whitepaper</a>
               </Link>
-              <Link href="/">
+              <Link href="/about">
                 <a className="btn-gray">Infographic</a>
               </Link>
             </div>
@@ -43,7 +43,7 @@ function Header() {
               <Link href="/">
                 <a className="btn-gray">Apps</a>
               </Link>
-              <Link href="/">
+              <Link href="/components">
                 <a className="btn-gray">Components</a>
               </Link>
             </div>
@@ -56,7 +56,7 @@ function Header() {
             className="group-hover:rotate-180"
           />
         </div>
-        <Link href="/">
+        <Link href="/get-started">
           <a className="btn-gray">Get started</a>
         </Link>
         <Link href="/">

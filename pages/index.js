@@ -41,9 +41,11 @@ export default function Home() {
 
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center">
-                <div className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
-                  Get started
-                </div>
+                <Link href="/get-started">
+                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                    Get started
+                  </a>
+                </Link>
                 <div>
                   <Image src={right} alt="right arrow" width="20" height="13" />
                 </div>
@@ -79,9 +81,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center">
-                <div className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
-                  Introduction
-                </div>
+                <Link href="/about">
+                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                    Introduction
+                  </a>
+                </Link>
                 <div>
                   <Image
                     src={right}
@@ -117,9 +121,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center">
-                <div className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
-                  Explore
-                </div>
+                <Link href="/components">
+                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                    Explore
+                  </a>
+                </Link>
                 <div>
                   <Image
                     src={right}

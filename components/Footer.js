@@ -15,13 +15,13 @@ function Footer() {
         </Link>
         <div className="text-zinc-450">2022 © unfoldingWord</div>
         <div>
-          <Link href="/">
+          <Link href="/about">
             <a className="btn-transparent">About</a>
           </Link>
-          <Link href="/">
+          <Link href="/components">
             <a className="btn-transparent">Explore</a>
           </Link>
-          <Link href="/">
+          <Link href="/get-started">
             <a className="btn-transparent">Get started</a>
           </Link>
           <Link href="/">
