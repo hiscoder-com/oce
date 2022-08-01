@@ -9,7 +9,7 @@ export default function LeanExpectations() {
     date: 'Sep 8, 2018 · 17 min read',
   }
   return (
-    <div className="container mx-auto md:px-1 lg:px-2 2xl:px-4  ">
+    <div className="container mx-auto md:px-1 lg:px-2 2xl:px-4">
       <HeaderStaticPage config={HeaderConfig} />
       <div className="mx-auto md:px-10 lg:px-20 2xl:px-40">
         <br />

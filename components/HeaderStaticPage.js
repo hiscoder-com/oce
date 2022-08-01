@@ -4,7 +4,7 @@ import Link from 'next/link'
 function HeaderStaticPage({ config }) {
   const { title, name, date } = config
   return (
-    <div className=" border-b-2 border-dashed my-16  pr-10">
+    <div className=" border-b-2 border-dashed my-16 pr-10">
       <Link href="/">
         <button className="flex justify-between w-28 hover:text-gray-700 text-gray-500">
           <div className="w-5 h-3">
