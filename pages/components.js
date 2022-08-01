@@ -35,3 +35,9 @@ function ComponentsPage() {
 }
 
 export default ComponentsPage
+
+export async function getServerSideProps(context) {
+  return {
+    props: {},
+  }
+}
