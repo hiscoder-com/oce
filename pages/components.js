@@ -16,13 +16,13 @@ function ComponentsPage() {
       <div className="pt-12">
         <div className="flex justify-between">
           <div className="flex justify-between">
-            <div className="px-2 w-40 ">
-              <Filter type="topics" />
+            <div className="px-2">
+              <Filter type="topics" multiple />
             </div>
-            <div className="px-2 w-40">
+            <div className="px-2">
               <Filter type="direction" />
             </div>
-            <div className="px-2 w-40">
+            <div className="px-2">
               <Filter type="order" />
             </div>
           </div>

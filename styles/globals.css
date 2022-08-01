@@ -32,10 +32,10 @@
   @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
 }
 .input {
-	@apply appearance-none block w-full px-3 py-1.5 text-base font-normal bg-clip-padding bg-no-repeat  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
+  @apply appearance-none block w-full px-3 py-1.5 text-base font-normal border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
 }
 .options {
-@apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm
+  @apply absolute mt-2 left-0 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm
 }
 .line-clamp {
   display: -webkit-box;

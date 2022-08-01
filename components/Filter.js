@@ -44,14 +44,11 @@ export default function Filter({ type, multiple }) {
       return
     }
 
-    router.push(
-      {
-        query: { ...router.query, [type]: param },
-      },
-      undefined,
-      { scroll: false }
-    )
+    router.push({ query: { ...router.query, [type]: param } }, undefined, {
+      scroll: false,
+    })
   }
+
   const handleCleanRouter = (e) => {
     e.preventDefault()
     const params = new URLSearchParams(query)
@@ -121,7 +118,6 @@ export default function Filter({ type, multiple }) {
               setSelectedFilter(e)
             } else {
               setSelectedFilters(e)
-              handleSendUrl(e.map((el) => el.value))
             }
           }}
           multiple={multiple}
@@ -134,11 +130,11 @@ export default function Filter({ type, multiple }) {
             } relative mt-1`}
           >
             <Listbox.Button>
-              <span className=" truncate mr-4">
+              <span className="truncate mr-4 w-fit">
                 {multiple ? type : selectedFilter ? selectedFilter?.name : type}
               </span>
               {multiple && selectedFilters.length > 0 && (
-                <span className="truncate "> {selectedFilters.length}</span>
+                <span className="truncate mr-6"> {selectedFilters.length}</span>
               )}
 
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -162,39 +158,46 @@ export default function Filter({ type, multiple }) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="options">
-                <>
-                  {filters[type].map((filter, personIdx) => (
-                    <Listbox.Option
-                      key={personIdx}
-                      hidden={filter.hidden}
-                      disabled={filter.disabled}
-                      className={({ active }) =>
-                        `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                          active ? 'bg-gray-100 text-amber-900' : 'text-gray-900'
-                        }`
-                      }
-                      value={filter}
-                    >
-                      {({ selected }) => (
-                        <>
-                          <span
-                            className={`block truncate ${
-                              selected ? 'font-medium' : 'font-normal'
-                            }`}
-                          >
-                            {filter.name}
-                          </span>
-                          {selected ? (
-                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
-                              <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                            </span>
-                          ) : null}
-                        </>
-                      )}
-                    </Listbox.Option>
-                  ))}
-                </>
+              <Listbox.Options className="options w-fit">
+                {({ open }) => {
+                  if (multiple && !open) {
+                    handleSendUrl(selectedFilters?.map((el) => el.value))
+                  }
+                  return (
+                    <>
+                      {filters[type].map((filter, personIdx) => (
+                        <Listbox.Option
+                          key={personIdx}
+                          hidden={filter.hidden}
+                          disabled={filter.disabled}
+                          className={({ active }) =>
+                            `relative cursor-default select-none py-2 pl-10 pr-2 ${
+                              active ? 'bg-gray-100 text-amber-900' : 'text-gray-900'
+                            }`
+                          }
+                          value={filter}
+                        >
+                          {({ selected }) => (
+                            <>
+                              <span
+                                className={`block ${
+                                  selected ? 'font-medium' : 'font-normal'
+                                }`}
+                              >
+                                {filter.name}
+                              </span>
+                              {selected ? (
+                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
+                                  <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                                </span>
+                              ) : null}
+                            </>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </>
+                  )
+                }}
               </Listbox.Options>
             </Transition>
           </div>
