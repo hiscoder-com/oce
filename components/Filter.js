@@ -21,7 +21,7 @@ const filters = {
   ],
 }
 
-export default function Filter({ type }) {
+export default function Filter({ type, multiple }) {
   const router = useRouter()
   const { pathname, query } = router
   const [selectedFilters, setSelectedFilters] = useState([])
@@ -33,10 +33,10 @@ export default function Filter({ type }) {
       return
     }
 
-    if (type === 'topics') {
-      router.replace(
+    if (multiple) {
+      router.push(
         {
-          query: { ...router.query, 'topics[]': param },
+          query: { ...router.query, [type + '[]']: param },
         },
         undefined,
         { scroll: false }
@@ -44,7 +44,7 @@ export default function Filter({ type }) {
       return
     }
 
-    router.replace(
+    router.push(
       {
         query: { ...router.query, [type]: param },
       },
@@ -55,7 +55,7 @@ export default function Filter({ type }) {
   const handleCleanRouter = (e) => {
     e.preventDefault()
     const params = new URLSearchParams(query)
-    params.delete('topics[]')
+    params.delete(type + '[]')
     router.replace({ pathname, query: params.toString() }, undefined, { scroll: false })
     setSelectedFilters([])
   }
@@ -64,7 +64,7 @@ export default function Filter({ type }) {
       return
     }
 
-    if (type !== 'topics' && !Object.keys(query).includes(type)) {
+    if (!multiple && !Object.keys(query).includes(type)) {
       router.replace(
         {
           query: { ...query, [type]: selectedFilter.value },
@@ -81,7 +81,7 @@ export default function Filter({ type }) {
       return
     }
 
-    if (Object.keys(query).includes(type) && type !== 'topics') {
+    if (Object.keys(query).includes(type) && !multiple) {
       filters?.[type]?.forEach((el) => {
         if (el.value === query[type]) {
           setSelectedFilter(el)
@@ -89,10 +89,10 @@ export default function Filter({ type }) {
       })
     }
 
-    if (Object.keys(query).includes('topics[]') && type === 'topics') {
+    if (Object.keys(query).includes(type + '[]') && multiple) {
       const selectedFromUrl = []
       filters[type].forEach((el) => {
-        if (query['topics[]'].includes(el.value)) {
+        if (query[type + '[]'].includes(el.value)) {
           selectedFromUrl.push(el)
         }
 
@@ -114,9 +114,9 @@ export default function Filter({ type }) {
       ) : (
         <Listbox
           open={false}
-          value={type === 'topics' ? selectedFilters : selectedFilter}
+          value={multiple ? selectedFilters : selectedFilter}
           onChange={(e) => {
-            if (type !== 'topics') {
+            if (!multiple) {
               handleSendUrl(e.value)
               setSelectedFilter(e)
             } else {
@@ -124,29 +124,25 @@ export default function Filter({ type }) {
               handleSendUrl(e.map((el) => el.value))
             }
           }}
-          multiple={type === 'topics'}
+          multiple={multiple}
         >
           <div
             className={`input ${
-              selectedFilters?.length > 0 && type === 'topics'
+              selectedFilters?.length > 0 && multiple
                 ? 'bg-[#2F5C6E] text-white'
                 : 'bg-white text-gray-700 '
             } relative mt-1`}
           >
             <Listbox.Button>
               <span className=" truncate mr-4">
-                {type === 'topics'
-                  ? 'topics'
-                  : selectedFilter
-                  ? selectedFilter?.name
-                  : type}
+                {multiple ? type : selectedFilter ? selectedFilter?.name : type}
               </span>
-              {type === 'topics' && selectedFilters.length > 0 && (
+              {multiple && selectedFilters.length > 0 && (
                 <span className="truncate "> {selectedFilters.length}</span>
               )}
 
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
-                {selectedFilters?.length > 0 && type === 'topics' ? (
+                {multiple && selectedFilters.length > 0 ? (
                   <XIcon
                     className="h-5 w-5 text-black-400"
                     aria-hidden="true"
