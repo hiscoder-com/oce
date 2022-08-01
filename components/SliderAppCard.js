@@ -5,7 +5,7 @@ function SliderAppCard({ app }) {
   const { title, description, link, logo } = app
 
   return (
-    <div className="w-[520px] max-h-64 bg-blue-75 my-5 mx-2 py-10 px-8 rounded-2xl">
+    <div className="w-[520px] max-h-64 bg-primary-100 my-5 mx-2 py-10 px-8 rounded-2xl">
       <div className="flex flex-row">
         <div className="w-2/3">
           <div>

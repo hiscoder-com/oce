@@ -1,24 +1,32 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import Chevron from '../public/chevron.svg'
 import Logo from '../public/logo.svg'
 
 function Header() {
+  const router = useRouter()
+
   return (
     <header className="header container mx-auto px-2">
       <div>
         <Link href="/">
           <a className="flex items-center gap-5">
             <Image src={Logo} alt="Open Components Ecosystem" width="34" height="47" />
-            <p>Open Components</p>
+            <p className="text-primary-600 text-2xl">Open Components</p>
           </a>
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex cursor-pointer btn-gray">
         <div className="flex gap-2 btn group">
-          <div className="relative">
-            <a className="cursor-pointer hover:text-gray-700">About</a>
+          <div
+            onClick={() => {
+              router.push(`/about`)
+            }}
+            className="relative"
+          >
+            <a className="">About</a>
             <div className="dropdown">
               <Link href="/about">
                 <a className="btn-gray">Whitepaper</a>
@@ -37,10 +45,15 @@ function Header() {
           />
         </div>
         <div className="flex gap-2 btn group">
-          <div className="relative">
-            <a className="cursor-pointer hover:text-gray-700">Explore</a>
+          <div
+            onClick={() => {
+              router.push(`/components`)
+            }}
+            className="relative"
+          >
+            <a className="btn-gray">Explore</a>
             <div className="dropdown">
-              <Link href="/">
+              <Link href="/components">
                 <a className="btn-gray">Apps</a>
               </Link>
               <Link href="/components">

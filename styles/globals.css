@@ -13,7 +13,7 @@
 }
 
 .btn-gray {
-  @apply btn hover:text-gray-700 active:text-gray-400
+  @apply btn text-text-800 hover:text-text-600 active:text-text-500
 }
 
 .btn-transparent {
@@ -67,5 +67,5 @@
 }
 
 .underline-custom {
-	@apply underline underline-offset-2 decoration-2 text-blue-500
+	@apply underline underline-offset-2 decoration-2 text-primary-500
 }

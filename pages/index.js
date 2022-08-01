@@ -36,7 +36,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row gap-5 h-[617px]">
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-blue-75 rounded-lg hover:bg-secondary-600 group">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-primary-100 rounded-lg hover:bg-secondary-600 group">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={ascent} alt="ascent" width="303" height="185" />
@@ -82,7 +82,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 group rounded-lg hover:bg-secondary-600">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-primary-100 group rounded-lg hover:bg-secondary-600">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={introduction} alt="introduction" width="303" height="185" />
@@ -127,7 +127,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-blue-75 rounded-lg hover:bg-secondary-600 group">
+        <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-primary-100 rounded-lg hover:bg-secondary-600 group">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={explore} alt="explore" width="303" height="185" />
