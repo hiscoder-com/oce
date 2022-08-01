@@ -11,7 +11,7 @@ export const components = [
     },
   },
   {
-    nameWithOwner: 'texttree/scripture-resources-rcl',
+    nameWithOwner: 'unfoldingword/scripture-resources-rcl',
     name: 'scripture-resources-rcl',
     description: ' Omnis tempore alias, iste repellendus deleniti rerum dolores',
     repositoryTopics: {
@@ -24,6 +24,18 @@ export const components = [
     owner: {
       login: 'timeline-poc',
       avatarUrl: 'https://avatars.githubusercontent.com/u/77689711?v=4',
+    },
+  },
+  {
+    nameWithOwner: 'unfoldingword/bible-reference-rcl',
+    name: 'bible-reference-rcl',
+    description: 'Amet consectetur adipisicing elit Lorem ipsum dolor sit',
+    repositoryTopics: {
+      nodes: [{ topic: { name: 'reference' } }, { topic: { name: 'book' } }],
+    },
+    owner: {
+      login: 'timeline-poc',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/77689722?v=4',
     },
   },
   {

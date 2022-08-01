@@ -4,7 +4,6 @@ import { Tab } from '@headlessui/react'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
-import Labels from './Labels'
 import SidePanel from './SidePanel'
 import ComponentCard from './ComponentCard'
 import useApp from '../hooks/useApp'
@@ -40,16 +39,8 @@ function App({ address }) {
         <>
           <h1 className="text-5xl font-bold uppercase">{repo.name}</h1>
           <p className="my-5">{repo.description}</p>
-          <div className="text-gray-500">
+          <div className="text-gray-500 mb-8">
             {repo?.language?.name} • Updated {timeSince(repo.pushedAt)} ago
-          </div>
-          <div className="my-10">
-            <Labels
-              full
-              labels={repo?.repositoryTopics?.nodes
-                ?.filter((el) => !['scripture-open-components'].includes(el.topic.name))
-                .map((el) => el.topic.name)}
-            />
           </div>
           <Tab.Group>
             <Tab.List className="border-b border-slate-400 border-dotted mb-12">

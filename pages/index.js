@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import ComponentCard from '../components/ComponentCard'
+import AppCard from '../components/AppCard'
+
 import editor_black from '../public/editor_black.svg'
 import ascent from '../public/ascent.svg'
 import right from '../public/right.svg'
@@ -10,8 +13,7 @@ import introduction from '../public/introduction.svg'
 import explore from '../public/explore.svg'
 import discord_hero from '../public/discord_hero.svg'
 import { apps, components } from '../utils/helper'
-import ComponentCard from '../components/ComponentCard'
-import AppCard from '../components/AppCard'
+import { shouldInclude } from '@apollo/client/utilities'
 
 export default function Home() {
   return (
@@ -167,7 +169,7 @@ export default function Home() {
           </div>
           <div className="flex gap-8">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
-              {apps?.map((el) => AppCard({ repo: el }))}
+              {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
             <div className="flex gap-2.5">
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
