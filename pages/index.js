@@ -43,14 +43,27 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <div className="flex flex-row gap-10 items-center">
+              <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/get-started">
-                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Get started
                   </a>
                 </Link>
-                <div>
-                  <Image src={right} alt="right arrow" width="20" height="13" />
+                <div className="w-5 h-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
                 </div>
               </div>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
@@ -88,20 +101,27 @@ export default function Home() {
               <Image src={introduction} alt="introduction" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
-              <div className="flex flex-row gap-10 items-center">
+              <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/about">
-                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Introduction
                   </a>
                 </Link>
-                <div>
-                  <Image
-                    src={right}
-                    alt="right arrow"
-                    width="20"
-                    height="13"
-                    className="group-hover:fill-black"
-                  />
+                <div className="w-5 h-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
                 </div>
               </div>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
@@ -135,20 +155,27 @@ export default function Home() {
               <Image src={explore} alt="explore" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
-              <div className="flex flex-row gap-10 items-center">
+              <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/components">
-                  <a className="text-2xl font-semibold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Explore
                   </a>
                 </Link>
-                <div>
-                  <Image
-                    src={right}
-                    alt="right arrow"
-                    width="20"
-                    height="13"
-                    className="group-hover:fill-black"
-                  />
+                <div className="w-5 h-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
                 </div>
               </div>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
