@@ -195,7 +195,7 @@ export default function Home() {
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
-            <div className="flex justify-center items-center gap-2.5 w-56 h-56">
+            <div className="flex justify-center items-center gap-2.5 w-56 h-56 font-bold">
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
                 More
               </div>
@@ -210,11 +210,11 @@ export default function Home() {
           <div className="text-base font-semibold uppercase text-text-500">
             Applications
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 justify-between">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
-            <div className="flex gap-2.5">
+            <div className="flex justify-end items-center gap-2.5 w-56 h-56 font-bold">
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
                 More
               </div>
