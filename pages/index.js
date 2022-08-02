@@ -27,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center border-b-2 border-dashed cursor-default">
+      <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex flex-row self-end mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
@@ -54,7 +54,7 @@ export default function Home() {
                 className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black"
               >
                 <Link href="/get-started">
-                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Get started
                   </a>
                 </Link>
@@ -75,7 +75,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <div className="text-base text-justify cursor-default text-text-600 group-hover:text-black">
+              <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Get started with the Open Component Ecosystem. The community conversation
                 is ongoing on Discord, but here you can find out more about how to begin
                 developing open components or getting your work added to the ecosystem.
@@ -111,7 +111,7 @@ export default function Home() {
                 className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black"
               >
                 <Link href="/about">
-                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Introduction
                   </a>
                 </Link>
@@ -132,7 +132,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <div className="text-base text-justify cursor-default text-text-600 group-hover:text-black">
+              <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Find out what the Open Component Ecosystem (OCE) is all about. To learn
                 about the concept behind the OCE, you can check out our{' '}
                 <Link href="/about">
@@ -170,7 +170,7 @@ export default function Home() {
                 className="inline-flex gap-10 items-center text-primary-600 group-hover:text-black"
               >
                 <Link href="/components">
-                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Explore
                   </a>
                 </Link>
@@ -191,7 +191,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <div className="text-base text-justify cursor-default text-text-600 group-hover:text-black">
+              <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Discover the various components that are already available in the
                 ecosystem and the related apps using them.
               </div>
@@ -202,9 +202,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-4">
-          <div className="text-base uppercase cursor-default text-text-500">
-            Components
-          </div>
+          <div className="text-base uppercase text-text-500">Components</div>
           <div className="flex gap-8">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
@@ -226,9 +224,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-base uppercase cursor-default text-text-500">
-            Applications
-          </div>
+          <div className="text-base uppercase text-text-500">Applications</div>
           <div className="flex gap-8 justify-between">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
@@ -237,7 +233,7 @@ export default function Home() {
               onClick={() => {
                 router.push(`/`)
               }}
-              className="flex justify-end items-center gap-2.5 w-56 h-56 font-bold cursor-pointer"
+              className="flex justify-center items-center gap-2.5 w-56 h-56 font-bold cursor-pointer"
             >
               <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
                 More
@@ -252,14 +248,32 @@ export default function Home() {
 
       <div className="flex gap-28">
         <div className="flex flex-col justify-center gap-5">
-          <div className="flex gap-11">
-            <div className="text-5xl font-bold text-primary-600">
+          <div
+            onClick={() => {
+              router.push(`/https://discord.com/invite/auJb4H9ezx`)
+            }}
+            className="flex gap-11 text-primary-600"
+          >
+            <div className="text-5xl font-bold">
               Join our community on{' '}
-              <Link href="https://discord.com/invite/auJb4H9ezx">
-                <a className="underline decoration-4 underline-offset-4">Discord</a>
-              </Link>
+              <span className="underline decoration-4 underline-offset-4 cursor-pointer">
+                Discord
+              </span>
             </div>
-            <Image src={discord_arrow} alt="discord_arrow" width="44" height="29" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-auto w-11 mt-2 cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </div>
 
           <div>

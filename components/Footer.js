@@ -27,13 +27,7 @@ function Footer() {
           >
             <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23">
               <div className="flex justify-center">
-                <Image
-                  src={discord_black}
-                  alt="discord_black"
-                  width="24"
-                  height="23"
-                  className=""
-                />
+                <Image src={discord_black} alt="discord_black" width="24" height="23" />
               </div>
               <div>Join Discord</div>
             </div>
@@ -55,7 +49,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="cursor-default text-text-200">2022 © unfoldingWord</div>
+        <div className="text-text-200">2022 © unfoldingWord</div>
       </div>
     </footer>
   )
