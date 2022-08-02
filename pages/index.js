@@ -46,34 +46,32 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <div
+              <button
                 onClick={() => {
                   router.push(`/`)
                 }}
                 className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black"
               >
                 <Link href="/get-started">
-                  <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 max-w-max group-hover:decoration-black">
                     Get started
                   </a>
                 </Link>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 mt-2 cursor-pointer"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-              </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 mt-2 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Get started with the Open Component Ecosystem. The community conversation
                 is ongoing on Discord, but here you can find out more about how to begin
@@ -103,34 +101,32 @@ export default function Home() {
               <Image src={introduction} alt="introduction" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
-              <div
+              <button
                 onClick={() => {
                   router.push(`/`)
                 }}
-                className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black"
+                className="flex flex-row gap-10 items-center max-w-max text-primary-600 group-hover:text-black"
               >
                 <Link href="/about">
                   <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Introduction
                   </a>
                 </Link>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 mt-2 cursor-pointer"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-              </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 mt-2 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Find out what the Open Component Ecosystem (OCE) is all about. To learn
                 about the concept behind the OCE, you can check out our{' '}
@@ -162,34 +158,32 @@ export default function Home() {
               <Image src={explore} alt="explore" width="303" height="185" />
             </div>
             <div className="flex flex-col gap-5">
-              <div
+              <button
                 onClick={() => {
                   router.push(`/`)
                 }}
-                className="inline-flex gap-10 items-center text-primary-600 group-hover:text-black"
+                className="inline-flex gap-10 items-center max-w-max text-primary-600 group-hover:text-black"
               >
                 <Link href="/components">
                   <a className="text-2xl font-bold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Explore
                   </a>
                 </Link>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 mt-2 cursor-pointer"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-              </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 mt-2 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
               <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Discover the various components that are already available in the
                 ecosystem and the related apps using them.
@@ -206,19 +200,30 @@ export default function Home() {
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
-            <div
+            <button
               onClick={() => {
                 router.push(`/`)
               }}
-              className="flex justify-center items-center gap-2.5 w-56 h-56 font-bold cursor-pointer"
+              className="flex justify-center items-center gap-2.5 w-18 font-bold cursor-pointer text-primary-600"
             >
-              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
+              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
               </div>
-              <div>
-                <Image src={right} alt="right arrow" width="13" height="8" />
-              </div>
-            </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-auto h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -228,37 +233,48 @@ export default function Home() {
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
-            <div
+            <button
               onClick={() => {
                 router.push(`/`)
               }}
-              className="flex justify-center items-center gap-2.5 w-56 h-56 font-bold cursor-pointer"
+              className="flex justify-center items-center gap-2.5 w-18 font-bold cursor-pointer text-primary-600"
             >
-              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4 text-primary-600">
+              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
               </div>
-              <div>
-                <Image src={right} alt="right arrow" width="13" height="8" />
-              </div>
-            </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-auto h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="flex gap-28">
+      <div className="flex justify-between">
         <div className="flex flex-col justify-center gap-5">
-          <div
+          <button
             onClick={() => {
               router.push(`/https://discord.com/invite/auJb4H9ezx`)
             }}
             className="flex gap-11 text-primary-600"
           >
-            <div className="text-5xl font-bold">
+            <a className="text-5xl font-bold">
               Join our community on{' '}
               <span className="underline decoration-4 underline-offset-4 cursor-pointer">
                 Discord
               </span>
-            </div>
+            </a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-auto w-11 mt-2 cursor-pointer"
@@ -273,7 +289,7 @@ export default function Home() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </div>
+          </button>
 
           <div>
             <div className="w-2/3 text-xl text-text-500">
