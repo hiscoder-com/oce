@@ -23,9 +23,9 @@ export default function HeadlessUI() {
             width="700"
             height="467"
             src={'/headless-ui/pic1.jpg'}
-            alt=""
+            alt="lego island"
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="text-gray-400">
             Glen Carrie —{' '}
             <Link href="https://unsplash.com/photos/HpMihL323k0">
               <a target="_blank">
