@@ -49,7 +49,7 @@ export default function Home() {
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/get-started">
-                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Get started
                   </a>
                 </Link>
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/about">
-                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Introduction
                   </a>
                 </Link>
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-10 items-center text-primary-600 group-hover:text-black">
                 <Link href="/components">
-                  <a className="text-2xl font-semibold underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
+                  <a className="text-2xl underline decoration-primary-600 decoration-2 underline-offset-4 group-hover:decoration-black">
                     Explore
                   </a>
                 </Link>
@@ -187,9 +187,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-4">
-          <div className="text-base font-semibold uppercase text-text-500">
-            Components
-          </div>
+          <div className="text-base uppercase text-text-500">Components</div>
           <div className="flex gap-8">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
@@ -206,9 +204,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="text-base font-semibold uppercase text-text-500">
-            Applications
-          </div>
+          <div className="text-base uppercase text-text-500">Applications</div>
           <div className="flex gap-8 justify-between">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
