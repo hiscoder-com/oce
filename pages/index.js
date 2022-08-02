@@ -31,12 +31,12 @@ export default function Home() {
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
         <div className="text-xl mb-28 text-primary-600">
-          <span className="font-bold">Collaborative Innovation</span> in Bible Technology{' '}
+          <span className="font-bold">Collaborative Innovation</span> in Bible Technology
         </div>
       </div>
 
-      <div className="flex flex-row gap-5 h-[617px]">
-        <div className="flex flex-col pt-16 pb-8 px-9 justify-between w-1/3 bg-primary-100 rounded-lg hover:bg-secondary-400 group">
+      <div className="flex flex-row gap-5">
+        <div className="flex flex-col gap-9 pt-16 pb-8 px-9 justify-between w-1/3 bg-primary-100 rounded-lg hover:bg-secondary-400 group">
           <div className="flex flex-col gap-14">
             <div>
               <Image src={ascent} alt="ascent" width="303" height="185" />
@@ -82,13 +82,7 @@ export default function Home() {
           >
             <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
               <div className="flex justify-center">
-                <Image
-                  src={discord}
-                  alt="discord"
-                  width="24"
-                  height="23"
-                  className="group-hover:fill-black"
-                />
+                <Image src={discord} alt="discord" width="24" height="23" />
               </div>
               <div>Join Discord</div>
             </div>
