@@ -22,7 +22,7 @@ export default function HeadlessUI() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/headlessUI/pic1.jpg'}
+            src={'/headless-ui/pic1.jpg'}
             alt=""
           />
           <figcaption className=" text-gray-400">
