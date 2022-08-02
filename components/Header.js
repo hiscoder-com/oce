@@ -29,10 +29,16 @@ function Header() {
             <a className="">About</a>
             <div className="dropdown">
               <Link href="/about">
-                <a className="btn-gray">Whitepaper</a>
+                <a className="btn-gray">About OCE</a>
               </Link>
               <Link href="/about">
-                <a className="btn-gray">Infographic</a>
+                <a className="btn-gray">OCE Whitepaper</a>
+              </Link>
+              <Link href="/about">
+                <a className="btn-gray">Video</a>
+              </Link>
+              <Link href="/about">
+                <a className="btn-gray">Licensing</a>
               </Link>
             </div>
           </div>

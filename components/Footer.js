@@ -25,7 +25,7 @@ function Footer() {
             }}
             className="w-44 h-11 rounded-lg text-white bg-primary-600"
           >
-            <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-600 active:shadow-xl active:shadow-primary-700/23">
+            <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23">
               <div className="flex justify-center">
                 <Image
                   src={discord_black}

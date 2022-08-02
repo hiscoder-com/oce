@@ -17,7 +17,7 @@
 }
 
 .btn-transparent {
-  @apply btn hover:text-secondary-600 active:text-yellow-400
+  @apply btn hover:text-secondary-400 active:text-yellow-400
 }
 
 .footer {
