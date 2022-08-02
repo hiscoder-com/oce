@@ -1,14 +1,17 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+
 import Gist from 'react-gist'
+
 import HeaderStaticPage from '../components/HeaderStaticPage'
+
+const HeaderConfig = {
+  title: 'Headless UI Components: Creating re-usable logic without thinking about design',
+  name: 'Osman Akar',
+  date: 'May 3, 2021·4 min read',
+}
+
 export default function HeadlessUI() {
-  const HeaderConfig = {
-    title:
-      'Headless UI Components: Creating re-usable logic without thinking about design',
-    name: 'Osman Akar',
-    date: 'May 3, 2021·4 min read',
-  }
   return (
     <div className="container mx-auto md:px-1 lg:px-2 2xl:px-4">
       <HeaderStaticPage config={HeaderConfig} />
@@ -19,7 +22,6 @@ export default function HeadlessUI() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/headlessUI/pic1.jpg'}
             alt=""
           />
@@ -135,6 +137,7 @@ export default function HeadlessUI() {
         </p>
         <br />
         <h2 className="font-bold text-2xl">Yes, we have done it!</h2>
+        <br />
         <p>At the end let’s summarize what this simple silly Theme component does:</p>
         <br />
         <ul className="list-disc ml-6">
