@@ -26,7 +26,7 @@ function Header() {
             }}
             className="relative"
           >
-            <a className="">About</a>
+            <a>About</a>
             <div className="dropdown">
               <Link href="/about">
                 <a className="btn-gray">About OCE</a>
@@ -59,7 +59,7 @@ function Header() {
           >
             <a className="btn-gray">Explore</a>
             <div className="dropdown">
-              <Link href="/components">
+              <Link href="/apps">
                 <a className="btn-gray">Apps</a>
               </Link>
               <Link href="/components">
