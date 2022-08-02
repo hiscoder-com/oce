@@ -14,7 +14,6 @@ import discord from '../public/discord.svg'
 import introduction from '../public/introduction.svg'
 import explore from '../public/explore.svg'
 import discord_hero from '../public/discord_hero.svg'
-import discord_arrow from '../public/discord_arrow.svg'
 
 export default function Home() {
   const router = useRouter()

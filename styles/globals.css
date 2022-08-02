@@ -4,8 +4,7 @@
 
 @layer base {
   html {
-    font-family: Ubuntu, system-ui, sans-serif;
-  }
+    font-family: 'Ubuntu', sans-serif;  }
 }
 
 .btn {
