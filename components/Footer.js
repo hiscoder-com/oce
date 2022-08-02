@@ -1,14 +1,10 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
-import { useRouter } from 'next/router'
-
-import Logo from '../public/logo-white.svg'
 import discord_black from '../public/discord_black.svg'
+import Logo from '../public/logo-white.svg'
 
 function Footer() {
-  const router = useRouter()
-
   return (
     <footer className="bg-primary-600 mt-6">
       <div className="footer container mx-auto px-2">
@@ -19,20 +15,19 @@ function Footer() {
             </a>
           </Link>
 
-          <button
-            onClick={() => {
-              router.push(`https://discord.com/invite/auJb4H9ezx`)
-            }}
-            className="w-44 h-11 rounded-lg text-white bg-primary-600"
-          >
-            <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23">
-              <div className="flex justify-center">
-                <Image src={discord_black} alt="discord_black" width="24" height="23" />
-              </div>
-              <div>Join Discord</div>
-            </div>
-          </button>
-
+          <div className="w-44 h-11 rounded-lg text-white bg-primary-600">
+            <Link href="https://discord.com/invite/auJb4H9ezx">
+              <a
+                target="_blank"
+                className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
+              >
+                <div className="flex justify-center">
+                  <Image src={discord_black} alt="discord_black" width="24" height="23" />
+                </div>
+                <div>Join Discord</div>
+              </a>
+            </Link>
+          </div>
           <div>
             <Link href="/about">
               <a className="btn-transparent">About</a>
