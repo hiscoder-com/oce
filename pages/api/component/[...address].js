@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     const result = await client.query({
       query: gql`
         {
-          repository(name: "${address[1]}", owner: "${address[0]}") {
+          repository(name: "${address?.[1]}", owner: "${address?.[0]}") {
             name
             description
             pushedAt
