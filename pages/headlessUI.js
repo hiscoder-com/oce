@@ -101,9 +101,9 @@ export default function HeadlessUI() {
           of an application and displays what the current theme is.
         </p>
         <br />
-        <div className="w-2/3 m-auto">
-          <Gist id="061bd6925289faf121e4c17a19e50e41" />
-          <p className="description-gist">theme component, not headless</p>
+        <Gist id="061bd6925289faf121e4c17a19e50e41" />
+        <div className="description-gist">
+          <p>theme component, not headless</p>
         </div>
         <br />
         <p>
@@ -199,15 +199,38 @@ export default function HeadlessUI() {
         <p>There are great libraries that implement headless components. Like:</p>
         <br />
         <ul className="list-disc ml-6 font-bold underline underline-offset-2">
-          <li>react-table</li>
-          <li>react-albus</li>
-          <li>react-selected</li>
+          <Link href="https://tanstack.com/table/v8/?from=reactTableV7&original=https://react-table-v7.tanstack.com/">
+            <a target="_blank">
+              <li>react-table</li>
+            </a>
+          </Link>
+          <Link href="https://github.com/americanexpress/react-albus">
+            <a target="_blank">
+              <li>react-albus</li>
+            </a>
+          </Link>
+          <Link href="https://github.com/jxom/react-selected">
+            <a target="_blank">
+              <li>react-selected</li>
+            </a>
+          </Link>
         </ul>
         <br />
         <p>
           I suggest you take a look around the source code of these libraries, especially
           react-table.
         </p>
+        <br />
+        <br />
+        If it is not enough for you, there are lots of sources about headless components.
+        Take a look at{' '}
+        <Link href="https://www.merrickchristensen.com/articles/headless-user-interface-components/">
+          <a target="_blank">
+            <u>those articles</u>
+          </a>
+        </Link>
+        . I would suggest you read this article which is written by{' '}
+        <b>Merrick Christensen.</b>
       </div>
     </div>
   )

@@ -69,3 +69,6 @@
 .underline-custom {
 	@apply underline underline-offset-2 decoration-2 text-blue-500
 }
+.description-gist {
+  @apply flex justify-center text-xs text-gray-500
+}
