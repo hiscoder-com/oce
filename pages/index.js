@@ -79,20 +79,19 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <button
-            onClick={() => {
-              router.push(`https://discord.com/invite/auJb4H9ezx`)
-            }}
-            className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black"
-          >
-            <div className="flex justify-center items-center w-full h-full gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
-              <div className="flex justify-center">
-                <Image src={discord} alt="discord" width="24" height="23" />
-              </div>
-              <div>Join Discord</div>
-            </div>
-          </button>
+          <div className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
+            <Link href="https://discord.com/invite/auJb4H9ezx">
+              <a
+                target="_blank"
+                className="flex justify-center items-center w-44 h-11 gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
+              >
+                <div className="flex justify-center">
+                  <Image src={discord} alt="discord" width="24" height="23" />
+                </div>
+                <div>Join Discord</div>
+              </a>
+            </Link>
+          </div>{' '}
         </div>
 
         <div className="flex flex-col pt-16 pb-8 px-9 justify-between gap-5 w-1/3 bg-primary-100 group rounded-lg hover:bg-secondary-400">
@@ -144,7 +143,7 @@ export default function Home() {
             onClick={() => {
               router.push(`/about`)
             }}
-            className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black"
+            className="w-36 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black"
           >
             <div className="flex justify-center items-center w-full h-full rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
               Learn more
@@ -263,34 +262,32 @@ export default function Home() {
 
       <div className="flex justify-between">
         <div className="flex flex-col justify-center gap-5">
-          <button
-            onClick={() => {
-              router.push(`/https://discord.com/invite/auJb4H9ezx`)
-            }}
-            className="flex gap-11 text-primary-600"
-          >
-            <a className="text-5xl font-bold">
-              Join our community on{' '}
-              <span className="underline decoration-4 underline-offset-4 cursor-pointer">
-                Discord
-              </span>
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-auto w-11 mt-2 cursor-pointer"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button>
-
+          <div className="text-primary-600">
+            <Link href="https://discord.com/invite/auJb4H9ezx">
+              <a target="_blank" className="flex gap-11 text-5xl font-bold">
+                <p>
+                  Join our community on{' '}
+                  <span className="underline decoration-4 underline-offset-4 cursor-pointer">
+                    Discord
+                  </span>
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-auto w-11 mt-2 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </div>
           <div>
             <div className="w-2/3 text-xl text-text-500">
               Use #scripture-open-components to showcase your work in the community
