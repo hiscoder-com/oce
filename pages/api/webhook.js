@@ -1,4 +1,38 @@
 import axios from 'axios'
+import prisma from '../../utils/prisma'
+
+const saveRepo = async (data) => {
+  const request = {
+    repo: data.full_name,
+    description: data.description,
+    topics: {
+      create: data.topics.map((el) => ({
+        topic: {
+          connectOrCreate: {
+            create: { name: el },
+            where: { name: el },
+          },
+        },
+      })),
+    },
+    reposFrom: {
+      create: data.oce.dependencies.map((el) => ({
+        repoTo: {
+          connectOrCreate: {
+            create: { repo: el },
+            where: { repo: el },
+          },
+        },
+      })),
+    },
+  }
+  const repo = await prisma.repo.upsert({
+    where: { repo: data.full_name },
+    update: request,
+    create: request,
+  })
+  return true
+}
 
 export default async function handler(req, res) {
   const {
@@ -20,12 +54,11 @@ export default async function handler(req, res) {
     repository: { description, full_name, topics, homepage, language },
   }
 
-  if (!commits || !commits?.length > 0) {
-    return res.status(200).json(data)
+  if (!commits || !commits?.length > 0 || master_branch !== ref.split('/')[2]) {
+    await saveRepo(data)
+    return res.status(200).json('ok')
   }
-  if (master_branch !== ref.split('/')[2]) {
-    return res.status(200).json(data)
-  }
+
   if (isChange('oce.json')) {
     try {
       const result = await axios.get(
