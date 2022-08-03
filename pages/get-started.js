@@ -10,7 +10,7 @@ import editor2 from '../public/editor2.svg'
 
 function getStarted() {
   return (
-    <div className="flex flex-col gap-14 my-16 cursor-default">
+    <div className="flex flex-col gap-14 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex self-start ml-60">
           <Image

@@ -23,7 +23,7 @@ function HeaderStaticPage({ config }) {
               />
             </svg>
           </div>
-          <p className="text-base">Get started</p>
+          <p className="text-base font-bold">Get started</p>
         </button>
       </Link>
       <div className="flex justify-between items-center">
