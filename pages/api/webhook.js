@@ -3,10 +3,10 @@ import prisma from '../../utils/prisma'
 
 const saveRepo = async (data) => {
   const request = {
-    repo: data.full_name,
-    description: data.description,
+    repo: data.repository.full_name,
+    description: data.repository.description,
     topics: {
-      create: data.topics.map((el) => ({
+      create: data.repository.topics.map((el) => ({
         topic: {
           connectOrCreate: {
             create: { name: el },
@@ -27,7 +27,7 @@ const saveRepo = async (data) => {
     },
   }
   const repo = await prisma.repo.upsert({
-    where: { repo: data.full_name },
+    where: { repo: data.repository.full_name },
     update: request,
     create: request,
   })
@@ -68,7 +68,6 @@ export default async function handler(req, res) {
       data['oce'] = result.data
       await saveRepo(data)
     } catch (error) {
-      // data['oce'] = {}
       res.status(404).json(error)
       return
     }
