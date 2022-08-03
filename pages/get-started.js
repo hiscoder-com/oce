@@ -8,7 +8,7 @@ import editor from '../public/editor.svg'
 import search2 from '../public/search2.svg'
 import editor2 from '../public/editor2.svg'
 
-function getStarted() {
+function GetStarted() {
   return (
     <div className="flex flex-col gap-14 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
@@ -154,4 +154,4 @@ function getStarted() {
   )
 }
 
-export default getStarted
+export default GetStarted

@@ -12,7 +12,7 @@
 }
 
 .btn-gray {
-  @apply btn text-text-800 hover:text-text-600 active:text-text-500
+  @apply btn hover:text-text-600 active:text-text-500
 }
 
 .btn-transparent {

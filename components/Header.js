@@ -18,7 +18,7 @@ function Header() {
           </a>
         </Link>
       </div>
-      <div className="flex cursor-pointer btn-gray">
+      <div className="flex cursor-pointer btn-gray text-text-600">
         <div className="flex gap-2 btn group">
           <div
             onClick={() => {
