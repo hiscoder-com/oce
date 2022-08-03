@@ -45,7 +45,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-5">
               <Link href="/get-started">
-                <a className="flex flex-row gap-10 items-center text-2xl font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 max-w-max group-hover:decoration-black group-hover:text-black">
+                <a className="flex gap-10 items-center text-2xl font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 max-w-max group-hover:decoration-black group-hover:text-black">
                   Get started
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5">
               <Link href="/about">
-                <a className="flex flex-row gap-10 items-center max-w-max text-2xl font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                <a className="flex gap-10 items-center max-w-max text-2xl font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
                   Introduction
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -183,66 +183,56 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <div className="text-base uppercase text-text-500">Components</div>
           <div className="flex gap-8">
-            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:grid-cols-5 2xl:gap-8">
+            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
-            <button
-              onClick={() => {
-                router.push(`/`)
-              }}
-              className="flex justify-center items-center gap-2.5 w-18 font-bold cursor-pointer text-primary-600"
-            >
-              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4">
+            <Link href="/">
+              <a className="flex items-center gap-2.5 mx-auto font-bold text-base underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4">
                 More
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-auto h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-auto h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
           <div className="text-base uppercase text-text-500">Applications</div>
           <div className="flex gap-8 justify-between">
-            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
+            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:w-9/12 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
-            <button
-              onClick={() => {
-                router.push(`/`)
-              }}
-              className="flex justify-center items-center gap-2.5 w-18 font-bold cursor-pointer text-primary-600"
-            >
-              <div className="text-base underline decoration-primary-600 decoration-2 underline-offset-4">
+            <Link href="/">
+              <a className="flex items-center gap-2.5 mx-auto font-bold text-base text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-auto h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-auto h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
