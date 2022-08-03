@@ -187,7 +187,7 @@ export default function Home() {
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
-            <Link href="/">
+            <Link href="/components">
               <a className="flex items-center gap-2.5 mx-auto font-bold text-base underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4">
                 More
                 <svg
@@ -215,7 +215,7 @@ export default function Home() {
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:w-9/12 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
-            <Link href="/">
+            <Link href="/apps">
               <a className="flex items-center gap-2.5 mx-auto font-bold text-base text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
                 <svg
