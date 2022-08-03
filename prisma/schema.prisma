@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./oce.db"
+}
+
+model Repo {
+  repo        String        @unique
+  name        String?
+  description String?
+  logo        String?
+  topics      ReposTopics[]
+  reposFrom   ReposRepos[]  @relation("repoFromRel")
+  reposTo     ReposRepos[]  @relation("repoToRel")
+}
+
+model Topic {
+  name  String        @unique
+  repos ReposTopics[]
+}
+
+model ReposTopics {
+  repo    Repo   @relation(fields: [repoId], references: [repo])
+  repoId  String
+  topic   Topic  @relation(fields: [topicId], references: [name])
+  topicId String
+
+  @@unique([repoId, topicId])
+}
+
+model ReposRepos {
+  repoFrom   Repo   @relation("repoFromRel", fields: [repoFromId], references: [repo])
+  repoFromId String
+  repoTo     Repo   @relation("repoToRel", fields: [repoToId], references: [repo])
+  repoToId   String
+
+  @@unique([repoFromId, repoToId])
+}

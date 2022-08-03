@@ -6,7 +6,7 @@ function ComponentCardNpm({ package: repo }) {
   return (
     <div
       key={repo.name}
-      className="flex flex-col justify-between pt-8 pl-6 pb-4 bg-blue-75 h-56 max-w-sm rounded-xl"
+      className="flex flex-col justify-between pt-8 pl-6 pb-4 bg-primary-100 h-56 max-w-sm rounded-xl"
     >
       <div>
         <Link href={`/component-npm/${repo.name}`}>

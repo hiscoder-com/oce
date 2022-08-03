@@ -4,8 +4,7 @@
 
 @layer base {
   html {
-    font-family: Ubuntu, system-ui, sans-serif;
-  }
+    font-family: 'Ubuntu', sans-serif;  }
 }
 
 .btn {
@@ -13,11 +12,11 @@
 }
 
 .btn-gray {
-  @apply btn hover:text-gray-600 active:text-gray-400
+  @apply btn text-text-800 hover:text-text-600 active:text-text-500
 }
 
 .btn-transparent {
-  @apply btn hover:text-yellow-350 active:text-yellow-400
+  @apply btn hover:text-secondary-400 active:text-yellow-400
 }
 
 .footer {
@@ -73,5 +72,9 @@
 }
 
 .underline-custom {
-	@apply underline underline-offset-2 decoration-2 text-blue-500
+	@apply underline underline-offset-2 decoration-2 text-primary-500
+}
+
+.description-gist {
+  @apply flex justify-center text-xs text-gray-500
 }
