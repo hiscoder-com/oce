@@ -7,7 +7,7 @@ import { CheckIcon, ChevronDownIcon, XIcon } from '@heroicons/react/solid'
 
 const filters = {
   order: [
-    { id: 0, name: 'popularity', value: 'popularity' },
+    { id: 0, name: 'interactions', value: 'interactions' },
     { id: 1, name: 'updated', value: 'updated' },
   ],
   direction: [

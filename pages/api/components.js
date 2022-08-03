@@ -13,6 +13,7 @@ export default async function handler(req, res) {
     order = 'updated',
     direction = 'desc',
     'topics[]': _topics = [],
+    query = '',
   } = req.query
   const topics = Array.isArray(_topics) ? _topics : _topics.length ? [_topics] : []
 
@@ -23,7 +24,9 @@ export default async function handler(req, res) {
           first: ${parseInt(limit)}
           after: ${from ? '"' + from + '"' : 'null'}
           type: REPOSITORY
-          query: "topic:scripture-open-components ${topics.join(' ')} NOT app sort:${
+          query: "${query} topic:scripture-open-components ${topics.join(
+        ' '
+      )} NOT app sort:${
         order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
       }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
         ) {
