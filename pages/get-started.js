@@ -93,7 +93,7 @@ function getStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <Link href="/">
+              <Link href="/lean-expectations">
                 <a className="underline-custom">
                   Lean Expectations — PoC, Prototype, MVP
                 </a>
