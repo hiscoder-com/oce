@@ -10,7 +10,7 @@ import editor2 from '../public/editor2.svg'
 
 function getStarted() {
   return (
-    <div className="flex flex-col gap-14 my-16 cursor-default">
+    <div className="flex flex-col gap-14 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex self-start ml-60">
           <Image
@@ -33,7 +33,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
         <div>
           <Image src={window} alt="window" width="200" height="200" />
         </div>
@@ -58,7 +58,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
         <div>
           <Image src={search2} alt="search2" width="200" height="200" />
         </div>
@@ -83,7 +83,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
         <div>
           <Image src={editor2} alt="editor2" width="200" height="200" />
         </div>
@@ -103,7 +103,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
         <div>
           <Image src={search} alt="search" width="200" height="200" />
         </div>
@@ -133,7 +133,7 @@ function getStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-blue-75">
+      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
         <div>
           <Image src={editor} alt="editor" width="200" height="200" />
         </div>

@@ -6,7 +6,7 @@ function AppCard({ repo }) {
   return (
     <div
       key={repo.nameWithOwner}
-      className="flex flex-row justify-between py-8 px-6 bg-blue-75 h-full sm:h-56 rounded-xl"
+      className="flex flex-row justify-between py-8 px-6 bg-primary-100 h-full sm:h-56 rounded-xl"
     >
       <div className="flex-grow w-2/3">
         <Link className="mb-8" href={`/app/${repo.nameWithOwner}`}>

@@ -16,7 +16,7 @@ function ComponentApp({ apps }) {
                 <p className="underline text-2xl font-bold decoration-2 underline-offset-4">
                   {el.name}
                 </p>
-                <p className="text-justify text-zinc-450">{el.description}</p>
+                <p className="text-justify text-text-500">{el.description}</p>
               </div>
             </div>
           )
