@@ -3,70 +3,79 @@ import prisma from '../../utils/prisma'
 
 const saveRepo = async (data) => {
   const request = {
-    repo: data.repository.full_name,
-    // language: data.repository.language,
-    description: data.repository.description,
-    // homepage: data.repository.homepage || '',
+    repo: data.full_name,
+    // language: data.language,
+    description: data.description,
+    // homepage: data.homepage || '',
     topics: {
-      create: data.repository.topics.map((el) => ({
+      create: data.topics.map((el) => ({
         topic: {
           connectOrCreate: {
-            create: { name: el },
             where: { name: el },
+            create: { name: el },
           },
         },
       })),
     },
   }
 
-  const repoTopicsClear = await prisma.repo.update({
-    where: { repo: data.repository.full_name },
-    data: {
+  await prisma.repo.upsert({
+    where: { repo: data.full_name },
+    update: {
+      repo: data.full_name,
       topics: {
         deleteMany: {},
       },
     },
+    create: {
+      repo: data.full_name,
+    },
   })
 
-  const repo = await prisma.repo.upsert({
-    where: { repo: data.repository.full_name },
+  await prisma.repo.upsert({
+    where: { repo: data.full_name },
     update: request,
     create: request,
   })
 
   return true
 }
+
 const saveOceData = async (data) => {
   const request = {
-    repo: data.repository.full_name,
-    name: data.name || null,
-    // version: data.version || '',
-    // date: data.date || '',
+    repo: data.full_name,
+    packageName: data.name || null,
+    release: data.version || '',
+    releaseDate: data.date || '',
     logo: data.logo || null,
-    reposFrom: {
-      create:
-        data?.dependencies && data?.dependencies.length > 0
-          ? data?.dependencies
-          : [].map((el) => ({
-              repoTo: {
-                connectOrCreate: {
-                  create: { repo: el },
-                  where: { repo: el },
-                },
-              },
-            })),
+    depends: {
+      create: (data?.dependencies && data?.dependencies.length > 0
+        ? data?.dependencies
+        : []
+      ).map((el) => ({
+        depend: {
+          connectOrCreate: {
+            create: { packageName: el },
+            where: { packageName: el },
+          },
+        },
+      })),
     },
   }
-  const repoDependenciesClear = await prisma.repo.update({
-    where: { repo: data.name },
-    data: {
-      reposFrom: {
+  await prisma.repo.upsert({
+    where: { repo: data.full_name },
+    create: {
+      repo: data.full_name,
+    },
+    update: {
+      repo: data.full_name,
+      depends: {
         deleteMany: {},
       },
     },
   })
-  const repo = await prisma.repo.upsert({
-    where: { repo: data.name },
+  await prisma.repo.upsert({
+    where: { repo: data.full_name },
     update: request,
     create: request,
   })
@@ -89,9 +98,7 @@ export default async function handler(req, res) {
       )
     })
   }
-  let data = {
-    repository: { description, full_name, topics, homepage, language },
-  }
+  let data = { description, full_name, topics, homepage, language }
 
   if (!commits || !commits?.length > 0 || master_branch !== ref.split('/')[2]) {
     await saveRepo(data)
@@ -104,7 +111,7 @@ export default async function handler(req, res) {
         `https://raw.githubusercontent.com/${full_name}/${master_branch}/oce.json`
       )
       // console.log(result.data, 'new')
-      await saveOceData({ ...result.data, full_name: data.repository.full_name })
+      await saveOceData({ ...result.data, full_name: data.full_name })
     } catch (error) {
       res.status(404).json(error)
       return

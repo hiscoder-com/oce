@@ -5,12 +5,17 @@ const prisma = new PrismaClient()
 async function main() {
   const r = await prisma.repo.findUnique({
     where: {
-      repo: 'repo2',
+      repo: 'texttree/projector-mode-rcl',
     },
     select: {
       repo: true,
       packageName: true,
       logo: true,
+      description: true,
+      ownerAvatar: true,
+      release: true,
+      releaseDate: true,
+      license: true,
       topics: true,
       depends: true,
     },
@@ -31,8 +36,17 @@ async function main() {
       packageName: true,
       repo: true,
       logo: true,
+      description: true,
+      ownerAvatar: true,
+      release: true,
+      releaseDate: true,
+      license: true,
     },
   })
+  if (!r.packageName) {
+    console.log({ r, dFrom, dTo: [] })
+    return true
+  }
   const dTo = await prisma.repo.findMany({
     where: {
       depends: {
@@ -47,8 +61,14 @@ async function main() {
       packageName: true,
       repo: true,
       logo: true,
+      description: true,
+      ownerAvatar: true,
+      release: true,
+      releaseDate: true,
+      license: true,
     },
   })
+
   console.log({ r, dFrom, dTo })
 }
 
