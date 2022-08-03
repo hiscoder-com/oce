@@ -66,6 +66,7 @@ export default async function handler(req, res) {
       )
 
       data['oce'] = result.data
+      await saveRepo(data)
     } catch (error) {
       // data['oce'] = {}
       res.status(404).json(error)
