@@ -286,7 +286,7 @@ export default function ReactCompLibrary() {
             height="232"
             className=""
             src={'/react-comp-library/pic3.png'}
-            alt=""
+            alt="Welcom to Styleguidist"
           />
         </div>
         <br />
@@ -335,6 +335,232 @@ export default function ReactCompLibrary() {
         <div className="description-gist">
           <p>Button.js</p>
         </div>
+        <br />
+        <p>
+          Run <code className="bg-gray-100">yarn start</code>or{' '}
+          <code className="bg-gray-100">npm start</code> again to restart the Styleguidist
+          server.
+        </p>
+        <br />
+        <p>
+          Now, open <code className="bg-gray-100">http://localhost:6060</code>again and it
+          should include the Button Component in the docs as shown in the picture below.
+        </p>
+        <br />
+        <div className="w-full h-auto">
+          <Image
+            layout="responsive"
+            width="692"
+            height="339"
+            className=""
+            src={'/react-comp-library/pic4.png'}
+            alt="button"
+          />
+        </div>
+        <br />
+        <p>
+          It doesn’t really show anything yet, but Styleguidist{' '}
+          <Link href="https://react-styleguidist.js.org/docs/documenting/">
+            <a target="_blank">
+              <u>makes it easy to preview and describe the components</u>
+            </a>
+          </Link>
+          .
+        </p>
+        <br />
+        <p>
+          Now create a markdown file named <code className="bg-gray-100">Button.md</code>{' '}
+          inside the <code className="bg-gray-100">Button</code> folder to start
+          documenting the Button Component.
+        </p>
+        <br />
+        <Gist id="bdbbf3e91622975653826ba4639cbc55" />
+        <div className="description-gist">
+          <p>src/components/Button/Button.md</p>
+        </div>
+        <br />
+        <p>
+          We can mix Markdown with JavaScript/React code to show the examples and
+          descriptions easily.
+        </p>
+        <br />
+        <p>
+          Now restart the Styleguidist server by rerunning{' '}
+          <code className="bg-gray-100">yarn start</code> or{' '}
+          <code className="bg-gray-100">npm start</code> and refresh the page, we should
+          now see:
+        </p>
+        <br />
+        <div className="w-full h-auto">
+          <Image
+            layout="responsive"
+            width="692"
+            height="414"
+            className=""
+            src={'/react-comp-library/pic5.png'}
+            alt="button"
+          />
+        </div>
+        <br />
+        <p>
+          We have created our first basic component, have set up a development environment
+          with live preview, and production-ready documentation at the same time.
+        </p>
+        <br />
+        {/* <div className="flex justify-center m-auto">
+          <div className="border-black border w-1 h-1 bg-black"></div>
+          <div className="border-black border w-1 h-1 mx-2 bg-black"></div>
+          <div className="border-black border w-1 h-1 bg-black"></div>
+        </div> */}
+        <br />
+
+        <h2 className="font-bold text-xl">Material-UI + unfoldingWord RCLs</h2>
+        <p>
+          At unfoldingWord we use Material-UI with our RCLs as a baseline for our UI/UX
+          design.
+        </p>
+        <br />
+        <p>Let’s start with a basic button using the Material-UI library.</p>
+        <br />
+        <p>
+          Copy the following code to{' '}
+          <code className="bg-gray-100">src/components/MuiButton/index.js</code>:
+        </p>
+        <Gist id="f067aaa7530f8e8c8b88fb02fa7cbef9" />
+        <div className="description-gist">
+          <p>index.js</p>
+        </div>
+        <br />
+        <p>
+          Copy the following code to{' '}
+          <code className="bg-gray-100">src/components/MuiButton/MuiButton.js</code>:
+        </p>
+        <br />
+        <Gist id="7728cc0db4e98b39ab2abf745727fd8c" />
+        <div className="description-gist">
+          <p>MuiButton.js</p>
+        </div>
+        <br />
+        <p>
+          Restart the Styleguidist server running{' '}
+          <code className="bg-gray-100">yarn start</code> or{' '}
+          <code className="bg-gray-100">npm start</code> again.
+        </p>
+        <br />
+        <p>
+          Open <code className="bg-gray-100">http://localhost:6060</code> and you should
+          see the <code className="bg-gray-100">MuiButton</code> Component.
+        </p>
+        <br />
+        <div className="w-full h-auto">
+          <Image
+            layout="responsive"
+            width="692"
+            height="264"
+            className=""
+            src={'/react-comp-library/pic6.png'}
+            alt="button"
+          />
+        </div>
+        <br />
+        <p>
+          Finally, let’s create a markdown file either named{' '}
+          <code className="bg-gray-100">MuiButton.md</code> or{' '}
+          <code className="bg-gray-100">README.md</code>
+          inside the <code className="bg-gray-100">MuiButton</code> folder to start
+          documenting the MuiButton Component.
+        </p>
+        <Gist id="6c05d855cf3a9542ee45c0393c8aac6a" />
+        <br />
+        <p>
+          Restart the Styleguidist server. You should now see the MuiButton component in
+          the Styleguidist live demo.
+        </p>
+        <br />
+        <div className="w-full h-auto">
+          <Image
+            layout="responsive"
+            width="692"
+            height="350"
+            className=""
+            src={'/react-comp-library/pic7.png'}
+            alt="button"
+          />
+        </div>
+        <br />
+        <h1 className="font-bold text-2xl">Bundling and publishing to NPM</h1>
+        <br />
+        <blockquote className="border-black border-l-2 pl-3">
+          <i>
+            Make sure you have an NPM account beforehand, if you don’t make sure to sign
+            up{' '}
+            <Link href="https://www.npmjs.com/signup">
+              <a target="_blank">
+                <u>here</u>
+              </a>
+            </Link>
+            .
+          </i>
+        </blockquote>
+        <br />
+        <p>
+          First, we have to update the entry point to the library. In order to do that, we
+          have to update the <code className="bg-gray-100">main</code> field in{' '}
+          <code className="bg-gray-100">package.json</code>. This points to the bundled
+          file that will be generated, not to the sources.
+        </p>
+        <br />
+        <p>
+          Let’s set it to <code className="bg-gray-100">dist/index.js</code>, the path to
+          the bundled output.
+        </p>
+        <Gist id="8dc37fff80a9be7eefcd226c02e70b69" />
+        <div className="description-gist">
+          <p>package.jsons</p>
+        </div>
+        <br />
+        <p>
+          We’re missing one more file, which defines what is exported from the library and
+          what users can import. Create a{' '}
+          <code className="bg-gray-100">src/index.js</code> file with the following code:
+        </p>
+        <Gist id="360539bc8377dd1f3f76cb89a27a7d5f" />
+        <br />
+        <p>
+          Also, create a <code className="bg-gray-100">src/components/index.js</code> file
+          and add all current components to make sure they’re exported and made available
+          to users of our RCL, here we’ll also export new components as we create them.
+        </p>
+        <br />
+        <Gist id="48fda928b8417f3a7f9aa81609e46dd4" />
+        <br />
+        <p>
+          <code className="bg-gray-100">src/index.js</code> and{' '}
+          <code className="bg-gray-100">dist/index.js</code>, are respectively the input
+          and output files for the bundler.
+        </p>
+        <p>
+          Before publishing let’s make sure we don’t publish unnecessary files to our NPM
+          module, so let’s add a <code className="bg-gray-100">.npmignore</code> file to
+          the root of our project.
+        </p>
+        <br />
+        <Gist id="73643f84274c2383cad755466bd5ddd5" />
+        <div className="description-gist">
+          <p>.npmignore</p>
+        </div>
+        <br />
+        <p>Now let’s bundle the code and publish it to NPM…</p>
+        <br />
+        <p>
+          The following command compiles your code from the{' '}
+          <code className="bg-gray-100">src</code> directory to{' '}
+          <code className="bg-gray-100">dist</code>
+        </p>
+        <br />
+        <pre className="p-5 bg-gray-100">
+          <p>./node_modules/.bin/babel src --out-dir dist</p>
+        </pre>
       </div>
     </div>
   )
