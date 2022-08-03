@@ -8,13 +8,30 @@ datasource db {
 }
 
 model Repo {
-  repo        String        @unique
-  name        String?
-  description String?
+  repo        String         @id @unique
+  packageName String?
   logo        String?
+  description String?
+  ownerAvatar String?
+  release     String?
+  releaseDate String?
+  license     String?
   topics      ReposTopics[]
-  reposFrom   ReposRepos[]  @relation("repoFromRel")
-  reposTo     ReposRepos[]  @relation("repoToRel")
+  depends     ReposDepends[]
+}
+
+model Depend {
+  packageName String         @unique
+  repos       ReposDepends[]
+}
+
+model ReposDepends {
+  repo     Repo   @relation(fields: [repoId], references: [repo])
+  repoId   String
+  depend   Depend @relation(fields: [dependId], references: [packageName])
+  dependId String
+
+  @@unique([repoId, dependId])
 }
 
 model Topic {
@@ -29,13 +46,4 @@ model ReposTopics {
   topicId String
 
   @@unique([repoId, topicId])
-}
-
-model ReposRepos {
-  repoFrom   Repo   @relation("repoFromRel", fields: [repoFromId], references: [repo])
-  repoFromId String
-  repoTo     Repo   @relation("repoToRel", fields: [repoToId], references: [repo])
-  repoToId   String
-
-  @@unique([repoFromId, repoToId])
 }

@@ -5,10 +5,43 @@ const prisma = new PrismaClient()
 const RepoData = [
   {
     repo: 'repo0',
+    packageName: 'npm/repo0',
+    depends: {
+      create: [
+        {
+          depend: {
+            connectOrCreate: {
+              create: { packageName: 'npm/repo2' },
+              where: { packageName: 'npm/repo2' },
+            },
+          },
+        },
+      ],
+    },
   },
   {
     repo: 'repo1',
-    name: 'Repo1',
+    packageName: 'npm/repo1',
+    depends: {
+      create: [
+        {
+          depend: {
+            connectOrCreate: {
+              create: { packageName: 'npm/repo2' },
+              where: { packageName: 'npm/repo2' },
+            },
+          },
+        },
+        {
+          depend: {
+            connectOrCreate: {
+              create: { packageName: 'npm/repo7' },
+              where: { packageName: 'npm/repo7' },
+            },
+          },
+        },
+      ],
+    },
     topics: {
       create: [
         {
@@ -37,22 +70,38 @@ const RepoData = [
         },
       ],
     },
-    reposFrom: {
+  },
+  {
+    repo: 'repo2',
+    packageName: 'npm/repo2',
+    depends: {
       create: [
         {
-          repoTo: {
+          depend: {
             connectOrCreate: {
-              create: { repo: 'repo2' },
-              where: { repo: 'repo2' },
+              create: { packageName: 'npm/repo3' },
+              where: { packageName: 'npm/repo3' },
+            },
+          },
+        },
+        {
+          depend: {
+            connectOrCreate: {
+              create: { packageName: 'npm/repo5' },
+              where: { packageName: 'npm/repo5' },
+            },
+          },
+        },
+        {
+          depend: {
+            connectOrCreate: {
+              create: { packageName: 'npm/repo7' },
+              where: { packageName: 'npm/repo7' },
             },
           },
         },
       ],
     },
-  },
-  {
-    repo: 'repo2',
-    name: 'Repo2',
     topics: {
       create: [
         {
@@ -68,26 +117,6 @@ const RepoData = [
             connectOrCreate: {
               create: { name: 'javascript' },
               where: { name: 'javascript' },
-            },
-          },
-        },
-      ],
-    },
-    reposFrom: {
-      create: [
-        {
-          repoTo: {
-            connectOrCreate: {
-              create: { repo: 'repo1' },
-              where: { repo: 'repo1' },
-            },
-          },
-        },
-        {
-          repoTo: {
-            connectOrCreate: {
-              create: { repo: 'repo5' },
-              where: { repo: 'repo5' },
             },
           },
         },
