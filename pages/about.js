@@ -172,7 +172,7 @@ function About() {
               allowFullScreen
             ></iframe>
           </div>
-          <p id="Licensing" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="licensing" className="my-32 text-5xl font-bold text-center scroll-m-16">
             Licensing
           </p>
 
