@@ -27,28 +27,7 @@ function Header() {
             className="relative"
           >
             <a>About</a>
-            <div className="dropdown">
-              <Link href="/about">
-                <a className="btn-gray">About OCE</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">OCE Whitepaper</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">Video</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">Licensing</a>
-              </Link>
-            </div>
           </div>
-          <Image
-            src={Chevron}
-            alt="show more"
-            width="6"
-            height="4"
-            className="group-hover:rotate-180"
-          />
         </div>
         <div className="flex gap-2 btn group">
           <div

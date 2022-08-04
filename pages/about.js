@@ -11,7 +11,7 @@ import file from '../public/file.svg'
 
 function About() {
   return (
-    <div id="1" className="flex flex-col gap-20 my-16">
+    <div className="flex flex-col gap-20 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex self-start ml-60">
           <Image
@@ -51,7 +51,9 @@ function About() {
         </div>
 
         <div className="ml-80">
-          <div className="text-5xl font-bold">The Open Components Ecosystem</div>
+          <div id="1" className="text-5xl font-bold scroll-m-[5rem]">
+            The Open Components Ecosystem
+          </div>
           <div className="mt-5 mb-16 text-xl font-bold">
             Collaborative Innovation in Bible Technology
           </div>
