@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import editor_r from '../public/editor-reverse.svg'
 import oce_infographic from '../public/the_open_components_ecosystem_infographic.png'
@@ -6,10 +7,11 @@ import oce_infographic_2 from '../public/the_open_components_ecosystem_infograph
 import oce_infographic_3 from '../public/the_open_components_ecosystem_infographic_3.png'
 import oce_infographic_4 from '../public/the_open_components_ecosystem_infographic_4.png'
 import oce_infographic_5 from '../public/the_open_components_ecosystem_infographic_5.png'
+import file from '../public/file.svg'
 
 function About() {
   return (
-    <div className="flex flex-col gap-20 my-16">
+    <div id="1" className="flex flex-col gap-20 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="flex self-start ml-60">
           <Image
@@ -32,15 +34,23 @@ function About() {
         </div>
       </div>
 
-      <div className="flex flex-row gap-20">
-        <div className="flex flex-col gap-5 w-1/5 text-2xl font-bold text-text-500 active:text-primary-600">
-          <div className="text-black">About OCE</div>
-          <div>OCE Whitepaper</div>
-          <div>Video</div>
-          <div>Licensing</div>
+      <div className="relative flex flex-row gap-20">
+        <div className="fixed flex flex-col gap-5 text-2xl font-bold text-text-500">
+          <a href="#1" className="active:text-primary-600">
+            About OCE
+          </a>
+          <a href="#2" className="active:text-primary-600">
+            OCE Whitepaper
+          </a>
+          <a href="#3" className="active:text-primary-600">
+            Video
+          </a>
+          <a href="#4" className="active:text-primary-600">
+            Licensing
+          </a>
         </div>
 
-        <div className="w-4/5">
+        <div className="ml-80">
           <div className="text-5xl font-bold">The Open Components Ecosystem</div>
           <div className="mt-5 mb-16 text-xl font-bold">
             Collaborative Innovation in Bible Technology
@@ -48,12 +58,24 @@ function About() {
           <div className="flex justify-center bg-text-250">
             <Image src={oce_infographic} alt="oce_infographic" width="483" height="415" />
           </div>
-          <p className="mt-5 mb-16 text-xl w-4/5 font-bold">
-            <span className="text-primary-600">Open Components</span> decentralized
-            technologies comprised of open source components that enable reuse of
-            functionality outside of original context and expansion of functionality by
-            integration of other components
+          <p className="mt-5 text-xl">
+            <span className="font-bold text-primary-600">Open Components</span>{' '}
+            decentralized technologies comprised of open source components that enable
+            reuse of functionality outside of original context and expansion of
+            functionality by integration of other components
           </p>
+          <div className="flex justify-center my-20">
+            <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
+              <a
+                id="2"
+                target="_blank"
+                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-[5rem] hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
+              >
+                <Image src={file} alt="file" width="13" height="16" />
+                <p>Read Whitepaper</p>
+              </a>
+            </Link>
+          </div>
           <p className="text-2xl font-bold mb-2.5">
             Join a global ecosystem of developers focused on collaborative innovation in
             Bible technology.
@@ -77,9 +99,9 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl font-bold w-4/5">
-              <span className="text-primary-600">Extensible</span> architecture is
-              designed to enable expansion of functionality by incorporating code
+            <p className="text-xl w-4/5">
+              <span className="font-bold text-primary-600">Extensible</span> architecture
+              is designed to enable expansion of functionality by incorporating code
               developed by a third party, most commonly in the form of a plugin. In this
               regard, other developers are invited to bring their code and “play in the
               sandbox” provided by the base technology.
@@ -93,11 +115,11 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl font-bold w-4/5">
-              <span className="text-primary-600">Portable</span> architecture is designed
-              to go in the other direction, by providing functionality that can be
-              incorporated into other technologies, commonly in the form of libraries or
-              simple apps. Developers are invited to “create their own sandbox” by
+            <p className="text-xl w-4/5">
+              <span className="font-bold text-primary-600">Portable</span> architecture is
+              designed to go in the other direction, by providing functionality that can
+              be incorporated into other technologies, commonly in the form of libraries
+              or simple apps. Developers are invited to “create their own sandbox” by
               incorporating the portable components into their own apps.
             </p>
           </div>
@@ -109,13 +131,50 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl font-bold w-4/5 pt-3">
-              <span className="text-primary-600">Open source</span> technology consists of
-              source code that is made available under an open license (like MIT), such
-              that developers can repurpose, and, improve, redistribute, and otherwise
-              reuse the technology without restriction.
+            <p className="text-xl w-4/5 pt-3">
+              <span className="font-bold text-primary-600">Open source</span> technology
+              consists of source code that is made available under an open license (like
+              MIT), such that developers can repurpose, and, improve, redistribute, and
+              otherwise reuse the technology without restriction.
             </p>
           </div>
+          <div id="3" className="aspect-w-16 aspect-h-9 my-20">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/GUE7vIGmugk"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p id="4" className="text-xl">
+            All Software code (to include source code) produced by the community shall be
+            released under the MIT License (
+            <Link href="https://opensource.org/licenses/MIT">
+              <a target="_blank" className="text-primary-500 hover:underline">
+                https://opensource.org/licenses/MIT
+              </a>
+            </Link>
+            ).
+            <br />
+            <br />
+            Any other work produced by the community shall be licensed under the Creative
+            Commons Attribution-ShareAlike 4.0 International License (
+            <Link href="https://opensource.org/licenses/MIT">
+              <a target="_blank" className="text-primary-500 hover:underline">
+                http://creativecommons.org/licenses/by-sa/4.0/
+              </a>
+            </Link>
+            ) or the Creative Commons Attribution 4.0 International License (
+            <Link href="https://opensource.org/licenses/MIT">
+              <a target="_blank" className="text-primary-500 hover:underline">
+                http://creativecommons.org/licenses/by/4.0/
+              </a>
+            </Link>
+            ).
+          </p>
         </div>
       </div>
     </div>
