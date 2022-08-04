@@ -24,7 +24,7 @@ export default function ReactCompLibrary() {
             src={'/react-comp-library/pic1.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="text-gray-400">
             Photo by{' '}
             <Link href="https://unsplash.com/@iurte?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -72,7 +72,7 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">Why?</h2>
         <br />
-        <p className="text-xl leading-8 ">
+        <p className="text-xl leading-8">
           You can read more about the reason behind unfoldingWord’s RCL approach here.
           However, in a nutshell, we use RCLs because our software development process
           gains code reusability, abstraction, collaboration, and versatility.
@@ -185,9 +185,9 @@ export default function ReactCompLibrary() {
         <br />
         <Link href="https://react-styleguidist.js.org/">
           <a target="_blank">
-            <div className="flex w-2/3  m-auto border-gray-100 border">
+            <div className="flex w-2/3 m-auto border-gray-100 border">
               <div className="py-5 pl-5">
-                <h3 className="text-base font-bold ">
+                <h3 className="text-base font-bold">
                   React Styleguidist: Isolated React component development environment
                   with a living style guide
                 </h3>
@@ -213,7 +213,7 @@ export default function ReactCompLibrary() {
           </a>
         </Link>
         <br />
-        <h2 className="font-bold text-3xl  leading-10">
+        <h2 className="font-bold text-3xl leading-10">
           Install Styleguidist and Webpack:
         </h2>
         <br />
@@ -723,7 +723,7 @@ export default function ReactCompLibrary() {
         <br />
         <Link href="https://github.com/mannycolon/first-react-component-library-tutorial">
           <a target="_blank">
-            <div className="flex w-2/3  m-auto border-gray-100 border">
+            <div className="flex w-2/3 m-auto border-gray-100 border">
               <div className="py-5 pl-5">
                 <h3 className="text-base font-bold">
                   GitHub - mannycolon/first-react-component-library-tutorial
