@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf prisma/migrations && rm -rf prisma/oce.db && rm -rf prisma/oce.db-journal && npx prisma migrate dev --name init next build",
     "start": "next start",
     "lint": "next lint",
     "seed": "rm -rf prisma/migrations && rm -rf prisma/oce.db && rm -rf prisma/oce.db-journal && npx prisma migrate dev --name init"
