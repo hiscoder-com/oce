@@ -296,7 +296,7 @@ export default function ReactCompLibrary() {
           Open <code className="bg-gray-100">http://localhost:6060</code> and you should
           see the following:
         </p>
-        <div className="w-full h-auto">
+        <div className="w-9/12 h-auto m-auto">
           <Image
             layout="responsive"
             width="692"
@@ -366,8 +366,9 @@ export default function ReactCompLibrary() {
         </p>
         <br />
         <p className="text-xl leading-8">
-          Now, open <code className="bg-gray-100">http://localhost:6060</code>again and it
-          should include the Button Component in the docs as shown in the picture below.
+          Now, open <code className="bg-gray-100">http://localhost:6060</code> again and
+          it should include the Button Component in the docs as shown in the picture
+          below.
         </p>
         <br />
         <div className="w-full h-auto">
