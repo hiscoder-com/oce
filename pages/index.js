@@ -124,7 +124,7 @@ export default function Home() {
               <div className="text-base text-justify text-text-600 group-hover:text-black">
                 Find out what the Open Component Ecosystem (OCE) is all about. To learn
                 about the concept behind the OCE, you can check out our{' '}
-                <Link href="/about#2">
+                <Link href="/about#whitepaper">
                   <a className="font-bold underline decoration-2 underline-offset-4">
                     whitepaper
                   </a>

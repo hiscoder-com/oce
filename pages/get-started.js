@@ -44,13 +44,13 @@ function GetStarted() {
           <ul className="phase-card-ul">
             <li>
               To learn about{' '}
-              <Link href="/">
+              <Link href="/about">
                 <a className="underline-custom">Open Components</a>
               </Link>
             </li>
             <li>
               Check the{' '}
-              <Link href="/about#2">
+              <Link href="/about#whitepaper">
                 <a className="underline-custom">whitepaper</a>
               </Link>
             </li>

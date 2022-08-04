@@ -14,11 +14,7 @@ import oce_infographic_5 from '../public/oce_infographic_5.png'
 function About() {
   const [fix, setFix] = useState(false)
   const setFixedSidebar = () => {
-    if (window.scrollY >= 500) {
-      setFix(true)
-    } else {
-      setFix(false)
-    }
+    setFix(window.scrollY >= 500)
   }
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', setFixedSidebar)
@@ -54,22 +50,22 @@ function About() {
             fix && 'fixed top-14'
           }`}
         >
-          <a href="#1" className="active:text-primary-600">
+          <a href="#oce" className="active:text-primary-600">
             About OCE
           </a>
-          <a href="#2" className="active:text-primary-600">
+          <a href="#whitepaper" className="active:text-primary-600">
             OCE Whitepaper
           </a>
-          <a href="#3" className="active:text-primary-600">
+          <a href="#video" className="active:text-primary-600">
             Video
           </a>
-          <a href="#4" className="active:text-primary-600">
+          <a href="#Licensing" className="active:text-primary-600">
             Licensing
           </a>
         </div>
 
         <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
-          <div id="1" className="text-5xl font-bold text-center scroll-m-16">
+          <div id="oce" className="text-5xl font-bold text-center scroll-m-16">
             The Open Components Ecosystem
           </div>
           <div className="mt-5 mb-16 text-xl font-bold text-center">
@@ -84,7 +80,7 @@ function About() {
             reuse of functionality outside of original context and expansion of
             functionality by integration of other components
           </p>
-          <p id="2" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="whitepaper" className="my-32 text-5xl font-bold text-center scroll-m-16">
             OCE Whitepaper
           </p>
 
@@ -161,7 +157,7 @@ function About() {
               otherwise reuse the technology without restriction.
             </p>
           </div>
-          <p id="3" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="video" className="my-32 text-5xl font-bold text-center scroll-m-16">
             Video
           </p>
 
@@ -176,11 +172,11 @@ function About() {
               allowFullScreen
             ></iframe>
           </div>
-          <p id="3" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="Licensing" className="my-32 text-5xl font-bold text-center scroll-m-16">
             Licensing
           </p>
 
-          <p id="4" className="text-xl">
+          <p className="text-xl">
             All Software code (to include source code) produced by the community shall be
             released under the MIT License (
             <Link href="https://opensource.org/licenses/MIT">
@@ -193,13 +189,13 @@ function About() {
             <br />
             Any other work produced by the community shall be licensed under the Creative
             Commons Attribution-ShareAlike 4.0 International License (
-            <Link href="https://opensource.org/licenses/MIT">
+            <Link href="http://creativecommons.org/licenses/by-sa/4.0/">
               <a target="_blank" className="text-primary-500 hover:underline">
                 http://creativecommons.org/licenses/by-sa/4.0/
               </a>
             </Link>
             ) or the Creative Commons Attribution 4.0 International License (
-            <Link href="https://opensource.org/licenses/MIT">
+            <Link href="http://creativecommons.org/licenses/by/4.0/">
               <a target="_blank" className="text-primary-500 hover:underline">
                 http://creativecommons.org/licenses/by/4.0/
               </a>
