@@ -19,7 +19,7 @@ function ComponentsList({ setTotal }) {
       limit,
       order,
       direction,
-      topics: [],
+      topics: router.query['topics[]'],
       from,
       query,
     }
