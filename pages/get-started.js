@@ -120,7 +120,9 @@ function GetStarted() {
             <li>
               Introduction to{' '}
               <Link href="https://react-styleguidist.js.org/">
-                <a target="_blank" className="underline-custom">Styleguidist</a>
+                <a target="_blank" className="underline-custom">
+                  Styleguidist
+                </a>
               </Link>
             </li>
             <li>
