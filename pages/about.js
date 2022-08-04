@@ -59,7 +59,7 @@ function About() {
           <a href="#video" className="active:text-primary-600">
             Video
           </a>
-          <a href="#Licensing" className="active:text-primary-600">
+          <a href="#licensing" className="active:text-primary-600">
             Licensing
           </a>
         </div>
