@@ -18,7 +18,7 @@ function Header() {
           </a>
         </Link>
       </div>
-      <div className="flex cursor-pointer btn-gray">
+      <div className="flex cursor-pointer btn-gray text-text-600">
         <div className="flex gap-2 btn group">
           <div
             onClick={() => {
@@ -27,28 +27,7 @@ function Header() {
             className="relative"
           >
             <a>About</a>
-            <div className="dropdown">
-              <Link href="/about">
-                <a className="btn-gray">About OCE</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">OCE Whitepaper</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">Video</a>
-              </Link>
-              <Link href="/about">
-                <a className="btn-gray">Licensing</a>
-              </Link>
-            </div>
           </div>
-          <Image
-            src={Chevron}
-            alt="show more"
-            width="6"
-            height="4"
-            className="group-hover:rotate-180"
-          />
         </div>
         <div className="flex gap-2 btn group">
           <div className="relative">
@@ -73,7 +52,7 @@ function Header() {
         <Link href="/get-started">
           <a className="btn-gray">Get started</a>
         </Link>
-        <Link href="/">
+        <Link href="/faq">
           <a className="btn-gray">FAQ</a>
         </Link>
       </div>
