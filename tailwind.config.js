@@ -17,6 +17,7 @@ module.exports = {
         },
         text: {
           200: '#F2F2F2',
+          250: '#EDEDEB',
           500: '#828282',
           600: '#4F4F4F',
           800: '#333333',
@@ -24,5 +25,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

@@ -9,7 +9,7 @@ function ComponentsList({ setTotal }) {
   const router = useRouter()
   const {
     isReady,
-    query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
+    query: { limit = 10, order = 'updated', direction = 'desc', topics = [], query = '' },
   } = router
   const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
@@ -19,8 +19,9 @@ function ComponentsList({ setTotal }) {
       limit,
       order,
       direction,
-      topics: [],
+      topics: router.query['topics[]'],
       from,
+      query,
     }
   )
 

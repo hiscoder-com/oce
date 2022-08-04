@@ -12,12 +12,13 @@ import useComponent from '../hooks/useComponent'
 import { apps, timeSince } from '../utils/helper'
 
 import 'github-markdown-css/github-markdown-light.css'
+import useRepo from '../hooks/useRepo'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const tabs = ['Readme', 'Apps']
+const tabs = ['Readme', 'Dependents', 'Dependencies']
 
 function Component({ address }) {
   const [readme, setReadme] = useState()
@@ -29,7 +30,11 @@ function Component({ address }) {
         setReadme(text)
       })
   }, [address])
+
   const { data: repo, isLoading, isError } = useComponent(address)
+
+  const { data: repoOCE, isLoading: isLoadingOCE, isError: isErrorOCE } = useRepo(address)
+  console.log({ repoOCE })
   return (
     <div className="mt-12">
       {isLoading ? (
@@ -77,6 +82,17 @@ function Component({ address }) {
                   </Tab.Panel>
                   <Tab.Panel>
                     <ComponentApp apps={apps} />
+                  </Tab.Panel>
+                  <Tab.Panel>
+                    {isLoadingOCE ? (
+                      '...'
+                    ) : isErrorOCE ? (
+                      'error'
+                    ) : (
+                      <div>
+                        <pre>{JSON.stringify(repoOCE, null, 2)}</pre>
+                      </div>
+                    )}
                   </Tab.Panel>
                 </Tab.Panels>
               </div>
