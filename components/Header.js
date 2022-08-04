@@ -18,17 +18,10 @@ function Header() {
           </a>
         </Link>
       </div>
-      <div className="flex cursor-pointer btn-gray text-text-600">
-        <div className="flex gap-2 btn group">
-          <div
-            onClick={() => {
-              router.push(`/about`)
-            }}
-            className="relative"
-          >
-            <a>About</a>
-          </div>
-        </div>
+      <div className="flex cursor-pointer text-text-600">
+        <Link href="/about">
+          <a className="btn-gray">About</a>
+        </Link>
         <div className="flex gap-2 btn group">
           <div className="relative">
             <a className="btn-gray">Explore</a>
