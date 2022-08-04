@@ -7,7 +7,7 @@ import { CheckIcon, ChevronDownIcon, XIcon } from '@heroicons/react/solid'
 
 const filters = {
   order: [
-    { id: 0, name: 'popularity', value: 'popularity' },
+    { id: 0, name: 'interactions', value: 'interactions' },
     { id: 1, name: 'updated', value: 'updated' },
   ],
   direction: [
@@ -47,6 +47,12 @@ export default function Filter({ type, multiple }) {
     router.push({ query: { ...router.query, [type]: param } }, undefined, {
       scroll: false,
     })
+  }
+  const handleCleanQuery = () => {
+    const params = new URLSearchParams(query)
+    params.delete('query')
+    router.replace({ pathname, query: params.toString() }, undefined, { scroll: false })
+    setSearchQuery('')
   }
 
   const handleCleanRouter = (e) => {
@@ -107,6 +113,7 @@ export default function Filter({ type, multiple }) {
           setSearchQuery={setSearchQuery}
           searchQuery={searchQuery}
           handleSendUrl={handleSendUrl}
+          handleCleanQuery={handleCleanQuery}
         />
       ) : (
         <Listbox
@@ -207,17 +214,33 @@ export default function Filter({ type, multiple }) {
   )
 }
 
-function Input({ setSearchQuery, searchQuery, handleSendUrl }) {
+function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery }) {
   return (
     <div className="flex justify-center">
       <div className="flex mb-3 xl:w-96">
         <input
-          onBlur={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onBlur={() => {
+            if (!searchQuery) {
+              handleCleanQuery()
+            }
+          }}
           type="text"
           className="form-control input"
           placeholder="Search"
+          value={searchQuery}
+          onKeyDown={(e) => {
+            searchQuery && e.key === 'Enter' && handleSendUrl(searchQuery)
+          }}
         />
-        <button className="btn" type="button" onClick={() => handleSendUrl(searchQuery)}>
+        <button className={'btn'} type="button">
+          <XIcon
+            className={`${
+              !searchQuery && 'hidden'
+            } -ml-10 absolute h-5 w-5 text-black-40`}
+            aria-hidden="true"
+            onClick={() => handleCleanQuery()}
+          />
           <svg
             aria-hidden="true"
             focusable="false"
@@ -227,6 +250,7 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl }) {
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
+            onClick={() => handleSendUrl(searchQuery)}
           >
             <path
               fill="currentColor"

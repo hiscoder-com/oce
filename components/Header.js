@@ -51,12 +51,7 @@ function Header() {
           />
         </div>
         <div className="flex gap-2 btn group">
-          <div
-            onClick={() => {
-              router.push(`/components`)
-            }}
-            className="relative"
-          >
+          <div className="relative">
             <a className="btn-gray">Explore</a>
             <div className="dropdown">
               <Link href="/apps">
