@@ -50,7 +50,7 @@ function GetStarted() {
             </li>
             <li>
               Check the{' '}
-              <Link href="/">
+              <Link href="/about#2">
                 <a className="underline-custom">whitepaper</a>
               </Link>
             </li>

@@ -1,15 +1,29 @@
+import { useState } from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
 import editor_r from '../public/editor-reverse.svg'
-import oce_infographic from '../public/the_open_components_ecosystem_infographic.png'
-import oce_infographic_2 from '../public/the_open_components_ecosystem_infographic_2.png'
-import oce_infographic_3 from '../public/the_open_components_ecosystem_infographic_3.png'
-import oce_infographic_4 from '../public/the_open_components_ecosystem_infographic_4.png'
-import oce_infographic_5 from '../public/the_open_components_ecosystem_infographic_5.png'
 import file from '../public/file.svg'
+import oce_infographic from '../public/oce_infographic.svg'
+import oce_infographic_2 from '../public/oce_infographic_2.png'
+import oce_infographic_3 from '../public/oce_infographic_3.png'
+import oce_infographic_4 from '../public/oce_infographic_4.png'
+import oce_infographic_5 from '../public/oce_infographic_5.png'
 
 function About() {
+  const [fix, setFix] = useState(false)
+  const setFixedSidebar = () => {
+    if (window.scrollY >= 500) {
+      setFix(true)
+    } else {
+      setFix(false)
+    }
+  }
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', setFixedSidebar)
+  }
+
   return (
     <div className="flex flex-col gap-20 my-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
@@ -34,8 +48,12 @@ function About() {
         </div>
       </div>
 
-      <div className="relative flex flex-row gap-20">
-        <div className="fixed flex flex-col gap-5 text-2xl font-bold text-text-500">
+      <div className="relative flex flex-row">
+        <div
+          className={`w-1/5 flex flex-col gap-5 text-2xl font-bold text-text-500 ${
+            fix && 'fixed top-14'
+          }`}
+        >
           <a href="#1" className="active:text-primary-600">
             About OCE
           </a>
@@ -50,15 +68,15 @@ function About() {
           </a>
         </div>
 
-        <div className="ml-80">
-          <div id="1" className="text-5xl font-bold scroll-m-[5rem]">
+        <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
+          <div id="1" className="text-5xl font-bold text-center scroll-m-16">
             The Open Components Ecosystem
           </div>
-          <div className="mt-5 mb-16 text-xl font-bold">
+          <div className="mt-5 mb-16 text-xl font-bold text-center">
             Collaborative Innovation in Bible Technology
           </div>
-          <div className="flex justify-center bg-text-250">
-            <Image src={oce_infographic} alt="oce_infographic" width="483" height="415" />
+          <div className="flex justify-center">
+            <Image src={oce_infographic} alt="oce_infographic" width="760" height="737" />
           </div>
           <p className="mt-5 text-xl">
             <span className="font-bold text-primary-600">Open Components</span>{' '}
@@ -66,12 +84,15 @@ function About() {
             reuse of functionality outside of original context and expansion of
             functionality by integration of other components
           </p>
+          <p id="2" className="my-32 text-5xl font-bold text-center scroll-m-16">
+            OCE Whitepaper
+          </p>
+
           <div className="flex justify-center my-20">
             <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
               <a
-                id="2"
                 target="_blank"
-                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-[5rem] hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
+                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-16 hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
               >
                 <Image src={file} alt="file" width="13" height="16" />
                 <p>Read Whitepaper</p>
@@ -140,7 +161,11 @@ function About() {
               otherwise reuse the technology without restriction.
             </p>
           </div>
-          <div id="3" className="aspect-w-16 aspect-h-9 my-20">
+          <p id="3" className="my-32 text-5xl font-bold text-center scroll-m-16">
+            Video
+          </p>
+
+          <div className="aspect-w-16 aspect-h-9 my-1">
             <iframe
               width="560"
               height="315"
@@ -151,6 +176,10 @@ function About() {
               allowFullScreen
             ></iframe>
           </div>
+          <p id="3" className="my-32 text-5xl font-bold text-center scroll-m-16">
+            Licensing
+          </p>
+
           <p id="4" className="text-xl">
             All Software code (to include source code) produced by the community shall be
             released under the MIT License (
