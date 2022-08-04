@@ -67,14 +67,14 @@ function GetStarted() {
           <ul className="phase-card-ul">
             <li>
               To check out the{' '}
-              <Link href="/">
+              <Link href="/components">
                 <a className="underline-custom">Open Components</a>
               </Link>{' '}
               developed by the community
             </li>
             <li>
               To check out the{' '}
-              <Link href="/">
+              <Link href="/apps">
                 <a className="underline-custom">Bible applications</a>
               </Link>{' '}
               using open components
