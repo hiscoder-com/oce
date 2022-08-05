@@ -4,8 +4,8 @@
 
 @layer base {
   html {
-    font-family: Ubuntu, system-ui, sans-serif;
-  }
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;}
 }
 
 .btn {
@@ -13,11 +13,11 @@
 }
 
 .btn-gray {
-  @apply btn hover:text-gray-600 active:text-gray-400
+  @apply btn hover:text-text-600 active:text-text-500
 }
 
 .btn-transparent {
-  @apply btn hover:text-yellow-350 active:text-yellow-400
+  @apply btn hover:text-secondary-400 active:text-yellow-400
 }
 
 .footer {
@@ -30,6 +30,12 @@
 
 .header {
   @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
+}
+.input {
+  @apply appearance-none block w-full px-3 py-1.5 text-base font-normal border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
+}
+.options {
+  @apply absolute mt-2 left-0 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm
 }
 .line-clamp {
   display: -webkit-box;
@@ -61,3 +67,24 @@
   right   : calc(20% + 0.5rem);
   border-bottom: 3px solid black;
 }
+
+.phase-card-ul {
+	@apply list-disc list-inside pl-3 leading-loose
+}
+
+.underline-custom {
+	@apply underline underline-offset-2 decoration-2 text-primary-500
+}
+
+.description-gist {
+  @apply flex justify-center text-xs text-gray-500
+}
+.article figure{
+  @apply my-4
+}
+.article code{
+  @apply text-sm
+  }
+p.article {
+  @apply text-xl leading-8
+  }

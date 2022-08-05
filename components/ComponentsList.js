@@ -9,7 +9,7 @@ function ComponentsList({ setTotal }) {
   const router = useRouter()
   const {
     isReady,
-    query: { limit = 10, order = 'updated', direction = 'desc', topics = [] },
+    query: { limit = 10, order = 'updated', direction = 'desc', topics = [], query = '' },
   } = router
   const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
@@ -19,8 +19,9 @@ function ComponentsList({ setTotal }) {
       limit,
       order,
       direction,
-      topics: [],
+      topics: router.query['topics[]'],
       from,
+      query,
     }
   )
 
@@ -55,7 +56,7 @@ function ComponentsList({ setTotal }) {
       {from === null && isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div></div>
       ) : (
         <>
           <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 xl:grid-cols-4 xl:gap-5 2xl:grid-cols-5 2xl:gap-8">
@@ -64,7 +65,7 @@ function ComponentsList({ setTotal }) {
           {pageInfo.hasNextPage ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>
           ) : (
-            <div>END</div>
+            <div></div>
           )}
         </>
       )}

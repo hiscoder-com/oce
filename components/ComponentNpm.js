@@ -35,7 +35,7 @@ function ComponentNpm({ address }) {
       {isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div></div>
       ) : (
         <>
           <h1 className="text-6xl font-bold">{repo.name}</h1>

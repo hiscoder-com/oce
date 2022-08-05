@@ -6,17 +6,24 @@ module.exports = {
         xxs: ['8px', '10px'],
       },
       colors: {
-        yellow: {
-          350: '#FDD835',
+        secondary: {
+          400: '#ffdb85',
         },
-        blue: {
-          75: '#F7F9FA',
+        primary: {
+          100: '#F7F9FA',
+          500: '#2F80ED',
+          600: '#2F5C6E',
+          700: '#2A505F',
         },
-        zinc: {
-          450: '#828282',
+        text: {
+          200: '#F2F2F2',
+          250: '#EDEDEB',
+          500: '#828282',
+          600: '#4F4F4F',
+          800: '#333333',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

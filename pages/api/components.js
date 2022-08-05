@@ -12,10 +12,15 @@ export default async function handler(req, res) {
     limit = 10,
     order = 'updated',
     direction = 'desc',
-    'topics[]': _topics = [],
+    topics = '',
+    query = '',
   } = req.query
-  const topics = Array.isArray(_topics) ? _topics : _topics.length ? [_topics] : []
-
+  const topicsQuery =
+    req?.query['topics[]']?.length > 0
+      ? req?.query['topics[]']
+      : topics.length > 0
+      ? [topics]
+      : []
   try {
     const result = await client.query({
       query: gql`{
@@ -23,7 +28,9 @@ export default async function handler(req, res) {
           first: ${parseInt(limit)}
           after: ${from ? '"' + from + '"' : 'null'}
           type: REPOSITORY
-          query: "topic:scripture-open-components ${topics.join(' ')} NOT app sort:${
+          query: "${query} topic:scripture-open-components ${topicsQuery.join(
+        ' '
+      )} NOT app sort:${
         order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
       }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
         ) {

@@ -11,39 +11,22 @@ function Header() {
         <Link href="/">
           <a className="flex items-center gap-5">
             <Image src={Logo} alt="Open Components Ecosystem" width="34" height="47" />
-            <p>Open Components</p>
+            <p className="text-primary-600 text-2xl">Open Components</p>
           </a>
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex cursor-pointer text-text-600">
+        <Link href="/about">
+          <a className="btn-gray">About</a>
+        </Link>
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="cursor-pointer hover:text-gray-600">About</a>
+            <a>Explore</a>
             <div className="dropdown">
-              <Link href="/">
-                <a className="btn-gray">White Paper</a>
-              </Link>
-              <Link href="/">
-                <a className="btn-gray">Infographic</a>
-              </Link>
-            </div>
-          </div>
-          <Image
-            src={Chevron}
-            alt="show more"
-            width="6"
-            height="4"
-            className="group-hover:rotate-180"
-          />
-        </div>
-        <div className="flex gap-2 btn group">
-          <div className="relative">
-            <a className="cursor-pointer hover:text-gray-600">Explore</a>
-            <div className="dropdown">
-              <Link href="/">
+              <Link href="/apps">
                 <a className="btn-gray">Apps</a>
               </Link>
-              <Link href="/">
+              <Link href="/components">
                 <a className="btn-gray">Components</a>
               </Link>
             </div>
@@ -56,11 +39,11 @@ function Header() {
             className="group-hover:rotate-180"
           />
         </div>
-        <Link href="/">
+        <Link href="/get-started">
           <a className="btn-gray">Get started</a>
         </Link>
-        <Link href="/">
-          <a className="btn-gray">FAQ</a>
+        <Link href="/faq" className="">
+          <a className="btn-gray hidden">FAQ</a>
         </Link>
       </div>
     </header>
