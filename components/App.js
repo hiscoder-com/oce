@@ -35,7 +35,7 @@ function App({ address }) {
       {isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div> </div>
       ) : (
         <>
           <h1 className="text-5xl font-bold uppercase">{repo.name}</h1>

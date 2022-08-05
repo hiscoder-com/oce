@@ -40,7 +40,7 @@ function Component({ address }) {
       {isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div></div>
       ) : (
         <>
           <h1 className="text-6xl font-bold">{repo.name}</h1>
@@ -84,17 +84,7 @@ function Component({ address }) {
                   <Tab.Panel>
                     <ComponentApp apps={apps} />
                   </Tab.Panel>
-                  <Tab.Panel>
-                    {isLoadingOCE ? (
-                      '...'
-                    ) : isErrorOCE ? (
-                      'error'
-                    ) : (
-                      <div>
-                        <pre>{JSON.stringify(repoOCE, null, 2)}</pre>
-                      </div>
-                    )}
-                  </Tab.Panel>
+                  <Tab.Panel></Tab.Panel>
                 </Tab.Panels>
               </div>
               <div className="w-full md:w-1/3">
