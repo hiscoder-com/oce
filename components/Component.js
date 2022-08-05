@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 
 import { Tab } from '@headlessui/react'
-import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
 import Labels from './Labels'
 import SidePanel from './SidePanel'
 import ComponentApp from './ComponentApp'
+import MarkdownViewer from './MarkdownViewer'
+
 import useComponent from '../hooks/useComponent'
 
 import { apps, timeSince } from '../utils/helper'
@@ -34,13 +35,12 @@ function Component({ address }) {
   const { data: repo, isLoading, isError } = useComponent(address)
 
   const { data: repoOCE, isLoading: isLoadingOCE, isError: isErrorOCE } = useRepo(address)
-  console.log({ repoOCE })
   return (
     <div className="mt-12">
       {isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div></div>
       ) : (
         <>
           <h1 className="text-6xl font-bold">{repo.name}</h1>
@@ -73,27 +73,18 @@ function Component({ address }) {
               <div className="w-full mb-6 md:w-2/3 pr-0 md:pr-6 lg:pr-24">
                 <Tab.Panels>
                   <Tab.Panel>
-                    <ReactMarkdown
+                    <MarkdownViewer
+                      address={address}
                       rehypePlugins={[rehypeRaw]}
                       className={'markdown-body'}
                     >
                       {readme ?? 'Loading...'}
-                    </ReactMarkdown>
+                    </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
                     <ComponentApp apps={apps} />
                   </Tab.Panel>
-                  <Tab.Panel>
-                    {isLoadingOCE ? (
-                      '...'
-                    ) : isErrorOCE ? (
-                      'error'
-                    ) : (
-                      <div>
-                        <pre>{JSON.stringify(repoOCE, null, 2)}</pre>
-                      </div>
-                    )}
-                  </Tab.Panel>
+                  <Tab.Panel></Tab.Panel>
                 </Tab.Panels>
               </div>
               <div className="w-full md:w-1/3">

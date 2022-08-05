@@ -15,7 +15,7 @@ const filters = {
     { id: 1, name: 'ascending', value: 'asc' },
   ],
   topics: [
-    { id: 0, name: 'typeScript', value: 'typeScript' },
+    { id: 0, name: 'headlessui', value: 'headlessui' },
     { id: 1, name: 'bible', value: 'bible' },
     { id: 2, name: 'reference', value: 'reference' },
   ],
@@ -73,7 +73,7 @@ export default function Filter({ type, multiple }) {
           query: { ...query, [type]: selectedFilter.value },
         },
         undefined,
-        { scroll: false }
+        { scroll: false, shallow: true }
       )
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
