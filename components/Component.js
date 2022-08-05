@@ -13,6 +13,7 @@ import { apps, timeSince } from '../utils/helper'
 
 import 'github-markdown-css/github-markdown-light.css'
 import useRepo from '../hooks/useRepo'
+import MarkdownViewer from './MarkdownViewer'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -73,12 +74,12 @@ function Component({ address }) {
               <div className="w-full mb-6 md:w-2/3 pr-0 md:pr-6 lg:pr-24">
                 <Tab.Panels>
                   <Tab.Panel>
-                    <ReactMarkdown
+                    <MarkdownViewer
                       rehypePlugins={[rehypeRaw]}
                       className={'markdown-body'}
                     >
                       {readme ?? 'Loading...'}
-                    </ReactMarkdown>
+                    </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
                     <ComponentApp apps={apps} />
