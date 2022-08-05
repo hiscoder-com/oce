@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 
 import { Tab } from '@headlessui/react'
-import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
 import SidePanel from './SidePanel'
 import ComponentCard from './ComponentCard'
+import MarkdownViewer from './MarkdownViewer'
+
 import useApp from '../hooks/useApp'
 
 import { components, timeSince } from '../utils/helper'
@@ -59,12 +60,13 @@ function App({ address }) {
               <div className="w-full mb-6 md:w-2/3 pr-0 md:pr-6 lg:pr-24">
                 <Tab.Panels>
                   <Tab.Panel>
-                    <ReactMarkdown
+                    <MarkdownViewer
+                      address={address}
                       rehypePlugins={[rehypeRaw]}
                       className={'markdown-body'}
                     >
                       {readme ?? 'Loading...'}
-                    </ReactMarkdown>
+                    </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
                     <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">

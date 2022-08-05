@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
 
 import { Tab } from '@headlessui/react'
-import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
 import Labels from './Labels'
 import SidePanel from './SidePanel'
 import ComponentApp from './ComponentApp'
+import MarkdownViewer from './MarkdownViewer'
+
 import useComponent from '../hooks/useComponent'
 
 import { apps, timeSince } from '../utils/helper'
 
 import 'github-markdown-css/github-markdown-light.css'
 import useRepo from '../hooks/useRepo'
-import MarkdownViewer from './MarkdownViewer'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -35,7 +35,6 @@ function Component({ address }) {
   const { data: repo, isLoading, isError } = useComponent(address)
 
   const { data: repoOCE, isLoading: isLoadingOCE, isError: isErrorOCE } = useRepo(address)
-  console.log({ repoOCE })
   return (
     <div className="mt-12">
       {isLoading ? (
@@ -75,6 +74,7 @@ function Component({ address }) {
                 <Tab.Panels>
                   <Tab.Panel>
                     <MarkdownViewer
+                      address={address}
                       rehypePlugins={[rehypeRaw]}
                       className={'markdown-body'}
                     >
