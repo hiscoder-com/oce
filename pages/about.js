@@ -52,7 +52,7 @@ function About() {
         </div>
 
         <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
-          <div className="text-5xl font-bold text-center ">
+          <div className="text-5xl font-bold text-center text-primary-600">
             The Open Components Ecosystem
           </div>
           <div className="mt-5 mb-8 text-xl font-bold text-center">
@@ -67,7 +67,10 @@ function About() {
             reuse of functionality outside of original context and expansion of
             functionality by integration of other components
           </p>
-          <p id="whitepaper" className="my-20 text-5xl font-bold text-center scroll-m-14">
+          <p
+            id="whitepaper"
+            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+          >
             OCE Whitepaper
           </p>
 
@@ -146,7 +149,7 @@ function About() {
           </div>
           <p
             id="video"
-            className="mt-10 mb-20 text-5xl font-bold text-center scroll-m-14"
+            className="mt-10 mb-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
           >
             Video
           </p>
@@ -162,7 +165,10 @@ function About() {
               allowFullScreen
             ></iframe>
           </div>
-          <p id="licensing" className="my-20 text-5xl font-bold text-center scroll-m-14">
+          <p
+            id="licensing"
+            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+          >
             Licensing
           </p>
 
