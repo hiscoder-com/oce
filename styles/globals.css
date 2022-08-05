@@ -79,3 +79,12 @@
 .description-gist {
   @apply flex justify-center text-xs text-gray-500
 }
+.article figure{
+  @apply my-4
+}
+.article code{
+  @apply text-sm
+  }
+p.article {
+  @apply text-xl leading-8
+  }

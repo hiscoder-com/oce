@@ -11,9 +11,9 @@ export default function LeanExpectations() {
   return (
     <div className="container mx-auto md:px-1 lg:px-2 2xl:px-4">
       <HeaderStaticPage config={HeaderConfig} />
-      <div className="mx-auto md:px-10 lg:px-20 2xl:px-40">
+      <div className="mx-auto md:px-10 lg:px-20 2xl:px-40 article">
         <br />
-        <p>
+        <p className="article">
           For new software to have intrinsic value, it typically introduces innovative
           approaches to solving a problem. This can come in many forms but is usually
           improvements on functionality, usability or performance. Sometimes it is
@@ -27,11 +27,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic1.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             Photo by{' '}
             <Link href="https://unsplash.com/@templecerulean?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -47,7 +46,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           If we fail to put our assumptions to the test, we risk investing heavily in
           building a flawed solution or worse, a solution to the wrong problem. Whether or
           not these new approaches have fully tested assumptions prior to starting
@@ -55,14 +54,14 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-2xl text-gray-400">
+          <p className="text-3xl text-gray-400">
             “Life’s too short to build something that nobody wants. “ — Ash Maurya,
             Spark59
           </p>
         </blockquote>
 
         <br />
-        <p>
+        <p className="article">
           We live in a rapidly changing world and software can be out of date by the time
           it is released. Users are smart and rarely wait for us to solve their problems
           for them. They adopt other tools or devise clever work arounds to fill the void
@@ -70,7 +69,7 @@ export default function LeanExpectations() {
           based upon will continue to evolve while our software is being developed.
         </p>
         <br />
-        <p>
+        <p className="article">
           It is important to be purposeful in the iterative learning process since it can
           take time to deliver software and the use cases we set out to solve are ever
           changing. Adopting the tools of{' '}
@@ -101,11 +100,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic2.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             Photo by{' '}
             <Link href="https://unsplash.com/@rawpixel/collections">
               <a target="_blank">
@@ -121,7 +119,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           Now that we are a part of a Scrum team using Agile methods we can iteratively
           improve our development practices by introducing more principles of Lean
           Software Development. We set the stage for being able to keep up with the rate
@@ -135,41 +133,39 @@ export default function LeanExpectations() {
           produce error free code. If we did we probably took too long to do it.
         </p>
         <br />
-        <p>
+        <p className="article">
           It only seems logical that more programming flaws and design holes exist earlier
           in the product’s development. This leads to the initial impression of the
           application to be marred very quickly. So how do we set expectations early in
           the development to prevent frustration and discouragement?
         </p>
         <br />
-        <p>
+        <p className="article">
           There are quite a few misconceptions along the way that can be cleared up by
           setting proper expectations, especially early in the software’s lifecycle. While
           we may be able to convince our stakeholders of the value of adopting lean
           principles, the expectation remains that the software produced will be
           immediately usable and address the use cases the first time.
         </p>
-        {/* три точки */}
         <br />
         <figure>
           <Image
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic3.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="text-gray-400">
             The scope of learning and changes should decrease as the product matures
             increasing stability. This is similar to a coin spinning down a funnel. Each
             reduction in scope allows for a faster iteration.
           </figcaption>
         </figure>
         <br />
-        <h1 className="font-bold text-2xl">A Solution</h1>
+        <h1 className="font-bold text-4xl">A Solution</h1>
         <br />
-        <p>
+        <p className="article">
           Software development priorities can evolve as the project matures. One important
           concept to explore is the inverse relationship between the scope of learning and
           stability. This sounds like a far stretch but has a simple and logical
@@ -180,7 +176,7 @@ export default function LeanExpectations() {
           the product matures.
         </p>
         <br />
-        <p>
+        <p className="article">
           To strike a balance of this natural tension, we follow the second principle of
           Lean Software Development,
           <Link href="https://en.wikipedia.org/wiki/Lean_software_development#Amplify_learning">
@@ -195,7 +191,7 @@ export default function LeanExpectations() {
           results in smaller changes, a more stable product naturally emerges.
         </p>
         <br />
-        <p>
+        <p className="article">
           One of the ways to help set proper expectations while learning to meet user’s
           needs in a timely manner can be implemented in an iterative cycle of Proof of
           Concept (PoC), Prototype, and Minimum Viable Product (MVP). While we may already
@@ -211,11 +207,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic4.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “Proof of Concepts are like using the scientific method in software
             development. You have to design your experiment before you begin testing your
             hypothesis.” — photo credit{' '}
@@ -233,9 +228,9 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <h1 className="font-bold text-2xl">Proof of Concept</h1>
+        <h1 className="font-bold text-4xl">Proof of Concept</h1>
         <br />
-        <p>
+        <p className="article">
           A Proof of Concept (PoC) is basically a stand-alone project that covers a very
           small scope and is quickly developed or hacked together so that it can test
           assumptions. Using the scientific method, you devise experiments to test your
@@ -248,7 +243,7 @@ export default function LeanExpectations() {
           investing in this approach or try something new.
         </p>
         <br />
-        <p>
+        <p className="article">
           There are two goals during the testing of the PoC, to test assumptions and to
           share the vision. Either you fail quickly and learn from it or you learn that
           you proved the concept and are now ready to share the vision. Both outcomes are
@@ -261,7 +256,7 @@ export default function LeanExpectations() {
           funding much easier for both the PoC and subsequent development.
         </p>
         <br />
-        <p>
+        <p className="article">
           It is important to not expect a PoC to be used long term by users for more than
           testing due to little effort placed in software architecture and user
           management. A major question that can be answered is if a new standalone product
@@ -278,11 +273,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic5.png'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “Mockups of a user interface” — photo credit{' '}
             <Link href="https://unsplash.com/@firmbee?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -298,7 +292,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           PoCs are ideal for new projects and major features. New features can include
           user interface design and workflows. You can test this by creating mockups of
           the interface and get user feedback. This is commonly skipped and much
@@ -310,7 +304,7 @@ export default function LeanExpectations() {
           scale the effectiveness of the team.
         </p>
         <br />
-        <p>
+        <p className="article">
           There are times where the concept does not have to be proven. This can be the
           case with small incremental feature improvements or small features. Creating a
           PoC outside of an existing project for these can be counter productive. Even
@@ -318,7 +312,7 @@ export default function LeanExpectations() {
           testing these new features or improvements.
         </p>
         <br />
-        <p>
+        <p className="article">
           The key in developing a PoC is to use the tools you know and focus on the
           easiest way to get it done quickly. This is common in hackathons. Resist the
           urge to optimize performance or test too many assumptions concurrently or your
@@ -330,7 +324,7 @@ export default function LeanExpectations() {
           allow developers to stay focused on their other projects.
         </p>
         <br />
-        <p>
+        <p className="article">
           The PoC typically has the smallest scope and has limited usability but is
           crucial in testing assumptions with minimal investment. Be prepared to start
           over a few times and introduce a lot of change because there is the most to be
@@ -343,11 +337,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic6.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “Electronic prototyping” — photo credit{' '}
             <Link href="https://unsplash.com/@nicolasthomas?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -363,9 +356,9 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <h1 className="font-bold text-2xl">Prototype</h1>
+        <h1 className="font-bold text-4xl">Prototype</h1>
         <br />
-        <p>
+        <p className="article">
           A Prototype can be thought of as the step between a PoC and MVP. Once the
           concept has been proven in a limited scope, you can take a little more time
           proving whether or not the concept works in a more integrated implementation.
@@ -373,7 +366,7 @@ export default function LeanExpectations() {
           focuses on functionality rather than design or even usability.
         </p>
         <br />
-        <p>
+        <p className="article">
           The Prototype is typically not a refactor of the PoC but a rewrite because of
           the shortcuts taken previously and applying what was learned. This should be
           more thoroughly user tested to further understand the bottlenecks of things such
@@ -387,7 +380,7 @@ export default function LeanExpectations() {
           , it can be signified as a release less than 1.0.
         </p>
         <br />
-        <p>
+        <p className="article">
           There are use cases such as internal software, that is not customer facing, that
           can get away with using prototypes in production. In these cases, the software
           is built to complement the services offered by the company or organization
@@ -398,7 +391,7 @@ export default function LeanExpectations() {
           prevent them from delivering their services.
         </p>
         <br />
-        <p>
+        <p className="article">
           Prototypes are ideal for taking the next step of a PoC. While the concept has
           already been proven there may be uncertainty as to how it is integrated and
           architected. This provides a safer environment for peer feedback which lead to
@@ -415,11 +408,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic7.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “close-up photo of motherboard” by{' '}
             <Link href="https://unsplash.com/@nenadg?utm_source=medium&utm_medium=referral">
               <a target="_balnk">
@@ -435,7 +427,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           There are times when the separation of concerns are already clearly known and
           the architecture is predetermined. This can be the case when implementing an
           existing feature from another software project. In this case, a Prototype can
@@ -446,7 +438,7 @@ export default function LeanExpectations() {
           stakeholders.
         </p>
         <br />
-        <p>
+        <p className="article">
           If the PoC took a couple of weeks, the Prototype would typically take a couple
           of months of 1–3 developers. A complex Prototype can take much longer. The time
           is more proportional to complexity than it is to the number of developers. In
@@ -454,7 +446,7 @@ export default function LeanExpectations() {
           advantages of peer feedback.
         </p>
         <br />
-        <p>
+        <p className="article">
           Adding more developers rarely speeds up the development process as it
           complicates team dynamics and the complexity of code. The{' '}
           <Link href="https://en.wikipedia.org/wiki/Ringelmann_effect">
@@ -469,7 +461,7 @@ export default function LeanExpectations() {
           discussed in a bit more depth in the MVP section.
         </p>
         <br />
-        <p>
+        <p className="article">
           Much insight is gained during testing of the Prototype as to what the separation
           of concerns are and what architecture should be used in the MVP. Showcasing the
           progress made and learning of the Prototype helps set expectations for the MVP.
@@ -482,11 +474,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic8.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “The MVP Camera. No bells, no whistles, just the basics. It is nearly as
             instant as our modern digital cameras.” — credit{' '}
             <Link href="https://unsplash.com/@hermez777?utm_source=medium&utm_medium=referral">
@@ -506,7 +497,7 @@ export default function LeanExpectations() {
         <br />
         <h1 className="font-bold text-2xl">Minimum Viable Product</h1>
         <br />
-        <p>
+        <p className="article">
           The Minimum Viable Product (MVP) is typically the minimal functionality required
           to meet the root needs of the user. Many times this sacrifices the non-essential
           but desired features. While the name infers being stripped down to the bare
@@ -516,7 +507,7 @@ export default function LeanExpectations() {
           Much more planning is required developing the MVP.
         </p>
         <br />
-        <p>
+        <p className="article">
           Clearly designed software architecture and user interfaces are crucial in this
           phase. Don’t stop learning at the Prototype phase. Continue to let users test
           your designs and interfaces along the way.
@@ -527,11 +518,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic9.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “If we knew that arial photography was the destiny of drones, we might have
             built out from the existing camera and tried to make it fly. Instead drones
             technology was matured in its own path until they found their shared destiny.”
@@ -550,7 +540,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           Once the MVP is released with the minimal feature set, new major features can
           then be added using the natural progression of the PoC, Prototype, then MVP.
           Starting with the PoC to test that the feature will meet the needs. Ideally this
@@ -565,14 +555,30 @@ export default function LeanExpectations() {
           viable-ness.
         </p>
         <br />
-        <p>
+        <p className="article">
           This MVP phase can have an indefinite timeframe due to its iterative nature but
           expect as much as a year for a stable release using a small team of about 2–4
           developers. This is most dependent on the scope of the software more than the
-          number of developers. According to Brook’s Law introduced in The Mythical
-          Man-Month, throwing more developers at the problem does not always speed up the
-          process and has increasingly diminishing returns. With Modular Programming,
-          where the codebase is organized by functionality as modules, more team members
+          number of developers. According to{' '}
+          <Link href="https://en.wikipedia.org/wiki/Brooks%27s_law">
+            <a target="_blank">
+              <u>Brook’s Law</u>
+            </a>
+          </Link>{' '}
+          introduced in{' '}
+          <Link href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">
+            <a target="_blank">
+              <u>The Mythical Man-Month</u>
+            </a>
+          </Link>
+          , throwing more developers at the problem does not always speed up the process
+          and has increasingly diminishing returns. With{' '}
+          <Link href="https://en.wikipedia.org/wiki/Modular_programming">
+            <a target="_blank">
+              <u>Modular Programming</u>
+            </a>
+          </Link>
+          , where the codebase is organized by functionality as modules, more team members
           can be added. Multiple teams can work in tandem on separate modules which can
           improve timelines but requires ample communication and planning, in turn
           increasing the inherent complexity of team dynamics. Clear examples of this are
@@ -586,11 +592,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic10.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             “Drone photography did not start as someone setting out to build flying
             cameras but the integration of two fully developed technologies.” — photo
             credit
@@ -608,7 +613,7 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <p>
+        <p className="article">
           While much of the same iterative learning can be made by starting with the MVP,
           opportunities can be missed by skipping the PoC and Prototype phases. PoCs
           encourage teams to be more receptive to raw feedback. Sensitivity to criticism
@@ -620,15 +625,15 @@ export default function LeanExpectations() {
           investment of the learning cycle, PoCs and Prototypes have value.
         </p>
         <br />
-        <p>
+        <p className="article">
           The MVP should naturally have a higher priority of stability over learning in
           comparison to the PoC and Prototype phases. Try not to let that be an excuse for
           failing to learn.
         </p>
         <br />
-        <h1 className="font-bold text-2xl">Life after MVP</h1>
+        <h1 className="font-bold text-4xl">Life after MVP</h1>
         <br />
-        <p>
+        <p className="article">
           There are quite a few online articles that discuss other approaches that include
           phases after MVP. After creating dozens of PoC’s and Prototypes through the
           years, half a dozen have made it to the MVP phase and brought to market in one
@@ -639,14 +644,14 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-2xl text-gray-400">
+          <p className="text-3xl text-gray-400">
             “The reason to build a new team to pursue an idea is that you believe you can
             accelerate through the Build-Measure-Learn feedback loop faster than anyone
             else can.” <em>— The Lean Startup</em>
           </p>
         </blockquote>
         <br />
-        <p>
+        <p className="article">
           Depending on your definition of what is considered minimally viable, you can
           keep adding features to meet the purpose of the application. Most software has a
           limited shelf life of only a couple years before the competition over takes it
@@ -664,11 +669,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic11.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             Photo by{' '}
             <Link href="https://unsplash.com/@new_data_services?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -684,9 +688,9 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <h1 className="font-bold text-2xl">Example Application Lifecycle</h1>
+        <h1 className="font-bold text-4xl">Example Application Lifecycle</h1>
         <br />
-        <p>
+        <p className="article">
           One of the applications that has used the PoC, Prototype, MVP development
           lifecycle in multiple phases is translationCore (tC). While there were other
           applications in the domain to fulfill similar roles to check Bible translations,
@@ -695,7 +699,7 @@ export default function LeanExpectations() {
           assumptions and help manage expectations around it.
         </p>
         <br />
-        <p>
+        <p className="article">
           First, a simple PoC was developed in a matter of weeks. It was a stand-alone web
           page, quickly hacked together by a single developer. It was used to test the
           assumptions and explore limits. The PoC and its findings were used to test
@@ -704,7 +708,7 @@ export default function LeanExpectations() {
           Prototype.
         </p>
         <br />
-        <p>
+        <p className="article">
           At first it seemed logical to integrate it into the existing application we had
           that was already on the market, translationStudio. This application used many of
           the same resources and had some common functionality. However, we knew that the
@@ -715,7 +719,7 @@ export default function LeanExpectations() {
           original product less effective for the existing users.
         </p>
         <br />
-        <p>
+        <p className="article">
           We decided to build a new platform. Since the prototype needed to be more stable
           and robust than the PoC, nearly half a year was spent on it. With our testing
           and learning from the Prototype, we started rewriting the app piece by piece
@@ -732,11 +736,10 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic12.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400">
+          <figcaption className="mt-1 text-gray-400">
             Photo by{' '}
             <Link href="https://unsplash.com/@dreamevile?utm_source=medium&utm_medium=referral">
               <a target="_blank">
@@ -752,16 +755,16 @@ export default function LeanExpectations() {
           </figcaption>
         </figure>
         <br />
-        <h1 className="font-bold text-2xl">Lifecycle of Modules</h1>
+        <h1 className="font-bold text-4xl">Lifecycle of Modules</h1>
         <br />
-        <p>
+        <p className="article">
           While the main tC application was being built, we created modules that we called
           tools that run inside the application with their own development lifecycle of
           PoC, Prototype, MVP. Their code is managed in separate repositories allowing for
           a manageable way to replace each tool’s Prototype with its MVP.
         </p>
         <br />
-        <p>
+        <p className="article">
           Features of one of the tools, WordMAP, also has its own lifecycle as well. Two
           years ago, it was a PoC that helped cast a vision for automated alignment with
           minimal requirements. It worked offline and in a browser. We used it to test
@@ -779,18 +782,15 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/leanExpectations/pic13.jpg'}
             alt=""
           />
-          <figcaption className=" text-gray-400"></figcaption>
         </figure>
         <br />
-        {/* три точки */}
         <br />
-        <h1 className="font-bold text-2xl">Summary</h1>
+        <h1 className="font-bold text-4xl">Summary</h1>
         <br />
-        <p>
+        <p className="article">
           Hopefully in reading this far you understand the value of pacing your software
           development into phases such as Proof of Concept, Prototype and Minimum Viable
           Product and have an idea on how to set the proper expectations of each phase.
@@ -803,7 +803,7 @@ export default function LeanExpectations() {
           market.
         </p>
         <br />
-        <p>
+        <p className="article">
           This lifecycle is scalable and when coupled with modular design decouples the
           pieces of a monolithic application into bite-size pieces. This fosters best
           practices and makes it easier to contract out work on portions of the
@@ -812,16 +812,16 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-2xl text-gray-400">
+          <p className="text-3xl text-gray-400">
             “Remember, planning is a tool that only works in the presence of a long and
             stable operating history. And yet, do any of us feel that the world around us
             is getting more and more stable every day? Changing such a mind-set is hard
             but critical to startup success.”
           </p>
-          <em className="text-2xl text-gray-400">—The Lean Startup</em>
+          <em className="text-3xl text-gray-400">—The Lean Startup</em>
         </blockquote>
         <br />
-        <p>
+        <p className="article">
           There is{' '}
           <Link href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month#No_silver_bullet">
             <a target="_blak">
@@ -838,7 +838,7 @@ export default function LeanExpectations() {
           user needs are adequately met.
         </p>
         <br />
-        <p className="mb-24">
+        <p className="mb-24 text-xl leading-8">
           Have you had a difficult time setting expectations for your software? Share
           these ideas and concepts with your team to see if it is a good fit for your
           current or future projects. How might applying the concepts shared help you turn
