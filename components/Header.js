@@ -45,8 +45,8 @@ function Header() {
         <Link href="/get-started">
           <a className="btn-gray">Get started</a>
         </Link>
-        <Link href="/faq">
-          <a className="btn-gray">FAQ</a>
+        <Link href="/faq" className="">
+          <a className="btn-gray hidden">FAQ</a>
         </Link>
       </div>
     </header>
