@@ -64,7 +64,7 @@ export default function ReactCompLibrary() {
           </i>
         </blockquote>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           A React Component Library (RCL) is a great way to reuse code, speed up
           development and maintain a consistent UI/UX across different features and
           applications.
@@ -72,7 +72,7 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">Why?</h2>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           You can read more about the reason behind unfoldingWord’s RCL approach here.
           However, in a nutshell, we use RCLs because our software development process
           gains code reusability, abstraction, collaboration, and versatility.
@@ -80,11 +80,11 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">How?</h2>
         <br />
-        <p className="text-xl leading-8">Next …</p>
+        <p className="article">Next …</p>
         <br />
         <h1 className="font-bold text-4xl leading-10"> Getting started</h1>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Create a project directory and initialize the NPM package:
         </p>
         <br />
@@ -102,7 +102,7 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">Adding core dependencies</h2>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Let’s run the following command to install the core dependencies:
         </p>
         <br />
@@ -111,7 +111,7 @@ export default function ReactCompLibrary() {
         </pre>
         <br />
         <blockquote className="border-black border-l-2 pl-3 text-xl leading-8">
-          <i>
+          <i className="article">
             As a side note, I use <code className="bg-gray-100">yarn</code> on this
             project but feel free to use <code className="bg-gray-100">npm</code> if you
             prefer. However, if you want to use yarn like me and don’t have it installed
@@ -133,7 +133,7 @@ export default function ReactCompLibrary() {
           </a>
         </Link>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Make the core dependencies <code className="bg-gray-100">peerDependencies</code>{' '}
           so that <code className="bg-gray-100">npm/yarn</code> knows about the{' '}
           <Link href="https://docs.npmjs.com/cli/v8/configuring-npm/package-json">
@@ -147,7 +147,7 @@ export default function ReactCompLibrary() {
           The more lightweight you can keep it the better.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Now, manually add <code className="bg-gray-100">peerDependenciesusing</code> the{' '}
           <Link href="https://semver.org/">
             <a target="_blank">
@@ -166,7 +166,7 @@ export default function ReactCompLibrary() {
           Setting up live development with Styleguidist
         </h1>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We use Styleguidist as a component development environment with live reloading
           and a documentation playground to showcase our components’ APIs.
         </p>
@@ -179,9 +179,7 @@ export default function ReactCompLibrary() {
           </i>
         </blockquote>
         <br />
-        <p className="text-xl leading-8">
-          Check out Styleguidis’s website to learn more:
-        </p>
+        <p className="article">Check out Styleguidis’s website to learn more:</p>
         <br />
         <Link href="https://react-styleguidist.js.org/">
           <a target="_blank">
@@ -217,7 +215,7 @@ export default function ReactCompLibrary() {
           Install Styleguidist and Webpack:
         </h2>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           For more information on how to set up{' '}
           <Link href="https://react-styleguidist.js.org/docs/getting-started/">
             <a target="_blank">
@@ -232,7 +230,7 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">Setup Babel</h2>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We need to set up{' '}
           <Link href="https://babeljs.io/">
             <a target="_blank">
@@ -242,7 +240,7 @@ export default function ReactCompLibrary() {
           in order to transpile our code and make it work well with Styleguidist.
         </p>
         <br />
-        <p className="text-xl leading-8">The entire process to set this up involves:</p>
+        <p className="article">The entire process to set this up involves:</p>
         <br />
         <p className="ml-8 text-xl leading-8">
           1. Running these commands to install the packages:
@@ -264,7 +262,7 @@ export default function ReactCompLibrary() {
         <br />
         <h2 className="font-bold text-3xl leading-10">Connect Styleguidist with Babel</h2>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Now set up Styleguidist’s internal <code className="bg-gray-100">webpack</code>{' '}
           instance to use our <code className="bg-gray-100">Babel</code> config to load
           the components properly. Thus, create{' '}
@@ -276,11 +274,9 @@ export default function ReactCompLibrary() {
           <p>styleguide.config.js</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
-          We’re ready to launch the Development environment!
-        </p>
+        <p className="article">We’re ready to launch the Development environment!</p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Add the following command{' '}
           <code className="bg-gray-100">”start”: “styleguidist server”</code> to your{' '}
           <code className="bg-gray-100">package.json</code> and run{' '}
@@ -292,7 +288,7 @@ export default function ReactCompLibrary() {
           <p>package.json</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Open <code className="bg-gray-100">http://localhost:6060</code> and you should
           see the following:
         </p>
@@ -307,25 +303,23 @@ export default function ReactCompLibrary() {
           />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Of course, we have not created any components yet, let’s do that now…
         </p>
         <br />
         <h1 className="font-bold text-4xl leading-10">Creating Components</h1>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We have set up the React Component Library development environment, now let’s
           create some components.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           All components will be added to the{' '}
           <code className="bg-gray-100">src/components</code> directory.
         </p>
         <br />
-        <p className="text-xl leading-8">
-          The component file structure will be as follows:
-        </p>
+        <p className="article">The component file structure will be as follows:</p>
         <br />
         <pre className="p-5 bg-gray-100">
           <p>src/</p>
@@ -335,9 +329,9 @@ export default function ReactCompLibrary() {
           <p>{'          '}└── Button.js</p>
         </pre>
         <br />
-        <p className="text-xl leading-8">Let’s start with a basic button.</p>
+        <p className="article">Let’s start with a basic button.</p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Copy the following code to{' '}
           <code className="bg-gray-100">src/components/Button/index.js</code>:
         </p>
@@ -349,7 +343,7 @@ export default function ReactCompLibrary() {
           <p>index.js</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Copy the following code to{' '}
           <code className="bg-gray-100">src/components/Button/Button.js</code>:
         </p>
@@ -359,13 +353,13 @@ export default function ReactCompLibrary() {
           <p>Button.js</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
-          Run <code className="bg-gray-100">yarn start</code>or{' '}
+        <p className="article">
+          Run <code className="bg-gray-100">yarn start</code> or{' '}
           <code className="bg-gray-100">npm start</code> again to restart the Styleguidist
           server.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Now, open <code className="bg-gray-100">http://localhost:6060</code> again and
           it should include the Button Component in the docs as shown in the picture
           below.
@@ -382,7 +376,7 @@ export default function ReactCompLibrary() {
           />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           It doesn’t really show anything yet, but Styleguidist{' '}
           <Link href="https://react-styleguidist.js.org/docs/documenting/">
             <a target="_blank">
@@ -392,7 +386,7 @@ export default function ReactCompLibrary() {
           .
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Now create a markdown file named <code className="bg-gray-100">Button.md</code>{' '}
           inside the <code className="bg-gray-100">Button</code> folder to start
           documenting the Button Component.
@@ -403,12 +397,12 @@ export default function ReactCompLibrary() {
           <p>src/components/Button/Button.md</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We can mix Markdown with JavaScript/React code to show the examples and
           descriptions easily.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Now restart the Styleguidist server by rerunning{' '}
           <code className="bg-gray-100">yarn start</code> or{' '}
           <code className="bg-gray-100">npm start</code> and refresh the page, we should
@@ -426,7 +420,7 @@ export default function ReactCompLibrary() {
           />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We have created our first basic component, have set up a development environment
           with live preview, and production-ready documentation at the same time.
         </p>
@@ -443,16 +437,16 @@ export default function ReactCompLibrary() {
         </h2>
         <br />
 
-        <p className="text-xl leading-8">
+        <p className="article">
           At unfoldingWord we use Material-UI with our RCLs as a baseline for our UI/UX
           design.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Let’s start with a basic button using the Material-UI library.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Copy the following code to{' '}
           <code className="bg-gray-100">src/components/MuiButton/index.js</code>:
         </p>
@@ -464,7 +458,7 @@ export default function ReactCompLibrary() {
           <p>index.js</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Copy the following code to{' '}
           <code className="bg-gray-100">src/components/MuiButton/MuiButton.js</code>:
         </p>
@@ -474,13 +468,13 @@ export default function ReactCompLibrary() {
           <p>MuiButton.js</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Restart the Styleguidist server running{' '}
           <code className="bg-gray-100">yarn start</code> or{' '}
           <code className="bg-gray-100">npm start</code> again.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Open <code className="bg-gray-100">http://localhost:6060</code> and you should
           see the <code className="bg-gray-100">MuiButton</code> Component.
         </p>
@@ -496,17 +490,17 @@ export default function ReactCompLibrary() {
           />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Finally, let’s create a markdown file either named{' '}
           <code className="bg-gray-100">MuiButton.md</code> or{' '}
-          <code className="bg-gray-100">README.md</code>
-          inside the <code className="bg-gray-100">MuiButton</code> folder to start
-          documenting the MuiButton Component.
+          <code className="bg-gray-100">README.md</code> inside the{' '}
+          <code className="bg-gray-100">MuiButton</code> folder to start documenting the
+          MuiButton Component.
         </p>
         <br />
         <Gist id="6c05d855cf3a9542ee45c0393c8aac6a" />
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Restart the Styleguidist server. You should now see the MuiButton component in
           the Styleguidist live demo.
         </p>
@@ -537,14 +531,14 @@ export default function ReactCompLibrary() {
           </i>
         </blockquote>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           First, we have to update the entry point to the library. In order to do that, we
           have to update the <code className="bg-gray-100">main</code> field in{' '}
           <code className="bg-gray-100">package.json</code>. This points to the bundled
           file that will be generated, not to the sources.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Let’s set it to <code className="bg-gray-100">dist/index.js</code>, the path to
           the bundled output.
         </p>
@@ -554,7 +548,7 @@ export default function ReactCompLibrary() {
           <p>package.jsons</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           We’re missing one more file, which defines what is exported from the library and
           what users can import. Create a{' '}
           <code className="bg-gray-100">src/index.js</code> file with the following code:
@@ -563,7 +557,7 @@ export default function ReactCompLibrary() {
           <Gist id="360539bc8377dd1f3f76cb89a27a7d5f" />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Also, create a <code className="bg-gray-100">src/components/index.js</code> file
           and add all current components to make sure they’re exported and made available
           to users of our RCL, here we’ll also export new components as we create them.
@@ -573,12 +567,12 @@ export default function ReactCompLibrary() {
           <Gist id="48fda928b8417f3a7f9aa81609e46dd4" />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           <code className="bg-gray-100">src/index.js</code> and{' '}
           <code className="bg-gray-100">dist/index.js</code>, are respectively the input
           and output files for the bundler.
         </p>
-        <p className="text-xl leading-8">
+        <p className="article">
           Before publishing let’s make sure we don’t publish unnecessary files to our NPM
           module, so let’s add a <code className="bg-gray-100">.npmignore</code> file to
           the root of our project.
@@ -591,11 +585,9 @@ export default function ReactCompLibrary() {
           <p>.npmignore</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
-          Now let’s bundle the code and publish it to NPM…
-        </p>
+        <p className="article">Now let’s bundle the code and publish it to NPM…</p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           The following command compiles your code from the{' '}
           <code className="bg-gray-100">src</code> directory to{' '}
           <code className="bg-gray-100">dist</code>
@@ -606,7 +598,7 @@ export default function ReactCompLibrary() {
         </pre>
         <br />
         <blockquote className="border-black border-l-2 pl-3">
-          <i className="text-xl leading-8">
+          <i className="text-xl leading-8 article">
             You can use the npm package runner that comes with npm@5.2.0 to shorten that
             command by replacing{' '}
             <code className="bg-gray-100">./node_modules/.bin/babel</code> with{' '}
@@ -615,7 +607,7 @@ export default function ReactCompLibrary() {
           </i>
         </blockquote>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Accordingly, add the following command prepublishOnly:{' '}
           <code className="bg-gray-100">
             “rm -rf ./dist && babel ./src --out-dir ./dist -s inline”
@@ -624,8 +616,8 @@ export default function ReactCompLibrary() {
           the code before publishing it to NPM.
         </p>
         <br />
-        <blockquote className="border-black border-l-2 pl-3 text-xl leading-8">
-          <p>
+        <blockquote className="border-black border-l-2 pl-3">
+          <p className="article">
             For Windows users, if there is a problem with{' '}
             <code className="bg-gray-100">rm -rf</code> then you need to add the{' '}
             <code className="bg-gray-100">rimraf</code> package and replace{' '}
@@ -634,7 +626,7 @@ export default function ReactCompLibrary() {
           </p>
         </blockquote>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Your <code className="bg-gray-100">scripts</code> field should look like this:
         </p>
         <br />
@@ -643,7 +635,7 @@ export default function ReactCompLibrary() {
           <p>package.json</p>
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Run <code className="bg-gray-100">yarn publish</code> or{' '}
           <code className="bg-gray-100">npm publish</code> to bundle the code and publish
           it to NPM. Of course, if you use the same name as I did the publish will fail
@@ -662,7 +654,7 @@ export default function ReactCompLibrary() {
           />
         </div>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           After publishing, let’s test our library, I created a React app on{' '}
           <Link href="https://codesandbox.io/">
             <a target="_blank">
@@ -686,14 +678,14 @@ export default function ReactCompLibrary() {
           sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
         ></iframe>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           As you may remember, we included{' '}
           <code className="bg-gray-100">@material-ui/core</code> in the{' '}
           <code className="bg-gray-100">peerDependencies</code> list. Therefore, our app
           must include it as a dependency.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           After adding <code className="bg-gray-100">@material-ui/core</code> as a
           dependency on our app, we have both button components rendering correctly from
           our newly created RCL.
@@ -713,12 +705,12 @@ export default function ReactCompLibrary() {
           sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
         ></iframe>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Click on the “Open Sandbox” button above if you want to open the sandbox project
           I used to try out the RCL we just created.
         </p>
         <br />
-        <p className="text-xl leading-8">
+        <p className="article">
           Feel free to check out the following repository if you need help:
         </p>
         <br />
@@ -742,7 +734,7 @@ export default function ReactCompLibrary() {
           </a>
         </Link>
         <br />
-        <p className="text-xl leading-8">Happy coding!</p>
+        <p className="article">Happy coding!</p>
       </div>
     </div>
   )
