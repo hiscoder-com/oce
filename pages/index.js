@@ -18,7 +18,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col gap-24 my-16">
+    <div className="flex flex-col gap-10">
       <Head>
         <title>Open Components Ecosystem</title>
         <meta name="description" content="Open Components Ecosystem" />
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="mb-8 w-3/5 text-center text-6xl font-bold text-primary-600">
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
-        <div className="text-xl mb-28 text-primary-600">
+        <div className="text-xl mb-10 text-primary-600">
           <span className="font-bold">Collaborative Innovation</span> in Bible Technology
         </div>
       </div>
@@ -180,10 +180,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <div className="text-base uppercase text-text-500">Components</div>
-          <div className="flex gap-8">
+          <div className="flex">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
@@ -209,9 +209,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <div className="text-base uppercase text-text-500">Applications</div>
-          <div className="flex gap-8 justify-between">
+          <div className="flex">
             <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:w-9/12 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
@@ -268,7 +268,8 @@ export default function Home() {
           </div>
           <div>
             <div className="w-2/3 text-xl text-text-500">
-              Use #scripture-open-components to showcase your work in the community
+              Use <span className="font-bold">#scripture-open-components</span> to
+              showcase your work in the community
             </div>
           </div>
         </div>
