@@ -7,9 +7,10 @@ function MarkdownViewer({ children, rehypePlugins, className, address }) {
     if (!uri) {
       return
     }
+
     const urlParts = uri.split('/').filter((el) => el !== '.')
 
-    if (!['https:', 'http:'].includes(urlParts[0])) {
+    if (urlParts.length > 0 && !['https:', 'http:'].includes(urlParts[0])) {
       const githubUri = [
         ...['https://raw.githubusercontent.com', address, 'master'],
         ...urlParts,
