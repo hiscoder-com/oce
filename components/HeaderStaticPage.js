@@ -4,8 +4,8 @@ import Link from 'next/link'
 function HeaderStaticPage({ config }) {
   const { title, name, date } = config
   return (
-    <div className=" border-b-2 border-dashed my-16 pr-10">
-      <Link href="/">
+    <div className=" border-b-2 border-dashed mb-10 pr-10">
+      <Link href="/get-started">
         <button className="flex justify-between w-28 hover:text-gray-700 text-gray-500">
           <div className="w-5 h-3">
             <svg
@@ -38,7 +38,7 @@ function HeaderStaticPage({ config }) {
           />
         </div>
       </div>
-      <div className="flex pb-20">
+      <div className="flex pb-10">
         <p>{name ? name : ''}</p>
         <p className="ml-16 text-gray-500">{date ? date : ''}</p>
       </div>

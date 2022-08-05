@@ -35,8 +35,10 @@ function GetStarted() {
             </li>
             <li>
               Check the{' '}
-              <Link href="/about#whitepaper">
-                <a className="underline-custom">whitepaper</a>
+              <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
+                <a target="_blank" className="underline-custom">
+                  whitepaper
+                </a>
               </Link>
             </li>
           </ul>
@@ -78,7 +80,7 @@ function GetStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <Link href="/">
+              <Link href="/lean-expectations">
                 <a className="underline-custom">
                   Lean Expectations — PoC, Prototype, MVP
                 </a>
@@ -98,19 +100,19 @@ function GetStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <Link href="/">
+              <Link href="/get-started">
                 <a className="underline-custom">Starting a React Component Library</a>
               </Link>
             </li>
             <li>
               Introduction to{' '}
-              <Link href="/">
+              <Link href="/get-started">
                 <a className="underline-custom">Styleguidist</a>
               </Link>
             </li>
             <li>
               Philosophy of{' '}
-              <Link href="/">
+              <Link href="/headless-ui">
                 <a className="underline-custom">Headless components</a>
               </Link>
             </li>
