@@ -37,7 +37,7 @@ function Footer() {
               <a className="btn-transparent">Get started</a>
             </Link>
             <Link href="/faq">
-              <a className="btn-transparent">FAQ</a>
+              <a className="btn-transparent hidden">FAQ</a>
             </Link>
           </div>
         </div>

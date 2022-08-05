@@ -21,23 +21,10 @@ function About() {
   }
 
   return (
-    <div className="flex flex-col gap-20 my-16">
+    <div className="flex flex-col gap-10 mb-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="flex self-start ml-60">
-          <Image
-            src={editor_r}
-            alt="editor_rotate"
-            width="76"
-            height="76"
-            className="rotate-180"
-          />
-        </div>
-        <div className="flex flex-col text-center gap-5">
-          <div className="text-6xl font-bold text-primary-600">About</div>
-          <div className="mx-auto w-3/5 text-xl text-text-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Montes, egestas
-            turpis faucibus non turpis.
-          </div>
+        <div id="oce" className="text-6xl font-bold text-primary-600 scroll-m-32">
+          About
         </div>
         <div className="flex self-end mr-60">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
@@ -65,10 +52,10 @@ function About() {
         </div>
 
         <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
-          <div id="oce" className="text-5xl font-bold text-center scroll-m-16">
+          <div className="text-5xl font-bold text-center ">
             The Open Components Ecosystem
           </div>
-          <div className="mt-5 mb-16 text-xl font-bold text-center">
+          <div className="mt-5 mb-8 text-xl font-bold text-center">
             Collaborative Innovation in Bible Technology
           </div>
           <div className="flex justify-center">
@@ -80,7 +67,7 @@ function About() {
             reuse of functionality outside of original context and expansion of
             functionality by integration of other components
           </p>
-          <p id="whitepaper" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="whitepaper" className="my-20 text-5xl font-bold text-center scroll-m-14">
             OCE Whitepaper
           </p>
 
@@ -88,7 +75,7 @@ function About() {
             <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
               <a
                 target="_blank"
-                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-16 hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
+                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-14 hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
               >
                 <Image src={file} alt="file" width="13" height="16" />
                 <p>Read Whitepaper</p>
@@ -157,7 +144,10 @@ function About() {
               otherwise reuse the technology without restriction.
             </p>
           </div>
-          <p id="video" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p
+            id="video"
+            className="mt-10 mb-20 text-5xl font-bold text-center scroll-m-14"
+          >
             Video
           </p>
 
@@ -172,7 +162,7 @@ function About() {
               allowFullScreen
             ></iframe>
           </div>
-          <p id="licensing" className="my-32 text-5xl font-bold text-center scroll-m-16">
+          <p id="licensing" className="my-20 text-5xl font-bold text-center scroll-m-14">
             Licensing
           </p>
 

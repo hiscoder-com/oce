@@ -1,13 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 import Chevron from '../public/chevron.svg'
 import Logo from '../public/logo.svg'
 
 function Header() {
-  const router = useRouter()
-
   return (
     <header className="header container mx-auto px-2">
       <div>
@@ -24,7 +21,7 @@ function Header() {
         </Link>
         <div className="flex gap-2 btn group">
           <div className="relative">
-            <a className="btn-gray">Explore</a>
+            <a>Explore</a>
             <div className="dropdown">
               <Link href="/apps">
                 <a className="btn-gray">Apps</a>
@@ -45,8 +42,8 @@ function Header() {
         <Link href="/get-started">
           <a className="btn-gray">Get started</a>
         </Link>
-        <Link href="/faq">
-          <a className="btn-gray">FAQ</a>
+        <Link href="/faq" className="">
+          <a className="btn-gray hidden">FAQ</a>
         </Link>
       </div>
     </header>
