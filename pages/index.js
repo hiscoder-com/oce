@@ -38,8 +38,8 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-5">
-        <div className="flex flex-col justify-between pt-16 pb-8 px-9 gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
-          <div className="flex flex-col gap-20">
+        <div className="flex flex-col justify-between pt-8 md:pt-16 pb-8 px-9 gap-8 md:gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
+          <div className="flex flex-col gap-8 md:gap-20">
             <div>
               <Image src={ascent} alt="ascent" width="303" height="185" />
             </div>
@@ -96,8 +96,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between pt-16 pb-8 px-9 gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
-          <div className="flex flex-col gap-20">
+        <div className="flex flex-col justify-between pt-8 md:pt-16 pb-8 px-9 gap-8 md:gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
+          <div className="flex flex-col gap-8 md:gap-20">
             <div>
               <Image src={introduction} alt="introduction" width="303" height="185" />
             </div>
@@ -149,8 +149,8 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col justify-between pt-16 pb-8 px-9 gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
-          <div className="flex flex-col gap-20">
+        <div className="flex flex-col justify-between pt-8 md:pt-16 pb-8 px-9 gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
+          <div className="flex flex-col gap-8 md:gap-20">
             <div>
               <Image src={explore} alt="explore" width="303" height="185" />
             </div>
