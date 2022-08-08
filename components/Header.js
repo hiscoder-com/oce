@@ -7,10 +7,14 @@ import Logo from '../public/logo.svg'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const condition = `header ${isOpen ? '' : 'hidden'}`
-
+  const condition = `flex flex-col cursor-pointer text-text-600  absolute left-0 top-20 right-0 bottom-0 md:hidden ${
+    isOpen ? '' : 'hidden'
+  }`
+  const closeNavbar = () => {
+    setIsOpen((prev) => !prev)
+  }
   return (
-    <header className="flex items-center justify-between text-lg py-6 font-bold md:mb-4 container mx-auto px-6 bg-white md:px-2">
+    <header className="container flex items-center justify-between mx-auto p-6 text-lg font-bold md:mb-4 md:px-2">
       <div className="flex items-center justify-between w-full md:w-fit md:gap-5">
         <Image
           src={Logo}
@@ -21,11 +25,11 @@ function Header() {
         />
         <Link href="/">
           <a className="flex items-center gap-5">
-            <p className="text-primary-600 text-xl md:text-2xl">Open Components</p>
+            <p className="text-primary-600 text-2xl">Open Components</p>
           </a>
         </Link>
         <svg
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={closeNavbar}
           width="30"
           height="30"
           viewBox="0 0 24 24"
@@ -81,7 +85,9 @@ function Header() {
               <Image src={Logo} alt="Open Components Ecosystem" width="30" height="43" />
               <Link href="/">
                 <a className="flex items-center gap-5">
-                  <p className="text-primary-600 text-xl">Open Components</p>
+                  <p onClick={closeNavbar} className="text-primary-600 text-2xl">
+                    Open Components
+                  </p>
                 </a>
               </Link>
               <svg
@@ -103,18 +109,25 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div onClick={closeNavbar} className="flex flex-col gap-5">
             <Link href="/about">
               <a className="btn-gray">About</a>
             </Link>
-            <a className="btn">Explore</a>
+            <a
+              onClick={(e) => {
+                e.stopPropagation()
+              }}
+              className="btn"
+            >
+              Explore
+            </a>
             <Link href="/apps">
-              <a className="btn text-text-500 hover:text-text-600 active:text-text-500">
+              <a className="pl-8 whitespace-nowrap rounded-md text-text-500 hover:text-text-600 active:text-text-500">
                 Apps
               </a>
             </Link>
             <Link href="/components">
-              <a className="btn text-text-500 hover:text-text-600 active:text-text-500">
+              <a className="pl-8 whitespace-nowrap rounded-md text-text-500 hover:text-text-600 active:text-text-500">
                 Components
               </a>
             </Link>

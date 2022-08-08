@@ -42,7 +42,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="text-text-200 text-center text-sm md:whitespace-nowrap md:text-lg">
+        <div className="text-text-200 mr-2 text-center text-sm md:whitespace-nowrap md:text-lg">
           {new Date().getFullYear()} © unfoldingWord
         </div>
       </div>

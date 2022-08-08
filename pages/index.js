@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex flex-row self-end mr-10 md:mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
-        <div className="mb-3 text-center text-lg font-bold text-primary-600 md:mb-8 md:text-6xl md:w-3/5">
+        <div className="text-center mb-3 text-2xl font-bold text-primary-600 md:mb-8 md:text-6xl md:w-3/5">
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
         <div className="text-xs mb-10 text-primary-600 md:text-xl">
@@ -64,7 +64,7 @@ export default function Home() {
                   </svg>
                 </a>
               </Link>
-              <div className="text-base text-justify text-text-600 group-hover:text-black">
+              <div className="text-justify text-text-600 group-hover:text-black">
                 Get started with the Open Component Ecosystem. The community conversation
                 is ongoing on Discord, but here you can find out more about how to begin
                 developing open components or getting your work added to the ecosystem.
@@ -121,7 +121,7 @@ export default function Home() {
                   </svg>
                 </a>
               </Link>
-              <div className="text-base text-justify text-text-600 group-hover:text-black">
+              <div className="text-justify text-text-600 group-hover:text-black">
                 Find out what the Open Component Ecosystem (OCE) is all about. To learn
                 about the concept behind the OCE, you can check out our{' '}
                 <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
@@ -185,13 +185,13 @@ export default function Home() {
 
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-2">
-          <div className="text-base uppercase text-text-500">Components</div>
-          <div className="flex">
-            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-3 gap-1 sm:grid-cols-4 sm:gap-2 2xl:w-9/12 2xl:gap-8">
+          <div className="uppercase text-text-500">Components</div>
+          <div className="flex flex-col md:flex-row">
+            <div className="my-1 md:my-2 xl:my-8 grid gap-5 sm:grid-cols-4 sm:gap-2 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
             </div>
             <Link href="/components">
-              <a className="flex items-center gap-2.5 mx-auto font-bold text-base underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4">
+              <a className="flex items-center gap-2.5 mx-auto py-10 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -213,13 +213,13 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <div className="text-base uppercase text-text-500">Applications</div>
-          <div className="flex">
-            <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:w-9/12 xl:gap-5">
+          <div className="uppercase text-text-500">Applications</div>
+          <div className="flex flex-col md:flex-row">
+            <div className="my-1 md:my-2 xl:my-8 grid gap-5 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:w-9/12 xl:gap-5">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
             <Link href="/apps">
-              <a className="flex items-center gap-2.5 mx-auto font-bold text-base text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
+              <a className="flex items-center gap-2.5 mx-auto py-10 font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +245,7 @@ export default function Home() {
         <div className="flex flex-col justify-center gap-5">
           <div className="text-primary-600">
             <Link href="https://discord.com/invite/auJb4H9ezx">
-              <a target="_blank" className="flex gap-11 text-5xl font-bold">
+              <a target="_blank" className="flex gap-11 font-bold text-2xl md:text-5xl">
                 <p>
                   Join our community on{' '}
                   <span className="underline decoration-4 underline-offset-4 cursor-pointer">
@@ -254,7 +254,7 @@ export default function Home() {
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-auto w-11 mt-2 cursor-pointer"
+                  className="h-auto w-11 mt-2 mr-8 cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -270,7 +270,7 @@ export default function Home() {
             </Link>
           </div>
           <div>
-            <div className="w-2/3 text-xl text-text-500">
+            <div className=" text-lg text-text-500 md:w-2/3">
               Use <span className="font-bold">#scripture-open-components</span> to
               showcase your work in the community
             </div>
