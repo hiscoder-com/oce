@@ -61,7 +61,7 @@ export default function HeadlessUI() {
           behavior of a component from its visual representation.
         </p>
         <br />
-        <blockquote className="border-black border-l-2  pl-3">
+        <blockquote className="border-black border-l-2 pl-3">
           <p className="pb-4 text-xl leading-8">
             <strong>Rule of Separation:</strong>{' '}
             <em>Separate policy from mechanism; separate interfaces from engines.</em>

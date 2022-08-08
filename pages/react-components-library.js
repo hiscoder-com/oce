@@ -418,18 +418,11 @@ export default function ReactCompLibrary() {
           with live preview, and production-ready documentation at the same time.
         </p>
         <br />
-        {/* <div className="flex justify-center m-auto">
-          <div className="border-black border w-1 h-1 bg-black"></div>
-          <div className="border-black border w-1 h-1 mx-2 bg-black"></div>
-          <div className="border-black border w-1 h-1 bg-black"></div>
-        </div> */}
         <br />
-
         <h2 className="font-bold text-3xl leading-10">
           Material-UI + unfoldingWord RCLs
         </h2>
         <br />
-
         <p>
           At unfoldingWord we use Material-UI with our RCLs as a baseline for our UI/UX
           design.
