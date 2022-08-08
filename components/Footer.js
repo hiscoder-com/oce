@@ -19,7 +19,7 @@ function Footer() {
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
                 target="_blank"
-                className="flex justify-center items-center w-full h-full gap-2 rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
+                className="flex justify-center items-center w-full h-full gap-2 text-base rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
               >
                 <Image src={discord_black} alt="discord_black" width="24" height="23" />
                 <p>Join Discord</p>

@@ -81,7 +81,7 @@ function Header() {
       <div className={condition}>
         <div className="fixed px-6 top-0 left-0 right-0 bottom-0 pt-6  w-full h-full text-2xl bg-white z-50">
           <div>
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-12">
               <Image src={Logo} alt="Open Components Ecosystem" width="30" height="43" />
               <Link href="/">
                 <a className="flex items-center gap-5">
