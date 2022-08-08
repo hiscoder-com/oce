@@ -315,11 +315,15 @@ export default function ReactCompLibrary() {
         <p>The component file structure will be as follows:</p>
         <br />
         <pre className="p-5 bg-gray-100">
-          <p>src/</p>
-          <p>{'  '}└── components/</p>
-          <p> {'     '}└── Button</p>
-          <p>{'          '}├── index.js</p>
-          <p>{'          '}└── Button.js</p>
+          src/
+          <br />
+          └── components/
+          <br />
+          {'    '}└── Button
+          <br />
+          {'        '}├── index.js
+          <br />
+          {'        '}└── Button.js
         </pre>
         <br />
         <p>Let’s start with a basic button.</p>
