@@ -2,18 +2,15 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Close from '../public/close.svg'
 import Chevron from '../public/chevron.svg'
 import Logo from '../public/logo.svg'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const condition = `flex flex-col cursor-pointer text-text-600 md:hidden absolute left-0 top-0 right-0 bottom-0 ${
-    isOpen ? '' : 'hidden'
-  }`
+  const condition = `header ${isOpen ? '' : 'hidden'}`
 
   return (
-    <header className="header container mx-auto px-6 md:px-2">
+    <header className="flex items-center justify-between text-lg py-6 font-bold md:mb-4 container mx-auto px-6 bg-white md:px-2">
       <div className="flex items-center justify-between w-full md:w-fit md:gap-5">
         <Image
           src={Logo}
@@ -78,36 +75,56 @@ function Header() {
 
       {/* mobile nav */}
       <div className={condition}>
-        <div className="fixed top-0 left-0 w-full h-full text-lg bg-white">
-          <Link href="/about">
-            <a className="btn-gray">About</a>
-          </Link>
-          <div className="flex gap-2 btn group">
-            <div className="relative">
-              <a>Explore</a>
-              <div className="dropdown">
-                <Link href="/apps">
-                  <a className="btn-gray">Apps</a>
-                </Link>
-                <Link href="/components">
-                  <a className="btn-gray">Components</a>
-                </Link>
-              </div>
+        <div className="fixed px-6 top-0 left-0 right-0 bottom-0 pt-6  w-full h-full text-2xl bg-white z-50">
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <Image src={Logo} alt="Open Components Ecosystem" width="30" height="43" />
+              <Link href="/">
+                <a className="flex items-center gap-5">
+                  <p className="text-primary-600 text-xl">Open Components</p>
+                </a>
+              </Link>
+              <svg
+                onClick={() => setIsOpen((prev) => !prev)}
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
-            <Image
-              src={Chevron}
-              alt="show more"
-              width="6"
-              height="4"
-              className="group-hover:rotate-180"
-            />
           </div>
-          <Link href="/get-started">
-            <a className="btn-gray">Get started</a>
-          </Link>
-          <Link href="/faq" className="">
-            <a className="btn-gray hidden">FAQ</a>
-          </Link>
+
+          <div className="flex flex-col gap-5">
+            <Link href="/about">
+              <a className="btn-gray">About</a>
+            </Link>
+            <a className="btn">Explore</a>
+            <Link href="/apps">
+              <a className="btn text-text-500 hover:text-text-600 active:text-text-500">
+                Apps
+              </a>
+            </Link>
+            <Link href="/components">
+              <a className="btn text-text-500 hover:text-text-600 active:text-text-500">
+                Components
+              </a>
+            </Link>
+            <Link href="/get-started">
+              <a className="btn-gray">Get started</a>
+            </Link>
+            <Link href="/faq">
+              <a className="btn-gray hidden">FAQ</a>
+            </Link>
+          </div>
         </div>
       </div>
     </header>
