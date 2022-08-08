@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -91,7 +92,7 @@ function Header() {
                 </a>
               </Link>
               <svg
-                onClick={() => setIsOpen((prev) => !prev)}
+                onClick={closeNavbar}
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
