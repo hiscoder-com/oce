@@ -6,9 +6,9 @@ import Logo from '../public/logo-white.svg'
 
 function Footer() {
   return (
-    <footer className="bg-primary-600 mt-6">
-      <div className="footer container mx-auto px-2">
-        <div className="flex items-center gap-9">
+    <div className="bg-primary-600 mt-6">
+      <div className="footer container mx-auto">
+        <div className="flex items-center gap-9 w-full">
           <Link href="/">
             <a className="flex gap-5 pl-2">
               <Image src={Logo} alt="Open Components Ecosystem" width="34" height="36" />
@@ -26,7 +26,7 @@ function Footer() {
               </a>
             </Link>
           </div>
-          <div>
+          <div className="hidden md:flex">
             <Link href="/about">
               <a className="btn-transparent">About</a>
             </Link>
@@ -42,9 +42,11 @@ function Footer() {
           </div>
         </div>
 
-        <div className="text-text-200">2022 © unfoldingWord</div>
+        <div className="text-text-200 text-center text-sm md:whitespace-nowrap md:text-lg">
+          {new Date().getFullYear()} © unfoldingWord
+        </div>
       </div>
-    </footer>
+    </div>
   )
 }
 

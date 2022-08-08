@@ -18,7 +18,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-4 mx-6 md:gap-10">
       <Head>
         <title>Open Components Ecosystem</title>
         <meta name="description" content="Open Components Ecosystem" />
@@ -26,13 +26,13 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="flex flex-row self-end mr-96">
+        <div className="flex flex-row self-end mr-10 md:mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
-        <div className="mb-8 w-3/5 text-center text-6xl font-bold text-primary-600">
+        <div className="mb-3 text-center text-lg font-bold text-primary-600 md:mb-8 md:text-6xl md:w-3/5">
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
-        <div className="text-xl mb-10 text-primary-600">
+        <div className="text-xs mb-10 text-primary-600 md:text-xl">
           <span className="font-bold">Collaborative Innovation</span> in Bible Technology
         </div>
       </div>

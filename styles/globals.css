@@ -21,7 +21,7 @@
 }
 
 .footer {
-  @apply flex items-center justify-between text-lg font-bold py-7 text-white
+  @apply flex items-center justify-between text-lg font-bold py-6 text-white
 }
 
 .dropdown {
@@ -29,7 +29,7 @@
 }
 
 .header {
-  @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
+  @apply flex items-center justify-between text-lg py-6 font-bold md:mb-4
 }
 .input {
   @apply appearance-none block w-full px-3 py-1.5 text-base font-normal border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
