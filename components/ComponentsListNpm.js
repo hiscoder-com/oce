@@ -57,14 +57,14 @@ function ComponentsListNpm({ setTotal }) {
       {from === 0 && isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
-        <div>Error</div>
+        <div></div>
       ) : (
         <>
           <div className="my-8 grid grid-cols-5 gap-8">{componentCards}</div>
           {parseInt(from) + parseInt(limit) < parseInt(totalRepos) ? (
             <div onClick={handlerLoadMore}>LOAD MORE</div>
           ) : (
-            <div>END</div>
+            <div></div>
           )}
         </>
       )}

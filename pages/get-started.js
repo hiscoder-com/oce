@@ -100,14 +100,16 @@ function GetStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>
-              <Link href="/get-started">
+              <Link href="/react-components-library">
                 <a className="underline-custom">Starting a React Component Library</a>
               </Link>
             </li>
             <li>
               Introduction to{' '}
-              <Link href="/get-started">
-                <a className="underline-custom">Styleguidist</a>
+              <Link href="https://react-styleguidist.js.org/">
+                <a target="_blank" className="underline-custom">
+                  Styleguidist
+                </a>
               </Link>
             </li>
             <li>
