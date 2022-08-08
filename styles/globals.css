@@ -85,6 +85,6 @@
 .article code{
   @apply text-sm
   }
-p.article {
+.article>p {
   @apply text-xl leading-8
   }
