@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 async function main() {
   const r = await prisma.repo.findUnique({
     where: {
-      repo: 'texttree/projector-mode-rcl',
+      repo: 'repo2',
     },
     select: {
       repo: true,

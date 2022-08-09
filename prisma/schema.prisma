@@ -21,7 +21,7 @@ model Repo {
 }
 
 model Depend {
-  packageName String         @unique
+  packageName String         @id @unique
   repos       ReposDepends[]
 }
 
@@ -35,7 +35,7 @@ model ReposDepends {
 }
 
 model Topic {
-  name  String        @unique
+  name  String        @id @unique
   repos ReposTopics[]
 }
 

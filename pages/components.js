@@ -17,13 +17,17 @@ function ComponentsPage() {
         <div className="flex justify-between">
           <div className="flex justify-between">
             <div className="px-2">
-              <Filter type="topics" multiple />
+              <Filter
+                type="topics"
+                multiple
+                values={['headlessui', 'bible', 'reference']}
+              />
             </div>
             <div className="px-2">
-              <Filter type="direction" />
+              <Filter type="direction" values={['desc', 'asc']} />
             </div>
             <div className="px-2">
-              <Filter type="order" />
+              <Filter type="order" values={['interactions', 'updated']} />
             </div>
           </div>
           <Filter type="query" />

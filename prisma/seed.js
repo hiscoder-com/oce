@@ -4,15 +4,35 @@ const prisma = new PrismaClient()
 
 const RepoData = [
   {
-    repo: 'repo0',
-    packageName: 'npm/repo0',
+    repo: 'bsa',
+    packageName: '',
+    topics: {
+      create: [
+        {
+          topic: {
+            connectOrCreate: {
+              create: { name: 'scripture-open-components' },
+              where: { name: 'scripture-open-components' },
+            },
+          },
+        },
+        {
+          topic: {
+            connectOrCreate: {
+              create: { name: 'react' },
+              where: { name: 'react' },
+            },
+          },
+        },
+      ],
+    },
     depends: {
       create: [
         {
           depend: {
             connectOrCreate: {
-              create: { packageName: 'npm/repo2' },
-              where: { packageName: 'npm/repo2' },
+              create: { packageName: '@texttree/projector-mode-rcl' },
+              where: { packageName: '@texttree/projector-mode-rcl' },
             },
           },
         },
@@ -20,8 +40,8 @@ const RepoData = [
     },
   },
   {
-    repo: 'repo1',
-    packageName: 'npm/repo1',
+    repo: 'projector-mode-rcl',
+    packageName: '@texttree/projector-mode-rcl',
     depends: {
       create: [
         {
@@ -29,14 +49,6 @@ const RepoData = [
             connectOrCreate: {
               create: { packageName: 'npm/repo2' },
               where: { packageName: 'npm/repo2' },
-            },
-          },
-        },
-        {
-          depend: {
-            connectOrCreate: {
-              create: { packageName: 'npm/repo7' },
-              where: { packageName: 'npm/repo7' },
             },
           },
         },
@@ -60,43 +72,19 @@ const RepoData = [
             },
           },
         },
-        {
-          topic: {
-            connectOrCreate: {
-              create: { name: 'next' },
-              where: { name: 'next' },
-            },
-          },
-        },
       ],
     },
   },
   {
-    repo: 'repo2',
-    packageName: 'npm/repo2',
+    repo: 'scripture-resources-rcl',
+    packageName: 'scripture-resources-rcl',
     depends: {
       create: [
         {
           depend: {
             connectOrCreate: {
-              create: { packageName: 'npm/repo3' },
-              where: { packageName: 'npm/repo3' },
-            },
-          },
-        },
-        {
-          depend: {
-            connectOrCreate: {
-              create: { packageName: 'npm/repo5' },
-              where: { packageName: 'npm/repo5' },
-            },
-          },
-        },
-        {
-          depend: {
-            connectOrCreate: {
-              create: { packageName: 'npm/repo7' },
-              where: { packageName: 'npm/repo7' },
+              create: { packageName: 'gitea-react-toolkit' },
+              where: { packageName: 'gitea-react-toolkit' },
             },
           },
         },
