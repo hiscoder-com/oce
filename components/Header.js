@@ -13,7 +13,7 @@ function Header() {
     setIsOpen((prev) => !prev)
   }
   return (
-    <header className="container flex items-center justify-between mx-auto p-6 text-lg font-bold md:mb-4 md:px-2">
+    <header className="header">
       <div className="flex items-center justify-between w-full md:w-fit md:gap-5">
         <Link href="/">
           <a className="flex">
@@ -82,7 +82,7 @@ function Header() {
 
       {/* mobile nav */}
       <div
-        className={`fixed px-6 top-0 left-0 right-0 bottom-0 pt-6 w-full h-full text-2xl bg-white text-text-600 z-50 md:hidden ${
+        className={`fixed px-6 top-0 left-0 right-0 bottom-0 pt-6 text-2xl bg-white text-text-600 z-50 sm:px-7 md:hidden ${
           isOpen ? '' : 'hidden'
         }`}
       >
