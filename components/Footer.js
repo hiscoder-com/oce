@@ -7,8 +7,8 @@ import Logo from '../public/logo-white.svg'
 function Footer() {
   return (
     <footer className="bg-primary-600 mt-6">
-      <div className="footer container mx-auto">
-        <div className="flex items-center gap-9 w-full">
+      <div className="container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white sm:flex-row">
+        <div className="flex items-center justify-around gap-9 w-full sm:justify-start">
           <Link href="/">
             <a className="flex gap-5 pl-2">
               <Image src={Logo} alt="Open Components Ecosystem" width="34" height="36" />
@@ -42,7 +42,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="text-text-200 mr-2 text-center text-sm md:whitespace-nowrap md:text-lg">
+        <div className="text-text-200 mr-2 text-center text-sm whitespace-nowrap md:text-lg">
           {new Date().getFullYear()} © unfoldingWord
         </div>
       </div>
