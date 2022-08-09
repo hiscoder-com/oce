@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
+
+import useScrollTrack from '../hooks/useScrollTrack'
 
 import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
@@ -13,7 +15,21 @@ import oce_infographic_5 from '../public/oce_infographic_5.png'
 
 function About() {
   const [fix, setFix] = useState(false)
+  const [refs, setRefs] = useState({})
+  const main = useRef(null)
+  useEffect(() => {
+    const _refs = {}
+    Array.from(main?.current?.children).forEach((el) => {
+      if (el.id) {
+        _refs[el.id] = el
+      }
+    })
+    setRefs(_refs)
+  }, [])
+  const scroll = useScrollTrack({ refs, top: 57, specific: { licensing: 420 } })
+
   const setFixedSidebar = () => {
+    window.scrollY
     setFix(window.scrollY >= 500)
   }
   if (typeof window !== 'undefined') {
@@ -23,9 +39,7 @@ function About() {
   return (
     <div className="flex flex-col gap-10 mb-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div id="oce" className="text-6xl font-bold text-primary-600 scroll-m-32">
-          About
-        </div>
+        <div className="text-6xl font-bold text-primary-600 scroll-m-32">About</div>
         <div className="flex self-end mr-60">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
@@ -37,22 +51,42 @@ function About() {
             fix && 'fixed top-14'
           }`}
         >
-          <a href="#oce" className="active:text-primary-600">
+          <a
+            href="#oce"
+            className={`active:text-primary-600 ${
+              scroll === 'oce' && 'text-primary-600'
+            }`}
+          >
             About OCE
           </a>
-          <a href="#whitepaper" className="active:text-primary-600">
+          <a
+            href="#whitepaper"
+            className={`active:text-primary-600 ${
+              scroll === 'whitepaper' && 'text-primary-600'
+            }`}
+          >
             OCE Whitepaper
           </a>
-          <a href="#video" className="active:text-primary-600">
+          <a
+            href="#video"
+            className={`active:text-primary-600 ${
+              scroll === 'video' && 'text-primary-600'
+            }`}
+          >
             Video
           </a>
-          <a href="#licensing" className="active:text-primary-600">
+          <a
+            href="#licensing"
+            className={`active:text-primary-600 ${
+              scroll === 'licensing' && 'text-primary-600'
+            }`}
+          >
             Licensing
           </a>
         </div>
 
-        <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
-          <div className="text-5xl font-bold text-center text-primary-600">
+        <div ref={main} className={`w-4/5 ${fix && 'ml-[304px]'}`}>
+          <div id="oce" className="text-5xl font-bold text-center text-primary-600">
             The Open Components Ecosystem
           </div>
           <div className="mt-5 mb-8 text-xl font-bold text-center">
@@ -69,7 +103,7 @@ function About() {
           </p>
           <p
             id="whitepaper"
-            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+            className={`my-20 text-5xl font-bold text-center scroll-m-14  `}
           >
             OCE Whitepaper
           </p>
@@ -128,8 +162,8 @@ function About() {
               <span className="font-bold text-primary-600">Portable</span> architecture is
               designed to go in the other direction, by providing functionality that can
               be incorporated into other technologies, commonly in the form of libraries
-              or simple apps. Developers are invited to “create their own sandbox” by
-              incorporating the portable components into their own apps.
+              or simple apps. Develowindow.scrollYpers are invited to “create their own
+              sandbox” by incorporating the portable components into their own apps.
             </p>
           </div>
           <div className="flex mt-6">
