@@ -8,9 +8,9 @@ function Footer() {
   return (
     <footer className="bg-primary-600 mt-6">
       <div className="footer">
-        <div className="flex items-center justify-around gap-9 w-full sm:justify-start">
+        <div className="flex flex-wrap items-center justify-center gap-9 w-full sm:justify-start md:flex-nowrap">
           <Link href="/">
-            <a className="flex gap-5 pl-2">
+            <a className="flex">
               <Image src={Logo} alt="Open Components Ecosystem" width="34" height="36" />
             </a>
           </Link>
@@ -19,14 +19,14 @@ function Footer() {
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
                 target="_blank"
-                className="flex justify-center items-center w-full h-full gap-2 text-base rounded-lg bg-primary-100 text-black hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
+                className="flex justify-center items-center w-full h-full gap-2 text-base rounded-lg bg-primary-100 text-primary-600 hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
               >
                 <Image src={discord_black} alt="discord_black" width="24" height="23" />
                 <p>Join Discord</p>
               </a>
             </Link>
           </div>
-          <div className="hidden md:flex">
+          <div>
             <Link href="/about">
               <a className="btn-transparent">About</a>
             </Link>
