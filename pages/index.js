@@ -71,13 +71,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-44 h-11 rounded-lg text-white bg-primary-600 group-hover:bg-black">
+          <div className="w-44 rounded-lg bg-primary-600 group-hover:bg-black">
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
                 target="_blank"
-                className="flex justify-center items-center py-2.5 px-6 gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
+                className="inline-flex whitespace-nowrap py-2.5 px-7 gap-2 rounded-lg text-white hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
               >
-                <div className="flex justify-center text-white">
+                <div className=" ">
                   <svg
                     role="img"
                     width="24"
