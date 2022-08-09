@@ -22,7 +22,7 @@ function Footer() {
                 className="flex justify-center items-center w-full h-full gap-2 text-base rounded-lg bg-primary-100 text-primary-600 hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
               >
                 <Image src={discord_black} alt="discord_black" width="24" height="23" />
-                <p>Join Discord</p>
+                Join Discord
               </a>
             </Link>
           </div>
