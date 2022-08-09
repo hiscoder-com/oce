@@ -15,7 +15,7 @@ export default async function handler(req, res) {
             first: 100
             after: null
             type: REPOSITORY
-            query: "topic:scripture-open-components app"
+            query: "topic:scripture-open-components topic:app"
           ) {
             total: repositoryCount
             repos: edges {

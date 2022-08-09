@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,8 +20,13 @@ function About() {
     window.addEventListener('scroll', setFixedSidebar)
   }
 
+  useEffect(() => {
+    document.documentElement.classList.add('about')
+    return () => document.documentElement.classList.remove('about')
+  }, [])
+
   return (
-    <div className="flex flex-col gap-10 mb-16">
+    <div className="flex flex-col gap-10 mb-16 about">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div id="oce" className="text-6xl font-bold text-primary-600 scroll-m-32">
           About

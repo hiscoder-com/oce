@@ -28,11 +28,13 @@ export default async function handler(req, res) {
           first: ${parseInt(limit)}
           after: ${from ? '"' + from + '"' : 'null'}
           type: REPOSITORY
-          query: "${query} topic:scripture-open-components ${topicsQuery.join(
-        ' '
-      )} NOT app sort:${
+          query: "${query} sort:${
         order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
-      }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
+      }-${
+        direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'
+      } topic:scripture-open-components ${topicsQuery
+        .map((el) => `topic:${el}`)
+        .join(' ')} -topic:app"
         ) {
           pageInfo {
             hasNextPage
@@ -77,59 +79,6 @@ export default async function handler(req, res) {
       }
 `,
     })
-    console.log(`{
-        search(
-          first: ${parseInt(limit)}
-          after: ${from ? '"' + from + '"' : 'null'}
-          type: REPOSITORY
-          query: "${query} topic:scripture-open-components ${topicsQuery
-      .map((el) => `topic:${el}`)
-      .join(' ')} -topic:app sort:${
-      order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
-    }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
-        ) {
-          pageInfo {
-            hasNextPage
-            endCursor
-          }
-          total: repositoryCount
-          repos: edges {
-            repo: node {
-              ... on Repository {
-                name
-                nameWithOwner
-                description
-                latestRelease {
-                  publishedAt
-                  tag {
-                    name
-                  }
-                  name
-                }
-                repositoryTopics(first: 5) {
-                  nodes {
-                    topic {
-                      name
-                    }
-                  }
-                  totalCount
-                }
-                owner {
-                  ... on Organization {
-                    avatarUrl
-                    login
-                  }
-                  ... on User {
-                    avatarUrl
-                    login
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-`)
     res.status(200).json(result.data.search)
   } catch (error) {
     res.status(404).json(error)

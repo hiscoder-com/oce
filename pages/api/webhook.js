@@ -1,5 +1,5 @@
 import axios from 'axios'
-import prisma from '../../utils/prisma'
+import { prisma } from '../../utils/prisma'
 
 const saveRepo = async (data) => {
   const request = {
