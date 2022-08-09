@@ -134,7 +134,7 @@ function Header() {
             onClick={(e) => {
               e.stopPropagation()
             }}
-            className="btn"
+            className="btn cursor-pointer"
           >
             Explore
           </a>
