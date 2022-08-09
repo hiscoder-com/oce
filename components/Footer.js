@@ -6,7 +6,7 @@ import Logo from '../public/logo-white.svg'
 
 function Footer() {
   return (
-    <div className="bg-primary-600 mt-6">
+    <footer className="bg-primary-600 mt-6">
       <div className="footer container mx-auto">
         <div className="flex items-center gap-9 w-full">
           <Link href="/">
@@ -46,7 +46,7 @@ function Footer() {
           {new Date().getFullYear()} © unfoldingWord
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

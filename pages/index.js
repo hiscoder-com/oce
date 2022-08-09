@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="flex flex-row self-end mr-10 md:mr-96">
+        <div className="flex flex-row self-end mr-10 md:mr-20 lg:mr-48 xl:mr-64 2xl:mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
         <div className="text-center mb-3 text-2xl font-bold text-primary-600 md:mb-8 md:text-6xl md:w-3/5">
