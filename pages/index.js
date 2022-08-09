@@ -75,7 +75,7 @@ export default function Home() {
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
                 target="_blank"
-                className="flex justify-center items-center w-44 h-11 gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
+                className="flex justify-center items-center py-2.5 px-6 gap-2 rounded-lg hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
               >
                 <div className="flex justify-center text-white">
                   <svg

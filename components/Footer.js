@@ -15,17 +15,15 @@ function Footer() {
             </a>
           </Link>
 
-          <div className="w-44 h-11 rounded-lg text-white bg-primary-600">
-            <Link href="https://discord.com/invite/auJb4H9ezx">
-              <a
-                target="_blank"
-                className="flex justify-center items-center w-full h-full gap-2 text-base rounded-lg bg-primary-100 text-primary-600 hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
-              >
-                <Image src={discord_black} alt="discord_black" width="24" height="23" />
-                Join Discord
-              </a>
-            </Link>
-          </div>
+          <Link href="https://discord.com/invite/auJb4H9ezx">
+            <a
+              target="_blank"
+              className="inline-flex whitespace-nowrap py-2.5 px-6 gap-2 text-base rounded-lg bg-primary-100 text-primary-600 hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23 md:px-4 md:gap-1 lg:px-6 lg:gap-2"
+            >
+              <Image src={discord_black} alt="discord_black" width="24" height="23" />
+              Join Discord
+            </a>
+          </Link>
           <div>
             <Link href="/about">
               <a className="btn-transparent">About</a>
