@@ -267,24 +267,24 @@ export default function Home() {
               <a target="_blank" className="flex gap-11 font-bold text-2xl md:text-5xl">
                 <p>
                   Join our community on{' '}
-                  <span className="underline decoration-4 underline-offset-4 cursor-pointer">
+                  <span className="underline decoration-4 underline-offset-4 inline-flex items-baseline">
                     Discord
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="self-center w-7 mx-2 md:w-11 md:mx-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
                   </span>
                 </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-auto w-11 mt-2 mr-8 cursor-pointer"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
               </a>
             </Link>
           </div>
