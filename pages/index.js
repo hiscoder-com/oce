@@ -183,7 +183,9 @@ export default function Home() {
 
       <div className="flex flex-col md:gap-10 xl:gap-0">
         <div className="flex flex-col gap-10 xl:gap-12">
-          <div className="uppercase text-text-500">Components</div>
+          <div className="uppercase self-center text-text-500 lg:self-start">
+            Components
+          </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
             <div className="grid gap-5 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4 xl:gap-5 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
@@ -230,7 +232,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-10 xl:gap-12">
-          <div className="uppercase text-text-500">Applications</div>
+          <div className="uppercase self-center text-text-500 lg:self-start">
+            Applications
+          </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
             <div className="grid gap-5 sm:grid-cols-1 sm:gap-3 md:grid-cols-2 md:gap-3 xl:gap-5 2xl:w-9/12 2xl:gap-8">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
