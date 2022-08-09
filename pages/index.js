@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-5">
+      <div className="flex flex-col lg:flex-row gap-5 text-center">
         <div className="flex flex-col justify-between pt-8 md:pt-16 pb-8 px-9 gap-8 md:gap-20 bg-primary-100 rounded-lg group hover:bg-secondary-400 lg:w-1/3">
           <div className="flex flex-col gap-8 md:gap-20">
             <div>
@@ -46,7 +46,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-5">
               <Link href="/get-started">
-                <a className="flex gap-10 items-center text-2xl font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 max-w-max group-hover:decoration-black group-hover:text-black">
+                <a className="flex gap-10 items-center self-center text-2xl font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 max-w-max group-hover:decoration-black group-hover:text-black lg:self-start">
                   Get started
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-44 rounded-lg bg-primary-600 group-hover:bg-black">
+          <div className="w-44 rounded-lg bg-primary-600 group-hover:bg-black self-center lg:self-start">
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
                 target="_blank"
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5">
               <Link href="/about">
-                <a className="flex gap-10 items-center max-w-max text-2xl font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 group-hover:text-black group-hover:decoration-black">
+                <a className="flex gap-10 items-center max-w-max text-2xl font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 self-center group-hover:text-black group-hover:decoration-black lg:self-start">
                   Introduction
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@ export default function Home() {
             onClick={() => {
               router.push(`/about`)
             }}
-            className="w-36 rounded-lg bg-primary-600 group-hover:bg-black"
+            className="w-36 rounded-lg bg-primary-600 group-hover:bg-black self-center lg:self-start"
           >
             <div className="flex justify-center py-2.5 rounded-lg text-white hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23">
               Learn more
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5">
               <Link href="/components">
-                <a className="flex items-center gap-10 max-w-max text-2xl font-bold text-primary-600 underline decoration-2 underline-offset-4 decoration-primary-600 group-hover:text-black group-hover:decoration-black">
+                <a className="flex items-center gap-10 max-w-max text-2xl font-bold text-primary-600 underline decoration-2 underline-offset-4 self-center decoration-primary-600 group-hover:text-black group-hover:decoration-black lg:self-start">
                   Explore
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
