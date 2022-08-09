@@ -186,11 +186,11 @@ export default function Home() {
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-2">
           <div className="uppercase text-text-500">Components</div>
-          <div className="flex flex-col lg:flex-row md:gap-2">
+          <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
             <div className="grid my-1 gap-5 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:my-2 lg:grid-cols-4 xl:my-8 xl:gap-5 2xl:w-9/12 2xl:gap-8">
               {components.map((el) => ComponentCard({ repo: el }))}
               <Link href="/components">
-                <a className="hidden items-center gap-2.5 mx-auto py-10 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:flex lg:hidden">
+                <a className="hidden items-center gap-2.5 mx-auto my-24 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:flex lg:hidden">
                   More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@ export default function Home() {
               </Link>
             </div>
             <Link href="/components">
-              <a className="flex items-center gap-2.5 mx-auto my-10 lg:my-24 xl:my-32 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:hidden lg:flex">
+              <a className="flex items-center gap-2.5 mx-auto my-10 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:hidden lg:flex lg:my-24 xl:my-32 xl:mr-6 2xl:mx-auto">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,12 +233,12 @@ export default function Home() {
 
         <div className="flex flex-col gap-2">
           <div className="uppercase text-text-500">Applications</div>
-          <div className="flex flex-col lg:flex-row md:gap-3">
-            <div className="my-1 grid gap-5 sm:grid-cols-1 sm:gap-3 md:grid-cols-2 md:my-2 md:gap-3 xl:w-9/12 xl:my-8 xl:gap-5">
+          <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
+            <div className="grid gap-5 my-1 sm:grid-cols-1 sm:gap-3 md:grid-cols-2 md:my-2 md:gap-3 xl:my-8 xl:gap-5 2xl:w-9/12 2xl:gap-8">
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
             <Link href="/apps">
-              <a className="flex items-center gap-2.5 mx-auto my-10 lg:my-24 xl:my-32  font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
+              <a className="flex items-center gap-2.5 mx-auto my-10 font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 lg:my-24 xl:mr-6 xl:my-32 2xl:mx-auto">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
