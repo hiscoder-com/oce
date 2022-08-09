@@ -1,24 +1,23 @@
 import { useCallback, useEffect, useState } from 'react'
 
-function useScrollTrack({ refs, top, specific }) {
-  const [scroll, setScroll] = useState({})
+function useScrollTrack({ refs }) {
+  const [refName, setRefName] = useState({})
   const onScroll = useCallback(() => {
-    let result = null
+    let _refName = null
     for (const key in refs) {
       const value = refs[key].getBoundingClientRect().top
-      if (value < (specific[key] ?? top)) {
-        result = key
+      if (value < refs[key].offsetHeight * 2) {
+        _refName = key
       }
     }
-    setScroll(result)
-  }, [refs, specific, top])
+    setRefName(_refName)
+  }, [refs])
 
   useEffect(() => {
-    onScroll()
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [onScroll])
-  return scroll
+  return refName
 }
 
 export default useScrollTrack

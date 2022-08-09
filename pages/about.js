@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,6 +17,8 @@ function About() {
   const [fix, setFix] = useState(false)
   const [refs, setRefs] = useState({})
   const main = useRef(null)
+  const sidebar = useRef(null)
+
   useEffect(() => {
     const _refs = {}
     Array.from(main?.current?.children).forEach((el) => {
@@ -26,14 +28,21 @@ function About() {
     })
     setRefs(_refs)
   }, [])
-  const scroll = useScrollTrack({ refs, top: 57, specific: { licensing: 420 } })
 
-  const setFixedSidebar = () => {
-    setFix(window.scrollY >= 500)
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', setFixedSidebar)
-  }
+  const scroll = useScrollTrack({ refs })
+
+  const setFixedSidebar = useCallback(() => {
+    if (!sidebar?.current) {
+      return
+    }
+    setFix(window.scrollY > sidebar?.current.getBoundingClientRect().top * 2)
+  }, [sidebar])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', setFixedSidebar)
+    }
+  }, [setFixedSidebar])
 
   return (
     <div className="flex flex-col gap-10 mb-16">
@@ -49,6 +58,7 @@ function About() {
           className={`w-1/5 flex flex-col gap-5 text-2xl font-bold text-text-500 ${
             fix && 'fixed top-14'
           }`}
+          ref={sidebar}
         >
           <a
             href="#oce"
