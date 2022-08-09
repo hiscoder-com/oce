@@ -11,7 +11,7 @@ function useScrollTrack({ refs, top, specific }) {
       }
     }
     setScroll(result)
-  }, [])
+  }, [refs, specific, top])
 
   useEffect(() => {
     onScroll()

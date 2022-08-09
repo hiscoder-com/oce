@@ -29,7 +29,6 @@ function About() {
   const scroll = useScrollTrack({ refs, top: 57, specific: { licensing: 420 } })
 
   const setFixedSidebar = () => {
-    window.scrollY
     setFix(window.scrollY >= 500)
   }
   if (typeof window !== 'undefined') {
@@ -103,7 +102,7 @@ function About() {
           </p>
           <p
             id="whitepaper"
-            className={`my-20 text-5xl font-bold text-center scroll-m-14  `}
+            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
           >
             OCE Whitepaper
           </p>
@@ -162,8 +161,8 @@ function About() {
               <span className="font-bold text-primary-600">Portable</span> architecture is
               designed to go in the other direction, by providing functionality that can
               be incorporated into other technologies, commonly in the form of libraries
-              or simple apps. Develowindow.scrollYpers are invited to “create their own
-              sandbox” by incorporating the portable components into their own apps.
+              or simple apps. Developers are invited to “create their own sandbox” by
+              incorporating the portable components into their own apps.
             </p>
           </div>
           <div className="flex mt-6">
