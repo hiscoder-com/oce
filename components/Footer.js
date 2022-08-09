@@ -7,7 +7,7 @@ import Logo from '../public/logo-white.svg'
 function Footer() {
   return (
     <footer className="bg-primary-600 mt-6">
-      <div className="container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white sm:flex-row">
+      <div className="footer">
         <div className="flex items-center justify-around gap-9 w-full sm:justify-start">
           <Link href="/">
             <a className="flex gap-5 pl-2">

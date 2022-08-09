@@ -21,7 +21,7 @@
 }
 
 .footer {
-  @apply flex items-center justify-between text-lg font-bold py-6 text-white
+  @apply container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white sm:flex-row
 }
 
 .dropdown {
