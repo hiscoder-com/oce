@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex flex-row self-end mr-10 md:mr-20 lg:mr-48 xl:mr-64 2xl:mr-96">
           <Image src={editor_black} alt="editor_black" width="90" height="90" />
         </div>
-        <div className="text-center mb-3 text-2xl font-bold text-primary-600 md:mb-8 md:text-6xl md:w-3/5">
+        <div className="text-center mb-3 text-2xl font-bold text-primary-600 md:mb-8 md:text-3xl lg:text-4xl xl:text-5xl md:w-3/5">
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
         <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
@@ -260,18 +260,21 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center flex-col-reverse mx-10 sm:mx-28 mb-20 text-center md:text-start md:mx-0 md:flex-row">
         <div className="flex flex-col justify-center gap-5">
           <div className="text-primary-600">
             <Link href="https://discord.com/invite/auJb4H9ezx">
-              <a target="_blank" className="flex gap-11 font-bold text-2xl md:text-5xl">
+              <a
+                target="_blank"
+                className="gap-11 font-bold text-2xl md:flex lg:text-4xl xl:text-5xl"
+              >
                 <p>
                   Join our community on{' '}
                   <span className="underline decoration-4 underline-offset-4 inline-flex items-baseline">
                     Discord
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="self-center w-7 mx-2 md:w-11 md:mx-8"
+                      className="hidden self-center w-7 mx-2 md:w-8 md:mx-8 md:inline lg:w-11"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -289,7 +292,7 @@ export default function Home() {
             </Link>
           </div>
           <div>
-            <div className=" text-lg text-text-500 md:w-2/3">
+            <div className="text-lg text-text-500 md:w-2/3">
               Use <span className="font-bold">#scripture-open-components</span> to
               showcase your work in the community
             </div>
