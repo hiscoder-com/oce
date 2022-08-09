@@ -18,7 +18,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col gap-4 mx-6 md:gap-10">
+    <div className="flex flex-col gap-4 mx-4 md:gap-10">
       <Head>
         <title>Open Components Ecosystem</title>
         <meta name="description" content="Open Components Ecosystem" />
@@ -210,7 +210,7 @@ export default function Home() {
               </Link>
             </div>
             <Link href="/components">
-              <a className="flex items-center gap-2.5 mx-auto py-10 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:hidden lg:flex">
+              <a className="flex items-center gap-2.5 mx-auto my-10 lg:my-24 xl:my-32 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:hidden lg:flex">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ export default function Home() {
               {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
             </div>
             <Link href="/apps">
-              <a className="flex items-center gap-2.5 mx-auto py-10 font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
+              <a className="flex items-center gap-2.5 mx-auto my-10 lg:my-24 xl:my-32  font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4">
                 More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
