@@ -20,9 +20,8 @@ export default function ReactCompLibrary() {
             layout="responsive"
             width="700"
             height="467"
-            className=""
             src={'/react-comp-library/pic1.jpg'}
-            alt=""
+            alt="blue building block lot"
           />
           <figcaption className="text-gray-400">
             Photo by{' '}
@@ -102,7 +101,7 @@ export default function ReactCompLibrary() {
         <br />
         <p>Let’s run the following command to install the core dependencies:</p>
         <br />
-        <pre className="p-5 bg-gray-100">
+        <pre className="p-5 bg-gray-100 overflow-x-scroll md:overflow-auto">
           <p>yarn add --dev react react-dom prop-types @material-ui/core</p>
         </pre>
         <br />
@@ -194,15 +193,7 @@ export default function ReactCompLibrary() {
                   guidereact-styleguidist.js.org
                 </p>
               </div>
-              <div className="w-1/3 h-auto">
-                <Image
-                  layout="responsive"
-                  width="100%"
-                  height="100%"
-                  src={'/react-comp-library/pic2.jpg'}
-                  alt=""
-                />
-              </div>
+              <div className="w-2/5  bg-[url('/react-comp-library/pic2.jpg')] bg-cover bg-center"></div>
             </div>
           </a>
         </Link>

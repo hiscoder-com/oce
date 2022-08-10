@@ -27,8 +27,10 @@ function HeaderStaticPage({ config }) {
         </button>
       </Link>
       <div className="flex justify-between items-center">
-        <h1 className="text-5xl text-primary-600">{title ? title : ''}</h1>
-        <div>
+        <h1 className=" py-5 text-3xl md:text-4xl lg:text-5xl text-primary-600">
+          {title ? title : ''}
+        </h1>
+        <div className="hidden lg:block 2xl:block">
           <Image
             className="editor-r"
             width="197"
@@ -38,7 +40,7 @@ function HeaderStaticPage({ config }) {
           />
         </div>
       </div>
-      <div className="flex pb-10">
+      <div className="flex py-10 md:pt-2 lg:pt-1">
         <p>{name ? name : ''}</p>
         <p className="ml-16 text-gray-500">{date ? date : ''}</p>
       </div>
