@@ -27,7 +27,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic1.jpg'}
+            src={'/lean-expectations/pic1.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -100,7 +100,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic2.jpg'}
+            src={'/lean-expectations/pic2.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -153,7 +153,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic3.jpg'}
+            src={'/lean-expectations/pic3.jpg'}
             alt=""
           />
           <figcaption className="text-gray-400">
@@ -207,7 +207,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic4.jpg'}
+            src={'/lean-expectations/pic4.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -273,7 +273,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic5.png'}
+            src={'/lean-expectations/pic5.png'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -337,7 +337,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic6.jpg'}
+            src={'/lean-expectations/pic6.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -408,7 +408,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic7.jpg'}
+            src={'/lean-expectations/pic7.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -474,7 +474,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic8.jpg'}
+            src={'/lean-expectations/pic8.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -518,7 +518,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic9.jpg'}
+            src={'/lean-expectations/pic9.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -592,7 +592,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic10.jpg'}
+            src={'/lean-expectations/pic10.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -669,7 +669,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic11.jpg'}
+            src={'/lean-expectations/pic11.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -736,7 +736,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic12.jpg'}
+            src={'/lean-expectations/pic12.jpg'}
             alt=""
           />
           <figcaption className="mt-1 text-gray-400">
@@ -782,7 +782,7 @@ export default function LeanExpectations() {
             layout="responsive"
             width="700"
             height="467"
-            src={'/leanExpectations/pic13.jpg'}
+            src={'/lean-expectations/pic13.jpg'}
             alt=""
           />
         </figure>
