@@ -74,7 +74,7 @@ function About() {
           </p>
           <p
             id="whitepaper"
-            className="mt-20 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
+            className="mt-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
           >
             OCE Whitepaper
           </p>
@@ -112,7 +112,7 @@ function About() {
               height="695"
             />
           </div>
-          <p className="text-xl mt-16 font-bold text-text-600 lg:text-2xl">
+          <p className="text-xl mt-3 font-bold text-text-600 lg:mt-16 lg:text-2xl">
             <span className="text-primary-600">Open Components</span> thrive at the
             intersection of three design criteria: Extensible, Portable, and Open source.
           </p>
@@ -124,7 +124,7 @@ function About() {
               height="160"
               className=""
             />
-            <p className="w-4/5 text-lg text-text-600 lg:text-xl">
+            <p className="text-lg text-text-600 lg:w-4/5 lg:text-xl">
               <span className="font-bold text-primary-600">Extensible</span> architecture
               is designed to enable expansion of functionality by incorporating code
               developed by a third party, most commonly in the form of a plugin. In this
@@ -140,7 +140,7 @@ function About() {
               height="160"
               className=""
             />
-            <p className="w-4/5 text-lg text-text-600 lg:text-xl">
+            <p className="text-lg text-text-600 lg:w-4/5 lg:text-xl">
               <span className="font-bold text-primary-600">Portable</span> architecture is
               designed to go in the other direction, by providing functionality that can
               be incorporated into other technologies, commonly in the form of libraries
@@ -157,7 +157,7 @@ function About() {
                 height="160"
               />
             </div>
-            <p className="w-4/5 pt-3 text-lg text-text-600 lg:text-xl">
+            <p className="pt-3 text-lg text-text-600 lg:w-4/5 lg:text-xl">
               <span className="font-bold text-primary-600">Open source</span> technology
               consists of source code that is made available under an open license (like
               MIT), such that developers can repurpose, and, improve, redistribute, and
@@ -166,7 +166,7 @@ function About() {
           </div>
           <p
             id="video"
-            className="mt-20 mb-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl"
+            className="my-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl"
           >
             Video
           </p>
@@ -183,7 +183,7 @@ function About() {
           </div>
           <p
             id="licensing"
-            className="mt-20 mb-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
+            className="my-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
           >
             Licensing
           </p>
