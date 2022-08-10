@@ -187,7 +187,7 @@ function About() {
           >
             Licensing
           </p>
-          <p className="text-lg text-text-600 lg:text-xl">
+          <p className="text-lg text-text-600 break-words lg:text-xl">
             All Software code (to include source code) produced by the community shall be
             released under the MIT License (
             <Link href="https://opensource.org/licenses/MIT">
