@@ -7,6 +7,7 @@ import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
 import oce_infographic from '../public/oce_infographic.svg'
 import oce_infographic_2 from '../public/oce_infographic_2.png'
+import oce_infographic_2_mobile from '../public/oce_infographic_2_mobile.jpg'
 import oce_infographic_3 from '../public/oce_infographic_3.png'
 import oce_infographic_4 from '../public/oce_infographic_4.png'
 import oce_infographic_5 from '../public/oce_infographic_5.png'
@@ -77,7 +78,6 @@ function About() {
           >
             OCE Whitepaper
           </p>
-
           <div className="flex justify-center my-10 lg:my-20">
             <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
               <a
@@ -96,23 +96,33 @@ function About() {
           <p className="text-lg text-text-600 lg:text-xl">
             Let’s build our apps without reinventing the wheel…
           </p>
-          <Image
-            src={oce_infographic_2}
-            alt="oce_infographic_2"
-            width="1275"
-            height="414"
-          />
+          <div className="hidden lg:inline">
+            <Image
+              src={oce_infographic_2}
+              alt="oce_infographic_2"
+              width="1275"
+              height="414"
+            />
+          </div>
+          <div className="inline lg:hidden">
+            <Image
+              src={oce_infographic_2_mobile}
+              alt="oce_infographic_2"
+              width="419"
+              height="695"
+            />
+          </div>
           <p className="text-xl mt-16 font-bold text-text-600 lg:text-2xl">
             <span className="text-primary-600">Open Components</span> thrive at the
             intersection of three design criteria: Extensible, Portable, and Open source.
           </p>
-          <div className="flex items-center mt-6">
+          <div className="flex flex-col items-center mt-6 lg:flex-row">
             <Image
               src={oce_infographic_3}
               alt="oce_infographic_3"
               width="213"
               height="160"
-              className="w-1/5"
+              className=""
             />
             <p className="w-4/5 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Extensible</span> architecture
@@ -122,13 +132,13 @@ function About() {
               sandbox” provided by the base technology.
             </p>
           </div>
-          <div className="flex items-center mt-6">
+          <div className="flex flex-col items-center mt-6 lg:flex-row">
             <Image
               src={oce_infographic_4}
               alt="oce_infographic_4"
               width="213"
               height="160"
-              className="w-1/5"
+              className=""
             />
             <p className="w-4/5 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Portable</span> architecture is
@@ -138,14 +148,15 @@ function About() {
               incorporating the portable components into their own apps.
             </p>
           </div>
-          <div className="flex mt-6">
-            <Image
-              src={oce_infographic_5}
-              alt="oce_infographic_5"
-              width="213"
-              height="160"
-              className="w-1/5"
-            />
+          <div className="flex flex-col items-center mt-6 lg:flex-row lg:items-start">
+            <div className="mt-6 lg:mt-0">
+              <Image
+                src={oce_infographic_5}
+                alt="oce_infographic_5"
+                width="213"
+                height="160"
+              />
+            </div>
             <p className="w-4/5 pt-3 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Open source</span> technology
               consists of source code that is made available under an open license (like
@@ -159,7 +170,6 @@ function About() {
           >
             Video
           </p>
-
           <div className="aspect-w-16 aspect-h-9 my-1">
             <iframe
               width="560"
@@ -177,7 +187,6 @@ function About() {
           >
             Licensing
           </p>
-
           <p className="text-lg text-text-600 lg:text-xl">
             All Software code (to include source code) produced by the community shall be
             released under the MIT License (
