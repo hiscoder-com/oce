@@ -183,7 +183,7 @@ export default function Home() {
 
       <div className="flex flex-col md:gap-10 xl:gap-0">
         <div className="flex flex-col gap-10 xl:gap-12">
-          <div className="uppercase self-center text-text-500 lg:self-start">
+          <div className="uppercase self-center text-text-500 mt-10 lg:mt-0 lg:self-start">
             Components
           </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
@@ -232,7 +232,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-10 xl:gap-12">
-          <div className="uppercase self-center text-text-500 lg:self-start">
+          <div className="uppercase self-center text-text-500 mt-10 lg:mt-0 lg:self-start">
             Applications
           </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
@@ -272,7 +272,7 @@ export default function Home() {
               >
                 <p>
                   Join our community on{' '}
-                  <span className="underline decoration-4 underline-offset-4 inline-flex items-baseline">
+                  <span className="inline-flex items-baseline underline decoration-2 underline-offset-4 lg:decoration-4">
                     Discord
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
