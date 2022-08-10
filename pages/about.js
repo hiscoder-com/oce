@@ -23,17 +23,20 @@ function About() {
   return (
     <div className="flex flex-col gap-10 mb-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div id="oce" className="text-6xl font-bold text-primary-600 scroll-m-32">
+        <div
+          id="oce"
+          className="text-2xl font-bold text-primary-600 scroll-m-32 md:mb-8 md:text-3xl lg:text-4xl xl:text-5xl"
+        >
           About
         </div>
-        <div className="flex self-end mr-60">
+        <div className="flex self-end w-1/5 mr-5">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
       </div>
 
       <div className="relative flex flex-row">
         <div
-          className={`w-1/5 flex flex-col gap-5 text-2xl font-bold text-text-500 ${
+          className={`hidden w-1/5 flex-col gap-5 text-2xl font-bold text-text-500 lg:flex ${
             fix && 'fixed top-14'
           }`}
         >
@@ -51,7 +54,7 @@ function About() {
           </a>
         </div>
 
-        <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
+        <div className={`w-4/5 ${fix && 'lg:ml-[304px]'}`}>
           <div className="text-5xl font-bold text-center text-primary-600">
             The Open Components Ecosystem
           </div>
