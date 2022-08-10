@@ -16,12 +16,12 @@ import oce_infographic_5 from '../public/oce_infographic_5.png'
 function About() {
   const [fix, setFix] = useState(false)
   const [refs, setRefs] = useState({})
-  const main = useRef(null)
+  const parentRefs = useRef(null)
   const sidebar = useRef(null)
 
   useEffect(() => {
     const _refs = {}
-    Array.from(main?.current?.children).forEach((el) => {
+    Array.from(parentRefs?.current?.children).forEach((el) => {
       if (el.id) {
         _refs[el.id] = el
       }
@@ -41,6 +41,9 @@ function About() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', setFixedSidebar)
+    }
+    return () => {
+      window.removeEventListener('scroll', setFixedSidebar)
     }
   }, [setFixedSidebar])
 
@@ -94,7 +97,7 @@ function About() {
           </a>
         </div>
 
-        <div ref={main} className={`w-4/5 ${fix && 'ml-[304px]'}`}>
+        <div ref={parentRefs} className={`w-4/5 ${fix && 'ml-[304px]'}`}>
           <div id="oce" className="text-5xl font-bold text-center text-primary-600">
             The Open Components Ecosystem
           </div>
