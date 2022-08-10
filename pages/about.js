@@ -21,7 +21,7 @@ function About() {
   }
 
   return (
-    <div className="flex flex-col gap-10 mb-16">
+    <div className="flex flex-col gap-10 mb-16 text-center lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div
           id="oce"
@@ -34,7 +34,7 @@ function About() {
         </div>
       </div>
 
-      <div className="relative flex flex-row">
+      <div className="relative flex flex-col items-center lg:items-start lg:flex-row">
         <div
           className={`hidden w-1/5 flex-col gap-5 text-2xl font-bold text-text-500 lg:flex ${
             fix && 'fixed top-14'
@@ -55,16 +55,17 @@ function About() {
         </div>
 
         <div className={`w-4/5 ${fix && 'lg:ml-[304px]'}`}>
-          <div className="text-5xl font-bold text-center text-primary-600">
+          <div className="font-bold mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
-          <div className="mt-5 mb-8 text-xl font-bold text-center">
-            Collaborative Innovation in Bible Technology
+          <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
+            <span className="font-bold">Collaborative Innovation</span> in Bible
+            Technology
           </div>
           <div className="flex justify-center">
             <Image src={oce_infographic} alt="oce_infographic" width="760" height="737" />
           </div>
-          <p className="mt-5 text-xl">
+          <p className="mt-5 text-lg lg:text-xl">
             <span className="font-bold text-primary-600">Open Components</span>{' '}
             decentralized technologies comprised of open source components that enable
             reuse of functionality outside of original context and expansion of
@@ -72,12 +73,12 @@ function About() {
           </p>
           <p
             id="whitepaper"
-            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+            className="mt-20 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
           >
             OCE Whitepaper
           </p>
 
-          <div className="flex justify-center my-20">
+          <div className="flex justify-center my-10 lg:my-20">
             <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
               <a
                 target="_blank"
@@ -88,18 +89,20 @@ function About() {
               </a>
             </Link>
           </div>
-          <p className="text-2xl font-bold mb-2.5">
+          <p className="text-xl font-bold mb-2.5 text-text-600 lg:text-2xl">
             Join a global ecosystem of developers focused on collaborative innovation in
             Bible technology.
           </p>
-          <p className="text-xl">Let’s build our apps without reinventing the wheel…</p>
+          <p className="text-lg text-text-600 lg:text-xl">
+            Let’s build our apps without reinventing the wheel…
+          </p>
           <Image
             src={oce_infographic_2}
             alt="oce_infographic_2"
             width="1275"
             height="414"
           />
-          <p className="mt-16 text-2xl font-bold">
+          <p className="text-xl mt-16 font-bold text-text-600 lg:text-2xl">
             <span className="text-primary-600">Open Components</span> thrive at the
             intersection of three design criteria: Extensible, Portable, and Open source.
           </p>
@@ -111,7 +114,7 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl w-4/5">
+            <p className="w-4/5 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Extensible</span> architecture
               is designed to enable expansion of functionality by incorporating code
               developed by a third party, most commonly in the form of a plugin. In this
@@ -127,7 +130,7 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl w-4/5">
+            <p className="w-4/5 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Portable</span> architecture is
               designed to go in the other direction, by providing functionality that can
               be incorporated into other technologies, commonly in the form of libraries
@@ -143,7 +146,7 @@ function About() {
               height="160"
               className="w-1/5"
             />
-            <p className="text-xl w-4/5 pt-3">
+            <p className="w-4/5 pt-3 text-lg text-text-600 lg:text-xl">
               <span className="font-bold text-primary-600">Open source</span> technology
               consists of source code that is made available under an open license (like
               MIT), such that developers can repurpose, and, improve, redistribute, and
@@ -152,7 +155,7 @@ function About() {
           </div>
           <p
             id="video"
-            className="mt-10 mb-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+            className="mt-20 mb-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl"
           >
             Video
           </p>
@@ -170,12 +173,12 @@ function About() {
           </div>
           <p
             id="licensing"
-            className="my-20 text-5xl font-bold text-center scroll-m-14 text-primary-600"
+            className="mt-20 mb-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
           >
             Licensing
           </p>
 
-          <p className="text-xl">
+          <p className="text-lg text-text-600 lg:text-xl">
             All Software code (to include source code) produced by the community shall be
             released under the MIT License (
             <Link href="https://opensource.org/licenses/MIT">
