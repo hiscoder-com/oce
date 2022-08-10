@@ -193,7 +193,7 @@ export default function ReactCompLibrary() {
                   guidereact-styleguidist.js.org
                 </p>
               </div>
-              <div className="w-2/5  bg-[url('/react-comp-library/pic2.jpg')] bg-cover bg-center"></div>
+              <div className="w-2/5 bg-[url('/react-comp-library/pic2.jpg')] bg-cover bg-center"></div>
             </div>
           </a>
         </Link>

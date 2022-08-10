@@ -4,7 +4,7 @@ import Link from 'next/link'
 function HeaderStaticPage({ config }) {
   const { title, name, date } = config
   return (
-    <div className=" border-b-2 border-dashed mb-10 pr-10">
+    <div className="border-b-2 border-dashed mb-10 pr-10">
       <Link href="/get-started">
         <button className="flex justify-between w-28 hover:text-gray-700 text-gray-500">
           <div className="w-5 h-3">
@@ -27,7 +27,7 @@ function HeaderStaticPage({ config }) {
         </button>
       </Link>
       <div className="flex justify-between items-center">
-        <h1 className=" py-5 text-3xl md:text-4xl lg:text-5xl text-primary-600">
+        <h1 className="pt-5 text-3xl md:text-4xl lg:text-5xl text-primary-600">
           {title ? title : ''}
         </h1>
         <div className="hidden lg:block 2xl:block">
@@ -40,7 +40,7 @@ function HeaderStaticPage({ config }) {
           />
         </div>
       </div>
-      <div className="flex py-10 md:pt-2 lg:pt-1">
+      <div className="flex py-5 md:pt-4 lg:pt-1">
         <p>{name ? name : ''}</p>
         <p className="ml-16 text-gray-500">{date ? date : ''}</p>
       </div>
