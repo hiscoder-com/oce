@@ -22,7 +22,7 @@ function AppsList({ setTotal }) {
         <div></div>
       ) : (
         <>
-          <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-3 xl:gap-5">
+          <div className="grid grid-cols-1 gap-5 my-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {apps?.map(AppCard)}
           </div>
         </>
