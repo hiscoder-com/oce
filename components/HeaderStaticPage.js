@@ -30,7 +30,7 @@ function HeaderStaticPage({ config }) {
         <h1 className="pt-5 text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-primary-600">
           {title ? title : ''}
         </h1>
-        <div className="hidden lg:block 2xl:block">
+        <div className="hidden lg:block">
           <Image
             className="editor-r"
             width="197"
