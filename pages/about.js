@@ -17,7 +17,7 @@ function About() {
   const setFixedSidebar = () => {
     window.innerWidth >= 1024
       ? setFix(window.scrollY >= 265)
-      : setFix(window.scrollY >= 217)
+      : setFix(window.scrollY >= 210)
   }
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', setFixedSidebar)
