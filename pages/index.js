@@ -32,7 +32,7 @@ export default function Home() {
         <div className="text-center mb-3 text-2xl font-bold text-primary-600 md:mb-8 md:text-3xl lg:text-4xl xl:text-5xl md:w-3/5">
           Open Components are Reusable Building Blocks for Bible Technology
         </div>
-        <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
+        <div className="text-center text-lg mb-3 text-primary-600 md:text-2xl lg:mb-10">
           <span className="font-bold">Collaborative Innovation</span> in Bible Technology
         </div>
       </div>
