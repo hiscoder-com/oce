@@ -77,7 +77,9 @@ function About() {
           </a>
         </div>
 
-        <div className={`lg:w-4/5 ${fix && 'lg:ml-[299px]'}`}>
+        <div
+          className={`lg:w-4/5 ${fix && 'lg:ml-[196px] xl:ml-[248px] 2xl:ml-[299px]'}`}
+        >
           <div className="font-bold mt-10 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
