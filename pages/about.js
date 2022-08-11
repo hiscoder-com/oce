@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
-import oce_infographic from '../public/oce_infographic.svg'
-import oce_infographic_2 from '../public/oce_infographic_2.png'
-import oce_infographic_2_mobile from '../public/oce_infographic_2_mobile.png'
-import oce_infographic_3 from '../public/oce_infographic_3.png'
-import oce_infographic_4 from '../public/oce_infographic_4.png'
-import oce_infographic_5 from '../public/oce_infographic_5.png'
+import oce_infographic from '../public/about/oce_infographic.svg'
+import oce_infographic_2 from '../public/about/oce_infographic_2.png'
+import oce_infographic_2_mobile from '../public/about/oce_infographic_2_mobile.png'
+import oce_infographic_3 from '../public/about/oce_infographic_3.png'
+import oce_infographic_4 from '../public/about/oce_infographic_4.png'
+import oce_infographic_5 from '../public/about/oce_infographic_5.png'
 
 function About() {
   const [fix, setFix] = useState(false)
@@ -97,7 +97,7 @@ function About() {
             functionality by integration of other components
           </p>
 
-          <p className="text-xl font-bold my-2.5 text-text-600 lg:text-2xl">
+          <p className="text-xl mt-10 font-bold my-2.5 text-text-600 lg:text-2xl">
             Join a global ecosystem of developers focused on collaborative innovation in
             Bible technology.
           </p>
