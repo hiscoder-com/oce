@@ -86,7 +86,7 @@
   @apply text-sm
   }
 .article>p {
-  @apply text-xl leading-8
+  @apply text-lg lg:text-xl leading-8
   }
   .article>pre {
     @apply overflow-x-auto

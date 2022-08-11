@@ -54,7 +54,7 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-3xl text-gray-400">
+          <p className="text-2xl lg:text-3xl text-gray-400">
             “Life’s too short to build something that nobody wants. “ — Ash Maurya,
             Spark59
           </p>
@@ -644,7 +644,7 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-3xl text-gray-400">
+          <p className="text-2xl lg:text-3xl text-gray-400">
             “The reason to build a new team to pursue an idea is that you believe you can
             accelerate through the Build-Measure-Learn feedback loop faster than anyone
             else can.” <em>— The Lean Startup</em>
@@ -812,13 +812,13 @@ export default function LeanExpectations() {
         </p>
         <br />
         <blockquote className="px-12">
-          <p className="text-3xl text-gray-400">
+          <p className="text-2xl lg:text-3xl text-gray-400">
             “Remember, planning is a tool that only works in the presence of a long and
             stable operating history. And yet, do any of us feel that the world around us
             is getting more and more stable every day? Changing such a mind-set is hard
             but critical to startup success.”
           </p>
-          <em className="text-3xl text-gray-400">—The Lean Startup</em>
+          <em className="text-2xl lg:text-3xl text-gray-400">—The Lean Startup</em>
         </blockquote>
         <br />
         <p>
@@ -838,7 +838,7 @@ export default function LeanExpectations() {
           user needs are adequately met.
         </p>
         <br />
-        <p className="mb-24 text-xl leading-8">
+        <p className="mb-24 text-lg lg:text-xl leading-8">
           Have you had a difficult time setting expectations for your software? Share
           these ideas and concepts with your team to see if it is a good fit for your
           current or future projects. How might applying the concepts shared help you turn

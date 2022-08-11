@@ -62,11 +62,11 @@ export default function HeadlessUI() {
         </p>
         <br />
         <blockquote className="border-black border-l-2 pl-3">
-          <p className="pb-4 text-xl leading-8">
+          <p className="pb-4 text-lg lg:text-xl leading-8">
             <strong>Rule of Separation:</strong>{' '}
             <em>Separate policy from mechanism; separate interfaces from engines.</em>
           </p>
-          <p className="font-bold text-xl leading-8">
+          <p className="font-bold text-lg lg:text-xl leading-8">
             <em>— Eric S. Raymond</em>
           </p>
         </blockquote>
@@ -159,7 +159,9 @@ export default function HeadlessUI() {
           affecting an old behavior.
         </p>
         <br />
-        <strong className="text-xl leading-8">Headless component will rescue!</strong>
+        <strong className="text-lg lg:text-xl leading-8">
+          Headless component will rescue!
+        </strong>
         <br />
         <p className="mt-4">
           The possibilities with headless component implementation will be almost endless.
