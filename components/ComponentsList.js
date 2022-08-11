@@ -59,7 +59,7 @@ function ComponentsList({ setTotal }) {
         <div></div>
       ) : (
         <>
-          <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 xl:grid-cols-4 xl:gap-5 2xl:grid-cols-5 2xl:gap-8">
+          <div className="grid grid-cols-2 gap-5 my-5 sm:grid-cols-2 md:grid-cols-3 md:my-10 xl:grid-cols-4 2xl:grid-cols-5">
             {componentCards}
           </div>
           {pageInfo.hasNextPage ? (

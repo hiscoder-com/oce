@@ -10,7 +10,7 @@ import editor2 from '../public/editor2.svg'
 
 function GetStarted() {
   return (
-    <div className="flex flex-col gap-10 mb-16">
+    <div className="flex flex-col gap-5 mb-16 lg:gap-10">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div className="text-2xl font-bold text-primary-600 md:text-3xl lg:text-4xl xl:text-5xl">
           Get started

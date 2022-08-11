@@ -17,14 +17,14 @@ function About() {
   const setFixedSidebar = () => {
     window.innerWidth >= 1024
       ? setFix(window.scrollY >= 265)
-      : setFix(window.scrollY >= 210)
+      : setFix(window.scrollY >= 200)
   }
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', setFixedSidebar)
   }
 
   return (
-    <div className="flex flex-col gap-10 mb-16 text-center lg:text-start">
+    <div className="flex flex-col gap-5 mb-16 text-center lg:gap-10 lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div
           id="oce"

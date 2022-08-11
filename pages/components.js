@@ -7,13 +7,15 @@ function ComponentsPage() {
 
   return (
     <div className="px-2 md:px-5 lg:px-12 2xl:px-28">
-      <div className="text-center pb-10 border-b-2 border-dashed">
-        <div className="text-6xl font-bold text-primary-600">Components</div>
-        <div className="mt-5">
+      <div className="text-center pb-3 border-b-2 border-dashed lg:pb-10">
+        <div className="text-2xl font-bold text-primary-600 md:text-3xl lg:text-4xl xl:text-5xl">
+          Components
+        </div>
+        <div className="text-lg mt-3 md:mt-8 text-text-800 md:text-2xl">
           <div className="inline-block">Repositories: {total}</div>
         </div>
       </div>
-      <div className="pt-8">
+      <div className="pt-10">
         <div className="flex justify-between">
           <div className="flex justify-between">
             <div className="px-2">
