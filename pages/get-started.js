@@ -12,17 +12,19 @@ function GetStarted() {
   return (
     <div className="flex flex-col gap-10 mb-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="text-6xl font-bold text-primary-600">Get started</div>
-        <div className="flex self-end mr-60">
+        <div className="text-2xl font-bold text-primary-600 md:text-3xl lg:text-4xl xl:text-5xl">
+          Get started
+        </div>
+        <div className="flex self-end w-1/5 mr-5">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
+      <div className="flex flex-col gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100 lg:flex-row">
         <div className="flex pl-8">
           <Image src={window} alt="window" width="152" height="152" />
         </div>
-        <div className="text-2xl">
+        <div className="md:text-lg lg:text-xl xl:text-2xl">
           <div className="mb-8 font-bold">
             Phase 1: Understanding the Open Components philosophy
           </div>
@@ -45,11 +47,11 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
+      <div className="flex flex-col gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100 lg:flex-row">
         <div className="flex pl-8">
           <Image src={search2} alt="search2" width="152" height="152" />
         </div>
-        <div className="text-2xl">
+        <div className="md:text-lg lg:text-xl xl:text-2xl">
           <div className="mb-8 font-bold">Phase 2: Explore the ecosystem</div>
           <ul className="phase-card-ul">
             <li>
@@ -70,11 +72,11 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
+      <div className="flex flex-col gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100 lg:flex-row">
         <div>
           <Image src={editor2} alt="editor2" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
+        <div className="flex flex-col gap-8 md:text-lg lg:text-xl xl:text-2xl">
           <div className="mb-8 font-bold">
             Phase 3: Learn the principles of iterative development
           </div>
@@ -90,11 +92,11 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
+      <div className="flex flex-col gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100 lg:flex-row">
         <div className="flex pl-8">
           <Image src={search} alt="search" width="152" height="152" />
         </div>
-        <div className="text-2xl">
+        <div className="md:text-lg lg:text-xl xl:text-2xl">
           <div className="mb-8 font-bold">
             Phase 4: Learn how to get started with an open component
           </div>
@@ -122,11 +124,11 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
+      <div className="flex flex-col gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100 lg:flex-row">
         <div className="flex">
           <Image src={editor} alt="editor" width="200" height="200" />
         </div>
-        <div className="text-2xl">
+        <div className="md:text-lg lg:text-xl xl:text-2xl">
           <div className="mb-8 font-bold">
             Phase 5: Contribute to an existing Open Component
           </div>
