@@ -7,7 +7,7 @@ import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
 import oce_infographic from '../public/oce_infographic.svg'
 import oce_infographic_2 from '../public/oce_infographic_2.png'
-import oce_infographic_2_mobile from '../public/oce_infographic_2_mobile.jpg'
+import oce_infographic_2_mobile from '../public/oce_infographic_2_mobile.png'
 import oce_infographic_3 from '../public/oce_infographic_3.png'
 import oce_infographic_4 from '../public/oce_infographic_4.png'
 import oce_infographic_5 from '../public/oce_infographic_5.png'
@@ -55,7 +55,7 @@ function About() {
           </a>
         </div>
 
-        <div className={`w-4/5 ${fix && 'lg:ml-[304px]'}`}>
+        <div className={`lg:w-4/5 ${fix && 'lg:ml-[304px]'}`}>
           <div className="font-bold mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
@@ -72,24 +72,8 @@ function About() {
             reuse of functionality outside of original context and expansion of
             functionality by integration of other components
           </p>
-          <p
-            id="whitepaper"
-            className="mt-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
-          >
-            OCE Whitepaper
-          </p>
-          <div className="flex justify-center my-10 lg:my-20">
-            <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
-              <a
-                target="_blank"
-                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-14 hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
-              >
-                <Image src={file} alt="file" width="13" height="16" />
-                <p>Read Whitepaper</p>
-              </a>
-            </Link>
-          </div>
-          <p className="text-xl font-bold mb-2.5 text-text-600 lg:text-2xl">
+
+          <p className="text-xl font-bold my-2.5 text-text-600 lg:text-2xl">
             Join a global ecosystem of developers focused on collaborative innovation in
             Bible technology.
           </p>
@@ -165,6 +149,24 @@ function About() {
             </p>
           </div>
           <p
+            id="whitepaper"
+            className="mt-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
+          >
+            OCE Whitepaper
+          </p>
+          <div className="flex justify-center my-10 lg:my-20">
+            <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
+              <a
+                target="_blank"
+                className="flex justify-center rounded-lg gap-2.5 py-2 w-80 bg-text-600 text-white scroll-m-14 hover:bg-text-800 active:shadow-xl active:shadow-primary-700/23"
+              >
+                <Image src={file} alt="file" width="13" height="16" />
+                <p>Read Whitepaper</p>
+              </a>
+            </Link>
+          </div>
+
+          <p
             id="video"
             className="my-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl"
           >
@@ -200,15 +202,15 @@ function About() {
             <br />
             Any other work produced by the community shall be licensed under the Creative
             Commons Attribution-ShareAlike 4.0 International License (
-            <Link href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <Link href="https://creativecommons.org/licenses/by-sa/4.0/">
               <a target="_blank" className="text-primary-500 hover:underline">
-                http://creativecommons.org/licenses/by-sa/4.0/
+                https://creativecommons.org/licenses/by-sa/4.0/
               </a>
             </Link>
             ) or the Creative Commons Attribution 4.0 International License (
-            <Link href="http://creativecommons.org/licenses/by/4.0/">
+            <Link href="https://creativecommons.org/licenses/by/4.0/">
               <a target="_blank" className="text-primary-500 hover:underline">
-                http://creativecommons.org/licenses/by/4.0/
+                https://creativecommons.org/licenses/by/4.0/
               </a>
             </Link>
             ).
