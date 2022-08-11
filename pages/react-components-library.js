@@ -101,7 +101,7 @@ export default function ReactCompLibrary() {
         <br />
         <p>Let’s run the following command to install the core dependencies:</p>
         <br />
-        <pre className="p-5 bg-gray-100 overflow-x-scroll md:overflow-auto">
+        <pre className="p-5 bg-gray-100">
           <p>yarn add --dev react react-dom prop-types @material-ui/core</p>
         </pre>
         <br />
