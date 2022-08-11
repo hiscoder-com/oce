@@ -45,10 +45,10 @@ function About() {
           }`}
         >
           <a href="#oce" className="active:text-primary-600">
-            About OCE
+            About
           </a>
           <a href="#whitepaper" className="active:text-primary-600">
-            OCE Whitepaper
+            Whitepaper
           </a>
           <a href="#video" className="active:text-primary-600">
             Video
