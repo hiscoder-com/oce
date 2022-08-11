@@ -193,7 +193,7 @@ export default function ReactCompLibrary() {
                   guidereact-styleguidist.js.org
                 </p>
               </div>
-              <div className="w-2/5 bg-[url('/react-comp-library/pic2.jpg')] bg-cover bg-center"></div>
+              <div className="hidden lg:block w-2/5 bg-[url('/react-comp-library/pic2.jpg')] bg-cover bg-center"></div>
             </div>
           </a>
         </Link>
@@ -278,7 +278,7 @@ export default function ReactCompLibrary() {
           Open <code className="bg-gray-100">http://localhost:6060</code> and you should
           see the following:
         </p>
-        <div className="w-9/12 h-auto m-auto">
+        <div className="h-auto m-auto lg:w-9/12">
           <Image
             layout="responsive"
             width="692"
@@ -706,7 +706,7 @@ export default function ReactCompLibrary() {
                   github.com
                 </p>
               </div>
-              <div className="w-1/3 h-auto bg-[url('/react-comp-library/pic9.png')] bg-center"></div>
+              <div className="hidden lg:block w-1/3 h-auto bg-[url('/react-comp-library/pic9.png')] bg-center"></div>
             </div>
           </a>
         </Link>
