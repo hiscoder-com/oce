@@ -62,7 +62,7 @@ function About() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center lg:items-start lg:flex-row ">
+      <div className="relative flex flex-col items-center lg:items-start lg:flex-row">
         {/* anchor-links for mobile v */}
         <div
           className={`flex justify-center gap-5 sticky top-0 py-5 w-full z-10 text-sm font-bold bg-white text-text-500 lg:hidden ${
@@ -104,8 +104,49 @@ function About() {
           </a>
         </div>
 
+        <div
+          ref={sidebar}
+          className="hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10"
+        >
+          <a
+            href="#oce"
+            className={`active:text-primary-600 ${
+              scroll === 'oce' && 'text-primary-600'
+            }`}
+          >
+            About OCE
+          </a>
+          <a
+            href="#whitepaper"
+            className={`active:text-primary-600 ${
+              scroll === 'whitepaper' && 'text-primary-600'
+            }`}
+          >
+            OCE Whitepaper
+          </a>
+          <a
+            href="#video"
+            className={`active:text-primary-600 ${
+              scroll === 'video' && 'text-primary-600'
+            }`}
+          >
+            Video
+          </a>
+          <a
+            href="#licensing"
+            className={`active:text-primary-600 ${
+              scroll === 'licensing' && 'text-primary-600'
+            }`}
+          >
+            Licensing
+          </a>
+        </div>
+
         <div ref={parentRefs} className="w-4/5">
-          <div id="oce" className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
+          <div
+            id="oce"
+            className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl"
+          >
             The Open Components Ecosystem
           </div>
           <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
