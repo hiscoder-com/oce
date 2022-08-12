@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
+
+import useScrollTrack from '../hooks/useScrollTrack'
 
 import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
@@ -14,12 +16,37 @@ import oce_infographic_5 from '../public/about/oce_infographic_5.png'
 
 function About() {
   const [isStickyMenu, setIsStickyMenu] = useState(false)
-  const setFixedSidebar = () => {
-    setIsStickyMenu(window.scrollY >= 200)
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', setFixedSidebar)
-  }
+  const [refs, setRefs] = useState({})
+  const parentRefs = useRef(null)
+  const sidebar = useRef(null)
+
+  useEffect(() => {
+    const _refs = {}
+    Array.from(parentRefs?.current?.children).forEach((el) => {
+      if (el.id) {
+        _refs[el.id] = el
+      }
+    })
+    setRefs(_refs)
+  }, [])
+
+  const scroll = useScrollTrack({ refs })
+
+  const setFixedSidebar = useCallback(() => {
+    if (!sidebar?.current) {
+      return
+    }
+    setIsStickyMenu(window.scrollY > sidebar?.current.getBoundingClientRect().top * 2)
+  }, [sidebar])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', setFixedSidebar)
+    }
+    return () => {
+      window.removeEventListener('scroll', setFixedSidebar)
+    }
+  }, [setFixedSidebar])
 
   return (
     <div className="flex flex-col mb-16 text-center lg:gap-10 lg:text-start">
@@ -41,38 +68,44 @@ function About() {
           className={`flex justify-center gap-5 sticky top-0 py-5 w-full z-10 text-sm font-bold bg-white text-text-500 lg:hidden ${
             isStickyMenu ? 'border-b-2' : ''
           }`}
+          ref={sidebar}
         >
-          <a href="#oce" className="active:text-primary-600">
-            About
-          </a>
-          <a href="#whitepaper" className="active:text-primary-600">
-            Whitepaper
-          </a>
-          <a href="#video" className="active:text-primary-600">
-            Video
-          </a>
-          <a href="#licensing" className="active:text-primary-600">
-            Licensing
-          </a>
-        </div>
-
-        <div className="hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10">
-          <a href="#oce" className="active:text-primary-600">
+          <a
+            href="#oce"
+            className={`active:text-primary-600 ${
+              scroll === 'oce' && 'text-primary-600'
+            }`}
+          >
             About OCE
           </a>
-          <a href="#whitepaper" className="active:text-primary-600 whitespace-nowrap">
+          <a
+            href="#whitepaper"
+            className={`active:text-primary-600 ${
+              scroll === 'whitepaper' && 'text-primary-600'
+            }`}
+          >
             OCE Whitepaper
           </a>
-          <a href="#video" className="active:text-primary-600">
+          <a
+            href="#video"
+            className={`active:text-primary-600 ${
+              scroll === 'video' && 'text-primary-600'
+            }`}
+          >
             Video
           </a>
-          <a href="#licensing" className="active:text-primary-600">
+          <a
+            href="#licensing"
+            className={`active:text-primary-600 ${
+              scroll === 'licensing' && 'text-primary-600'
+            }`}
+          >
             Licensing
           </a>
         </div>
 
-        <div className="w-4/5">
-          <div className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
+        <div ref={parentRefs} className="w-4/5">
+          <div id="oce" className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
           <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
