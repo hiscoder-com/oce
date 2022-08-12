@@ -105,13 +105,13 @@ function About() {
         </div>
 
         <div
-          ref={sidebar}
           className="hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10"
+          ref={sidebar}
         >
           <a
             href="#oce"
             className={`active:text-primary-600 ${
-              scroll === 'oce' && 'text-primary-600'
+              scroll === 'oce' ? 'text-primary-600' : ''
             }`}
           >
             About OCE
@@ -119,7 +119,7 @@ function About() {
           <a
             href="#whitepaper"
             className={`active:text-primary-600 ${
-              scroll === 'whitepaper' && 'text-primary-600'
+              scroll === 'whitepaper' ? 'text-primary-600' : ''
             }`}
           >
             OCE Whitepaper
@@ -127,7 +127,7 @@ function About() {
           <a
             href="#video"
             className={`active:text-primary-600 ${
-              scroll === 'video' && 'text-primary-600'
+              scroll === 'video' ? 'text-primary-600' : ''
             }`}
           >
             Video
@@ -135,7 +135,7 @@ function About() {
           <a
             href="#licensing"
             className={`active:text-primary-600 ${
-              scroll === 'licensing' && 'text-primary-600'
+              scroll === 'licensing' ? 'text-primary-600' : ''
             }`}
           >
             Licensing
