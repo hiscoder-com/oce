@@ -13,18 +13,8 @@ import oce_infographic_4 from '../public/about/oce_infographic_4.png'
 import oce_infographic_5 from '../public/about/oce_infographic_5.png'
 
 function About() {
-  const [isMenuFixed, setIsMenuFixed] = useState(false)
-  const setFixedSidebar = () => {
-    window.innerWidth >= 1024
-      ? setIsMenuFixed(window.scrollY >= 265)
-      : setIsMenuFixed(window.scrollY >= 200)
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', setFixedSidebar)
-  }
-
   return (
-    <div className="flex flex-col gap-5 mb-16 text-center lg:gap-10 lg:text-start">
+    <div className="flex flex-col mb-16 text-center lg:gap-10 lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">
         <div
           id="oce"
@@ -37,12 +27,10 @@ function About() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center lg:items-start lg:flex-row">
+      <div className="relative flex flex-col items-center lg:items-start lg:flex-row ">
         {/* anchor-links for mobile v */}
         <div
-          className={`flex gap-5 text-sm font-bold bg-white text-text-500 lg:hidden ${
-            isMenuFixed ? 'fixed py-5 justify-center z-10 top-0' : ''
-          }`}
+          className={`flex justify-center gap-5 sticky top-0 py-5 w-full z-10 text-sm font-bold bg-white text-text-500 lg:hidden`}
         >
           <a href="#oce" className="active:text-primary-600">
             About
@@ -59,9 +47,7 @@ function About() {
         </div>
 
         <div
-          className={`hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex ${
-            isMenuFixed ? 'fixed mt-0 top-10' : ''
-          }`}
+          className={`hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10`}
         >
           <a href="#oce" className="active:text-primary-600">
             About OCE
@@ -77,10 +63,8 @@ function About() {
           </a>
         </div>
 
-        <div className={`${isMenuFixed ? 'w-1/5' : 'hidden'}`}></div>
-
         <div className="w-4/5">
-          <div className="font-bold mt-10 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
+          <div className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
           <div className="text-center text-lg mb-10 text-primary-600 md:text-2xl">
