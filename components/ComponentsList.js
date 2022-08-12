@@ -52,7 +52,7 @@ function ComponentsList({ setTotal }) {
   const componentCards = components?.map(ComponentCard)
 
   return (
-    <div>
+    <div className="flex-col items-center flex">
       {from === null && isLoading ? (
         <div>Loading...</div>
       ) : isError ? (
@@ -63,7 +63,12 @@ function ComponentsList({ setTotal }) {
             {componentCards}
           </div>
           {pageInfo.hasNextPage ? (
-            <div onClick={handlerLoadMore}>LOAD MORE</div>
+            <div
+              className="inline-flex py-2.5 px-32 rounded-lg font-bold bg-primary-100 text-primary-600 cursor-pointer md:px-16 hover:bg-secondary-400 active:shadow-xl active:shadow-primary-700/23"
+              onClick={handlerLoadMore}
+            >
+              LOAD MORE
+            </div>
           ) : (
             <div></div>
           )}

@@ -109,7 +109,7 @@ function About() {
               src={oce_infographic_2_mobile}
               alt="oce_infographic_2"
               width="419"
-              height="695"
+              height="629"
             />
           </div>
           <p className="text-xl mt-3 font-bold text-text-600 lg:mt-16 lg:text-2xl">
