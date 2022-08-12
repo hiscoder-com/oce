@@ -13,6 +13,14 @@ import oce_infographic_4 from '../public/about/oce_infographic_4.png'
 import oce_infographic_5 from '../public/about/oce_infographic_5.png'
 
 function About() {
+  const [isStickyMenu, setIsStickyMenu] = useState(false)
+  const setFixedSidebar = () => {
+    setIsStickyMenu(window.scrollY >= 200)
+  }
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', setFixedSidebar)
+  }
+
   return (
     <div className="flex flex-col mb-16 text-center lg:gap-10 lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">
@@ -30,7 +38,9 @@ function About() {
       <div className="relative flex flex-col items-center lg:items-start lg:flex-row ">
         {/* anchor-links for mobile v */}
         <div
-          className={`flex justify-center gap-5 sticky top-0 py-5 w-full z-10 text-sm font-bold bg-white text-text-500 lg:hidden`}
+          className={`flex justify-center gap-5 sticky top-0 py-5 w-full z-10 text-sm font-bold bg-white text-text-500 lg:hidden ${
+            isStickyMenu ? 'border-b-2' : ''
+          }`}
         >
           <a href="#oce" className="active:text-primary-600">
             About
@@ -46,9 +56,7 @@ function About() {
           </a>
         </div>
 
-        <div
-          className={`hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10`}
-        >
+        <div className="hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex sticky top-10">
           <a href="#oce" className="active:text-primary-600">
             About OCE
           </a>
