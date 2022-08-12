@@ -13,11 +13,11 @@ import oce_infographic_4 from '../public/about/oce_infographic_4.png'
 import oce_infographic_5 from '../public/about/oce_infographic_5.png'
 
 function About() {
-  const [fix, setFix] = useState(false)
+  const [isMenuFixed, setIsMenuFixed] = useState(false)
   const setFixedSidebar = () => {
     window.innerWidth >= 1024
-      ? setFix(window.scrollY >= 265)
-      : setFix(window.scrollY >= 200)
+      ? setIsMenuFixed(window.scrollY >= 265)
+      : setIsMenuFixed(window.scrollY >= 200)
   }
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', setFixedSidebar)
@@ -41,7 +41,7 @@ function About() {
         {/* anchor-links for mobile v */}
         <div
           className={`flex gap-5 text-sm font-bold bg-white text-text-500 lg:hidden ${
-            fix && 'fixed py-5 justify-center w-full z-10 top-0'
+            isMenuFixed ? 'fixed py-5 justify-center z-10 top-0' : ''
           }`}
         >
           <a href="#oce" className="active:text-primary-600">
@@ -59,14 +59,14 @@ function About() {
         </div>
 
         <div
-          className={`hidden w-1/5 flex-col gap-5 mt-2 text-2xl font-bold text-text-500 lg:flex ${
-            fix && 'fixed mt-0 top-10'
+          className={`hidden w-1/5 flex-col gap-5 mt-2 text-xl font-bold text-text-500 lg:flex ${
+            isMenuFixed ? 'fixed mt-0 top-10' : ''
           }`}
         >
           <a href="#oce" className="active:text-primary-600">
             About OCE
           </a>
-          <a href="#whitepaper" className="active:text-primary-600">
+          <a href="#whitepaper" className="active:text-primary-600 whitespace-nowrap">
             OCE Whitepaper
           </a>
           <a href="#video" className="active:text-primary-600">
@@ -77,9 +77,9 @@ function About() {
           </a>
         </div>
 
-        <div
-          className={`lg:w-4/5 ${fix && 'lg:ml-[196px] xl:ml-[248px] 2xl:ml-[299px]'}`}
-        >
+        <div className={`${isMenuFixed ? 'w-1/5' : 'hidden'}`}></div>
+
+        <div className="w-4/5">
           <div className="font-bold mt-10 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl">
             The Open Components Ecosystem
           </div>
