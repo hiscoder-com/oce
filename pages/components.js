@@ -15,9 +15,9 @@ function ComponentsPage() {
           <div className="inline-block">Repositories: {total}</div>
         </div>
       </div>
-      <div className="pt-10">
-        <div className="flex justify-between">
-          <div className="flex justify-between">
+      <div className="pt-5 lg:pt-10">
+        <div className="flex flex-col gap-2 justify-between lg:flex-row">
+          <div className="flex flex-col gap-2 justify-between lg:flex-row">
             <div className="px-2">
               <Filter type="topics" multiple />
             </div>
