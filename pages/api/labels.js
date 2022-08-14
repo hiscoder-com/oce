@@ -9,7 +9,13 @@ export default async function handle(req, res) {
         },
       })
 
-      res.status(200).json(labels.map((el) => el.name))
+      res
+        .status(200)
+        .json(
+          labels
+            .map((el) => el.name)
+            .filter((el) => !['scripture-open-components', 'app'].includes(el))
+        )
       return true
     default:
       res.status(404).end('Error')
