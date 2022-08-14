@@ -10,7 +10,7 @@ import MarkdownViewer from './MarkdownViewer'
 import useComponent from '../hooks/useComponent'
 import useRepo from '../hooks/useRepo'
 
-import { apps, timeSince } from '../utils/helper'
+import { timeSince } from '../utils/helper'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -75,9 +75,24 @@ function Component({ address }) {
                     </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
-                    <ComponentApp apps={apps} />
+                    {JSON.stringify(repoOCE?.dTo, null, 2)}
+                    {/* Получаем список, кто от него зависит. Сначала наши приложения, потом наши компоненты, потом все остальное (либо не будем отображать их) */}
+                    <ComponentApp
+                      apps={repoOCE?.dTo?.map((el) => ({
+                        nameWithOwner: el.repo,
+                        name: el?.repo.split('/')?.[1],
+                        description: el.description,
+                        repositoryTopics: { nodes: [] },
+                        owner: {
+                          login: el?.repo.split('/')?.[0],
+                          avatarUrl: el.ownerAvatar,
+                        },
+                      }))}
+                    />
                   </Tab.Panel>
-                  <Tab.Panel></Tab.Panel>
+                  <Tab.Panel>
+                    {/* Получаем список, от чего он зависит. Сначала наши компоненты, потом все остальное (либо не будем отображать их) */}
+                  </Tab.Panel>
                 </Tab.Panels>
               </div>
               <div className="w-full md:w-1/3">

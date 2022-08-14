@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 
 const RepoData = [
   {
-    repo: 'bsa',
+    repo: 'texttree/bsa',
     packageName: '',
     topics: {
       create: [
@@ -40,7 +40,7 @@ const RepoData = [
     },
   },
   {
-    repo: 'projector-mode-rcl',
+    repo: 'texttree/projector-mode-rcl',
     packageName: '@texttree/projector-mode-rcl',
     depends: {
       create: [
@@ -49,6 +49,10 @@ const RepoData = [
             connectOrCreate: {
               create: { packageName: 'npm/repo2' },
               where: { packageName: 'npm/repo2' },
+            },
+            connectOrCreate: {
+              create: { packageName: 'scripture-resources-rcl' },
+              where: { packageName: 'scripture-resources-rcl' },
             },
           },
         },
@@ -76,7 +80,7 @@ const RepoData = [
     },
   },
   {
-    repo: 'scripture-resources-rcl',
+    repo: 'unfoldingword/scripture-resources-rcl',
     packageName: 'scripture-resources-rcl',
     depends: {
       create: [

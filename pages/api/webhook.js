@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { prisma } from '../../utils/prisma'
 
+// При инициализации хука получить все данные
+
 const saveRepo = async (data) => {
   const request = {
     repo: data.full_name,
