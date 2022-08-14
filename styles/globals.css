@@ -11,6 +11,7 @@
 .about {
     scroll-behavior: smooth;
 }
+
 .btn {
   @apply px-3 py-2 whitespace-nowrap rounded-md
 }
@@ -24,7 +25,7 @@
 }
 
 .footer {
-  @apply flex items-center justify-between text-lg font-bold py-7 text-white
+  @apply container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white md:flex-row
 }
 
 .dropdown {
@@ -32,7 +33,7 @@
 }
 
 .header {
-  @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
+  @apply container flex items-center justify-between mx-auto p-6 text-lg font-bold md:mb-4 md:px-2
 }
 
 .input {
@@ -93,9 +94,11 @@
 .article code{
   @apply text-sm
 }
-
-p.article {
-  @apply text-xl leading-8
+.article>p {
+  @apply text-lg lg:text-xl leading-8
+}
+.article>pre {
+    @apply overflow-x-auto
 }
 
 .markdown-body img{

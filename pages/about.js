@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
+
+import useScrollTrack from '../hooks/useScrollTrack'
 
 import editor_r from '../public/editor-reverse.svg'
 import file from '../public/file.svg'
@@ -13,12 +15,37 @@ import oce_infographic_5 from '../public/oce_infographic_5.png'
 
 function About() {
   const [fix, setFix] = useState(false)
-  const setFixedSidebar = () => {
-    setFix(window.scrollY >= 500)
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', setFixedSidebar)
-  }
+  const [refs, setRefs] = useState({})
+  const parentRefs = useRef(null)
+  const sidebar = useRef(null)
+
+  useEffect(() => {
+    const _refs = {}
+    Array.from(parentRefs?.current?.children).forEach((el) => {
+      if (el.id) {
+        _refs[el.id] = el
+      }
+    })
+    setRefs(_refs)
+  }, [])
+
+  const scroll = useScrollTrack({ refs })
+
+  const setFixedSidebar = useCallback(() => {
+    if (!sidebar?.current) {
+      return
+    }
+    setFix(window.scrollY > sidebar?.current.getBoundingClientRect().top * 2)
+  }, [sidebar])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', setFixedSidebar)
+    }
+    return () => {
+      window.removeEventListener('scroll', setFixedSidebar)
+    }
+  }, [setFixedSidebar])
 
   useEffect(() => {
     document.documentElement.classList.add('about')
@@ -26,11 +53,9 @@ function About() {
   }, [])
 
   return (
-    <div className="flex flex-col gap-10 mb-16 about">
+    <div className="flex flex-col gap-10 mb-16">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div id="oce" className="text-6xl font-bold text-primary-600 scroll-m-32">
-          About
-        </div>
+        <div className="text-6xl font-bold text-primary-600 scroll-m-32">About</div>
         <div className="flex self-end mr-60">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
@@ -41,23 +66,44 @@ function About() {
           className={`w-1/5 flex flex-col gap-5 text-2xl font-bold text-text-500 ${
             fix && 'fixed top-14'
           }`}
+          ref={sidebar}
         >
-          <a href="#oce" className="active:text-primary-600">
+          <a
+            href="#oce"
+            className={`active:text-primary-600 ${
+              scroll === 'oce' && 'text-primary-600'
+            }`}
+          >
             About OCE
           </a>
-          <a href="#whitepaper" className="active:text-primary-600">
+          <a
+            href="#whitepaper"
+            className={`active:text-primary-600 ${
+              scroll === 'whitepaper' && 'text-primary-600'
+            }`}
+          >
             OCE Whitepaper
           </a>
-          <a href="#video" className="active:text-primary-600">
+          <a
+            href="#video"
+            className={`active:text-primary-600 ${
+              scroll === 'video' && 'text-primary-600'
+            }`}
+          >
             Video
           </a>
-          <a href="#licensing" className="active:text-primary-600">
+          <a
+            href="#licensing"
+            className={`active:text-primary-600 ${
+              scroll === 'licensing' && 'text-primary-600'
+            }`}
+          >
             Licensing
           </a>
         </div>
 
-        <div className={`w-4/5 ${fix && 'ml-[304px]'}`}>
-          <div className="text-5xl font-bold text-center text-primary-600">
+        <div ref={parentRefs} className={`w-4/5 ${fix && 'ml-[304px]'}`}>
+          <div id="oce" className="text-5xl font-bold text-center text-primary-600">
             The Open Components Ecosystem
           </div>
           <div className="mt-5 mb-8 text-xl font-bold text-center">
