@@ -71,7 +71,7 @@ function About() {
               scroll === 'oce' ? 'text-primary-600' : ''
             }`}
           >
-            About OCE
+            About
           </a>
           <a
             href="#whitepaper"
@@ -79,7 +79,7 @@ function About() {
               scroll === 'whitepaper' ? 'text-primary-600' : ''
             }`}
           >
-            OCE Whitepaper
+            Whitepaper
           </a>
           <a
             href="#video"
@@ -140,7 +140,7 @@ function About() {
         <div ref={parentRefs} className="w-4/5">
           <div
             id="oce"
-            className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl scroll-m-20 md:text-3xl lg:scroll-m-10 lg:mt-0 lg:text-4xl xl:text-5xl"
+            className="font-bold pt-5 mb-3 text-center text-primary-600 text-2xl scroll-m-14 md:text-3xl lg:scroll-m-10 lg:mt-0 lg:text-4xl xl:text-5xl"
           >
             The Open Components Ecosystem
           </div>
