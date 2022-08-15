@@ -22,6 +22,59 @@ export default async function handler(req, res) {
       ? [topics]
       : []
   try {
+    console.log(`{
+        search(
+          first: ${parseInt(limit)}
+          after: ${from ? '"' + from + '"' : 'null'}
+          type: REPOSITORY
+          query: "${query} sort:${
+      order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
+    }-${
+      direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'
+    } topic:scripture-open-components ${topicsQuery.map((el) => `topic:${el}`).join(' ')}"
+        ) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          total: repositoryCount
+          repos: edges {
+            repo: node {
+              ... on Repository {
+                name
+                nameWithOwner
+                description
+                latestRelease {
+                  publishedAt
+                  tag {
+                    name
+                  }
+                  name
+                }
+                repositoryTopics(first: 5) {
+                  nodes {
+                    topic {
+                      name
+                    }
+                  }
+                  totalCount
+                }
+                owner {
+                  ... on Organization {
+                    avatarUrl
+                    login
+                  }
+                  ... on User {
+                    avatarUrl
+                    login
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+`)
     const result = await client.query({
       query: gql`{
         search(

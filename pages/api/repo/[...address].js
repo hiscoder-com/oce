@@ -45,6 +45,7 @@ export default async function handle(req, res) {
           release: true,
           releaseDate: true,
           license: true,
+          topics: { select: { topicId: true } },
         },
       })
       if (!r.packageName) {
@@ -70,6 +71,7 @@ export default async function handle(req, res) {
           release: true,
           releaseDate: true,
           license: true,
+          topics: { select: { topicId: true } },
         },
       })
 
