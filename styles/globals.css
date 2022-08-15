@@ -91,3 +91,6 @@
 .article>pre {
     @apply overflow-x-auto
 }
+.height-work-area{
+  height: calc(100vh - 14rem);
+}
