@@ -51,10 +51,7 @@ function About() {
   return (
     <div className="flex flex-col mb-16 text-center lg:gap-10 lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div
-          id="oce"
-          className="text-2xl font-bold text-primary-600 scroll-m-32 md:mb-8 md:text-3xl lg:text-4xl xl:text-5xl"
-        >
+        <div className="text-2xl font-bold text-primary-600 scroll-m-32 md:mb-8 md:text-3xl lg:text-4xl xl:text-5xl">
           About
         </div>
         <div className="flex self-end w-1/5 mr-5 -mb-1">
@@ -143,7 +140,7 @@ function About() {
         <div ref={parentRefs} className="w-4/5">
           <div
             id="oce"
-            className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl md:text-3xl lg:mt-0 lg:text-4xl xl:text-5xl"
+            className="font-bold mt-5 mb-3 text-center text-primary-600 text-2xl scroll-m-20 md:text-3xl lg:scroll-m-10 lg:mt-0 lg:text-4xl xl:text-5xl"
           >
             The Open Components Ecosystem
           </div>
@@ -238,11 +235,11 @@ function About() {
           </div>
           <p
             id="whitepaper"
-            className="mt-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
+            className="pt-10 font-bold text-center scroll-m-10 text-primary-600 text-2xl md:text-3xl lg:scroll-m-1 lg:my-20 lg:text-4xl xl:text-5xl"
           >
             OCE Whitepaper
           </p>
-          <div className="flex justify-center my-10 lg:my-20">
+          <div className="flex justify-center mt-10 mb-7 lg:my-20">
             <Link href="https://opencomponents.io/The%20Open%20Components%20Ecosystem%20-%20draft%204.pdf">
               <a
                 target="_blank"
@@ -256,7 +253,7 @@ function About() {
 
           <p
             id="video"
-            className="my-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl"
+            className="pt-3 mb-10 font-bold text-center scroll-m-16 text-primary-600 text-2xl md:text-3xl lg:scroll-m-8 lg:mb-20 lg:text-4xl xl:text-5xl"
           >
             Video
           </p>
