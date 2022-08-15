@@ -262,8 +262,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center flex-col-reverse mx-10 sm:mx-28 mb-20 text-center md:text-start md:mx-0 md:flex-row">
-        <div className="flex flex-col justify-center gap-5">
+      <div className="flex items-center flex-col-reverse mx-10 sm:mx-28 mb-20 text-center md:text-start md:mx-0 md:flex-row">
+        <div className="flex flex-col justify-center gap-5 lg:w-1/2 2xl:w-7/12">
           <div className="text-primary-600">
             <Link href="https://discord.com/invite/auJb4H9ezx">
               <a
@@ -300,8 +300,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <Image src={discord_hero} alt="discord_hero" width="234" height="227" />
+        <div className="justify-center flex lg:w-1/2 2xl:w-5/12">
+          <Image src={discord_hero} alt="discord_hero" width="304" height="295" />
         </div>
       </div>
     </div>
