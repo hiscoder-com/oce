@@ -15,7 +15,7 @@ function GetStarted() {
         <div className="text-2xl font-bold text-primary-600 md:text-3xl lg:text-4xl xl:text-5xl">
           Get started
         </div>
-        <div className="flex self-end w-1/5 mr-5">
+        <div className="flex self-end w-1/5 mr-5 -mb-1">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
       </div>
