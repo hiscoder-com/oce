@@ -8,7 +8,10 @@ function ComponentApp({ apps }) {
           return (
             <div key={key} className="flex items-start gap-8">
               <AppImage
-                src={el.owner.avatarUrl}
+                src={
+                  el.logo ??
+                  `https://raw.githubusercontent.com/${el?.nameWithOwner}/master/images/logo.jpg`
+                }
                 alt={el.name}
                 className="rounded-lg overflow-hidden w-16 sm:w-24 md:w-32 xl:w-44 flex-shrink-0 flex-grow-0 basis-auto aspect-square"
               />

@@ -82,7 +82,7 @@ function Component({ address }) {
                         nameWithOwner: el.repo,
                         name: el?.repo.split('/')?.[1],
                         description: el.description,
-                        repositoryTopics: { nodes: [] },
+                        logo: el.logo,
                         owner: {
                           login: el?.repo.split('/')?.[0],
                           avatarUrl: el.ownerAvatar,
