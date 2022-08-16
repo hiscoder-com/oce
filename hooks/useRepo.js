@@ -2,7 +2,7 @@ import useSWR from 'swr'
 
 import { fetcher } from '../utils/fetcher'
 
-function useComponent(url) {
+function useRepo(url) {
   const { data, error } = useSWR(url && `/api/repo/${url}`, fetcher)
 
   return {
@@ -12,4 +12,4 @@ function useComponent(url) {
   }
 }
 
-export default useComponent
+export default useRepo

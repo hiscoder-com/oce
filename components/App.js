@@ -8,7 +8,8 @@ import MarkdownViewer from './MarkdownViewer'
 
 import useApp from '../hooks/useApp'
 
-import { components, timeSince } from '../utils/helper'
+import { timeSince } from '../utils/helper'
+import useRepo from '../hooks/useRepo'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -18,6 +19,7 @@ const tabs = ['Readme', 'Components']
 
 function App({ address }) {
   const [readme, setReadme] = useState()
+  const [components, setComponents] = useState(null)
 
   useEffect(() => {
     fetch(`https://raw.githubusercontent.com/${address}/master/README.md`)
@@ -27,6 +29,17 @@ function App({ address }) {
       })
   }, [address])
   const { data: repo, isLoading, isError } = useApp(address)
+
+  const { data: repoOCE, isLoading: isLoadingOCE, isError: isErrorOCE } = useRepo(address)
+
+  useEffect(() => {
+    setComponents(() =>
+      repoOCE?.dFrom?.filter((el) => {
+        return el.topics.some((f) => f.topicId === 'scripture-open-components')
+      })
+    )
+  }, [repoOCE])
+
   return (
     <div className="mt-12">
       {isLoading ? (
@@ -62,8 +75,30 @@ function App({ address }) {
                     </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
-                    <div className="my-1 md:my-2 xl:my-8 grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
-                      {components.map((el) => ComponentCard({ repo: el }))}
+                    <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
+                      {components?.length ? (
+                        components?.map((el) =>
+                          ComponentCard({
+                            repo: {
+                              nameWithOwner: el.repo,
+                              name: el?.repo.split('/')?.[1],
+                              description: el.description,
+                              owner: {
+                                login: el?.repo.split('/')?.[0],
+                                avatarUrl: el?.ownerAvatar,
+                              },
+                              latestRelease: { tag: { name: el.release } },
+                              repositoryTopics: {
+                                nodes: el?.topics.map((t) => ({
+                                  topic: { name: t.topicId },
+                                })),
+                              },
+                            },
+                          })
+                        )
+                      ) : (
+                        <p>No Components</p>
+                      )}
                     </div>
                   </Tab.Panel>
                 </Tab.Panels>
