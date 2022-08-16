@@ -10,20 +10,22 @@ import editor2 from '../public/editor2.svg'
 
 function GetStarted() {
   return (
-    <div className="flex flex-col gap-10 mb-16">
+    <div className="flex flex-col gap-5 mb-16 lg:gap-10">
       <div className="flex flex-col items-center border-b-2 border-dashed">
-        <div className="text-6xl font-bold text-primary-600">Get started</div>
-        <div className="flex self-end mr-60">
+        <div className="text-2xl font-bold text-primary-600 md:text-3xl lg:text-4xl xl:text-5xl">
+          Get started
+        </div>
+        <div className="flex self-end w-1/5 mr-5 -mb-1">
           <Image src={editor_r} alt="editor_reverse" width="76" height="76" />
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
-        <div className="flex pl-8">
+      <div className="flex flex-col p-5 rounded-lg bg-primary-100 lg:flex-row lg:px-5 lg:py-14 lg:gap-14">
+        <div className="flex self-center lg:pl-8">
           <Image src={window} alt="window" width="152" height="152" />
         </div>
-        <div className="text-2xl">
-          <div className="mb-8 font-bold">
+        <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
+          <div className="my-4 font-bold lg:mb-8">
             Phase 1: Understanding the Open Components philosophy
           </div>
           <ul className="phase-card-ul">
@@ -45,12 +47,12 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
-        <div className="flex pl-8">
+      <div className="flex flex-col p-5 rounded-lg bg-primary-100 lg:flex-row lg:px-5 lg:py-14 lg:gap-14">
+        <div className="flex self-center lg:pl-8">
           <Image src={search2} alt="search2" width="152" height="152" />
         </div>
-        <div className="text-2xl">
-          <div className="mb-8 font-bold">Phase 2: Explore the ecosystem</div>
+        <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
+          <div className="my-4 font-bold lg:mb-8">Phase 2: Explore the ecosystem</div>
           <ul className="phase-card-ul">
             <li>
               To check out the{' '}
@@ -70,12 +72,12 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
-        <div>
+      <div className="flex flex-col p-5 rounded-lg bg-primary-100 lg:flex-row lg:px-5 lg:py-14 lg:gap-10">
+        <div className="flex self-center">
           <Image src={editor2} alt="editor2" width="200" height="200" />
         </div>
-        <div className="flex flex-col gap-8 text-2xl">
-          <div className="mb-8 font-bold">
+        <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
+          <div className="my-4 font-bold lg:mb-8">
             Phase 3: Learn the principles of iterative development
           </div>
           <ul className="phase-card-ul">
@@ -90,12 +92,12 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-14 py-14 px-5 pl-5 rounded-lg bg-primary-100">
-        <div className="flex pl-8">
+      <div className="flex flex-col p-5 rounded-lg bg-primary-100 lg:flex-row lg:px-5 lg:py-14 lg:gap-14">
+        <div className="flex self-center lg:pl-8">
           <Image src={search} alt="search" width="152" height="152" />
         </div>
-        <div className="text-2xl">
-          <div className="mb-8 font-bold">
+        <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
+          <div className="my-4 font-bold lg:mb-8">
             Phase 4: Learn how to get started with an open component
           </div>
           <ul className="phase-card-ul">
@@ -122,12 +124,12 @@ function GetStarted() {
         </div>
       </div>
 
-      <div className="flex gap-10 py-14 px-5 pl-5 rounded-lg bg-primary-100">
-        <div className="flex">
+      <div className="flex flex-col p-5 rounded-lg bg-primary-100 lg:flex-row lg:px-5 lg:py-14 lg:gap-10">
+        <div className="flex self-center">
           <Image src={editor} alt="editor" width="200" height="200" />
         </div>
-        <div className="text-2xl">
-          <div className="mb-8 font-bold">
+        <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
+          <div className="my-4 font-bold lg:mb-8">
             Phase 5: Contribute to an existing Open Component
           </div>
           <ul className="phase-card-ul">

@@ -149,7 +149,7 @@ export default function Filter({ type, multiple, values }) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="options w-fit">
+              <Listbox.Options className="options w-fit z-10">
                 {({ open }) => {
                   if (multiple && !open) {
                     handleSendUrl(selectedFilters)
@@ -199,7 +199,7 @@ export default function Filter({ type, multiple, values }) {
 function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery }) {
   return (
     <div className="flex justify-center">
-      <div className="flex mb-3 xl:w-96">
+      <div className="relative flex w-full px-2 xl:w-96">
         <input
           onChange={(e) => setSearchQuery(e.target.value)}
           onBlur={() => {
@@ -215,11 +215,11 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
             searchQuery && e.key === 'Enter' && handleSendUrl(searchQuery)
           }}
         />
-        <button className={'btn'} type="button">
+        <button className={'btn absolute top-0 bottom-0 right-2 '} type="button">
           <XIcon
             className={`${
               !searchQuery && 'hidden'
-            } -ml-10 absolute h-5 w-5 text-black-40`}
+            } -ml-7 absolute top-[9px] h-5 w-5 text-black-40`}
             aria-hidden="true"
             onClick={() => handleCleanQuery()}
           />
