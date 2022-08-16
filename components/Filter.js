@@ -239,7 +239,7 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
               !searchQuery && 'hidden'
             } -ml-10 absolute top-[9px] h-5 w-5 text-black-40`}
             aria-hidden="true"
-            onClick={() => handleCleanQuery()}
+            onClick={(e) => (handleCleanQuery(e), e.stopPropagation())}
           />
           <svg
             aria-hidden="true"
