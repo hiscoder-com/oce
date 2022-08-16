@@ -7,8 +7,8 @@ const saveRepo = async (data) => {
   const request = {
     repo: data.full_name,
     description: data.description,
-    // language: data.language,
-    // homepage: data.homepage || '',
+    ownerAvatar: data.avatar_url,
+    license: data.licenseName,
     topics: {
       create: data.topics.map((el) => ({
         topic: {
@@ -97,11 +97,28 @@ export default async function handler(req, res) {
     body: {
       ref,
       commits,
-      repository: { description, full_name, topics, homepage, language, default_branch },
+      repository: {
+        description,
+        full_name,
+        topics,
+        homepage,
+        language,
+        default_branch,
+        owner: { avatar_url },
+        license,
+      },
     },
   } = req
 
-  let data = { description, full_name, topics, homepage, language }
+  let data = {
+    description,
+    full_name,
+    topics,
+    homepage,
+    language,
+    avatar_url,
+    licenseName: license?.name,
+  }
 
   if (req.body.zen) {
     await saveRepo(data)
@@ -110,16 +127,19 @@ export default async function handler(req, res) {
         `https://raw.githubusercontent.com/${full_name}/${default_branch}/oce.json`
       )
       await saveOceData({ ...result.data, full_name: data.full_name })
+      return res
+        .status(200)
+        .json({ data, oce: { ...result.data, full_name: data.full_name } })
+      return
     } catch (error) {
       res.status(404).json(error)
       return
     }
-    return res.status(200).json('ok')
   }
 
   if (!commits || !commits?.length > 0 || default_branch !== ref.split('/')[2]) {
     await saveRepo(data)
-    return res.status(200).json('ok')
+    return res.status(200).json(data)
   }
 
   if (isChange('oce.json', commits)) {
@@ -128,11 +148,11 @@ export default async function handler(req, res) {
         `https://raw.githubusercontent.com/${full_name}/${default_branch}/oce.json`
       )
       await saveOceData({ ...result.data, full_name: data.full_name })
+      res.status(200).json({ ...result.data, full_name: data.full_name })
+      return
     } catch (error) {
       res.status(404).json(error)
       return
     }
   }
-
-  res.status(200).json(data)
 }

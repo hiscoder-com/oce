@@ -11,16 +11,18 @@ import useComponent from '../hooks/useComponent'
 import useRepo from '../hooks/useRepo'
 
 import { timeSince } from '../utils/helper'
+import ComponentCard from './ComponentCard'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const tabs = ['Readme', 'Dependents', 'Dependencies']
+const tabs = ['Readme', 'Apps', 'Dependents', 'Dependencies']
 
 function Component({ address }) {
   const [readme, setReadme] = useState()
-
+  const [apps, setApps] = useState(null)
+  const [dependents, setDependents] = useState(null)
   useEffect(() => {
     fetch(`https://raw.githubusercontent.com/${address}/master/README.md`)
       .then((response) => response.text())
@@ -32,6 +34,20 @@ function Component({ address }) {
   const { data: repo, isLoading, isError } = useComponent(address)
 
   const { data: repoOCE, isLoading: isLoadingOCE, isError: isErrorOCE } = useRepo(address)
+
+  useEffect(() => {
+    setApps(() =>
+      repoOCE?.dTo?.filter((el) => {
+        return el.topics.some((f) => f.topicId === 'scripture-open-apps')
+      })
+    )
+    setDependents(() =>
+      repoOCE?.dTo?.filter((el) => {
+        return el.topics.some((f) => f.topicId === 'scripture-open-components')
+      })
+    )
+  }, [repoOCE])
+
   return (
     <div className="mt-12">
       {isLoading ? (
@@ -75,10 +91,9 @@ function Component({ address }) {
                     </MarkdownViewer>
                   </Tab.Panel>
                   <Tab.Panel>
-                    {JSON.stringify(repoOCE?.dTo, null, 2)}
                     {/* Получаем список, кто от него зависит. Сначала наши приложения, потом наши компоненты, потом все остальное (либо не будем отображать их) */}
                     <ComponentApp
-                      apps={repoOCE?.dTo?.map((el) => ({
+                      apps={apps?.map((el) => ({
                         nameWithOwner: el.repo,
                         name: el?.repo.split('/')?.[1],
                         description: el.description,
@@ -89,6 +104,33 @@ function Component({ address }) {
                         },
                       }))}
                     />
+                  </Tab.Panel>
+                  <Tab.Panel>
+                    <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
+                      {dependents?.length ? (
+                        dependents?.map((el) =>
+                          ComponentCard({
+                            repo: {
+                              nameWithOwner: el.repo,
+                              name: el?.repo.split('/')?.[1],
+                              description: el.description,
+                              owner: {
+                                login: el?.repo.split('/')?.[0],
+                                avatarUrl: el?.ownerAvatar,
+                              },
+                              latestRelease: { tag: { name: el.release } },
+                              repositoryTopics: {
+                                nodes: el?.topics.map((t) => ({
+                                  topic: { name: t.topicId },
+                                })),
+                              },
+                            },
+                          })
+                        )
+                      ) : (
+                        <p>No Components</p>
+                      )}
+                    </div>
                   </Tab.Panel>
                   <Tab.Panel>
                     {/* Получаем список, от чего он зависит. Сначала наши компоненты, потом все остальное (либо не будем отображать их) */}

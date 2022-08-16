@@ -4,11 +4,14 @@ import AppImage from './AppImage'
 function ComponentApp({ apps }) {
   return (
     <div className="flex flex-col gap-10">
-      {apps &&
+      {apps?.length ? (
         apps.map((el, key) => {
           return (
-            <div key={key} className="flex items-start gap-8">
-              <div className="relative w-16 sm:w-24 md:w-32 xl:w-44 flex-shrink-0 flex-grow-0 basis-auto aspect-square">
+            <div
+              key={key}
+              className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-8 mb-3"
+            >
+              <div className="relative w-44 md:w-32 flex-shrink-0 flex-grow-0 basis-auto aspect-square">
                 <AppImage
                   src={
                     el.logo ??
@@ -18,9 +21,9 @@ function ComponentApp({ apps }) {
                   className="rounded-lg overflow-hidden"
                 />
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-center md:items-start gap-4">
                 <Link href={`/app/${el.nameWithOwner}`}>
-                  <a className="underline text-2xl font-bold decoration-2 underline-offset-4">
+                  <a className="underline text-2xl text-primary-600 font-bold decoration-2 underline-offset-4 uppercase">
                     {el.name}
                   </a>
                 </Link>
@@ -28,7 +31,10 @@ function ComponentApp({ apps }) {
               </div>
             </div>
           )
-        })}
+        })
+      ) : (
+        <p>No apps</p>
+      )}
     </div>
   )
 }
