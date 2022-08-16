@@ -5,7 +5,7 @@
 @layer base {
   html {
     font-family: 'Ubuntu', sans-serif;
-    scroll-behavior: smooth;}
+    }
 }
 
 .btn {
@@ -21,7 +21,7 @@
 }
 
 .footer {
-  @apply flex items-center justify-between text-lg font-bold py-7 text-white
+  @apply container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white md:flex-row
 }
 
 .dropdown {
@@ -29,10 +29,10 @@
 }
 
 .header {
-  @apply flex items-center justify-between text-lg mb-4 py-7 font-bold
+  @apply container flex items-center justify-between mx-auto p-6 text-lg font-bold md:mb-4 md:px-2
 }
 .input {
-  @apply appearance-none block w-full px-3 py-1.5 text-base font-normal border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
+  @apply appearance-none block w-full pl-3 pr-16 py-1.5 text-base font-normal border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none
 }
 .options {
   @apply absolute mt-2 left-0 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm
@@ -84,7 +84,13 @@
 }
 .article code{
   @apply text-sm
-  }
-p.article {
-  @apply text-xl leading-8
-  }
+}
+.article>p {
+  @apply text-lg lg:text-xl leading-8
+}
+.article>pre {
+    @apply overflow-x-auto
+}
+.height-work-area{
+  height: calc(100vh - 14rem);
+}
