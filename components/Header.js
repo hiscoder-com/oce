@@ -28,7 +28,7 @@ function Header() {
         </Link>
         <Link href="/">
           <a className="flex items-center gap-5">
-            <p className="text-primary-600 text-2xl">Open Components</p>
+            <p className="text-primary-600 text-xl md:text-2xl">Open Components</p>
           </a>
         </Link>
         <svg
@@ -96,12 +96,13 @@ function Header() {
                   width="30"
                   height="43"
                   className="md:w-8 md:h-12"
+                  onClick={closeNavbar}
                 />
               </a>
             </Link>
             <Link href="/">
               <a className="flex items-center gap-5">
-                <p onClick={closeNavbar} className="text-primary-600 text-2xl">
+                <p onClick={closeNavbar} className="text-primary-600 text-xl">
                   Open Components
                 </p>
               </a>
