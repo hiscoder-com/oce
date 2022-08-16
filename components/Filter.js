@@ -233,14 +233,20 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
             searchQuery && e.key === 'Enter' && handleSendUrl(searchQuery)
           }}
         />
-        <button className={'btn absolute top-0 bottom-0 right-2 '} type="button">
-          <XIcon
-            className={`${
-              !searchQuery && 'hidden'
-            } -ml-7 absolute top-[9px] h-5 w-5 text-black-40`}
-            aria-hidden="true"
-            onClick={() => handleCleanQuery()}
-          />
+
+        <button
+          className={`absolute top-0 bottom-0 right-12 pl-3 pr-2 py-2 text-black-40 ${
+            !searchQuery ? 'hidden' : ''
+          }`}
+          type="button"
+        >
+          <XIcon className="w-5" aria-hidden="true" onClick={() => handleCleanQuery()} />
+        </button>
+
+        <button
+          className={'pl-2 pr-3 py-2 absolute top-0 bottom-0 right-2'}
+          type="button"
+        >
           <svg
             aria-hidden="true"
             focusable="false"
