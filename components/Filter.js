@@ -237,7 +237,7 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
           <XIcon
             className={`${
               !searchQuery && 'hidden'
-            } -ml-7 absolute top-[9px] h-5 w-5 text-black-40`}
+            } -ml-10 absolute top-[9px] h-5 w-5 text-black-40`}
             aria-hidden="true"
             onClick={() => handleCleanQuery()}
           />
