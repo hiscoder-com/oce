@@ -234,12 +234,13 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
           }}
         />
 
-        <button className="absolute top-0 bottom-0 right-12 pl-3 pr-2 py-2" type="button">
-          <XIcon
-            className={`${!searchQuery && 'hidden'} w-5 text-black-40`}
-            aria-hidden="true"
-            onClick={() => handleCleanQuery()}
-          />
+        <button
+          className={`absolute top-0 bottom-0 right-12 pl-3 pr-2 py-2 text-black-40 ${
+            !searchQuery ? 'hidden' : ''
+          }`}
+          type="button"
+        >
+          <XIcon className="w-5" aria-hidden="true" onClick={() => handleCleanQuery()} />
         </button>
 
         <button
