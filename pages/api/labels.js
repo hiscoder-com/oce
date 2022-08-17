@@ -14,7 +14,9 @@ export default async function handle(req, res) {
         .json(
           labels
             .map((el) => el.name)
-            .filter((el) => !['scripture-open-components', 'app'].includes(el))
+            .filter(
+              (el) => !['scripture-open-components', 'scripture-open-apps'].includes(el)
+            )
         )
       return true
     default:

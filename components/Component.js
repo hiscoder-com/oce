@@ -71,7 +71,12 @@ function Component({ address }) {
             <Labels
               full
               labels={repo?.repositoryTopics?.nodes
-                ?.filter((el) => !['scripture-open-components'].includes(el.topic.name))
+                ?.filter(
+                  (el) =>
+                    !['scripture-open-components', 'scripture-open-apps'].includes(
+                      el.topic.name
+                    )
+                )
                 .map((el) => el.topic.name)}
             />
           </div>
@@ -172,7 +177,10 @@ function Component({ address }) {
                   homepage={repo?.homepageUrl}
                   repository={repo?.url}
                   owner={{ url: repo.owner?.avatarUrl, name: repo.owner?.login }}
-                  release={repo?.latestRelease}
+                  release={{
+                    tagName: repoOCE?.r?.release,
+                    publishedAt: repoOCE?.r?.releaseDate,
+                  }}
                 />
               </div>
             </div>

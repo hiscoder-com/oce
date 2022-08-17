@@ -17,7 +17,12 @@ function ComponentCard({ repo }) {
         </Link>
         <Labels
           labels={repo.repositoryTopics?.nodes
-            .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
+            .filter(
+              (el) =>
+                !['scripture-open-components', 'scripture-open-apps'].includes(
+                  el.topic.name
+                )
+            )
             .map((el) => el.topic.name)}
         />
       </div>
@@ -27,12 +32,12 @@ function ComponentCard({ repo }) {
           <Image
             width="100%"
             height="100%"
+            title={repo.owner?.login}
             alt={repo.owner?.login}
             src={repo.owner?.avatarUrl}
             className="rounded-full"
           />
         </div>
-        <div className="text-gray-400">{repo.latestRelease?.tag.name || 'v-.--.--'}</div>
       </div>
     </div>
   )
