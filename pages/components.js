@@ -28,7 +28,7 @@ function ComponentsPage() {
               <Filter type="direction" values={['desc', 'asc']} />
             </div>
             <div className="px-2">
-              <Filter type="order" values={['interactions', 'updated']} />
+              <Filter type="order" values={['updated', 'interactions']} />
             </div>
           </div>
           <Filter type="query" />

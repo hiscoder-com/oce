@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const colors = [
   'bg-slate-100 text-slate-600',
   'bg-rose-100 text-rose-600',
@@ -26,13 +28,15 @@ function Label({ isFull, label }) {
   const labelColor =
     label && label.length > 0 ? colors[label.length % colors.length] : 'white'
   return (
-    <div
-      className={`${labelColor} uppercase ${
-        !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-base p-2'
-      } font-bold w-fit rounded-lg self-center`}
-    >
-      {label}
-    </div>
+    <Link href={`/components?order=updated&direction=desc&topics[]=${label}`}>
+      <a
+        className={`${labelColor} uppercase ${
+          !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-base p-2'
+        } font-bold w-fit rounded-lg self-center`}
+      >
+        {label}
+      </a>
+    </Link>
   )
 }
 
