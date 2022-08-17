@@ -43,10 +43,15 @@ function Label({ isFull, label, isActive, onClick }) {
 function Labels({ full = false, labels }) {
   const { data: savedLabels, isLoading, isError } = useLabels()
   const router = useRouter()
-  const handleClick = (label) =>
-    router.replace({
-      query: { ...router.query, ['topics[]']: label },
-    })
+  const handleClick = (label) => {
+    if (router.pathname === '/components') {
+      router.replace({
+        query: { ...router.query, ['topics[]']: label },
+      })
+    } else {
+      router.push(`/components?order=updated&direction=desc&topics[]=${label}`)
+    }
+  }
   return (
     <>
       {isLoading ? (
