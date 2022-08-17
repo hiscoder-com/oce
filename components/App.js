@@ -48,9 +48,11 @@ function App({ address }) {
         <div> </div>
       ) : (
         <>
-          <h1 className="text-5xl font-bold uppercase">{repo.name}</h1>
-          <p className="my-5">{repo.description}</p>
-          <div className="text-gray-500 mb-8">
+          <h1 className="uppercase font-bold text-3xl text-primary-600 md:text-4xl lg:text-5xl xl:text-6xl">
+            {repo.name}
+          </h1>
+          <p className="my-5 text-text-600">{repo.description}</p>
+          <div className="text-text-500 mb-8">
             {repo?.language?.name} • Updated {timeSince(repo.pushedAt)} ago
           </div>
           <Tab.Group>
@@ -59,7 +61,10 @@ function App({ address }) {
                 <Tab
                   key={tab}
                   className={({ selected }) =>
-                    classNames('tab ', selected ? 'active' : '')
+                    classNames(
+                      'tab text-text-800 text-xs md:text-sm lg:text-base ',
+                      selected ? 'active' : ''
+                    )
                   }
                 >
                   {tab}

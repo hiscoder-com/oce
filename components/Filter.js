@@ -104,7 +104,7 @@ export default function Filter({ type, multiple, values }) {
           <div
             className={`input px-3 ${
               selectedFilters?.length > 0 && multiple
-                ? 'bg-[#2F5C6E] text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-700 '
             } relative mt-1`}
           >

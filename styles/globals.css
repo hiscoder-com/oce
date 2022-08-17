@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    @apply text-text-800;
     font-family: 'Ubuntu', sans-serif;
   }
 }

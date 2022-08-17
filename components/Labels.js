@@ -32,7 +32,7 @@ function Label({ isFull, label, isActive, onClick }) {
     <div
       onClick={isActive ? onClick : null}
       className={`${labelColor} uppercase ${isActive ? 'cursor-pointer' : ''} ${
-        !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-base p-2'
+        !isFull ? 'text-xxs p-1 inline-block mx-1' : 'text-xs md:text-sm lg:text-base p-2'
       } font-bold w-fit rounded-lg self-center`}
     >
       {label}
