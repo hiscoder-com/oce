@@ -22,7 +22,11 @@ function AppCard({ repo }) {
         <AppImage
           alt={repo.name}
           className="rounded-md overflow-hidden"
-          src={`https://raw.githubusercontent.com/${repo?.nameWithOwner}/master/images/logo.jpg`}
+          src={
+            repo?.logo
+              ? repo?.logo
+              : `https://raw.githubusercontent.com/${repo?.nameWithOwner}/master/images/logo.jpg`
+          }
         />
       </div>
     </div>

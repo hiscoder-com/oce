@@ -16,6 +16,7 @@ model Repo {
   release     String?
   releaseDate String?
   license     String?
+  createdAt   DateTime       @default(now())
   topics      ReposTopics[]
   depends     ReposDepends[]
 }
