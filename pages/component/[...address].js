@@ -7,7 +7,7 @@ function ComponentPage() {
     isReady,
     query: { address },
   } = useRouter()
-  return <>{isReady ? <Component address={address.join('/')} /> : <>Loading</>}</>
+  return <>{isReady ? <Component address={address.join('/')} /> : <>Loading...</>}</>
 }
 
 export default ComponentPage

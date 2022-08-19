@@ -121,9 +121,9 @@ function Component({ address }) {
                     />
                   </Tab.Panel>
                   <Tab.Panel>
-                    <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
-                      {dependents?.length ? (
-                        dependents?.map((el) =>
+                    {dependents?.length ? (
+                      <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
+                        {dependents?.map((el) =>
                           ComponentCard({
                             repo: {
                               nameWithOwner: el.repo,
@@ -141,16 +141,30 @@ function Component({ address }) {
                               },
                             },
                           })
-                        )
-                      ) : (
-                        <p>No Components</p>
-                      )}
-                    </div>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-text-500">
+                        No Components
+                        <br />
+                        <br />
+                        If you are the owner of the component or app and want more
+                        information to be displayed here, read the{' '}
+                        <a
+                          className="underline text-primary-600"
+                          href="https://github.com/texttree/oce/wiki/English-Version#how-to-add-a-component-or-app"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          instructions at the link
+                        </a>
+                      </p>
+                    )}
                   </Tab.Panel>
                   <Tab.Panel>
-                    <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
-                      {dependencies?.length ? (
-                        dependencies?.map((el) =>
+                    {dependencies?.length ? (
+                      <div className="my-1 md:my-2 xl:my-8 grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 2xl:grid-cols-3 2xl:gap-8">
+                        {dependencies?.map((el) =>
                           ComponentCard({
                             repo: {
                               nameWithOwner: el.repo,
@@ -168,11 +182,25 @@ function Component({ address }) {
                               },
                             },
                           })
-                        )
-                      ) : (
-                        <p>No Components</p>
-                      )}
-                    </div>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-text-500">
+                        No Components
+                        <br />
+                        <br />
+                        If you are the owner of the component or app and want more
+                        information to be displayed here, read the{' '}
+                        <a
+                          className="underline text-primary-600"
+                          href="https://github.com/texttree/oce/wiki/English-Version#how-to-add-a-component-or-app"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          instructions at the link
+                        </a>
+                      </p>
+                    )}
                   </Tab.Panel>
                 </Tab.Panels>
               </div>
