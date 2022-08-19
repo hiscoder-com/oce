@@ -7,17 +7,22 @@ function ComponentCard({ repo }) {
   return (
     <div
       key={repo.nameWithOwner}
-      className="flex flex-col justify-between pt-8 pl-6 pr-2 pb-4 bg-primary-100 h-56 rounded-xl"
+      className="flex flex-col justify-between pt-8 pl-6 pr-4 pb-4 bg-primary-100 h-56 rounded-xl"
     >
       <div>
         <Link href={`/component/${repo.nameWithOwner}`}>
-          <a className="line-clamp-1 font-bold text-xl cursor-pointer hover:underline">
+          <a className="line-clamp-1 text-primary-600 font-bold text-xl cursor-pointer hover:underline">
             {repo.name}
           </a>
         </Link>
         <Labels
           labels={repo.repositoryTopics?.nodes
-            .filter((el) => !['scripture-open-components', 'app'].includes(el.topic.name))
+            .filter(
+              (el) =>
+                !['scripture-open-components', 'scripture-open-apps'].includes(
+                  el.topic.name
+                )
+            )
             .map((el) => el.topic.name)}
         />
       </div>
@@ -27,12 +32,12 @@ function ComponentCard({ repo }) {
           <Image
             width="100%"
             height="100%"
+            title={repo.owner?.login}
             alt={repo.owner?.login}
             src={repo.owner?.avatarUrl}
             className="rounded-full"
           />
         </div>
-        <div className="text-gray-400">{repo.latestRelease?.tag.name || 'v-.--.--'}</div>
       </div>
     </div>
   )

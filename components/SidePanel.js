@@ -57,7 +57,7 @@ function SidePanel({ license, homepage, repository, owner, release }) {
           </a>
         </Link>
       </div>
-      {release && (
+      {release?.tagName && (
         <div className="flex justify-between">
           <div className="w-[45%]">
             <div className="text-xs text-text-500">Release</div>

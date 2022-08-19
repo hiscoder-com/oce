@@ -9,7 +9,7 @@ function ComponentsList({ setTotal }) {
   const router = useRouter()
   const {
     isReady,
-    query: { limit = 10, order = 'updated', direction = 'desc', topics = [], query = '' },
+    query: { limit = 10, order = 'updated', direction = 'desc', query = '' },
   } = router
   const [from, setFrom] = useState(null)
   const [components, setComponents] = useState([])
@@ -19,7 +19,7 @@ function ComponentsList({ setTotal }) {
       limit,
       order,
       direction,
-      topics: router.query['topics[]'],
+      topics: router.query['topics[]'] ?? [],
       from,
       query,
     }
@@ -50,18 +50,21 @@ function ComponentsList({ setTotal }) {
   }
 
   const componentCards = components?.map(ComponentCard)
-
   return (
     <div className="flex-col items-center flex">
       {from === null && isLoading ? (
-        <div>Loading...</div>
+        <div className="my-8 text-xl text-primary-700">Loading...</div>
       ) : isError ? (
         <div></div>
       ) : (
         <>
-          <div className="grid grid-cols-1 gap-5 my-5 sm:grid-cols-2 md:grid-cols-3 md:my-10 xl:grid-cols-4 2xl:grid-cols-5">
-            {componentCards}
-          </div>
+          {componentCards.length ? (
+            <div className="grid grid-cols-1 gap-5 my-5 sm:grid-cols-2 md:grid-cols-3 md:my-10 xl:grid-cols-4 2xl:grid-cols-5">
+              {componentCards}
+            </div>
+          ) : (
+            <p className="my-8 text-xl text-primary-700">Nothing found</p>
+          )}
           {pageInfo.hasNextPage ? (
             <div
               className="inline-flex py-2.5 px-32 rounded-lg font-bold bg-primary-600 text-white cursor-pointer md:px-16 hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"

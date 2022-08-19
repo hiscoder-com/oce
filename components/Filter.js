@@ -5,54 +5,35 @@ import { useRouter } from 'next/router'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon, XIcon } from '@heroicons/react/solid'
 
-const filters = {
-  order: [
-    { id: 0, name: 'interactions', value: 'interactions' },
-    { id: 1, name: 'updated', value: 'updated' },
-  ],
-  direction: [
-    { id: 0, name: 'descending', value: 'desc' },
-    { id: 1, name: 'ascending', value: 'asc' },
-  ],
-  topics: [
-    { id: 0, name: 'headlessui', value: 'headlessui' },
-    { id: 1, name: 'bible', value: 'bible' },
-    { id: 2, name: 'reference', value: 'reference' },
-  ],
-}
-
-export default function Filter({ type, multiple }) {
+export default function Filter({ type, multiple, values }) {
   const router = useRouter()
-  const { pathname, query } = router
-  const [selectedFilters, setSelectedFilters] = useState([])
-  const [selectedFilter, setSelectedFilter] = useState(filters?.[type]?.[0])
-  const [searchQuery, setSearchQuery] = useState('')
+  const { pathname, query, asPath } = router
+  const [selectedFilters, setSelectedFilters] = useState(() => {
+    const val = query?.[type + '[]']
+    if (val) {
+      if (Array.isArray(val)) {
+        return val
+      } else {
+        return [val]
+      }
+    } else {
+      return []
+    }
+  })
+  const [selectedFilter, setSelectedFilter] = useState(() => query?.[type] ?? values?.[0])
 
   const handleSendUrl = (param) => {
     if (!param || !router.isReady) {
       return
     }
 
-    if (multiple) {
-      router.push(
-        {
-          query: { ...router.query, [type + '[]']: param },
-        },
-        undefined,
-        { scroll: false }
-      )
-      return
-    }
-
-    router.push({ query: { ...router.query, [type]: param } }, undefined, {
-      scroll: false,
-    })
-  }
-  const handleCleanQuery = () => {
-    const params = new URLSearchParams(query)
-    params.delete('query')
-    router.replace({ pathname, query: params.toString() }, undefined, { scroll: false })
-    setSearchQuery('')
+    router.push(
+      {
+        query: { ...router.query, [type + (multiple ? '[]' : '')]: param },
+      },
+      undefined,
+      { scroll: false }
+    )
   }
 
   const handleCleanRouter = (e) => {
@@ -62,6 +43,7 @@ export default function Filter({ type, multiple }) {
     router.replace({ pathname, query: params.toString() }, undefined, { scroll: false })
     setSelectedFilters([])
   }
+
   useEffect(() => {
     if (!selectedFilter) {
       return
@@ -70,23 +52,19 @@ export default function Filter({ type, multiple }) {
     if (!multiple && !Object.keys(query).includes(type)) {
       router.replace(
         {
-          query: { ...query, [type]: selectedFilter.value },
+          query: { ...query, [type]: selectedFilter },
         },
         undefined,
         { scroll: false, shallow: true }
       )
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, selectedFilter, type])
+  }, [asPath, selectedFilter])
 
   useEffect(() => {
-    if (query && Object.keys(query) === 0 && type !== 'query') {
-      return
-    }
-
     if (Object.keys(query).includes(type) && !multiple) {
-      filters?.[type]?.forEach((el) => {
-        if (el.value === query[type]) {
+      values?.forEach((el) => {
+        if (el === query[type]) {
           setSelectedFilter(el)
         }
       })
@@ -94,34 +72,28 @@ export default function Filter({ type, multiple }) {
 
     if (Object.keys(query).includes(type + '[]') && multiple) {
       const selectedFromUrl = []
-      filters[type].forEach((el) => {
-        if (query[type + '[]'].includes(el.value)) {
+      values.forEach((el) => {
+        if (query[type + '[]'].includes(el)) {
           selectedFromUrl.push(el)
         }
 
         setSelectedFilters(selectedFromUrl)
       })
-      return
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [type])
+  }, [asPath])
 
   return (
     <>
       {type === 'query' ? (
-        <Input
-          setSearchQuery={setSearchQuery}
-          searchQuery={searchQuery}
-          handleSendUrl={handleSendUrl}
-          handleCleanQuery={handleCleanQuery}
-        />
+        <Input handleSendUrl={handleSendUrl} />
       ) : (
         <Listbox
           open={false}
           value={multiple ? selectedFilters : selectedFilter}
           onChange={(e) => {
             if (!multiple) {
-              handleSendUrl(e.value)
+              handleSendUrl(e)
               setSelectedFilter(e)
             } else {
               setSelectedFilters(e)
@@ -130,18 +102,21 @@ export default function Filter({ type, multiple }) {
           multiple={multiple}
         >
           <div
-            className={`input ${
+            className={`input px-3 ${
               selectedFilters?.length > 0 && multiple
-                ? 'bg-[#2F5C6E] text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-700 '
             } relative mt-1`}
           >
-            <Listbox.Button>
-              <span className="truncate mr-4 w-fit">
-                {multiple ? type : selectedFilter ? selectedFilter?.name : type}
+            <Listbox.Button className={'w-full text-left'}>
+              <span className="truncate mr-6">
+                {multiple ? type : selectedFilter ? selectedFilter : type}
               </span>
               {multiple && selectedFilters.length > 0 && (
-                <span className="truncate mr-6"> {selectedFilters.length}</span>
+                <span className="truncate mr-6 float-right">
+                  {' '}
+                  {selectedFilters.length}
+                </span>
               )}
 
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -168,17 +143,17 @@ export default function Filter({ type, multiple }) {
               <Listbox.Options className="options w-fit z-10">
                 {({ open }) => {
                   if (multiple && !open) {
-                    handleSendUrl(selectedFilters?.map((el) => el.value))
+                    handleSendUrl(selectedFilters)
                   }
                   return (
                     <>
-                      {filters[type].map((filter, personIdx) => (
+                      {values.map((filter, personIdx) => (
                         <Listbox.Option
                           key={personIdx}
-                          hidden={filter.hidden}
-                          disabled={filter.disabled}
                           className={({ active }) =>
-                            `relative cursor-default select-none py-2 pl-10 pr-2 ${
+                            `relative cursor-default select-none py-2 ${
+                              multiple ? 'pl-10' : 'pl-4'
+                            } pr-4 ${
                               active ? 'bg-gray-100 text-amber-900' : 'text-gray-900'
                             }`
                           }
@@ -191,13 +166,23 @@ export default function Filter({ type, multiple }) {
                                   selected ? 'font-medium' : 'font-normal'
                                 }`}
                               >
-                                {filter.name}
+                                {filter}
                               </span>
-                              {selected ? (
-                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
-                                  <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                                </span>
-                              ) : null}
+                              {multiple &&
+                                (selected ? (
+                                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
+                                    <CheckIcon
+                                      className="h-5 w-5 border border-gray-300 rounded"
+                                      aria-hidden="true"
+                                    />
+                                  </span>
+                                ) : (
+                                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
+                                    <div className="h-5 border border-gray-300 w-5 rounded">
+                                      {' '}
+                                    </div>
+                                  </span>
+                                ))}
                             </>
                           )}
                         </Listbox.Option>
@@ -214,7 +199,20 @@ export default function Filter({ type, multiple }) {
   )
 }
 
-function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery }) {
+function Input({ handleSendUrl }) {
+  const router = useRouter()
+
+  const [searchQuery, setSearchQuery] = useState(() => router.query.query ?? '')
+
+  const handleCleanQuery = () => {
+    const params = new URLSearchParams(router.query)
+    params.delete('query')
+    router.replace({ pathname: router.pathname, query: params.toString() }, undefined, {
+      scroll: false,
+    })
+    setSearchQuery('')
+  }
+
   return (
     <div className="flex justify-center">
       <div className="relative flex w-full px-2 xl:w-96">
@@ -226,21 +224,20 @@ function Input({ setSearchQuery, searchQuery, handleSendUrl, handleCleanQuery })
             }
           }}
           type="text"
-          className="form-control input"
+          className="input pl-3 pr-16 text-gray-700"
           placeholder="Search"
           value={searchQuery}
           onKeyDown={(e) => {
             searchQuery && e.key === 'Enter' && handleSendUrl(searchQuery)
           }}
         />
-
         <button
           className={`absolute top-0 bottom-0 right-12 pl-3 pr-2 py-2 text-black-40 ${
             !searchQuery ? 'hidden' : ''
           }`}
           type="button"
         >
-          <XIcon className="w-5" aria-hidden="true" onClick={() => handleCleanQuery()} />
+          <XIcon className="w-5" aria-hidden="true" onClick={handleCleanQuery} />
         </button>
 
         <button

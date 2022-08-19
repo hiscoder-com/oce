@@ -30,5 +30,4 @@ yarn-error.log*
 
 # vercel
 .vercel
-/prisma/migrations
 /prisma/oce.db*

@@ -48,6 +48,11 @@ function About() {
     }
   }, [setFixedSidebar])
 
+  useEffect(() => {
+    document.documentElement.classList.add('about')
+    return () => document.documentElement.classList.remove('about')
+  }, [])
+
   return (
     <div className="flex flex-col mb-16 text-center lg:gap-10 lg:text-start">
       <div className="flex flex-col items-center border-b-2 border-dashed">

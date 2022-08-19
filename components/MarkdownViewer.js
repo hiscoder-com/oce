@@ -1,6 +1,13 @@
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
+import rehypeSlug from 'rehype-slug'
+import 'highlight.js/styles/github.css'
 
-function MarkdownViewer({ children, rehypePlugins, className, address }) {
+import 'github-markdown-css/github-markdown-light.css'
+
+function MarkdownViewer({ children, className, address }) {
   const content = typeof children === 'string' ? children : ''
 
   const transformImageUri = (uri) => {
@@ -23,8 +30,9 @@ function MarkdownViewer({ children, rehypePlugins, className, address }) {
 
   return (
     <ReactMarkdown
-      rehypePlugins={rehypePlugins}
+      rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeSlug]}
       className={className}
+      remarkPlugins={[remarkGfm]}
       transformImageUri={transformImageUri}
     >
       {content}
