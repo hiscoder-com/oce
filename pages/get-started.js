@@ -134,7 +134,7 @@ function GetStarted() {
           </div>
           <ul className="phase-card-ul">
             <li>Fork the repo of an existing component</li>
-            <li>Create issues for changes planne</li>
+            <li>Create issues for changes planned</li>
             <li>Develop and peer review within community</li>
             <li>Join community sprint review to demo your work</li>
             <li>Publish work with appropriate tagging of components</li>
