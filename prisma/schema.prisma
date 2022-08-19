@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./oce.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Repo {
@@ -16,12 +16,13 @@ model Repo {
   release     String?
   releaseDate String?
   license     String?
+  createdAt   DateTime       @default(now())
   topics      ReposTopics[]
   depends     ReposDepends[]
 }
 
 model Depend {
-  packageName String         @unique
+  packageName String         @id @unique
   repos       ReposDepends[]
 }
 
@@ -35,7 +36,7 @@ model ReposDepends {
 }
 
 model Topic {
-  name  String        @unique
+  name  String        @id @unique
   repos ReposTopics[]
 }
 

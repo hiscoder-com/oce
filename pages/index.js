@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 import ComponentCard from '../components/ComponentCard'
 import AppCard from '../components/AppCard'
-import { apps, components } from '../utils/helper'
+import useNew from '../hooks/useNew'
 
 import editor_black from '../public/editor_black.svg'
 import ascent from '../public/ascent.svg'
@@ -16,7 +16,7 @@ import discord_hero from '../public/discord_hero.svg'
 
 export default function Home() {
   const router = useRouter()
-
+  const { data, isLoading, isError } = useNew()
   return (
     <div className="flex flex-col gap-10 mx-4 xl:gap-12">
       <Head>
@@ -188,7 +188,25 @@ export default function Home() {
           </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
             <div className="grid gap-5 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4 xl:gap-5 2xl:w-9/12 2xl:gap-8">
-              {components.map((el) => ComponentCard({ repo: el }))}
+              {data?.components?.map((el) =>
+                ComponentCard({
+                  repo: {
+                    nameWithOwner: el.repo,
+                    name: el?.repo.split('/')?.[1],
+                    description: el.description,
+                    owner: {
+                      login: el?.repo.split('/')?.[0],
+                      avatarUrl: el?.ownerAvatar,
+                    },
+                    latestRelease: { tag: { name: el.release } },
+                    repositoryTopics: {
+                      nodes: el?.topics.map((t) => ({
+                        topic: { name: t.topicId },
+                      })),
+                    },
+                  },
+                })
+              )}
               <Link href="/components">
                 <a className="hidden items-center gap-2.5 mx-auto my-24 font-bold underline text-primary-600 decoration-primary-600 decoration-2 underline-offset-4 md:flex lg:hidden">
                   More
@@ -237,7 +255,16 @@ export default function Home() {
           </div>
           <div className="flex flex-col lg:flex-row lg:gap-5 xl:gap-12 2xl:gap-0">
             <div className="grid gap-5 sm:grid-cols-1 sm:gap-3 md:grid-cols-2 md:gap-3 xl:gap-5 2xl:w-9/12 2xl:gap-8">
-              {apps?.slice(0, 2)?.map((el) => AppCard({ repo: el }))}
+              {data?.apps?.slice(0, 2)?.map((el) =>
+                AppCard({
+                  repo: {
+                    name: el.repo.split('/')[1],
+                    nameWithOwner: el.repo,
+                    description: el.description,
+                    logo: el.logo,
+                  },
+                })
+              )}
             </div>
             <Link href="/apps">
               <a className="flex items-center gap-2.5 mx-auto my-10 font-bold text-primary-600 underline decoration-primary-600 decoration-2 underline-offset-4 lg:my-24 xl:mr-6 xl:my-32 2xl:mx-auto">

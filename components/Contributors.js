@@ -16,9 +16,12 @@ function Contributors() {
         {contributors &&
           contributors.map((el, key) => {
             return (
-              <div
+              <a
+                target="_blank"
+                href={`https://github.com/${el.login}`}
                 key={key}
                 className="overflow-hidden border inline-flex m-0.5 rounded-lg"
+                rel="noreferrer"
               >
                 <Image
                   src={el.avatar_url}
@@ -27,7 +30,7 @@ function Contributors() {
                   width="42"
                   height="42"
                 />
-              </div>
+              </a>
             )
           })}
       </div>

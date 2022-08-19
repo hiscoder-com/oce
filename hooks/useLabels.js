@@ -2,8 +2,8 @@ import useSWR from 'swr'
 
 import { fetcher } from '../utils/fetcher'
 
-function useRepo(url) {
-  const { data, error } = useSWR(url && `/api/repo/${url}`, fetcher)
+function useLabels() {
+  const { data, error } = useSWR(`/api/labels`, fetcher)
 
   return {
     data,
@@ -12,4 +12,4 @@ function useRepo(url) {
   }
 }
 
-export default useRepo
+export default useLabels

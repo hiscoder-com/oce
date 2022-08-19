@@ -28,11 +28,13 @@ export default async function handler(req, res) {
           first: ${parseInt(limit)}
           after: ${from ? '"' + from + '"' : 'null'}
           type: REPOSITORY
-          query: "${query} topic:scripture-open-components ${topicsQuery.join(
-        ' '
-      )} NOT app sort:${
+          query: "${query} sort:${
         order.toLowerCase() === 'interactions' ? 'interactions' : 'updated'
-      }-${direction.toLowerCase() !== 'desc' ? 'asc' : 'desc'}"
+      }-${
+        direction.toLowerCase() === 'asc' ? 'asc' : 'desc'
+      } topic:scripture-open-components ${topicsQuery
+        .map((el) => `topic:${el}`)
+        .join(' ')}"
         ) {
           pageInfo {
             hasNextPage
