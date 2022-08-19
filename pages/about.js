@@ -275,7 +275,7 @@ function About() {
           </div>
           <p
             id="licensing"
-            className="my-10 font-bold text-center scroll-m-14 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
+            className="py-10 font-bold text-center scroll-m-9 text-primary-600 text-2xl md:text-3xl lg:my-20 lg:text-4xl xl:text-5xl"
           >
             Licensing
           </p>
