@@ -13,7 +13,7 @@ function Header() {
     setIsOpen((prev) => !prev)
   }
   return (
-    <header className="header">
+    <header className="container flex items-center justify-between mx-auto p-6 text-lg font-bold md:mb-4 md:px-2">
       <div className="flex items-center justify-between w-full md:w-fit md:gap-5">
         <Link href="/">
           <a className="flex">
@@ -55,7 +55,7 @@ function Header() {
         <div className="flex gap-2 btn group">
           <div className="relative">
             <a className="cursor-pointer">Explore</a>
-            <div className="dropdown">
+            <div className="absolute flex-col mt-2 p-3 shadow-md z-50 bg-white rounded-md hidden group-hover:flex">
               <Link href="/apps">
                 <a className="btn-gray">Apps</a>
               </Link>
