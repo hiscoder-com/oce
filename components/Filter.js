@@ -140,7 +140,7 @@ export default function Filter({ type, multiple, values }) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="options w-fit z-10">
+              <Listbox.Options className="absolute mt-2 left-0 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-10">
                 {({ open }) => {
                   if (multiple && !open) {
                     handleSendUrl(selectedFilters)
