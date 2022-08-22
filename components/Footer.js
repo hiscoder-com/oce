@@ -7,7 +7,7 @@ import Logo from '../public/logo-white.svg'
 function Footer() {
   return (
     <footer className="bg-primary-600 mt-6">
-      <div className="footer">
+      <div className="container flex flex-col items-center justify-between gap-6 mx-auto text-lg font-bold py-6 text-white md:flex-row">
         <div className="flex flex-wrap items-center justify-center gap-9 w-full sm:justify-start md:flex-nowrap">
           <Link href="/">
             <a className="flex">

@@ -67,7 +67,7 @@ function ComponentsList({ setTotal }) {
           )}
           {pageInfo.hasNextPage ? (
             <div
-              className="inline-flex py-2.5 px-32 rounded-lg font-bold bg-primary-600 text-white cursor-pointer md:px-16 hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
+              className="py-2.5 w-full text-center rounded-lg font-bold bg-primary-600 text-white cursor-pointer md:px-16 md:w-auto hover:bg-primary-700 active:shadow-xl active:shadow-primary-700/23"
               onClick={handlerLoadMore}
             >
               LOAD MORE

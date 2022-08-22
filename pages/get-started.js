@@ -28,7 +28,7 @@ function GetStarted() {
           <div className="my-4 font-bold lg:mb-8">
             Phase 1: Understanding the Open Components philosophy
           </div>
-          <ul className="phase-card-ul">
+          <ul className="list-disc list-inside pl-3 leading-loose">
             <li>
               To learn about{' '}
               <Link href="/about">
@@ -53,7 +53,7 @@ function GetStarted() {
         </div>
         <div className="text-text-800 md:text-lg lg:text-xl xl:text-2xl">
           <div className="my-4 font-bold lg:mb-8">Phase 2: Explore the ecosystem</div>
-          <ul className="phase-card-ul">
+          <ul className="list-disc list-inside pl-3 leading-loose">
             <li>
               To check out the{' '}
               <Link href="/components">
@@ -80,7 +80,7 @@ function GetStarted() {
           <div className="my-4 font-bold lg:mb-8">
             Phase 3: Learn the principles of iterative development
           </div>
-          <ul className="phase-card-ul">
+          <ul className="list-disc list-inside pl-3 leading-loose">
             <li>
               <Link href="/lean-expectations">
                 <a className="underline-custom">
@@ -100,7 +100,7 @@ function GetStarted() {
           <div className="my-4 font-bold lg:mb-8">
             Phase 4: Learn how to get started with an open component
           </div>
-          <ul className="phase-card-ul">
+          <ul className="list-disc list-inside pl-3 leading-loose">
             <li>
               <Link href="/react-components-library">
                 <a className="underline-custom">Starting a React Component Library</a>
@@ -132,7 +132,7 @@ function GetStarted() {
           <div className="my-4 font-bold lg:mb-8">
             Phase 5: Contribute to an existing Open Component
           </div>
-          <ul className="phase-card-ul">
+          <ul className="list-disc list-inside pl-3 leading-loose">
             <li>Fork the repo of an existing component</li>
             <li>Create issues for changes planned</li>
             <li>Develop and peer review within community</li>
