@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         direction.toLowerCase() === 'asc' ? 'asc' : 'desc'
       } topic:scripture-open-components ${topicsQuery
         .map((el) => `topic:${el}`)
-        .join(' ')}"
+        .join(' ')} fork:true"
         ) {
           pageInfo {
             hasNextPage
