@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             first: 100
             after: null
             type: REPOSITORY
-            query: "topic:scripture-open-apps sort:updated-desc"
+            query: "topic:scripture-open-apps sort:updated-desc fork:true"
           ) {
             total: repositoryCount
             repos: edges {
